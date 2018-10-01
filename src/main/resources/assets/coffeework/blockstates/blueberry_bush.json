@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "age=0": { "model": "coffeework:blueberry_stage0" },
+        "age=1": { "model": "coffeework:blueberry_stage1" },
+        "age=2": { "model": "coffeework:blueberry_stage2" },
+        "age=3": { "model": "coffeework:blueberry_stage3" }
+    }
+}

@@ -1,0 +1,30 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.coffeework.cocoa.title"
+      },
+      "description" : {
+         "translate" : "achievement.coffeework.cocoa.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "coffeework:cocoa_plate",
+         "data" : 0
+      },
+      "frame" : "task"
+   },
+   "parent" : "coffeework:bean",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "coffeework:cocoa",
+                  "data" : 0
+               }
+            ]
+         }
+      }
+   }
+}

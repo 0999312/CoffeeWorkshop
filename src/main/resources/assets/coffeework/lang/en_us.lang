@@ -1,0 +1,255 @@
+﻿#Items/Blocks
+tile.coffeework.bag_coffee_raw.name=Raw Coffee Bean Bag
+tile.coffeework.bag_coffee.name=Coffee Bean Bag
+tile.coffeework.bag_coffee_powder.name=Coffee Powder Bag
+tile.coffeework.bag_cocoa.name=Cocoa Bean Bag
+tile.coffeework.bag_cocoa_powder.name=Cocoa Powder Bag
+tile.coffeework.bag_flour.name=Flour Bag
+tile.coffeework.bag_sugar.name=Sugar Bag
+item.coffeework.bag.name=Bag
+
+tile.coffeework.cake_sponge.name=Sponge Cake
+tile.coffeework.cake_sponge_chocolate.name=Chocolate Sponge Cake
+tile.coffeework.cake_cheese.name=Cheese Cake
+tile.coffeework.cake_schwarzwald.name=Schwarzwald Cake
+tile.coffeework.cake_carrot.name=Carrot Cake
+tile.coffeework.cake_redvelvet.name=Red Velvet Cake
+tile.coffeework.tiramisu.name=Tiramisu
+
+tile.coffeework.double_bag_coffee_powder.name=Two Coffee Powder Bags
+tile.coffeework.double_bag_cocoa.name=Two Cocoa Bean Bags
+tile.coffeework.double_bag_cocoa_powder.name=Two Cocoa Powder Bags
+tile.coffeework.double_bag_flour.name=Two Flour Bags
+tile.coffeework.double_bag_sugar.name=Two Sugar Bags
+tile.coffeework.double_bag_coffee_raw.name=Two Raw Coffee Bean Bags
+tile.coffeework.double_bag_coffee.name=Two Coffee Bean Bags
+
+tile.coffeework.grinder.name=Thermal Grinder
+tile.coffeework.coffeemachine.name=Coffee Machine
+item.coffeework.coffee_seed.name=Coffee Seed
+tile.coffeework.coffee_tree.name=Coffee Tree
+tile.coffeework.icecream_machine.name=Ice cream Machine
+item.coffeework.coffee_bean.name=Roast Coffee Bean
+item.coffeework.coffee_bean_raw.name=Raw Coffee Bean
+item.coffeework.cocoa_bean.name=Roast Cocoa Bean
+item.coffeework.coffee_powder.name=Coffee Powder
+item.coffeework.cocoa_powder.name=Cocoa Powder
+item.coffeework.cocoa_batter.name=Cocoa Batter
+item.coffeework.flour.name=Flour
+item.coffeework.dough.name=Dough
+item.coffeework.dough_cookie.name=Cookie Dough
+item.coffeework.dough_baguette.name=Baguette Dough
+item.coffeework.chocolate_bar.name=Chocolate Bar
+item.coffeework.chocolate_chip.name=Chocolate Chip
+item.coffeework.baguette.name=Baguette
+item.coffeework.cup.name=Cup
+item.coffeework.cup_glass.name=Glass Cup
+item.coffeework.ice_slag.name=Ice Slag
+item.coffeework.coffee_turkey.name=Turkey Coffee
+item.coffeework.coffee_milk_tea.name=Sweet Milk Tea
+item.coffeework.coffee_milk_tea_ice.name=Iced Milk Tea
+item.coffeework.coffee_green_tea_ice.name=Iced Green tea
+item.coffeework.coffee_black_tea_ice.name=Iced Black tea
+tile.coffeework.coffee_turkey.name=Turkey Coffee
+tile.coffeework.plate.name=Plate
+
+item.coffeework.moka_top.name=Moka Pot upper part
+item.coffeework.moka_bottom.name=Moka Pot Boiler
+item.coffeework.moka_pot_unheated.name=Moka Pot
+item.coffeework.moka_pot_heated.name=Moka Pot(Brewing complete)
+
+item.coffeework.turkey_coffee_pot.name=Turkey Coffee Pot
+item.coffeework.turkey_coffee_pot_unheated.name=Turkey Coffee Pot
+item.coffeework.turkey_coffee_pot_heated.name=Turkey Coffee Pot(Brewing complete)
+
+tile.coffeework.coffee_milk_tea.name=Sweet Milk Tea
+tile.coffeework.coffee_mandarin_drink.name=Mandarin Drink
+item.coffeework.coffee_mandarin_drink.name=Mandarin Drink
+
+tile.coffeework.coffee.name=Black Coffee
+tile.coffeework.coffee_milk.name=Milk Coffee
+tile.coffeework.espresso.name=Espresso
+tile.coffeework.coffee_american.name=Café Americano
+tile.coffeework.coffee_latte.name=Café Latté
+tile.coffeework.coffee_cappuccino.name=Cappuccino
+tile.coffeework.coffee_macchiato.name=Macchiato
+tile.coffeework.coffee_mochaccino.name=Mochaccino
+tile.coffeework.cocoa.name=Hot Cocoa
+tile.coffeework.strong_cocoa.name=Thick Cocoa
+
+item.coffeework.coffee.name=Black Coffee
+item.coffeework.coffee_milk.name=Milk Coffee
+
+item.coffeework.espresso.name=Espresso
+item.coffeework.coffee_american.name=Café Americano
+item.coffeework.coffee_latte.name=Café Latté
+item.coffeework.coffee_cappuccino.name=Cappuccino
+item.coffeework.coffee_macchiato.name=Macchiato
+item.coffeework.coffee_mochaccino.name=Mochaccino
+item.coffeework.cocoa.name=Hot Cocoa
+item.coffeework.strong_cocoa.name=Thick Cocoa
+
+item.coffeework.coffee_american_ice.name=Iced Americano
+item.coffeework.coffee_latte_ice.name=Iced Latté
+item.coffeework.coffee_cappuccino_ice.name=Iced Cappuccino
+item.coffeework.coffee_macchiato_ice.name=Iced Macchiato
+item.coffeework.coffee_mochaccino_ice.name=Iced Mochaccino
+item.coffeework.cocoa_ice.name=Iced Cocoa
+item.coffeework.strong_cocoa_ice.name=Iced Thick Cocoa
+
+item.coffeework.icecream_vanilla.name=Vanilla Ice cream
+item.coffeework.icecream_chocolate.name=Chocolate Ice cream
+item.coffeework.icecream_coffee.name=Coffee Ice cream
+item.coffeework.icecream_apple.name=Apple Ice cream
+item.coffeework.icecream_berry.name=Berry Ice cream
+item.coffeework.icecream_melon.name=Melon Ice cream
+item.coffeework.icecream_lemon.name=Lemon Ice cream
+
+item.coffeework.cream_milk.name=Cream
+item.coffeework.cream_chocolate.name=Chocolate Cream
+item.coffeework.cream_coffee.name=Coffee Cream
+item.coffeework.cream_apple.name=Apple Cream
+item.coffeework.cream_berry.name=Mix berry Cream
+item.coffeework.cream_lemon.name=Lemon Cream
+item.coffeework.cream_melon.name=Melon Cream
+
+item.coffeework.milk_form.name=Milk form
+item.coffeework.mixing_bowl.name=Mixing Bowl
+item.coffeework.yeast.name=Yeast
+tile.coffeework.blueberry_bush.name=Blueberry Bush
+item.coffeework.custard.name=Custard
+item.coffeework.blueberry.name=Blueberry
+item.coffeework.cookie_icecream_vanilla.name=Vanilla Cookie Sundae
+item.coffeework.cookie_icecream_chocolate.name=Chocolate Cookie Sundae
+item.coffeework.cookie_icecream_coffee.name=Coffee Cookie Sundae
+item.coffeework.cookie_icecream_apple.name=Apple Cookie Sundae
+item.coffeework.cookie_icecream_berry.name=Berry Cookie Sundae
+item.coffeework.cookie_icecream_lemon.name=Lemon Cookie Sundae
+item.coffeework.cookie_icecream_melon.name=Melon Cookie Sundae
+
+item.coffeework.cake_sponge_raw.name=Raw Sponge Cake
+item.coffeework.cake_sponge_chocolate_raw.name=Raw Chocolate Sponge Cake
+item.coffeework.cake_cheese_raw.name=Raw Cheese Cake
+item.coffeework.cake_carrot_raw.name=Raw Carrot Cake
+item.coffeework.cake_redvelvet_raw.name=Raw Red Velvet Cake
+item.coffeework.brownie_raw.name=Raw Brownie
+
+item.coffeework.cake_sponge_model.name=Sponge Cake(In Model)
+item.coffeework.cake_sponge_chocolate_model.name=Chocolate Sponge Cake(In Model)
+item.coffeework.cake_cheese_model.name=Cheese Cake(In Model)
+item.coffeework.cake_carrot_model.name=Carrot Cake(In Model)
+item.coffeework.cake_redvelvet_model.name=Red Velvet Cake(In Model)
+item.coffeework.brownie_model.name=Brownie(In Model)
+item.coffeework.tiramisu_model.name=Tiramisu(In Model)
+
+item.coffeework.muffin_raw.name=Raw Muffin
+item.coffeework.muffin_chocolate_raw.name=Raw Chocolate Muffin
+item.coffeework.croissant_raw.name=Raw Croissant
+item.coffeework.croissant_chocolate_raw.name=Raw Chocolate Croissant
+item.coffeework.croissant_chocolate_raw.name=Raw Chocolate Croissant
+item.coffeework.muffin_berry_raw.name=Raw Berry Muffin
+item.coffeework.muffin_berry.name=Berry Muffin
+item.coffeework.muffin_chocolate.name=Chocolate Muffin
+item.coffeework.croissant.name=Croissant
+item.coffeework.croissant_chocolate.name=Chocolate Croissant
+item.coffeework.bucket_cream.name=Cream Bucket
+item.coffeework.bucket_butter.name=Butter Bucket
+item.coffeework.butter.name=Butter
+item.coffeework.cheese.name=Cheese
+item.coffeework.cake_model.name=Round Cake Model
+item.coffeework.cake_model_square.name=Square Cake Model
+item.coffeework.brownie.name=Brownie
+item.coffeework.field_ration_d.name=Field Ration D
+
+item.coffeework.mooncake_raw.name=Raw Mooncake(Five Seeds)
+item.coffeework.mooncake_egg_raw.name=Raw Mooncake(Egg Yolk)
+item.coffeework.mooncake.name=Mooncake(Five Seeds)
+item.coffeework.mooncake_egg.name=Mooncake(Egg Yolk)
+
+tile.coffeework.roller.name=Thermal Roller
+item.coffeework.mooncake_model.name=Mooncake Model
+item.coffeework.mooncake_ham_raw.name=Raw Mooncake(Ham)
+item.coffeework.mooncake_fruit_raw.name=Raw Mooncake(Fruit)
+item.coffeework.mooncake_ham.name=Mooncake(Ham)
+item.coffeework.mooncake_fruit.name=Mooncake(Fruit)
+item.coffeework.hardtack_raw.name=Raw Hardtack
+item.coffeework.hardtack.name=Hardtack
+item.coffeework.plate_pastry_raw.name=Raw Pastry Plate
+item.coffeework.plate_pastry.name=Pastry Plate
+item.coffeework.mille_feuille.name=Mille Feuille
+item.coffeework.plate_iron.name=Iron Plate
+item.coffeework.dough_pastry.name=Pastry Dough
+item.coffeework.plate_dough.name=Dough Plate
+item.coffeework.plate_dough_pastry.name=Pastry Dough Plate
+
+#TABS
+itemGroup.coffee_workshop=Coffee Workshop
+
+#GUI
+gui.coffee_machine.name=Coffee Machine
+gui.grinder.name=Grinding
+gui.ice_cream_machine.name=Freezing
+
+#JEI
+jei.coffeework.category.grinder=Grinding
+jei.coffeework.category.icecream_machine=Freezing
+jei.coffeework.category.roller=Rolling
+#Achievement
+achievement.coffeework.first.title=Let's make coffee now!
+achievement.coffeework.roastbean.title=City Roast
+achievement.coffeework.blackcoffee.title=Black coffee
+achievement.coffeework.coffee_milk.title=Coffee with milk
+achievement.coffeework.espresso.title=Espresso
+achievement.coffeework.coffee_master.title=Café Master
+
+achievement.coffeework.cocoa.title=Hot Cocoa
+achievement.coffeework.strong_cocoa.title=Thick Cocoa
+
+achievement.coffeework.first.desc=Get coffee seeds.
+achievement.coffeework.roastbean.desc=Roast some coffee seeds.
+achievement.coffeework.blackcoffee.desc=Make a cup of black coffee
+achievement.coffeework.coffee_milk.desc=Make a cup of milk coffee
+achievement.coffeework.espresso.desc=Make a cup of Espresso
+achievement.coffeework.coffee_master.desc=Get five special coffee in the same time.
+
+achievement.coffeework.cocoa.desc=Make a cup of Hot Cocoa
+achievement.coffeework.strong_cocoa.desc=Make a cup of Thick Cocoa
+
+
+achievement.coffeework.bag.title=Do you need a Bag?
+achievement.coffeework.bag_monster.title=I need a mountain of Bags!
+achievement.coffeework.bag.desc=Make a bag.
+achievement.coffeework.bag_monster.desc=Get ALL Double bag in the same time.
+
+#Word
+word.coffeework.coffee.name=This is Black Coffee.
+word.coffeework.coffee_milk.name=Coffees' best friend.
+
+word.coffeework.espresso.name=Espresso is the soul of Italian coffee.
+word.coffeework.coffee_american.name=The gift of wars.
+word.coffeework.coffee_latte.name=Meet milk,accidentaly.
+word.coffeework.coffee_cappuccino.name=Waitting is bitter with sweet.
+word.coffeework.coffee_macchiato.name=The brand of love.
+word.coffeework.coffee_mochaccino.name=Chocolate coffee
+word.coffeework.cocoa.name=Warm,sweet and harmony.
+word.coffeework.strong_cocoa.name=Recipe from Pierre Hermé.
+word.coffeework.coffee_mandarin_drink.name=Community of common destiny.
+word.coffeework.coffee_american_ice.name=My Favourite!
+word.coffeework.coffee_latte_ice.name=Dancing Latté
+word.coffeework.coffee_cappuccino_ice.name=Popular drink.
+word.coffeework.coffee_macchiato_ice.name=Iced Caramel.
+word.coffeework.coffee_mochaccino_ice.name=Chocolate,ice and coffee?Oh,god.
+word.coffeework.cocoa_ice.name=Iced Chocolate
+word.coffeework.strong_cocoa_ice.name=Iced MORE Chocolate
+
+word.coffeework.coffee_turkey.name=Coffee can divine.
+word.coffeework.coffee_milk_tea.name=English breakfast Tea.
+word.coffeework.coffee_milk_tea_ice.name=Why roite didn't make that?
+word.coffeework.coffee_green_tea_ice.name=Iced Green tea
+word.coffeework.coffee_black_tea_ice.name=Please,NO INM.
+
+coffee.result.1=Enjoy your nice day.
+coffee.result.2=Not bad today.
+coffee.result.3=A dull day.
+coffee.result.4=Today will be not nice.
+coffee.result.5=It's going to be bad today.

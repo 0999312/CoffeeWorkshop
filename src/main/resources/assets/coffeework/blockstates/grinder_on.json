@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "coffeework:grinder_on" },
+        "facing=south": { "model": "coffeework:grinder_on", "y": 180 },
+        "facing=west":  { "model": "coffeework:grinder_on", "y": 270 },
+        "facing=east":  { "model": "coffeework:grinder_on", "y": 90 }
+    }
+}

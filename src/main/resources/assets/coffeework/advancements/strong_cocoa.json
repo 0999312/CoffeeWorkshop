@@ -1,0 +1,30 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.coffeework.strong_cocoa.title"
+      },
+      "description" : {
+         "translate" : "achievement.coffeework.strong_cocoa.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "coffeework:strong_cocoa_plate",
+         "data" : 0
+      },
+      "frame" : "task"
+   },
+   "parent" : "coffeework:cocoa",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "coffeework:strong_cocoa",
+                  "data" : 0
+               }
+            ]
+         }
+      }
+   }
+}

@@ -1,0 +1,29 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.coffeework.first.title"
+      },
+      "description" : {
+         "translate" : "achievement.coffeework.first.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "coffeework:coffee_seed"
+      },
+      "background" : "minecraft:textures/blocks/concrete_white.png",
+      "frame" : "task"
+   },
+   "criteria" : {
+      "getSeed" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "coffeework:coffee_seed",
+                  "count" : 1
+               }
+            ]
+         }
+      }
+   }
+}

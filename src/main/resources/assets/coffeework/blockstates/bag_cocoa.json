@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "coffeework:bag_cocoa" },
+        "facing=south": { "model": "coffeework:bag_cocoa", "y": 180 },
+        "facing=west":  { "model": "coffeework:bag_cocoa", "y": 270 },
+        "facing=east":  { "model": "coffeework:bag_cocoa", "y": 90 }
+    }
+}

@@ -1,0 +1,30 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.coffeework.roastbean.title"
+      },
+      "description" : {
+         "translate" : "achievement.coffeework.roastbean.desc",
+		 "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "coffeework:coffee_bean",
+         "data" : 0
+      },
+      "frame" : "task"
+   },
+   "parent" : "coffeework:root",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "coffeework:coffee_bean",
+                  "data" : 0
+               }
+            ]
+         }
+      }
+   }
+}

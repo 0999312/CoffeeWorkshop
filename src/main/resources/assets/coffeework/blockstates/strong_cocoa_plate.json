@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "coffeework:strong_cocoa_plate" },
+        "facing=south": { "model": "coffeework:strong_cocoa_plate", "y": 180 },
+        "facing=west":  { "model": "coffeework:strong_cocoa_plate", "y": 270 },
+        "facing=east":  { "model": "coffeework:strong_cocoa_plate", "y": 90 }
+    }
+}
