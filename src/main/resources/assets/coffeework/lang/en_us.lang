@@ -182,6 +182,27 @@ item.coffeework.dough_pastry.name=Pastry Dough
 item.coffeework.plate_dough.name=Dough Plate
 item.coffeework.plate_dough_pastry.name=Pastry Dough Plate
 
+item.coffeework.jiggy_cake_raw.name=Raw Jiggy Cake
+item.coffeework.jiggy_cake_chocolate_raw.name=Raw Chocolate Jiggy Cake
+item.coffeework.jiggy_cake_model.name=Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_chocolate_model.name=Chocolate Jiggy Cake(In Model)
+item.coffeework.jiggy_cake.name=Jiggy Cake
+item.coffeework.jiggy_cake_chocolate.name=Chocolate Jiggy Cake
+item.coffeework.cake_sponge_base.name=Sponge Cake Base
+item.coffeework.cake_sponge_chocolate_base.name=Chocolate Sponge Cake Base
+item.coffeework.iron_bowl.name=Iron Bowl
+item.coffeework.iron_bowl_egg.name=Egg(Iron Bowl)
+item.coffeework.iron_bowl_cheese.name=Cheese(Iron Bowl)
+item.coffeework.iron_bowl_batter.name=Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_berry.name=Berry Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_chocolate.name=Chocolate Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_red.name=Red Velvet Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_lemon.name=Lemon Cake Batter(Iron Bowl)
+item.coffeework.muffin_lemon.name=Lemon Muffin
+item.coffeework.muffin_lemon_raw.name=Raw Lemon Muffin
+item.coffeework.muffin_redvelvet.name=Red Velvet Muffin
+item.coffeework.muffin_redvelvet_raw.name=Raw Red Velvet Muffin
+
 #TABS
 itemGroup.coffee_workshop=Coffee Workshop
 

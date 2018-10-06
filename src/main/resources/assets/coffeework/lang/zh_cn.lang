@@ -183,6 +183,27 @@ item.coffeework.cookie_icecream_berry.name=混合莓果饼干圣代
 item.coffeework.cookie_icecream_lemon.name=柠檬饼干圣代
 item.coffeework.cookie_icecream_melon.name=西瓜饼干圣代
 
+item.coffeework.jiggy_cake_raw.name=生古早蛋糕
+item.coffeework.jiggy_cake_chocolate_raw.name=生巧克力古早蛋糕
+item.coffeework.jiggy_cake_model.name=古早蛋糕（模具）
+item.coffeework.jiggy_cake_chocolate_model.name=巧克力古早蛋糕（模具）
+item.coffeework.jiggy_cake.name=古早蛋糕
+item.coffeework.jiggy_cake_chocolate.name=巧克力古早蛋糕
+item.coffeework.cake_sponge_base.name=海绵蛋糕底
+item.coffeework.cake_sponge_chocolate_base.name=巧克力海绵蛋糕底
+item.coffeework.iron_bowl.name=铁碗
+item.coffeework.iron_bowl_egg.name=鸡蛋（铁碗）
+item.coffeework.iron_bowl_cheese.name=芝士（铁碗）
+item.coffeework.iron_bowl_batter.name=蛋糕糊（铁碗）
+item.coffeework.iron_bowl_batter_berry.name=莓果蛋糕糊（铁碗）
+item.coffeework.iron_bowl_batter_chocolate.name=巧克力蛋糕糊（铁碗）
+item.coffeework.iron_bowl_batter_red.name=红丝绒蛋糕糊（铁碗）
+item.coffeework.iron_bowl_batter_lemon.name=柠檬蛋糕糊（铁碗）
+item.coffeework.muffin_lemon.name=柠檬玛芬
+item.coffeework.muffin_lemon_raw.name=柠檬玛芬蛋糕糊
+item.coffeework.muffin_redvelvet.name=红丝绒玛芬
+item.coffeework.muffin_redvelvet_raw.name=红丝绒玛芬蛋糕糊
+
 #TABS
 itemGroup.coffee_workshop=咖啡工坊
 

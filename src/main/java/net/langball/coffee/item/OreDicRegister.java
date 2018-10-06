@@ -24,6 +24,8 @@ public class OreDicRegister {
 	OreDictionary.registerOre("listAllgrain", Items.WHEAT);
 	OreDictionary.registerOre("bread", ItemLoader.baguette);
 	OreDictionary.registerOre("foodBread", ItemLoader.baguette);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_chocolate_base);
 	OreDictionary.registerOre("foodCocoapowder", ItemLoader.cocoa_powder);
 	OreDictionary.registerOre("foodChocolatebar", ItemLoader.chocolate_bar);
     OreDictionary.registerOre("cropApple", Items.APPLE);

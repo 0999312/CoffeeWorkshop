@@ -6,6 +6,7 @@ import net.langball.coffee.compat.TeaStoriesCompatDrinks;
 import net.langball.coffee.compat.TeaStoriesCompatRecipes;
 import net.langball.coffee.compat.HACRecipeLoader;
 import net.langball.coffee.drinks.DrinksLoader;
+import net.langball.coffee.event.EventCoffeeSeeds;
 import net.langball.coffee.gui.GuiLoader;
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.item.OreDicRegister;
@@ -69,6 +70,7 @@ public class CommonProxy {
     	MinecraftForge.EVENT_BUS.register(new MakingBlackCoffee());
     	RecipesUtil.addRecipe(DrinksLoader.coffee_turkey, new MakingTurkeyCoffee());
     	MinecraftForge.EVENT_BUS.register(new MakingTurkeyCoffee());
+    	MinecraftForge.EVENT_BUS.register(new EventCoffeeSeeds());
     	new MaterialCraftingRecipes();
     	new DrinksCraftingRecipes();
     	new FoodCraftingRecipes();

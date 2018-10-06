@@ -80,17 +80,31 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe(ItemLoader.mixing_bowl, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.mixing_bowl,new Object[]{
 				 "I I"," W ",'I',"ingotIron",'W',"plateIron"
 		}));
+		RecipesUtil.addRecipe(ItemLoader.iron_bowl, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl,new Object[]{
+				 "I I","W W"," W ",'I',"ingotIron",'W',"plateIron"
+		}));
 		RecipesUtil.addRecipe(ItemLoader.mooncake_model, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.mooncake_model,new Object[]{
 				 "IWI",'I',"ingotIron",'W',"plateIron"
 		}));
 		RecipesUtil.addRecipe(ItemLoader.cake_model_square, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.cake_model_square,new Object[]{
-				"I I"," W ","I I",'I',"ingotIron",'W',"plateIron"
+				"III","IWI","III",'I',"ingotIron",'W',"plateIron"
 		}));
+		RecipesUtil.addRecipe(ItemLoader.iron_bowl_egg, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_egg,new Object[]{
+				ItemLoader.iron_bowl,"listAllegg","listAllegg","listAllegg"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.iron_bowl_cheese, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_cheese,new Object[]{
+				ItemLoader.iron_bowl,"foodCheese","foodCheese","listAllheavycream"
+		}));
+		
+		RecipesUtil.addRecipe(ItemLoader.iron_bowl_batter, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_batter,new Object[]{
+				ItemLoader.iron_bowl,ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar"
+		}));
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_berry, "listAllberry");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_chocolate, "foodCocoapowder");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_lemon, "cropLemon");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_red, "dyeRed");
 		RecipesUtil.addRecipe(BlockLoader.plateItem, new ShapedOreRecipe(new ResourceLocation(""),BlockLoader.plateItem,new Object[]{
 				"   ","WDW"," W ",'W',new ItemStack(Blocks.CONCRETE,1,0),'D',"dyeWhite"
-		}));
-		RecipesUtil.addRecipe(ItemLoader.coffee_bean_raw, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.coffee_bean_raw,new Object[]{
-				"seedCoffee","listAllwater"
 		}));
 		RecipesUtil.addRecipe(CoffeeWork.MODID+"."+ItemLoader.coffee_bean_raw.getUnlocalizedName().substring(5)+"_2", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.coffee_bean_raw,new Object[]{
 				"cropCoffee","listAllwater"
@@ -264,5 +278,14 @@ public class MaterialCraftingRecipes {
 				BlockLoader.plateItem,icecream
 		}));
 	}
-	
+	public static void registerBatterInBowl(Item result,Item input) {
+		RecipesUtil.addRecipe(result, new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
+				ItemLoader.iron_bowl_batter,input
+		}));
+	}
+	public static void registerBatterInBowl(Item result,String input) {
+		RecipesUtil.addRecipe(result, new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
+				ItemLoader.iron_bowl_batter,input
+		}));
+	}
 }
