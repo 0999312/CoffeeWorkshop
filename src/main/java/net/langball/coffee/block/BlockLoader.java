@@ -95,13 +95,31 @@ public class BlockLoader {
 	public static Item cake_spongeItem = new ItemBlock(cake_sponge).setRegistryName("cake_sponge").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge");
 	public static Block cake_sponge_chocolate = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_chocolate").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_chocolate").setCreativeTab(CommonProxy.tab);
 	public static Item cake_sponge_chocolateItem = new ItemBlock(cake_sponge_chocolate).setRegistryName("cake_sponge_chocolate").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_chocolate");
+
+	public static Block cake_sponge_coffee = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_coffee").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_coffee").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_coffeeItem = new ItemBlock(cake_sponge_coffee).setRegistryName("cake_sponge_coffee").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_coffee");
+	public static Block cake_sponge_pumpkin = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_pumpkin").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_pumpkin").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_pumpkinItem = new ItemBlock(cake_sponge_pumpkin).setRegistryName("cake_sponge_pumpkin").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_pumpkin");
+	
+	public static Block cake_sponge_carrot = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_carrot").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_carrot").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_carrotItem = new ItemBlock(cake_sponge_carrot).setRegistryName("cake_sponge_carrot").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_carrot");
+	public static Block cake_sponge_redvelvet = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_redvelvet").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_redvelvetItem = new ItemBlock(cake_sponge_redvelvet).setRegistryName("cake_sponge_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_redvelvet");
+	
+	
+	public static Block cake_sponge_lemon = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_lemon").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_lemon").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_lemonItem = new ItemBlock(cake_sponge_lemon).setRegistryName("cake_sponge_lemon").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_lemon");
+	public static Block cake_sponge_tea = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_tea").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_tea").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_teaItem = new ItemBlock(cake_sponge_tea).setRegistryName("cake_sponge_tea").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_tea");
+	
+	public static Block cake_sponge_berry = new BlockCakeBasic(1,0.5F).setRegistryName("cake_sponge_berry").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_berry").setCreativeTab(CommonProxy.tab);
+	public static Item cake_sponge_berryItem = new ItemBlock(cake_sponge_berry).setRegistryName("cake_sponge_berry").setUnlocalizedName(CoffeeWork.MODID+".cake_sponge_berry");
+	
 	public static Block cake_cheese = new BlockCakeBasic(2,0.2F).setRegistryName("cake_cheese").setUnlocalizedName(CoffeeWork.MODID+".cake_cheese").setCreativeTab(CommonProxy.tab);
 	public static Item cake_cheeseItem = new ItemBlock(cake_cheese).setRegistryName("cake_cheese").setUnlocalizedName(CoffeeWork.MODID+".cake_cheese");
 	public static Block cake_schwarzwald = new BlockCakeBasic(3,0.5F).setRegistryName("cake_schwarzwald").setUnlocalizedName(CoffeeWork.MODID+".cake_schwarzwald").setCreativeTab(CommonProxy.tab);
 	public static Item cake_schwarzwaldItem = new ItemBlock(cake_schwarzwald).setRegistryName("cake_schwarzwald").setUnlocalizedName(CoffeeWork.MODID+".cake_schwarzwald");
-	public static Block cake_carrot = new BlockCakeBasic(2,0.5F).setRegistryName("cake_carrot").setUnlocalizedName(CoffeeWork.MODID+".cake_carrot").setCreativeTab(CommonProxy.tab);
-	public static Item cake_carrotItem = new ItemBlock(cake_carrot).setRegistryName("cake_carrot").setUnlocalizedName(CoffeeWork.MODID+".cake_carrot");
-	
+
 	public static Block cake_redvelvet = new BlockCakeBasic(2,0.5F).setRegistryName("cake_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_redvelvet").setCreativeTab(CommonProxy.tab);
 	public static Item cake_redvelvetItem = new ItemBlock(cake_redvelvet).setRegistryName("cake_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_redvelvet");
 	public static Block tiramisu = new BlockCakeBasic(3,0.5F).setRegistryName("tiramisu").setUnlocalizedName(CoffeeWork.MODID+".tiramisu").setCreativeTab(CommonProxy.tab);
@@ -126,17 +144,30 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(Coffee_treeItem);
 		ForgeRegistries.BLOCKS.register(BlueBerryBush);
 		ForgeRegistries.ITEMS.register(BlueBerryBushItem);
+		
 		ForgeRegistries.BLOCKS.register(cake_sponge);
 		ForgeRegistries.ITEMS.register(cake_spongeItem);
 		ForgeRegistries.BLOCKS.register(cake_sponge_chocolate);
 		ForgeRegistries.ITEMS.register(cake_sponge_chocolateItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_coffee);
+		ForgeRegistries.ITEMS.register(cake_sponge_coffeeItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_pumpkin);
+		ForgeRegistries.ITEMS.register(cake_sponge_pumpkinItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_carrot);
+		ForgeRegistries.ITEMS.register(cake_sponge_carrotItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_redvelvet);
+		ForgeRegistries.ITEMS.register(cake_sponge_redvelvetItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_lemon);
+		ForgeRegistries.ITEMS.register(cake_sponge_lemonItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_tea);
+		ForgeRegistries.ITEMS.register(cake_sponge_teaItem);
+		ForgeRegistries.BLOCKS.register(cake_sponge_berry);
+		ForgeRegistries.ITEMS.register(cake_sponge_berryItem);
+		
 		ForgeRegistries.BLOCKS.register(cake_cheese);
 		ForgeRegistries.ITEMS.register(cake_cheeseItem);
-		
 		ForgeRegistries.BLOCKS.register(cake_schwarzwald);
 		ForgeRegistries.ITEMS.register(cake_schwarzwaldItem);
-		ForgeRegistries.BLOCKS.register(cake_carrot);
-		ForgeRegistries.ITEMS.register(cake_carrotItem);
 		ForgeRegistries.BLOCKS.register(cake_redvelvet);
 		ForgeRegistries.ITEMS.register(cake_redvelvetItem);
 		ForgeRegistries.BLOCKS.register(tiramisu);
@@ -203,13 +234,23 @@ public class BlockLoader {
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
+		
+		registerRender(cake_sponge);
+		registerRender(cake_sponge_chocolate);
+		registerRender(cake_sponge_coffee);
+		registerRender(cake_sponge_pumpkin);
+		registerRender(cake_sponge_carrot);
+		registerRender(cake_sponge_redvelvet);
+		registerRender(cake_sponge_lemon);
+		registerRender(cake_sponge_tea);
+		registerRender(cake_sponge_berry);
+		
 		registerRender(cake_sponge);
 		registerRender(BlueBerryBush);
 		registerRender(cake_sponge_chocolate);
 		registerRender(cake_cheese);
 
 		registerRender(cake_schwarzwald);
-		registerRender(cake_carrot);
 		registerRender(cake_redvelvet);
 		registerRender(tiramisu);
 		registerRender(Roller);

@@ -33,7 +33,6 @@ public class SeedCoffee extends Item {
 	public SeedCoffee() {
 	super();
 	this.setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_seed");
-	this.setMaxStackSize(32);
 	}
 	 /**
      * Called when a Block is right-clicked with this Item

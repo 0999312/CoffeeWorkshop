@@ -5,6 +5,7 @@ import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.client.Minecraft;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -23,45 +24,25 @@ public class FoodCraftingRecipes {
 		RecipesUtil.addRecipe(ItemLoader.chocolate_bar, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.chocolate_bar,new Object[]{
 				ItemLoader.cocoa_batter,ItemLoader.cocoa_batter,"listAllsugar"
 		}));
-		registerCakeRecipes(new ItemStack(ItemLoader.cake_sponge_raw), new ItemStack(ItemLoader.cake_sponge_model), new ItemStack(BlockLoader.cake_spongeItem), new Object[]{
-				ItemLoader.cake_model,ItemLoader.iron_bowl_batter
-		});
-		registerCakeRecipes(new ItemStack(ItemLoader.cake_chocolate_raw), new ItemStack(ItemLoader.cake_chocolate_model), new ItemStack(BlockLoader.cake_sponge_chocolateItem), new Object[]{
-				ItemLoader.cake_model,ItemLoader.iron_bowl_batter_chocolate
-		});
-		registerCakeRecipes(new ItemStack(ItemLoader.cake_carrot_raw), new ItemStack(ItemLoader.cake_carrot_model), new ItemStack(BlockLoader.cake_carrotItem), new Object[]{
-				ItemLoader.cake_model,ItemLoader.iron_bowl_batter,Items.CARROT
-		});
+
 		registerCakeRecipes(new ItemStack(ItemLoader.cake_cheese_raw), new ItemStack(ItemLoader.cake_cheese_model), new ItemStack(BlockLoader.cake_cheeseItem), new Object[]{
 				ItemLoader.cake_model,ItemLoader.iron_bowl_cheese,"baseCake"
 		});
-		registerCakeRecipes(new ItemStack(ItemLoader.cake_redvelvet_raw), new ItemStack(ItemLoader.cake_redvelvet_model), new ItemStack(BlockLoader.cake_redvelvetItem), new Object[]{
-				ItemLoader.cake_model,ItemLoader.iron_bowl_batter_red
-		});
+
 		RecipesUtil.addRecipe(BlockLoader.cake_schwarzwaldItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_schwarzwaldItem,new Object[]{
 				BlockLoader.cake_sponge_chocolateItem,ItemLoader.chocolate_chip,"listAllsugar",ItemLoader.cream_chocolate
 		}));
 		registerCakeRecipes(new ItemStack(ItemLoader.brownie_raw), new ItemStack(ItemLoader.brownie_model), new ItemStack(ItemLoader.brownie,4), new Object[]{
 				ItemLoader.cake_model_square,ItemLoader.iron_bowl_batter_chocolate,ItemLoader.chocolate_chip
 		});
-		registerCakeRecipes(new ItemStack(ItemLoader.jiggy_cake_raw), new ItemStack(ItemLoader.jiggy_cake_model), new ItemStack(ItemLoader.jiggy_cake,4), new Object[]{
-				ItemLoader.cake_model_square,ItemLoader.iron_bowl_batter,ItemLoader.iron_bowl_batter
-		});
-		registerCakeRecipes(new ItemStack(ItemLoader.jiggy_cake_chocolate_raw), new ItemStack(ItemLoader.jiggy_cake_chocolate_model), new ItemStack(ItemLoader.jiggy_cake_chocolate,4), new Object[]{
-				ItemLoader.cake_model_square,ItemLoader.iron_bowl_batter_chocolate,ItemLoader.iron_bowl_batter_chocolate
-		});
+
 		RecipesUtil.addRecipe(ItemLoader.tiramisu_model, new ShapelessOreRecipe(new ResourceLocation(""),ItemLoader.tiramisu_model,new Object[]{
 				ItemLoader.cake_model_square,"baseCake","foodCheese",DrinksLoader.espresso,"listAllheavycream","foodCocoapowder"
 		}));
 		RecipesUtil.addRecipe(BlockLoader.tiramisuItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.tiramisuItem,new Object[]{
 				ItemLoader.tiramisu_model
 		}));
-		RecipesUtil.addRecipe(ItemLoader.cake_sponge_base, new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.cake_sponge_base,2),new Object[]{
-				BlockLoader.cake_spongeItem
-		}));
-		RecipesUtil.addRecipe(ItemLoader.cake_sponge_chocolate_base, new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.cake_sponge_chocolate_base,2),new Object[]{
-				BlockLoader.cake_sponge_chocolateItem
-		}));
+
 		RecipesUtil.addRecipe(ItemLoader.D_bar, new ShapelessOreRecipe(new ResourceLocation(""),ItemLoader.D_bar,new Object[]{
 				ItemLoader.cocoa_batter,ItemLoader.cocoa_batter,"listAllsugar","foodFlour","foodFlour"
 		}));
@@ -77,21 +58,7 @@ public class FoodCraftingRecipes {
 		RecipesUtil.addRecipe(Items.CAKE, new ShapelessOreRecipe(new ResourceLocation(""),Items.CAKE,new Object[]{
 				BlockLoader.cake_spongeItem,"listAllsugar","listAllheavycream","listAllheavycream"
 		}));
-		registerRaw2CookedRecipes(new ItemStack(ItemLoader.muffin_raw,3), new ItemStack(ItemLoader.muffin), new Object[]{
-				ItemLoader.iron_bowl_batter
-		});
-		registerRaw2CookedRecipes(new ItemStack(ItemLoader.muffin_chocolate_raw,3), new ItemStack(ItemLoader.muffin_chocolate), new Object[]{
-				ItemLoader.iron_bowl_batter_chocolate
-		});
-		registerRaw2CookedRecipes(new ItemStack(ItemLoader.muffin_berry_raw,3), new ItemStack(ItemLoader.muffin_berry), new Object[]{
-				ItemLoader.iron_bowl_batter_berry
-		});
-		registerRaw2CookedRecipes(new ItemStack(ItemLoader.muffin_redvelvet_raw,3), new ItemStack(ItemLoader.muffin_redvelvet), new Object[]{
-				ItemLoader.iron_bowl_batter_red
-		});
-		registerRaw2CookedRecipes(new ItemStack(ItemLoader.muffin_lemon_raw,3), new ItemStack(ItemLoader.muffin_lemon), new Object[]{
-				ItemLoader.iron_bowl_batter_lemon
-		});
+
 		registerRaw2CookedRecipes(new ItemStack(ItemLoader.croissant_raw,2), new ItemStack(ItemLoader.croissant), new Object[]{
 				"listAllegg","listAllsugar","foodButter","foodDough"
 		});
@@ -116,6 +83,70 @@ public class FoodCraftingRecipes {
 		registerRaw2CookedRecipes(new ItemStack(ItemLoader.mooncake_fruit_raw,2), new ItemStack(ItemLoader.mooncake_fruit), new Object[]{
 				"listAllfruit","listAllfruit","listAllsugar","foodDoughPastry",ItemLoader.mooncake_model
 		});
+		
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter),
+				new ItemStack(ItemLoader.cake_sponge_raw), new ItemStack(ItemLoader.cake_sponge_model), new ItemStack(BlockLoader.cake_sponge),
+				new ItemStack(ItemLoader.cake_sponge_plate_raw), new ItemStack(ItemLoader.cake_sponge_plate_model), new ItemStack(ItemLoader.cake_sponge_base), 
+				new ItemStack(ItemLoader.jiggy_cake_raw), new ItemStack(ItemLoader.jiggy_cake_model), new ItemStack(ItemLoader.jiggy_cake), 
+				new ItemStack(ItemLoader.muffin_raw,3), new ItemStack(ItemLoader.muffin), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar"	
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_chocolate),
+				new ItemStack(ItemLoader.cake_sponge_chocolate_raw), new ItemStack(ItemLoader.cake_sponge_chocolate_model), new ItemStack(BlockLoader.cake_sponge_chocolate),
+				new ItemStack(ItemLoader.cake_sponge_chocolate_plate_raw), new ItemStack(ItemLoader.cake_sponge_chocolate_plate_model), new ItemStack(ItemLoader.cake_sponge_chocolate_base), 
+				new ItemStack(ItemLoader.jiggy_cake_chocolate_raw), new ItemStack(ItemLoader.jiggy_cake_chocolate_model), new ItemStack(ItemLoader.jiggy_cake_chocolate), 
+				new ItemStack(ItemLoader.muffin_chocolate_raw,3), new ItemStack(ItemLoader.muffin_chocolate), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar", "foodCocoapowder"	
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_coffee),
+				new ItemStack(ItemLoader.cake_sponge_coffee_raw), new ItemStack(ItemLoader.cake_sponge_coffee_model), new ItemStack(BlockLoader.cake_sponge_coffee),
+				new ItemStack(ItemLoader.cake_sponge_coffee_plate_raw), new ItemStack(ItemLoader.cake_sponge_coffee_plate_model), new ItemStack(ItemLoader.cake_sponge_coffee_base), 
+				new ItemStack(ItemLoader.jiggy_cake_coffee_raw), new ItemStack(ItemLoader.jiggy_cake_coffee_model), new ItemStack(ItemLoader.jiggy_cake_coffee), 
+				new ItemStack(ItemLoader.muffin_coffee_raw,3), new ItemStack(ItemLoader.muffin_coffee), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","dustCoffee"	
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_pumpkin),
+				new ItemStack(ItemLoader.cake_sponge_pumpkin_raw), new ItemStack(ItemLoader.cake_sponge_pumpkin_model), new ItemStack(BlockLoader.cake_sponge_pumpkin),
+				new ItemStack(ItemLoader.cake_sponge_pumpkin_plate_raw), new ItemStack(ItemLoader.cake_sponge_pumpkin_plate_model), new ItemStack(ItemLoader.cake_sponge_pumpkin_base), 
+				new ItemStack(ItemLoader.jiggy_cake_pumpkin_raw), new ItemStack(ItemLoader.jiggy_cake_pumpkin_model), new ItemStack(ItemLoader.jiggy_cake_pumpkin), 
+				new ItemStack(ItemLoader.muffin_pumpkin_raw,3), new ItemStack(ItemLoader.muffin_pumpkin), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","cropPumpkin"
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_carrot),
+				new ItemStack(ItemLoader.cake_sponge_carrot_raw), new ItemStack(ItemLoader.cake_sponge_carrot_model), new ItemStack(BlockLoader.cake_sponge_carrot),
+				new ItemStack(ItemLoader.cake_sponge_carrot_plate_raw), new ItemStack(ItemLoader.cake_sponge_carrot_plate_model), new ItemStack(ItemLoader.cake_sponge_carrot_base), 
+				new ItemStack(ItemLoader.jiggy_cake_carrot_raw), new ItemStack(ItemLoader.jiggy_cake_carrot_model), new ItemStack(ItemLoader.jiggy_cake_carrot), 
+				new ItemStack(ItemLoader.muffin_carrot_raw,3), new ItemStack(ItemLoader.muffin_carrot), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","cropCarrot"
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_red),
+				new ItemStack(ItemLoader.cake_sponge_redvelvet_raw), new ItemStack(ItemLoader.cake_sponge_redvelvet_model), new ItemStack(BlockLoader.cake_sponge_redvelvet),
+				new ItemStack(ItemLoader.cake_sponge_redvelvet_plate_raw), new ItemStack(ItemLoader.cake_sponge_redvelvet_plate_model), new ItemStack(ItemLoader.cake_sponge_redvelvet_base), 
+				new ItemStack(ItemLoader.jiggy_cake_redvelvet_raw), new ItemStack(ItemLoader.jiggy_cake_redvelvet_model), new ItemStack(ItemLoader.jiggy_cake_redvelvet), 
+				new ItemStack(ItemLoader.muffin_redvelvet_raw,3), new ItemStack(ItemLoader.muffin_redvelvet), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","dyeRed"
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_lemon),
+				new ItemStack(ItemLoader.cake_sponge_lemon_raw), new ItemStack(ItemLoader.cake_sponge_lemon_model), new ItemStack(BlockLoader.cake_sponge_lemon),
+				new ItemStack(ItemLoader.cake_sponge_lemon_plate_raw), new ItemStack(ItemLoader.cake_sponge_lemon_plate_model), new ItemStack(ItemLoader.cake_sponge_lemon_base), 
+				new ItemStack(ItemLoader.jiggy_cake_lemon_raw), new ItemStack(ItemLoader.jiggy_cake_lemon_model), new ItemStack(ItemLoader.jiggy_cake_lemon), 
+				new ItemStack(ItemLoader.muffin_lemon_raw,3), new ItemStack(ItemLoader.muffin_lemon), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","cropLemon"
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_tea),
+				new ItemStack(ItemLoader.cake_sponge_tea_raw), new ItemStack(ItemLoader.cake_sponge_tea_model), new ItemStack(BlockLoader.cake_sponge_tea),
+				new ItemStack(ItemLoader.cake_sponge_tea_plate_raw), new ItemStack(ItemLoader.cake_sponge_tea_plate_model), new ItemStack(ItemLoader.cake_sponge_tea_base), 
+				new ItemStack(ItemLoader.jiggy_cake_tea_raw), new ItemStack(ItemLoader.jiggy_cake_tea_model), new ItemStack(ItemLoader.jiggy_cake_tea), 
+				new ItemStack(ItemLoader.muffin_tea_raw,3), new ItemStack(ItemLoader.muffin_tea), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","dustMatcha"
+				});
+		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_berry),
+				new ItemStack(ItemLoader.cake_sponge_berry_raw), new ItemStack(ItemLoader.cake_sponge_berry_model), new ItemStack(BlockLoader.cake_sponge_berry),
+				new ItemStack(ItemLoader.cake_sponge_berry_plate_raw), new ItemStack(ItemLoader.cake_sponge_berry_plate_model), new ItemStack(ItemLoader.cake_sponge_berry_base), 
+				new ItemStack(ItemLoader.jiggy_cake_berry_raw), new ItemStack(ItemLoader.jiggy_cake_berry_model), new ItemStack(ItemLoader.jiggy_cake_berry), 
+				new ItemStack(ItemLoader.muffin_berry_raw,3), new ItemStack(ItemLoader.muffin_berry), new Object[]{
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar", "listAllberry"	
+				});
 	}
 		private static void registerCakeRecipes(ItemStack cake_raw,ItemStack cake_model,ItemStack cake,Object... recipe) {
 			RecipesUtil.addRecipe(cake_raw.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake_raw,recipe));
@@ -123,6 +154,25 @@ public class FoodCraftingRecipes {
 			RecipesUtil.addRecipe(cake.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake,new Object[]{
 					cake_model
 			}));
+		}
+		private static void registerCakeRecipes(
+				ItemStack batter,ItemStack cake_raw,ItemStack cake_model,ItemStack cake,
+				ItemStack cake_plate_raw,ItemStack cake_plate_model,ItemStack cake_plate,
+				ItemStack jiggycake_raw,ItemStack jiggycake_model,ItemStack jiggycake,
+				ItemStack muffin_raw,ItemStack muffin,Object... recipe) {
+			RecipesUtil.addRecipe(batter.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),batter,recipe));
+			registerCakeRecipes(cake_raw,cake_model,cake,new Object[]{
+					ItemLoader.cake_model,batter
+			});
+			registerCakeRecipes(cake_plate_raw,cake_plate_model,cake_plate,new Object[]{
+					ItemLoader.cake_model_plate,batter
+			});
+			registerCakeRecipes(jiggycake_raw,jiggycake_model,jiggycake,new Object[]{
+					ItemLoader.cake_model_square,batter,batter
+			});
+			registerRaw2CookedRecipes(muffin_raw, muffin, new Object[]{
+					batter
+			});
 		}
 		private static void registerRaw2CookedRecipes(ItemStack cake_raw,ItemStack cake,Object... recipe) {
 			RecipesUtil.addRecipe(cake_raw.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake_raw,recipe));

@@ -86,8 +86,11 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe(ItemLoader.mooncake_model, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.mooncake_model,new Object[]{
 				 "IWI",'I',"ingotIron",'W',"plateIron"
 		}));
+		RecipesUtil.addRecipe(ItemLoader.cake_model_plate, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.cake_model_plate,new Object[]{
+				"IWI",'I',"plateIron",'W',"ingotIron"
+		}));
 		RecipesUtil.addRecipe(ItemLoader.cake_model_square, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.cake_model_square,new Object[]{
-				"III","IWI","III",'I',"ingotIron",'W',"plateIron"
+				"IWI",'I',"plateIron",'W',ItemLoader.cake_model_plate
 		}));
 		RecipesUtil.addRecipe(ItemLoader.iron_bowl_egg, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_egg,new Object[]{
 				ItemLoader.iron_bowl,"listAllegg","listAllegg","listAllegg"
@@ -95,10 +98,10 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe(ItemLoader.iron_bowl_cheese, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_cheese,new Object[]{
 				ItemLoader.iron_bowl,"foodCheese","foodCheese","listAllheavycream"
 		}));
-		
-		RecipesUtil.addRecipe(ItemLoader.iron_bowl_batter, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl_batter,new Object[]{
-				ItemLoader.iron_bowl,ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar"
-		}));
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_coffee, "dustCoffee");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_pumpkin, "cropPumpkin");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_tea, "dustMatcha");
+		registerBatterInBowl(ItemLoader.iron_bowl_batter_carrot, "cropCarrot");
 		registerBatterInBowl(ItemLoader.iron_bowl_batter_berry, "listAllberry");
 		registerBatterInBowl(ItemLoader.iron_bowl_batter_chocolate, "foodCocoapowder");
 		registerBatterInBowl(ItemLoader.iron_bowl_batter_lemon, "cropLemon");
@@ -278,13 +281,9 @@ public class MaterialCraftingRecipes {
 				BlockLoader.plateItem,icecream
 		}));
 	}
-	public static void registerBatterInBowl(Item result,Item input) {
-		RecipesUtil.addRecipe(result, new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
-				ItemLoader.iron_bowl_batter,input
-		}));
-	}
+
 	public static void registerBatterInBowl(Item result,String input) {
-		RecipesUtil.addRecipe(result, new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
+		RecipesUtil.addRecipe(result.getRegistryName().toString()+"_2", new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
 				ItemLoader.iron_bowl_batter,input
 		}));
 	}

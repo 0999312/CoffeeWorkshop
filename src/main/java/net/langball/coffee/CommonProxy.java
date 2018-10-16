@@ -38,7 +38,7 @@ public class CommonProxy {
 		}
 	};
 	 public void preInit(FMLPreInitializationEvent event)
-	    {
+	 	{
 		 new ConfigLoader(event);
 		 new BlockLoader(event);
 		 new TileEntityLoader(event);
@@ -80,6 +80,5 @@ public class CommonProxy {
 
     public void postInit(FMLPostInitializationEvent event)
     {
-
     }
 }

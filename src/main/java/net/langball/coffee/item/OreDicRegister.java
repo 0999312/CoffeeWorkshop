@@ -7,6 +7,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
+import roito.teastory.TeaStory;
+import roito.teastory.item.ItemRegister;
 
 public class OreDicRegister {
 	public OreDicRegister() {
@@ -22,10 +24,22 @@ public class OreDicRegister {
 	OreDictionary.registerOre("listAllegg", Items.EGG);
 	OreDictionary.registerOre("listAllwheat", Items.WHEAT);
 	OreDictionary.registerOre("listAllgrain", Items.WHEAT);
+    OreDictionary.registerOre("cropCarrot", Items.CARROT);
+    OreDictionary.registerOre("cropPotato", Items.POTATO);
+    OreDictionary.registerOre("cropPumpkin", Blocks.PUMPKIN);
+    OreDictionary.registerOre("cropWheat", Items.WHEAT);
+    OreDictionary.registerOre("cropBeet", Items.BEETROOT);
 	OreDictionary.registerOre("bread", ItemLoader.baguette);
 	OreDictionary.registerOre("foodBread", ItemLoader.baguette);
 	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_base);
 	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_chocolate_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_coffee_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_tea_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_pumpkin_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_redvelvet_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_lemon_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_carrot_base);
+	OreDictionary.registerOre("baseCake", ItemLoader.cake_sponge_berry_base);
 	OreDictionary.registerOre("foodCocoapowder", ItemLoader.cocoa_powder);
 	OreDictionary.registerOre("foodChocolatebar", ItemLoader.chocolate_bar);
     OreDictionary.registerOre("cropApple", Items.APPLE);
@@ -62,6 +76,9 @@ public class OreDicRegister {
     OreDictionary.registerOre("plateDough", ItemLoader.plate_dough);
     if(Loader.isModLoaded(ClimateMain.MOD_ID)){
     	OreDictionary.registerOre("beanCoffee",new ItemStack(FoodInit.teaLeaves, 1, 0));
+    }
+    if(Loader.isModLoaded(TeaStory.MODID)){
+    	OreDictionary.registerOre("dustMatcha",new ItemStack(ItemRegister.matcha_powder, 1, 0));
     }
 	}
 	
