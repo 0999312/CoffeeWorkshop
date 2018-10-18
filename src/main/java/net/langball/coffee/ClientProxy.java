@@ -18,7 +18,8 @@ public class ClientProxy extends CommonProxy {
 	        super.preInit(event);
 	        ItemLoader.registerRenders();
 	        DrinksLoader.registerRenders();
-	        if(Loader.isModLoaded(TeaStory.MODID))TeaStoriesCompatDrinks.registerRenders();
+	        if(Loader.isModLoaded(TeaStory.MODID))
+	        	TeaStoriesCompatDrinks.registerRenders();
 	        BlockLoader.registerRenders();
 	    }
 	public void initializeItemRenderer() {

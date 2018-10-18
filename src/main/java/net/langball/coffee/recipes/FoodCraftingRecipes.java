@@ -32,6 +32,12 @@ public class FoodCraftingRecipes {
 		RecipesUtil.addRecipe(BlockLoader.cake_schwarzwaldItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_schwarzwaldItem,new Object[]{
 				BlockLoader.cake_sponge_chocolateItem,ItemLoader.chocolate_chip,"listAllsugar",ItemLoader.cream_chocolate
 		}));
+		
+
+		RecipesUtil.addRecipe(BlockLoader.cake_redvelvetItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_redvelvetItem,new Object[]{
+				BlockLoader.cake_sponge_redvelvetItem,"listAllsugar","foodCheese","foodCheese"
+		}));
+		
 		registerCakeRecipes(new ItemStack(ItemLoader.brownie_raw), new ItemStack(ItemLoader.brownie_model), new ItemStack(ItemLoader.brownie,4), new Object[]{
 				ItemLoader.cake_model_square,ItemLoader.iron_bowl_batter_chocolate,ItemLoader.chocolate_chip
 		});
@@ -138,7 +144,7 @@ public class FoodCraftingRecipes {
 				new ItemStack(ItemLoader.cake_sponge_tea_plate_raw), new ItemStack(ItemLoader.cake_sponge_tea_plate_model), new ItemStack(ItemLoader.cake_sponge_tea_base), 
 				new ItemStack(ItemLoader.jiggy_cake_tea_raw), new ItemStack(ItemLoader.jiggy_cake_tea_model), new ItemStack(ItemLoader.jiggy_cake_tea), 
 				new ItemStack(ItemLoader.muffin_tea_raw,3), new ItemStack(ItemLoader.muffin_tea), new Object[]{
-					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","dustMatcha"
+					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar","cropTea"
 				});
 		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter_berry),
 				new ItemStack(ItemLoader.cake_sponge_berry_raw), new ItemStack(ItemLoader.cake_sponge_berry_model), new ItemStack(BlockLoader.cake_sponge_berry),

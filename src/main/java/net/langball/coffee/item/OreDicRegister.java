@@ -77,9 +77,7 @@ public class OreDicRegister {
     if(Loader.isModLoaded(ClimateMain.MOD_ID)){
     	OreDictionary.registerOre("beanCoffee",new ItemStack(FoodInit.teaLeaves, 1, 0));
     }
-    if(Loader.isModLoaded(TeaStory.MODID)){
-    	OreDictionary.registerOre("dustMatcha",new ItemStack(ItemRegister.matcha_powder, 1, 0));
-    }
+ 
 	}
 	
 }

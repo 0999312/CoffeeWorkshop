@@ -10,6 +10,14 @@ item.coffeework.bag.name=Bag
 
 tile.coffeework.cake_sponge.name=Sponge Cake
 tile.coffeework.cake_sponge_chocolate.name=Chocolate Sponge Cake
+tile.coffeework.cake_sponge_coffee.name=Coffee Sponge Cake
+tile.coffeework.cake_sponge_carrot.name=Carrot Sponge Cake
+tile.coffeework.cake_sponge_pumpkin.name=Pumpkin Sponge Cake
+tile.coffeework.cake_sponge_tea.name=Matcha Sponge Cake
+tile.coffeework.cake_sponge_berry.name=Berry Sponge Cake
+tile.coffeework.cake_sponge_lemon.name=Lemon Sponge Cake
+tile.coffeework.cake_sponge_redvelvet.name=Red Velvet Sponge Cake
+
 tile.coffeework.cake_cheese.name=Cheese Cake
 tile.coffeework.cake_schwarzwald.name=Schwarzwald Cake
 tile.coffeework.cake_carrot.name=Carrot Cake
@@ -113,6 +121,8 @@ item.coffeework.cream_berry.name=Mix berry Cream
 item.coffeework.cream_lemon.name=Lemon Cream
 item.coffeework.cream_melon.name=Melon Cream
 
+
+
 item.coffeework.milk_form.name=Milk form
 item.coffeework.mixing_bowl.name=Mixing Bowl
 item.coffeework.yeast.name=Yeast
@@ -129,35 +139,122 @@ item.coffeework.cookie_icecream_melon.name=Melon Cookie Sundae
 
 item.coffeework.cake_sponge_raw.name=Raw Sponge Cake
 item.coffeework.cake_sponge_chocolate_raw.name=Raw Chocolate Sponge Cake
-item.coffeework.cake_cheese_raw.name=Raw Cheese Cake
-item.coffeework.cake_carrot_raw.name=Raw Carrot Cake
-item.coffeework.cake_redvelvet_raw.name=Raw Red Velvet Cake
-item.coffeework.brownie_raw.name=Raw Brownie
+item.coffeework.cake_sponge_coffee_raw.name=Raw Coffee Sponge Cake
+item.coffeework.cake_sponge_carrot_raw.name=Raw Carrot Sponge Cake
+item.coffeework.cake_sponge_pumpkin_raw.name=Raw Pumpkin Sponge Cake
+item.coffeework.cake_sponge_tea_raw.name=Raw Matcha Sponge Cake
+item.coffeework.cake_sponge_berry_raw.name=Raw Berry Sponge Cake
+item.coffeework.cake_sponge_lemon_raw.name=Raw Lemon Sponge Cake
+item.coffeework.cake_sponge_redvelvet_raw.name=Raw Red Velvet Sponge Cake
 
 item.coffeework.cake_sponge_model.name=Sponge Cake(In Model)
 item.coffeework.cake_sponge_chocolate_model.name=Chocolate Sponge Cake(In Model)
+item.coffeework.cake_sponge_coffee_model.name=Coffee Sponge Cake(In Model)
+item.coffeework.cake_sponge_carrot_model.name=Carrot Sponge Cake(In Model)
+item.coffeework.cake_sponge_pumpkin_model.name=Pumpkin Sponge Cake(In Model)
+item.coffeework.cake_sponge_tea_model.name=Matcha Sponge Cake(In Model)
+item.coffeework.cake_sponge_berry_model.name=Berry Sponge Cake(In Model)
+item.coffeework.cake_sponge_lemon_model.name=Lemon Sponge Cake(In Model)
+item.coffeework.cake_sponge_redvelvet_model.name=Red Velvet Sponge Cake(In Model)
+
+item.coffeework.cake_sponge_plate_raw.name=Raw Sponge Cake Plate
+item.coffeework.cake_sponge_chocolate_plate_raw.name=Raw Chocolate Sponge Cake Plate
+item.coffeework.cake_sponge_coffee_plate_raw.name=Raw Coffee Sponge Cake Plate
+item.coffeework.cake_sponge_carrot_plate_raw.name=Raw Carrot Sponge Cake Plate
+item.coffeework.cake_sponge_pumpkin_plate_raw.name=Raw Pumpkin Sponge Cake Plate
+item.coffeework.cake_sponge_tea_plate_raw.name=Raw Matcha Sponge Cake Plate
+item.coffeework.cake_sponge_berry_plate_raw.name=Raw Berry Sponge Cake Plate
+item.coffeework.cake_sponge_lemon_plate_raw.name=Raw Lemon Sponge Cake Plate
+item.coffeework.cake_sponge_redvelvet_plate_raw.name=Raw Red Velvet Sponge Cake Plate
+
+item.coffeework.cake_sponge_plate_model.name=Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_chocolate_plate_model.name=Chocolate Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_coffee_plate_model.name=Coffee Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_carrot_plate_model.name=Carrot Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_pumpkin_plate_model.name=Pumpkin Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_tea_plate_model.name=Matcha Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_berry_plate_model.name=Berry Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_lemon_plate_model.name=Lemon Sponge Cake Plate(In Model)
+item.coffeework.cake_sponge_redvelvet_plate_model.name=Red Velvet Sponge Cake Plate(In Model)
+
+item.coffeework.cake_sponge_base.name=Sponge Cake Plate
+item.coffeework.cake_sponge_chocolate_base.name=Chocolate Sponge Cake Plate
+item.coffeework.cake_sponge_coffee_base.name=Coffee Sponge Cake Plate
+item.coffeework.cake_sponge_carrot_base.name=Carrot Sponge Cake Plate
+item.coffeework.cake_sponge_pumpkin_base.name=Pumpkin Sponge Cake Plate
+item.coffeework.cake_sponge_tea_base.name=Matcha Sponge Cake Plate
+item.coffeework.cake_sponge_berry_base.name=Berry Sponge Cake Plate
+item.coffeework.cake_sponge_lemon_base.name=Lemon Sponge Cake Plate
+item.coffeework.cake_sponge_redvelvet_base.name=Red Velvet Sponge Cake Plate
+
+item.coffeework.jiggy_cake_raw.name=Raw Sponge Jiggy Cake
+item.coffeework.jiggy_cake_chocolate_raw.name=Raw Chocolate Sponge Jiggy Cake
+item.coffeework.jiggy_cake_coffee_raw.name=Raw Coffee Sponge Jiggy Cake
+item.coffeework.jiggy_cake_carrot_raw.name=Raw Carrot Sponge Jiggy Cake
+item.coffeework.jiggy_cake_pumpkin_raw.name=Raw Pumpkin Sponge Jiggy Cake
+item.coffeework.jiggy_cake_tea_raw.name=Raw Matcha Sponge Jiggy Cake
+item.coffeework.jiggy_cake_berry_raw.name=Raw Berry Sponge Jiggy Cake
+item.coffeework.jiggy_cake_lemon_raw.name=Raw Lemon Sponge Jiggy Cake
+item.coffeework.jiggy_cake_redvelvet_raw.name=Raw Red Velvet Sponge Jiggy Cake
+
+item.coffeework.jiggy_cake_model.name=Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_chocolate_model.name=Chocolate Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_coffee_model.name=Coffee Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_carrot_model.name=Carrot Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_pumpkin_model.name=Pumpkin Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_tea_model.name=Matcha Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_berry_model.name=Berry Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_lemon_model.name=Lemon Jiggy Cake(In Model)
+item.coffeework.jiggy_cake_redvelvet_model.name=Red Velvet Jiggy Cake(In Model)
+
+item.coffeework.jiggy_cake.name=Jiggy Cake
+item.coffeework.jiggy_cake_chocolate.name=Chocolate Jiggy Cake
+item.coffeework.jiggy_cake_coffee.name=Coffee Jiggy Cake
+item.coffeework.jiggy_cake_carrot.name=Carrot Jiggy Cake
+item.coffeework.jiggy_cake_pumpkin.name=Pumpkin Jiggy Cake
+item.coffeework.jiggy_cake_tea.name=Matcha Jiggy Cake
+item.coffeework.jiggy_cake_berry.name=Berry Jiggy Cake
+item.coffeework.jiggy_cake_lemon.name=Lemon Jiggy Cake
+item.coffeework.jiggy_cake_redvelvet.name=Red Velvet Jiggy Cake
+
+item.coffeework.cake_cheese_raw.name=Raw Cheese Cake
+item.coffeework.brownie_raw.name=Raw Brownie
+
 item.coffeework.cake_cheese_model.name=Cheese Cake(In Model)
-item.coffeework.cake_carrot_model.name=Carrot Cake(In Model)
-item.coffeework.cake_redvelvet_model.name=Red Velvet Cake(In Model)
 item.coffeework.brownie_model.name=Brownie(In Model)
 item.coffeework.tiramisu_model.name=Tiramisu(In Model)
 
 item.coffeework.muffin_raw.name=Raw Muffin
+item.coffeework.muffin.name=Muffin
 item.coffeework.muffin_chocolate_raw.name=Raw Chocolate Muffin
-item.coffeework.croissant_raw.name=Raw Croissant
-item.coffeework.croissant_chocolate_raw.name=Raw Chocolate Croissant
-item.coffeework.croissant_chocolate_raw.name=Raw Chocolate Croissant
 item.coffeework.muffin_berry_raw.name=Raw Berry Muffin
 item.coffeework.muffin_berry.name=Berry Muffin
 item.coffeework.muffin_chocolate.name=Chocolate Muffin
+item.coffeework.muffin_lemon.name=Lemon Muffin
+item.coffeework.muffin_lemon_raw.name=Raw Lemon Muffin
+item.coffeework.muffin_redvelvet.name=Red Velvet Muffin
+item.coffeework.muffin_redvelvet_raw.name=Raw Red Velvet Muffin
+item.coffeework.muffin_tea.name=Matcha Muffin
+item.coffeework.muffin_tea_raw.name=Raw Matcha Muffin
+item.coffeework.muffin_coffee.name=Coffee Muffin
+item.coffeework.muffin_coffee_raw.name=Raw Coffee Muffin
+item.coffeework.muffin_carrot.name=Carrot Muffin
+item.coffeework.muffin_carrot_raw.name=Raw Carrot Muffin
+item.coffeework.muffin_pumpkin.name=Pumpkin Muffin
+item.coffeework.muffin_pumpkin_raw.name=Raw Pumpkin Muffin
+
+item.coffeework.croissant_raw.name=Raw Croissant
+item.coffeework.croissant_chocolate_raw.name=Raw Chocolate Croissant
 item.coffeework.croissant.name=Croissant
 item.coffeework.croissant_chocolate.name=Chocolate Croissant
+
 item.coffeework.bucket_cream.name=Cream Bucket
 item.coffeework.bucket_butter.name=Butter Bucket
 item.coffeework.butter.name=Butter
 item.coffeework.cheese.name=Cheese
 item.coffeework.cake_model.name=Round Cake Model
 item.coffeework.cake_model_square.name=Square Cake Model
+item.coffeework.cake_model_plate.name=Cake Plate Model
 item.coffeework.brownie.name=Brownie
 item.coffeework.field_ration_d.name=Field Ration D
 
@@ -182,14 +279,6 @@ item.coffeework.dough_pastry.name=Pastry Dough
 item.coffeework.plate_dough.name=Dough Plate
 item.coffeework.plate_dough_pastry.name=Pastry Dough Plate
 
-item.coffeework.jiggy_cake_raw.name=Raw Jiggy Cake
-item.coffeework.jiggy_cake_chocolate_raw.name=Raw Chocolate Jiggy Cake
-item.coffeework.jiggy_cake_model.name=Jiggy Cake(In Model)
-item.coffeework.jiggy_cake_chocolate_model.name=Chocolate Jiggy Cake(In Model)
-item.coffeework.jiggy_cake.name=Jiggy Cake
-item.coffeework.jiggy_cake_chocolate.name=Chocolate Jiggy Cake
-item.coffeework.cake_sponge_base.name=Sponge Cake Base
-item.coffeework.cake_sponge_chocolate_base.name=Chocolate Sponge Cake Base
 item.coffeework.iron_bowl.name=Iron Bowl
 item.coffeework.iron_bowl_egg.name=Egg(Iron Bowl)
 item.coffeework.iron_bowl_cheese.name=Cheese(Iron Bowl)
@@ -198,10 +287,10 @@ item.coffeework.iron_bowl_batter_berry.name=Berry Cake Batter(Iron Bowl)
 item.coffeework.iron_bowl_batter_chocolate.name=Chocolate Cake Batter(Iron Bowl)
 item.coffeework.iron_bowl_batter_red.name=Red Velvet Cake Batter(Iron Bowl)
 item.coffeework.iron_bowl_batter_lemon.name=Lemon Cake Batter(Iron Bowl)
-item.coffeework.muffin_lemon.name=Lemon Muffin
-item.coffeework.muffin_lemon_raw.name=Raw Lemon Muffin
-item.coffeework.muffin_redvelvet.name=Red Velvet Muffin
-item.coffeework.muffin_redvelvet_raw.name=Raw Red Velvet Muffin
+item.coffeework.iron_bowl_batter_carrot.name=Carrot Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_pumpkin.name=Pumpkin Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_tea.name=Matcha Cake Batter(Iron Bowl)
+item.coffeework.iron_bowl_batter_coffee.name=Coffee Cake Batter(Iron Bowl)
 
 #TABS
 itemGroup.coffee_workshop=Coffee Workshop
