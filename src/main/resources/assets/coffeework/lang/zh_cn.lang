@@ -24,6 +24,12 @@ tile.coffeework.cake_carrot.name=胡萝卜蛋糕
 tile.coffeework.cake_redvelvet.name=红丝绒蛋糕
 tile.coffeework.tiramisu.name=提拉米苏
 
+tile.coffeework.cake_harvest.name=丰收蛋糕
+tile.coffeework.cake_tea.name=抹茶蛋糕
+tile.coffeework.cake_berry.name=莓果蛋糕
+tile.coffeework.cake_lemon.name=夏日蛋糕
+tile.coffeework.cake_coffee.name=拿铁蛋糕
+
 tile.coffeework.double_bag_coffee_powder.name=咖啡粉两袋
 tile.coffeework.double_bag_cocoa.name=可可豆两袋
 tile.coffeework.double_bag_cocoa_powder.name=可可粉两袋
@@ -189,13 +195,23 @@ item.coffeework.cake_sponge_redvelvet_base.name=红丝绒海绵蛋糕版
 
 item.coffeework.jiggy_cake_raw.name=枕头蛋糕糊
 item.coffeework.jiggy_cake_chocolate_raw.name=巧克力枕头蛋糕糊
-item.coffeework.jiggy_cake_coffee_raw.name=咖啡枕头蛋糕
-item.coffeework.jiggy_cake_carrot_raw.name=胡萝卜枕头蛋糕
-item.coffeework.jiggy_cake_pumpkin_raw.name=南瓜枕头蛋糕
-item.coffeework.jiggy_cake_tea_raw.name=抹茶枕头蛋糕
+item.coffeework.jiggy_cake_coffee_raw.name=咖啡枕头蛋糕糊
+item.coffeework.jiggy_cake_carrot_raw.name=胡萝卜枕头蛋糕糊
+item.coffeework.jiggy_cake_pumpkin_raw.name=南瓜枕头蛋糕糊
+item.coffeework.jiggy_cake_tea_raw.name=抹茶枕头蛋糕糊
 item.coffeework.jiggy_cake_berry_raw.name=莓果枕头蛋糕糊
-item.coffeework.jiggy_cake_lemon_raw.name=柠檬枕头蛋糕
+item.coffeework.jiggy_cake_lemon_raw.name=柠檬枕头蛋糕糊
 item.coffeework.jiggy_cake_redvelvet_raw.name=红丝绒枕头蛋糕糊
+
+item.coffeework.cake_roll.name=蛋糕卷
+item.coffeework.cake_chocolate_roll.name=巧克力蛋糕卷
+item.coffeework.cake_coffee_roll.name=咖啡蛋糕卷
+item.coffeework.cake_carrot_roll.name=胡萝卜蛋糕卷
+item.coffeework.cake_pumpkin_roll.name=南瓜蛋糕卷
+item.coffeework.cake_tea_roll.name=抹茶蛋糕卷
+item.coffeework.cake_berry_roll.name=莓果蛋糕卷
+item.coffeework.cake_lemon_roll.name=柠檬蛋糕卷
+item.coffeework.cake_redvelvet_roll.name=红丝绒蛋糕卷
 
 item.coffeework.jiggy_cake_model.name=枕头蛋糕（模具）
 item.coffeework.jiggy_cake_chocolate_model.name=巧克力枕头蛋糕（模具）
@@ -292,6 +308,15 @@ item.coffeework.iron_bowl_batter_pumpkin.name=南瓜蛋糕糊（铁碗）
 item.coffeework.iron_bowl_batter_tea.name=抹茶蛋糕糊（铁碗）
 item.coffeework.iron_bowl_batter_coffee.name=咖啡蛋糕糊（铁碗）
 
+item.coffeework.records_kusa_noshi_to_ne.name=唱片
+item.coffeework.records_lazy_lady_kaguya.name=唱片
+item.coffeework.records_the_grimoire_of_marisa.name=唱片
+item.coffeework.record_blank.name=空唱片
+item.record.kusa_noshi_to_ne.desc=沁墨蓝汐-草の茵（钢琴X小提琴）（已下架）
+item.record.lazy_lady_kaguya.desc=沁墨蓝汐-懒散的辉夜姬
+item.record.the_grimoire_of_marisa.desc=沁墨蓝汐-The Grimoire of Marisa（已下架）
+word.thanks2lanxi.name=感谢 沁墨蓝汐 的授权，网易云音乐ID：沁墨蓝汐
+
 #TABS
 itemGroup.coffee_workshop=咖啡工坊
 
@@ -330,8 +355,14 @@ achievement.coffeework.bag.title=你要袋子吗？
 achievement.coffeework.bag_monster.title=我要成山的袋子！
 achievement.coffeework.bag.desc=制作一个袋子。
 achievement.coffeework.bag_monster.desc=同时得到所有的双层袋子。
-
+coffee.effect.relax=放松
 #Word
+coffee.result.one.name=今天是个好日子。
+coffee.result.two.name=今天不会太烦人。
+coffee.result.three.name=今天过的还可以。
+coffee.result.four.name=今天会有点难受。
+coffee.result.five.name=今天不是好日子。
+
 word.coffeework.coffee.name=这是黑咖啡。
 word.coffeework.coffee_milk.name=咖啡最好的朋友。
 
@@ -358,8 +389,4 @@ word.coffeework.coffee_milk_tea_ice.name=为什么洛骁没有做这个呢？
 word.coffeework.coffee_green_tea_ice.name=冰绿茶
 word.coffeework.coffee_black_tea_ice.name=请不要在这里刷INM梗。
 
-coffee.result.1=今天是个好日子。
-coffee.result.2=今天不会太烦人。
-coffee.result.3=今天过的还可以。
-coffee.result.4=今天会有点难受。
-coffee.result.5=今天不是好日子。
+

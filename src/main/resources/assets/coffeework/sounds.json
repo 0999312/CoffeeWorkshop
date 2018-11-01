@@ -1,0 +1,28 @@
+{"records.kusa_noshi_to_ne": {
+        "category": "record", 
+        "sounds": [
+          {
+            "name": "coffeework:records/kusa_noshi_to_ne",
+            "stream": true
+          }
+        ] 
+    },
+	"records.lazy_lady_kaguya": {
+        "category": "record", 
+        "sounds": [
+          {
+            "name": "coffeework:records/lazy_lady_kaguya",
+            "stream": true
+          }
+        ] 
+    },
+	"records.the_grimoire_of_marisa": {
+        "category": "record", 
+        "sounds": [
+          {
+            "name": "coffeework:records/the_grimoire_of_marisa",
+            "stream": true
+          }
+        ] 
+    }
+}

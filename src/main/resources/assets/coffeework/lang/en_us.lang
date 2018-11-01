@@ -24,6 +24,22 @@ tile.coffeework.cake_carrot.name=Carrot Cake
 tile.coffeework.cake_redvelvet.name=Red Velvet Cake
 tile.coffeework.tiramisu.name=Tiramisu
 
+tile.coffeework.cake_harvest.name=Harvest Cake
+tile.coffeework.cake_tea.name=Matcha Cake
+tile.coffeework.cake_berry.name=Berry mix Cake
+tile.coffeework.cake_lemon.name=Summer day Cake
+tile.coffeework.cake_coffee.name=Latté Cake
+
+item.coffeework.cake_roll.name=Cake Roll
+item.coffeework.cake_chocolate_roll.name=Chocolate Cake Roll
+item.coffeework.cake_coffee_roll.name=Coffee Cake Roll
+item.coffeework.cake_carrot_roll.name=Carrot Cake Roll
+item.coffeework.cake_pumpkin_roll.name=Pumpkin Cake Roll
+item.coffeework.cake_tea_roll.name=Matcha Cake Roll
+item.coffeework.cake_berry_roll.name=Berry Cake Roll
+item.coffeework.cake_lemon_roll.name=Lemon Cake Roll
+item.coffeework.cake_redvelvet_roll.name=Red Velvet Cake Roll
+
 tile.coffeework.double_bag_coffee_powder.name=Two Coffee Powder Bags
 tile.coffeework.double_bag_cocoa.name=Two Cocoa Bean Bags
 tile.coffeework.double_bag_cocoa_powder.name=Two Cocoa Powder Bags
@@ -292,6 +308,16 @@ item.coffeework.iron_bowl_batter_pumpkin.name=Pumpkin Cake Batter(Iron Bowl)
 item.coffeework.iron_bowl_batter_tea.name=Matcha Cake Batter(Iron Bowl)
 item.coffeework.iron_bowl_batter_coffee.name=Coffee Cake Batter(Iron Bowl)
 
+item.coffeework.records_kusa_noshi_to_ne.name=Record
+item.coffeework.records_lazy_lady_kaguya.name=Record
+item.coffeework.records_the_grimoire_of_marisa.name=Record
+item.coffeework.record_blank.name=Blank Record
+item.record.kusa_noshi_to_ne.desc=Lanxi-Kusa noshi to ne(Piano & violin)(Has been removed)
+item.record.lazy_lady_kaguya.desc=Lanxi-Lazy lady Kaguya
+item.record.the_grimoire_of_marisa.desc=Lanxi-The Grimoire of Marisa(Has been removed)
+word.thanks2lanxi.name=Thanks,Lanxi.
+
+
 #TABS
 itemGroup.coffee_workshop=Coffee Workshop
 
@@ -330,8 +356,14 @@ achievement.coffeework.bag.title=Do you need a Bag?
 achievement.coffeework.bag_monster.title=I need a mountain of Bags!
 achievement.coffeework.bag.desc=Make a bag.
 achievement.coffeework.bag_monster.desc=Get ALL Double bag in the same time.
-
+coffee.effect.relax=Relax
 #Word
+coffee.result.one.name=Enjoy your nice day.
+coffee.result.two.name=Not bad today.
+coffee.result.three.name=A dull day.
+coffee.result.four.name=Today will be not nice.
+coffee.result.five.name=It's going to be bad today.
+
 word.coffeework.coffee.name=This is Black Coffee.
 word.coffeework.coffee_milk.name=Coffees' best friend.
 
@@ -358,8 +390,3 @@ word.coffeework.coffee_milk_tea_ice.name=Why roite didn't make that?
 word.coffeework.coffee_green_tea_ice.name=Iced Green tea
 word.coffeework.coffee_black_tea_ice.name=Please,NO INM.
 
-coffee.result.1=Enjoy your nice day.
-coffee.result.2=Not bad today.
-coffee.result.3=A dull day.
-coffee.result.4=Today will be not nice.
-coffee.result.5=It's going to be bad today.

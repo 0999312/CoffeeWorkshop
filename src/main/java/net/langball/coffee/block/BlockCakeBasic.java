@@ -1,5 +1,6 @@
 package net.langball.coffee.block;
 
+import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -7,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -63,6 +65,14 @@ public class BlockCakeBasic extends BlockCake {
         {
             player.addStat(StatList.CAKE_SLICES_EATEN);
             player.getFoodStats().addStats(foodamount, foodsat);
+            if(!worldIn.isRemote){
+        		PotionEffect effect= player.getActivePotionEffect(PotionLoader.relax);
+        		if(effect != null){
+        			int foodlevel = effect.getAmplifier();
+        			player.heal(foodlevel*2);
+        			player.getFoodStats().addStats(foodlevel, foodlevel*1.25F);
+        		}
+        	}
             int i = ((Integer)state.getValue(BITES)).intValue();
 
             if (i < 6)

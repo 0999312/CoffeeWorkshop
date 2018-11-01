@@ -1,6 +1,7 @@
 package net.langball.coffee.item;
 
 import net.langball.coffee.block.BlockLoader;
+import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +15,9 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
-
+import net.minecraftforge.fml.common.Optional.Interface;
+import net.minecraftforge.fml.common.Optional.Method;
+@Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkEspresso extends DrinkCoffee {
 	public DrinkEspresso(int amount, float saturation) {
 		super(amount, saturation,null);
@@ -40,12 +43,37 @@ public class DrinkEspresso extends DrinkCoffee {
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect bitter_1 = new PotionEffect(Potion.getPotionById(1),400,2);
+		PotionEffect effect1= player.getActivePotionEffect(PotionLoader.relax);
+		if(effect1 != null){
+			int plus = effect1.getAmplifier();
+			if(plus<=2)
+			plus++;
+			PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,400,plus);
+			player.addPotionEffect(bitter_1);
+		}else{
+		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,400,0);
 		player.addPotionEffect(bitter_1);
+		}
 		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),400,2);
 		player.addPotionEffect(bitter_2);
 		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),400,2);
 		player.addPotionEffect(bitter_3);
 	}
-	
+	  @Method(modid="toughasnails")
+	  public int getThirst()
+	  {
+	    return 6;
+	  }
+	  
+	  @Method(modid="toughasnails")
+	  public float getHydration()
+	  {
+	    return 0.4F;
+	  }
+	  
+	  @Method(modid="toughasnails")
+	  public float getPoisonChance()
+	  {
+	    return 0.0F;
+	  }
 }

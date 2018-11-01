@@ -1,11 +1,13 @@
 package net.langball.coffee;
 
+import defeatedcrow.hac.main.ClimateMain;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.block.tileentity.TileEntityLoader;
 import net.langball.coffee.compat.TeaStoriesCompatDrinks;
 import net.langball.coffee.compat.TeaStoriesCompatRecipes;
 import net.langball.coffee.compat.HACRecipeLoader;
 import net.langball.coffee.drinks.DrinksLoader;
+import net.langball.coffee.effect.PotionLoader;
 import net.langball.coffee.event.EventCoffeeSeeds;
 import net.langball.coffee.gui.GuiLoader;
 import net.langball.coffee.item.ItemLoader;
@@ -44,6 +46,7 @@ public class CommonProxy {
 		 new TileEntityLoader(event);
 		 new ItemLoader(event);
 		 new DrinksLoader(event);
+		 new PotionLoader(event);
 		 if(Loader.isModLoaded(TeaStory.MODID)) new TeaStoriesCompatDrinks(event);
 	     new OreDicRegister();
 	    }
@@ -74,7 +77,7 @@ public class CommonProxy {
     	new MaterialCraftingRecipes();
     	new DrinksCraftingRecipes();
     	new FoodCraftingRecipes();
-    	new HACRecipeLoader();
+    	 if(Loader.isModLoaded(ClimateMain.MOD_ID)) new HACRecipeLoader();
     	if(Loader.isModLoaded(TeaStory.MODID)) new TeaStoriesCompatRecipes();
     }
 

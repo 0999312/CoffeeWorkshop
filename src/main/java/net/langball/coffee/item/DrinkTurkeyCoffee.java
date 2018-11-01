@@ -16,6 +16,7 @@ import net.minecraft.stats.StatBase;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextComponentUtils;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -40,33 +41,33 @@ public class DrinkTurkeyCoffee extends DrinkCoffee {
 		int ranresult = ran.nextInt(5);
 		switch (ranresult){
 		case 0:
-	        player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.1",new Object())), true);
+	        player.sendMessage(new TextComponentTranslation("coffee.rusult.one.name",new Object[0]));
 			player.addPotionEffect(bitter_1);
 			player.addPotionEffect(bitter_2);
 			player.addPotionEffect(bitter_3);
 			break;
 		case 1:
-			player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.2",new Object())), true);
+			player.sendMessage(new TextComponentTranslation("coffee.rusult.two.name",new Object[0]));
 			player.addPotionEffect(bitter_1);
 			player.addPotionEffect(bitter_2); 
 			break;
 		case 2:
-			player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.3",new Object())), true);
+			player.sendMessage(new TextComponentTranslation("coffee.rusult.three.name",new Object[0]));
 			player.addPotionEffect(bitter_1);
 			break;
 		case 3:
-			player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.4",new Object())), true);
+			player.sendMessage(new TextComponentTranslation("coffee.rusult.four.name",new Object[0]));
 			player.addPotionEffect(bad_2);
 			player.addPotionEffect(bad_3);
 			break;
 		case 4:
-			player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.5",new Object())), true);
+			player.sendMessage(new TextComponentTranslation("coffee.rusult.five.name",new Object[0]));
 			player.addPotionEffect(bad_1);
 			player.addPotionEffect(bad_2);
 			player.addPotionEffect(bad_3);
 			break;
 		 default:
-			player.sendStatusMessage(new TextComponentString(I18n.format("coffee.rusult.null",new Object())), true);
+			player.sendMessage(new TextComponentTranslation("coffee.rusult.null.name",new Object[0]));
 //			System.out.println(ranresult);
 			break;
 	}

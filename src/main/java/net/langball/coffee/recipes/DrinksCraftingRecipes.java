@@ -43,14 +43,14 @@ public class DrinksCraftingRecipes {
 				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_cappuccino, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cappuccino,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",ItemLoader.milk_form,DrinksLoader.cup
+				DrinksLoader.espresso,ItemLoader.milk_form,DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup
+				DrinksLoader.espresso,ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mochaccino_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mochaccino_ice,new Object[]{
-				DrinksLoader.espresso,"foodCocoapowder","listAllmilk",ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup_glass,ItemLoader.ice_slag
+				DrinksLoader.espresso,"foodCocoapowder",ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_american_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_american_ice,new Object[]{
 				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup_glass,ItemLoader.ice_slag
@@ -59,10 +59,10 @@ public class DrinksCraftingRecipes {
 				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_cappuccino_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cappuccino_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",ItemLoader.milk_form,DrinksLoader.cup_glass,ItemLoader.ice_slag
+				DrinksLoader.espresso,ItemLoader.milk_form,DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup_glass,ItemLoader.ice_slag
+				DrinksLoader.espresso,ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 	}
 }

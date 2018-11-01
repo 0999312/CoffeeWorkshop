@@ -112,6 +112,18 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe(CoffeeWork.MODID+"."+ItemLoader.coffee_bean_raw.getUnlocalizedName().substring(5)+"_2", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.coffee_bean_raw,new Object[]{
 				"cropCoffee","listAllwater"
 		}));
+		RecipesUtil.addRecipe(ItemLoader.record_blank, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.record_blank,new Object[]{
+				"plateIron","dyeBlack","dyeBlack"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.kusa_noshi_to_ne, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.kusa_noshi_to_ne,new Object[]{
+				ItemLoader.record_blank,"dyeBlack"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.lazt_lady_kaguya, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.lazt_lady_kaguya,new Object[]{
+				ItemLoader.record_blank,"dyeRed"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.the_grimoire_of_marisa, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.the_grimoire_of_marisa,new Object[]{
+				ItemLoader.record_blank,"dyeYellow"
+		}));
 		RecipesUtil.addRecipe(DrinksLoader.cup_glass, new ShapedOreRecipe(new ResourceLocation(""), DrinksLoader.cup_glass,new Object[]{
 				"W W","W W"," G ",'W',"paneGlassColorless",'G',"blockGlassColorless"
 		}));
