@@ -12,6 +12,11 @@ public class DrinksCraftingRecipes {
 		RecipesUtil.addRecipe(DrinksLoader.coffee_milk, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_milk,new Object[]{
 				DrinksLoader.coffee,"listAllmilk","listAllsugar"
 		}));
+		
+		RecipesUtil.addRecipe(DrinksLoader.coffee_cheese, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cheese,new Object[]{
+				DrinksLoader.coffee,"foodCheese","listAllsugar"
+		}));
+		
 		RecipesUtil.addRecipe(DrinksLoader.cocoa, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.cocoa,new Object[]{
 				DrinksLoader.cup,"foodCocoapowder","listAllmilk"
 		}));

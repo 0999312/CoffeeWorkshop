@@ -60,6 +60,8 @@ public class BlockLoader {
 	public static Item espressoBlockItem = new ItemBlockCoffee(espressoBlock);
 	public static Block coffee_turkeyBlock = new BlockCoffee(DrinksLoader.coffee_turkey);
 	public static Item coffee_turkeyBlockItem = new ItemBlockCoffee(coffee_turkeyBlock);
+	public static Block coffee_cheeseBlock = new BlockCoffee(DrinksLoader.coffee_cheese);
+	public static Item coffee_cheeseBlockItem = new ItemBlockCoffee(coffee_cheeseBlock);
 	
 	public static Block bag_coffee = new BlockBag().setRegistryName("bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee").setCreativeTab(CommonProxy.tab);
 	public static Item bag_coffeeItem = new ItemBlock(bag_coffee).setRegistryName("bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee").setContainerItem(ItemLoader.bag);
@@ -241,6 +243,7 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(coffee_macchiatoBlock);
 		ForgeRegistries.BLOCKS.register(espressoBlock);
 		ForgeRegistries.BLOCKS.register(coffee_turkeyBlock);
+		ForgeRegistries.BLOCKS.register(coffee_cheeseBlock);
 
 		
 		ForgeRegistries.ITEMS.register(coffeeBlockItem);
@@ -254,11 +257,12 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(coffee_cappuccinoBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_macchiatoBlockItem);
 		ForgeRegistries.ITEMS.register(espressoBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_cheeseBlockItem);
 
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
-		
+		registerRender(coffee_cheeseBlock);
 		registerRender(cake_sponge);
 		registerRender(cake_sponge_chocolate);
 		registerRender(cake_sponge_coffee);

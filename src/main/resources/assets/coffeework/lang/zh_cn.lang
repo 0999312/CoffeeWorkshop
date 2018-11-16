@@ -90,6 +90,7 @@ tile.coffeework.coffee_macchiato.name=焦糖玛奇朵
 tile.coffeework.coffee_mochaccino.name=摩卡奇诺
 tile.coffeework.cocoa.name=热可可
 tile.coffeework.strong_cocoa.name=香浓可可
+tile.coffeework.coffee_cheese.name=芝士咖啡
 
 item.coffeework.coffee.name=黑咖啡
 item.coffeework.coffee_milk.name=牛奶咖啡
@@ -102,6 +103,7 @@ item.coffeework.coffee_macchiato.name=焦糖玛奇朵
 item.coffeework.coffee_mochaccino.name=摩卡奇诺
 item.coffeework.cocoa.name=热可可
 item.coffeework.strong_cocoa.name=香浓可可
+item.coffeework.coffee_cheese.name=芝士咖啡
 
 item.coffeework.coffee_american_ice.name=冰美式咖啡
 item.coffeework.coffee_latte_ice.name=冰拿铁咖啡

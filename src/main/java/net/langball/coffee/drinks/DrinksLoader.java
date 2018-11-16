@@ -28,6 +28,7 @@ public class DrinksLoader {
 	public static Item cup = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup").setMaxStackSize(1);
 	public static Item coffee=new DrinkCoffee(2,1f,null).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee");
 	public static Item coffee_milk=new DrinkCoffee(3,1f,new PotionEffect(Potion.getPotionById(10),600,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_milk");
+	public static Item coffee_cheese=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(12),600,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_cheese");
 	public static Item cocoa=new DrinkCoffee(4,2f,null).setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa");
 	public static Item strong_cocoa=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(5),600,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"strong_cocoa");
 	public static Item coffee_american=new DrinkMixCoffee(EnumCoffee.american);
@@ -50,6 +51,7 @@ public class DrinksLoader {
 		register(cup);
 		register(coffee);
 		register(coffee_milk);
+		register(coffee_cheese);
 		register(coffee_turkey);
 		register(cocoa);
 		register(strong_cocoa);
@@ -73,6 +75,7 @@ public class DrinksLoader {
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(coffee_cheese);
 		registerRender(coffee_turkey);
 		registerRender(cup_glass);
 		registerRender(cocoa_ice);

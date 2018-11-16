@@ -238,6 +238,7 @@ public class MaterialCraftingRecipes {
 		registerCoffeePlate(BlockLoader.espressoBlockItem, DrinksLoader.espresso);
 		registerCoffeePlate(BlockLoader.coffee_macchiatoBlockItem, DrinksLoader.coffee_macchiato);
 		registerCoffeePlate(BlockLoader.strong_cocoaBlockItem, DrinksLoader.strong_cocoa);
+		registerCoffeePlate(BlockLoader.coffee_cheeseBlockItem, DrinksLoader.coffee_cheese);
 		
 		registerBag(BlockLoader.bag_flourItem,ItemLoader.flour,"foodFlour",BlockLoader.double_bag_flourItem);
 		registerBag(BlockLoader.bag_coffee_powderItem,ItemLoader.coffee_powder,"dustCoffee",BlockLoader.double_bag_coffee_powderItem);
