@@ -15,6 +15,9 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional.Interface;
 import net.minecraftforge.fml.common.Optional.Method;
+import toughasnails.api.stat.capability.ITemperature;
+import toughasnails.api.temperature.Temperature;
+import toughasnails.api.temperature.TemperatureHelper;
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkCocoaIce extends DrinkCoffee{
 	public PotionEffect effect;
@@ -55,5 +58,14 @@ public class DrinkCocoaIce extends DrinkCoffee{
 	  public float getPoisonChance()
 	  {
 	    return 0.0F;
+	  }
+	  @Method(modid="toughasnails")
+	  public void changeTemperature(EntityLivingBase entity)
+	  {
+	    EntityPlayer player = (EntityPlayer)entity;
+	    ITemperature temperature = TemperatureHelper.getTemperatureData(player);
+	    if (temperature.getTemperature().getRawValue() >= 14) {
+	      temperature.setTemperature(new Temperature(temperature.getTemperature().getRawValue() - 2));
+	    }
 	  }
 }

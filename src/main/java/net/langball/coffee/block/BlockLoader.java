@@ -31,7 +31,7 @@ public class BlockLoader {
 	public static Block Roller = new BlockRoller(false).setRegistryName("roller_off").setUnlocalizedName(CoffeeWork.MODID+".roller").setCreativeTab(CommonProxy.tab);
 	public static Block Roller_on = new BlockRoller(true).setRegistryName("roller_on").setUnlocalizedName(CoffeeWork.MODID+".roller");
 	public static Item RollerItem = new ItemBlock(Roller).setRegistryName("roller").setUnlocalizedName(CoffeeWork.MODID+"roller");
-	
+	public static Block vanilla_crop = new BlockVanilla().setRegistryName("vanilla_crop").setUnlocalizedName(CoffeeWork.MODID+".vanilla_crop");
 	
 	public static Block plate = new BlockPlate().setRegistryName("plate").setUnlocalizedName(CoffeeWork.MODID+".plate").setCreativeTab(CommonProxy.tab);
 	public static Item plateItem = new ItemBlock(plate).setRegistryName("plate").setUnlocalizedName(CoffeeWork.MODID+"plate");
@@ -40,14 +40,22 @@ public class BlockLoader {
 	public static Block coffee_milkBlock = new BlockCoffee(DrinksLoader.coffee_milk);
 	public static Block cocoaBlock = new BlockCoffee(DrinksLoader.cocoa);
 	public static Block strong_cocoaBlock = new BlockCoffee(DrinksLoader.strong_cocoa);
+	public static Block coffee_creamBlock = new BlockCoffee(DrinksLoader.coffee_cream);
+	public static Block espressoBlock = new BlockCoffee(DrinksLoader.espresso);
 	public static Block coffee_americanBlock = new BlockCoffee(DrinksLoader.coffee_american);
 	public static Block coffee_latteBlock = new BlockCoffee(DrinksLoader.coffee_latte);
 	public static Block coffee_mochaccinoBlock = new BlockCoffee(DrinksLoader.coffee_mochaccino);
 	public static Block coffee_cappuccinoBlock = new BlockCoffee(DrinksLoader.coffee_cappuccino);
 	public static Block coffee_macchiatoBlock = new BlockCoffee(DrinksLoader.coffee_macchiato);
-	public static Block espressoBlock = new BlockCoffee(DrinksLoader.espresso);
+	public static Block coffee_vanillaBlock = new BlockCoffee(DrinksLoader.coffee_vanilla);
+	public static Block coffee_berryBlock = new BlockCoffee(DrinksLoader.coffee_berry);
+	public static Block coffee_lemonBlock = new BlockCoffee(DrinksLoader.coffee_lemon);
 
 	
+	public static Item coffee_berryBlockItem = new ItemBlockCoffee(coffee_berryBlock);
+	public static Item coffee_creamBlockItem = new ItemBlockCoffee(coffee_creamBlock);
+	public static Item coffee_lemonBlockItem = new ItemBlockCoffee(coffee_lemonBlock);
+	public static Item coffee_vanillaBlockItem = new ItemBlockCoffee(coffee_vanillaBlock);
 	public static Item coffeeBlockItem = new ItemBlockCoffee(coffeeBlock);
 	public static Item coffee_milkBlockItem = new ItemBlockCoffee(coffee_milkBlock);
 	public static Item cocoaBlockItem = new ItemBlockCoffee(cocoaBlock);
@@ -159,6 +167,7 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(Coffee_treeItem);
 		ForgeRegistries.BLOCKS.register(BlueBerryBush);
 		ForgeRegistries.ITEMS.register(BlueBerryBushItem);
+		ForgeRegistries.BLOCKS.register(vanilla_crop);
 		
 		ForgeRegistries.BLOCKS.register(cake_sponge);
 		ForgeRegistries.ITEMS.register(cake_spongeItem);
@@ -236,32 +245,45 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(coffee_milkBlock);
 		ForgeRegistries.BLOCKS.register(cocoaBlock);
 		ForgeRegistries.BLOCKS.register(strong_cocoaBlock);
-		ForgeRegistries.BLOCKS.register(coffee_americanBlock);
-		ForgeRegistries.BLOCKS.register(coffee_latteBlock);
-		ForgeRegistries.BLOCKS.register(coffee_mochaccinoBlock);
-		ForgeRegistries.BLOCKS.register(coffee_cappuccinoBlock);
-		ForgeRegistries.BLOCKS.register(coffee_macchiatoBlock);
-		ForgeRegistries.BLOCKS.register(espressoBlock);
 		ForgeRegistries.BLOCKS.register(coffee_turkeyBlock);
 		ForgeRegistries.BLOCKS.register(coffee_cheeseBlock);
+		ForgeRegistries.BLOCKS.register(coffee_creamBlock);
+		ForgeRegistries.BLOCKS.register(espressoBlock);
+		ForgeRegistries.BLOCKS.register(coffee_americanBlock);
+		ForgeRegistries.BLOCKS.register(coffee_latteBlock);
+		ForgeRegistries.BLOCKS.register(coffee_cappuccinoBlock);
+		ForgeRegistries.BLOCKS.register(coffee_mochaccinoBlock);
+		ForgeRegistries.BLOCKS.register(coffee_macchiatoBlock);
+		ForgeRegistries.BLOCKS.register(coffee_vanillaBlock);
+		ForgeRegistries.BLOCKS.register(coffee_berryBlock);
+		ForgeRegistries.BLOCKS.register(coffee_lemonBlock);
 
-		
 		ForgeRegistries.ITEMS.register(coffeeBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_milkBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_turkeyBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_creamBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_cheeseBlockItem);
 		ForgeRegistries.ITEMS.register(cocoaBlockItem);
 		ForgeRegistries.ITEMS.register(strong_cocoaBlockItem);
+		ForgeRegistries.ITEMS.register(espressoBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_americanBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_latteBlockItem);
-		ForgeRegistries.ITEMS.register(coffee_mochaccinoBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_cappuccinoBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_macchiatoBlockItem);
-		ForgeRegistries.ITEMS.register(espressoBlockItem);
-		ForgeRegistries.ITEMS.register(coffee_cheeseBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_mochaccinoBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_vanillaBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_berryBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_lemonBlockItem);
+
 
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
+		registerRender(coffee_creamBlock);
+		registerRender(coffee_berryBlock);
+		registerRender(coffee_vanillaBlock);
+		registerRender(coffee_lemonBlock);
+		
 		registerRender(coffee_cheeseBlock);
 		registerRender(cake_sponge);
 		registerRender(cake_sponge_chocolate);
@@ -275,7 +297,7 @@ public class BlockLoader {
 		registerRender(cake_sponge);
 		registerRender(BlueBerryBush);
 		registerRender(cake_cheese);
-
+		registerRender(vanilla_crop);
 		registerRender(cake_schwarzwald);
 		registerRender(cake_redvelvet);
 		registerRender(tiramisu);

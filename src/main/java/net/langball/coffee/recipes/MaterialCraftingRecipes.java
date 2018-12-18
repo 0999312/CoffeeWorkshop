@@ -127,7 +127,8 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe(DrinksLoader.cup_glass, new ShapedOreRecipe(new ResourceLocation(""), DrinksLoader.cup_glass,new Object[]{
 				"W W","W W"," G ",'W',"paneGlassColorless",'G',"blockGlassColorless"
 		}));
-
+		
+		
 		RecipesUtil.addRecipe(ItemLoader.bag, new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.bag,8),new Object[]{
 				" D "," W "," D ",'W',Blocks.WOOL,'D',"string"
 		}));
@@ -239,6 +240,11 @@ public class MaterialCraftingRecipes {
 		registerCoffeePlate(BlockLoader.coffee_macchiatoBlockItem, DrinksLoader.coffee_macchiato);
 		registerCoffeePlate(BlockLoader.strong_cocoaBlockItem, DrinksLoader.strong_cocoa);
 		registerCoffeePlate(BlockLoader.coffee_cheeseBlockItem, DrinksLoader.coffee_cheese);
+		
+		registerCoffeePlate(BlockLoader.coffee_lemonBlockItem, DrinksLoader.coffee_lemon);
+		registerCoffeePlate(BlockLoader.coffee_creamBlockItem, DrinksLoader.coffee_cream);
+		registerCoffeePlate(BlockLoader.coffee_berryBlockItem, DrinksLoader.coffee_berry);
+		registerCoffeePlate(BlockLoader.coffee_vanillaBlockItem, DrinksLoader.coffee_vanilla);
 		
 		registerBag(BlockLoader.bag_flourItem,ItemLoader.flour,"foodFlour",BlockLoader.double_bag_flourItem);
 		registerBag(BlockLoader.bag_coffee_powderItem,ItemLoader.coffee_powder,"dustCoffee",BlockLoader.double_bag_coffee_powderItem);

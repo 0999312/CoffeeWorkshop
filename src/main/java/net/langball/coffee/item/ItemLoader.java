@@ -10,9 +10,12 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemSeeds;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
@@ -23,6 +26,10 @@ import net.minecraftforge.registries.ForgeRegistry;
 public class ItemLoader {
 	public static Item coffee_seeds = new SeedCoffee();
 	
+	public static Item vanilla_seeds = new ItemSeeds(BlockLoader.vanilla_crop, Blocks.FARMLAND).setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla_seeds");
+	public static Item vanilla = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla");
+	
+
 	public static Item moka_top = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_top").setMaxStackSize(1);
 	public static Item moka_bottom = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_bottom").setMaxStackSize(1);
 	public static Item moka_pot_unheated = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_pot_unheated").setMaxStackSize(1);
@@ -248,7 +255,16 @@ public class ItemLoader {
 	public static Item kusa_noshi_to_ne = new ItemRecordCW("records.kusa_noshi_to_ne");
 	public static Item lazt_lady_kaguya = new ItemRecordCW("records.lazy_lady_kaguya");
 	public static Item the_grimoire_of_marisa = new ItemRecordCW("records.the_grimoire_of_marisa");
+	
+	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
+	public static Item syrup_full = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_full").setContainerItem(syrup_empty);
+	public static Item syrup_brown = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_brown").setContainerItem(syrup_empty);
+	public static Item syrup_vanilla = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_vanilla").setContainerItem(syrup_empty);
+	public static Item syrup_berry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_berry").setContainerItem(syrup_empty);
+	public static Item syrup_cherry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_cherry").setContainerItem(syrup_empty);
+	public static Item syrup_lemon = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_lemon").setContainerItem(syrup_empty);
 	public ItemLoader(FMLPreInitializationEvent event) {
+		
 		register(record_blank);
 		register(kusa_noshi_to_ne);
 		register(lazt_lady_kaguya);
@@ -270,6 +286,9 @@ public class ItemLoader {
 		register(milk_form);
 		register(coffee_seeds);
 		register(blue_berry);
+		register(vanilla_seeds);
+		MinecraftForge.addGrassSeed(new ItemStack(vanilla_seeds), 8);
+		register(vanilla);
 		register(coffee_bean_raw);
 		register(coffee_bean);
 		register(coffee_powder);
@@ -311,6 +330,15 @@ public class ItemLoader {
 		register(iron_bowl_batter_lemon);
 		register(iron_bowl_batter_berry);
 		register(iron_bowl_batter_tea);
+		
+		register(syrup_empty);
+		register(syrup_full);
+		register(syrup_brown);
+		register(syrup_vanilla);
+		register(syrup_berry);
+		register(syrup_cherry);
+		register(syrup_lemon);
+		
 		//foods
 		register(icecream_vanilla);
 		register(icecream_chocolate);
@@ -494,6 +522,14 @@ public class ItemLoader {
 		registerRender(cake_tea_roll);
 		registerRender(cake_berry_roll);
 		
+		registerRender(syrup_empty);
+		registerRender(syrup_full);
+		registerRender(syrup_brown);
+		registerRender(syrup_vanilla);
+		registerRender(syrup_berry);
+		registerRender(syrup_cherry);
+		registerRender(syrup_lemon);
+		
 		registerRender(muffin);
 		registerRender(muffin_chocolate);
 		registerRender(muffin_coffee);
@@ -523,7 +559,8 @@ public class ItemLoader {
 		registerRender(cake_model);
 		registerRender(cake_model_square);
 		registerRender(cake_model_plate);
-
+		registerRender(vanilla_seeds,"vanilla_seeds");
+		registerRender(vanilla,"vanilla");
 		registerRender(cake_sponge_raw);
 		registerRender(cake_sponge_model);
 		registerRender(cake_sponge_plate_raw);

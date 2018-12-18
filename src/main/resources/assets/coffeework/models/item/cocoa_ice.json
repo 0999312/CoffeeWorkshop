@@ -1,13 +1,13 @@
 {
    "credit" : "Made with Blockbench",
    "textures" : {
-      "0" : "blocks/glass",
+      "0" : "coffeework:model/glass",
       "1" : "coffeework:model/texture5",
-      "particle" : "blocks/glass"
+      "particle" : "coffeework:model/glass"
    },
    "elements" : [
       {
-         "from" : [ 10, 1, 6 ],
+         "from" : [ 10, 0, 6 ],
          "to" : [ 11, 10, 10 ],
          "faces" : {
             "north" : {
@@ -37,7 +37,7 @@
          }
       },
       {
-         "from" : [ 5, 1, 6 ],
+         "from" : [ 5, 0, 6 ],
          "to" : [ 6, 10, 10 ],
          "faces" : {
             "north" : {
@@ -127,7 +127,7 @@
          }
       },
       {
-         "from" : [ 6, 1, 5 ],
+         "from" : [ 6, 0, 5 ],
          "to" : [ 10, 10, 6 ],
          "faces" : {
             "north" : {
@@ -157,7 +157,7 @@
          }
       },
       {
-         "from" : [ 6, 1, 10 ],
+         "from" : [ 6, 0, 10 ],
          "to" : [ 10, 10, 11 ],
          "faces" : {
             "north" : {

@@ -113,6 +113,22 @@ item.coffeework.coffee_mochaccino_ice.name=冰摩卡奇诺
 item.coffeework.cocoa_ice.name=冰可可
 item.coffeework.strong_cocoa_ice.name=冰香浓可可
 
+item.coffeework.coffee_cream.name=奶油咖啡
+item.coffeework.coffee_lemon.name=柠檬拿铁
+item.coffeework.coffee_berry.name=莓果拿铁
+item.coffeework.coffee_vanilla.name=香草拿铁
+tile.coffeework.coffee_cream.name=奶油咖啡
+tile.coffeework.coffee_lemon.name=柠檬拿铁
+tile.coffeework.coffee_berry.name=莓果拿铁
+tile.coffeework.coffee_vanilla.name=香草拿铁
+
+item.coffeework.coffee_freddo_caramel_ice.name=焦糖法瑞多
+item.coffeework.coffee_freddo_mocha_ice.name=摩卡法瑞多
+item.coffeework.coffee_freddo_ice.name=法瑞多
+item.coffeework.coffee_lemon_ice.name=冰柠拿铁
+item.coffeework.coffee_berry_ice.name=莓果冰拿铁
+item.coffeework.coffee_vanilla_ice.name=香草冰拿铁
+
 item.coffeework.icecream_vanilla.name=香草冰淇凌
 item.coffeework.icecream_chocolate.name=巧克力冰淇凌
 item.coffeework.icecream_coffee.name=咖啡冰淇凌
@@ -129,7 +145,16 @@ item.coffeework.cream_berry.name=混合莓果奶油
 item.coffeework.cream_lemon.name=柠檬奶油
 item.coffeework.cream_melon.name=西瓜奶油
 
+item.coffeework.vanilla_seeds.name=香草种子
+item.coffeework.vanilla.name=香草荚
 
+item.coffeework.syrup_empty.name=空糖浆
+item.coffeework.syrup_full.name=糖浆
+item.coffeework.syrup_brown.name=焦糖浆
+item.coffeework.syrup_vanilla.name=香草糖浆
+item.coffeework.syrup_berry.name=莓果糖浆
+item.coffeework.syrup_cherry.name=樱桃糖浆
+item.coffeework.syrup_lemon.name=柠檬糖浆
 
 item.coffeework.milk_form.name=奶泡
 item.coffeework.mixing_bowl.name=搅拌盆
@@ -391,4 +416,16 @@ word.coffeework.coffee_milk_tea_ice.name=为什么洛骁没有做这个呢？
 word.coffeework.coffee_green_tea_ice.name=冰绿茶
 word.coffeework.coffee_black_tea_ice.name=请不要在这里刷INM梗。
 
+word.coffeework.coffee_cheese.name=芬兰芝士咖啡
 
+word.coffeework.coffee_freddo_caramel_ice.name=寒冰，焦糖，咖啡
+word.coffeework.coffee_freddo_mocha_ice.name=巧克力咖啡冰？或者冰咖啡？
+word.coffeework.coffee_freddo_ice.name=不是刨冰，是饮冰
+word.coffeework.coffee_lemon_ice.name=如夏日般清新
+word.coffeework.coffee_berry_ice.name=草莓冰
+word.coffeework.coffee_vanilla_ice.name=亚空瘴气
+
+word.coffeework.coffee_cream.name=奶油般的咖啡
+word.coffeework.coffee_lemon.name=五味杂陈
+word.coffeework.coffee_berry.name=草莓风味
+word.coffeework.coffee_vanilla.name=法国风

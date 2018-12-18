@@ -74,6 +74,7 @@ public class OreDicRegister {
     OreDictionary.registerOre("listAllfruit", Items.CHORUS_FRUIT);
     OreDictionary.registerOre("plateIron", ItemLoader.plate_iron);
     OreDictionary.registerOre("plateDough", ItemLoader.plate_dough);
+    OreDictionary.registerOre("cropVanilla", ItemLoader.vanilla);
     if(Loader.isModLoaded(ClimateMain.MOD_ID)){
     	OreDictionary.registerOre("beanCoffee",new ItemStack(FoodInit.teaLeaves, 1, 0));
     }

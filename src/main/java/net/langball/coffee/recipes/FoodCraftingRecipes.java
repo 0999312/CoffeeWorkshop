@@ -30,7 +30,7 @@ public class FoodCraftingRecipes {
 		});
 
 		RecipesUtil.addRecipe(BlockLoader.cake_schwarzwaldItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_schwarzwaldItem,new Object[]{
-				BlockLoader.cake_sponge_chocolateItem,ItemLoader.chocolate_chip,"listAllsugar",ItemLoader.cream_chocolate
+				BlockLoader.cake_sponge_chocolateItem,ItemLoader.syrup_cherry,"listAllsugar",ItemLoader.cream_chocolate
 		}));
 		
 		RecipesUtil.addRecipe(BlockLoader.cake_coffeeItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_coffeeItem,new Object[]{
@@ -49,7 +49,7 @@ public class FoodCraftingRecipes {
 		}));
 		
 		RecipesUtil.addRecipe(BlockLoader.cake_lemonItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_lemonItem,new Object[]{
-				BlockLoader.cake_sponge_lemonItem,"listAllheavycream","listAllsugar","foodLemon"
+				BlockLoader.cake_sponge_lemonItem,"listAllheavycream","listAllsugar",ItemLoader.syrup_lemon
 		}));
 		
 		RecipesUtil.addRecipe(BlockLoader.cake_redvelvetItem, new ShapelessOreRecipe(new ResourceLocation(""),BlockLoader.cake_redvelvetItem,new Object[]{

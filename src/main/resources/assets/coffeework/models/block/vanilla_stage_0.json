@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "coffeework:blocks/vanilla_stage_1"
+    }
+}

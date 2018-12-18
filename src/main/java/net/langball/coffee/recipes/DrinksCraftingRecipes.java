@@ -39,7 +39,7 @@ public class DrinksCraftingRecipes {
 		
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mochaccino, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mochaccino,new Object[]{
-				DrinksLoader.espresso,"foodCocoapowder","listAllmilk",ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup
+				DrinksLoader.espresso,"listAllmilk",ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_american, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_american,new Object[]{
 				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup
@@ -47,15 +47,24 @@ public class DrinksCraftingRecipes {
 		RecipesUtil.addRecipe(DrinksLoader.coffee_latte, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_latte,new Object[]{
 				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup
 		}));
+		RecipesUtil.addRecipe(DrinksLoader.coffee_berry, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_berry,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_berry
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.coffee_vanilla, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_vanilla,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_vanilla
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.coffee_lemon, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_lemon,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_lemon
+		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_cappuccino, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cappuccino,new Object[]{
 				DrinksLoader.espresso,ItemLoader.milk_form,DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato,new Object[]{
-				DrinksLoader.espresso,ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup
+				DrinksLoader.espresso,ItemLoader.milk_form,ItemLoader.syrup_brown,DrinksLoader.cup
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mochaccino_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mochaccino_ice,new Object[]{
-				DrinksLoader.espresso,"foodCocoapowder",ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup_glass,ItemLoader.ice_slag
+				DrinksLoader.espresso,ItemLoader.milk_form,ItemLoader.chocolate_chip,DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_american_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_american_ice,new Object[]{
 				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup_glass,ItemLoader.ice_slag
@@ -67,7 +76,27 @@ public class DrinksCraftingRecipes {
 				DrinksLoader.espresso,ItemLoader.milk_form,DrinksLoader.cup_glass,ItemLoader.ice_slag
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato_ice,new Object[]{
-				DrinksLoader.espresso,ItemLoader.milk_form,"listAllsugar",DrinksLoader.cup_glass,ItemLoader.ice_slag
+				DrinksLoader.espresso,ItemLoader.milk_form,ItemLoader.syrup_brown,DrinksLoader.cup_glass,ItemLoader.ice_slag
+		}));
+		
+		RecipesUtil.addRecipe(DrinksLoader.freddo, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,ItemLoader.ice_slag,ItemLoader.syrup_full
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.freddo_mocha, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo_mocha,new Object[]{
+				DrinksLoader.freddo,ItemLoader.milk_form,ItemLoader.chocolate_chip
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.freddo_caramel, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo_caramel,new Object[]{
+				DrinksLoader.freddo,ItemLoader.milk_form,ItemLoader.syrup_brown
+		}));
+		
+		RecipesUtil.addRecipe(DrinksLoader.coffee_berry_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_berry_ice,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_berry,ItemLoader.ice_slag
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.coffee_vanilla_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_vanilla_ice,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_vanilla,ItemLoader.ice_slag
+		}));
+		RecipesUtil.addRecipe(DrinksLoader.coffee_lemon_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_lemon_ice,new Object[]{
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,ItemLoader.syrup_lemon,ItemLoader.ice_slag
 		}));
 	}
 }

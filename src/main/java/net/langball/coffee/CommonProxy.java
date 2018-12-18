@@ -13,6 +13,7 @@ import net.langball.coffee.gui.GuiLoader;
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.item.OreDicRegister;
 import net.langball.coffee.recipes.MaterialCraftingRecipes;
+import net.langball.coffee.recipes.SyrupCraftingRecipes;
 import net.langball.coffee.recipes.blocks.FuelLoader;
 import net.langball.coffee.util.RecipesUtil;
 import net.langball.coffee.recipes.DrinksCraftingRecipes;
@@ -42,12 +43,12 @@ public class CommonProxy {
 	 public void preInit(FMLPreInitializationEvent event)
 	 	{
 		 new ConfigLoader(event);
+		 new PotionLoader(event);
 		 new BlockLoader(event);
 		 new TileEntityLoader(event);
-		 new ItemLoader(event);
 		 new DrinksLoader(event);
-		 new PotionLoader(event);
 		 if(Loader.isModLoaded(TeaStory.MODID)) new TeaStoriesCompatDrinks(event);
+		 new ItemLoader(event);
 	     new OreDicRegister();
 	    }
 	 
@@ -77,6 +78,7 @@ public class CommonProxy {
     	new MaterialCraftingRecipes();
     	new DrinksCraftingRecipes();
     	new FoodCraftingRecipes();
+    	SyrupCraftingRecipes.init();
     	 if(Loader.isModLoaded(ClimateMain.MOD_ID)) new HACRecipeLoader();
     	if(Loader.isModLoaded(TeaStory.MODID)) new TeaStoriesCompatRecipes();
     }

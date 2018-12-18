@@ -27,7 +27,10 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional.Interface;
 import net.minecraftforge.fml.common.Optional.Method;
+import toughasnails.api.stat.capability.ITemperature;
 import toughasnails.api.stat.capability.IThirst;
+import toughasnails.api.temperature.Temperature;
+import toughasnails.api.temperature.TemperatureHelper;
 import toughasnails.api.thirst.ThirstHelper;
 
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
@@ -81,17 +84,8 @@ public class DrinkCoffee extends ItemFood {
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect effect1= player.getActivePotionEffect(PotionLoader.relax);
-		if(effect1 != null){
-			int plus = effect1.getAmplifier();
-			if(plus<=2)
-			plus++;
-			PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,400,plus);
-			player.addPotionEffect(bitter_1);
-		}else{
 		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,400,0);
 		player.addPotionEffect(bitter_1);
-		}
 		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),400,1);
 		player.addPotionEffect(bitter_2);
 		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),400,1);
@@ -125,5 +119,16 @@ public class DrinkCoffee extends ItemFood {
 	  public float getPoisonChance()
 	  {
 	    return 0.0F;
+	  }
+	  @Method(modid="toughasnails")
+	  public void changeTemperature(EntityLivingBase entity)
+	  {
+	    EntityPlayer player = (EntityPlayer)entity;
+	    ITemperature temperature = TemperatureHelper.getTemperatureData(player);
+	    if (temperature.getTemperature().getRawValue() <= 10) {
+	      temperature.setTemperature(new Temperature(temperature.getTemperature().getRawValue() + 1));
+	    } else if (temperature.getTemperature().getRawValue() >= 14) {
+	      temperature.setTemperature(new Temperature(temperature.getTemperature().getRawValue() - 1));
+	    }
 	  }
 }

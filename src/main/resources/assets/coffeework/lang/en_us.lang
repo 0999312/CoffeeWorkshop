@@ -75,6 +75,33 @@ item.coffeework.coffee_milk_tea_ice.name=Iced Milk Tea
 item.coffeework.coffee_green_tea_ice.name=Iced Green tea
 item.coffeework.coffee_black_tea_ice.name=Iced Black tea
 tile.coffeework.coffee_turkey.name=Turkey Coffee
+
+item.coffeework.vanilla_seeds.name=Vanilla Seeds
+item.coffeework.vanilla.name=Vanilla
+
+item.coffeework.syrup_empty.name=Empty Syrup
+item.coffeework.syrup_full.name=Syrup
+item.coffeework.syrup_brown.name=Caramel Syrup
+item.coffeework.syrup_vanilla.name=Vanilla Syrup
+item.coffeework.syrup_berry.name=Berry Syrup
+item.coffeework.syrup_cherry.name=Cherry Syrup
+item.coffeework.syrup_lemon.name=Lemon Syrup
+
+item.coffeework.coffee_freddo_caramel_ice.name=Caramel Freddo
+item.coffeework.coffee_freddo_mocha_ice.name=Mocha Freddo
+item.coffeework.coffee_freddo_ice.name=Freddo
+item.coffeework.coffee_lemon_ice.name=Iced Lemon Latté
+item.coffeework.coffee_berry_ice.name=Iced Berry Latté
+
+item.coffeework.coffee_cream.name=Cream Coffee
+item.coffeework.coffee_lemon.name=Lemon Latté
+item.coffeework.coffee_berry.name=Berry Latté
+item.coffeework.coffee_vanilla.name=Vanilla Latté
+tile.coffeework.coffee_cream.name=Cream Coffee
+tile.coffeework.coffee_lemon.name=Lemon Latté
+tile.coffeework.coffee_berry.name=Berry Latté
+tile.coffeework.coffee_vanilla.name=Vanilla Latté
+
 tile.coffeework.plate.name=Plate
 
 item.coffeework.moka_top.name=Moka Pot upper part
@@ -392,3 +419,16 @@ word.coffeework.coffee_milk_tea_ice.name=Why roite didn't make that?
 word.coffeework.coffee_green_tea_ice.name=Iced Green tea
 word.coffeework.coffee_black_tea_ice.name=Please,NO INM.
 
+word.coffeework.coffee_cheese.name=Tamoxifen coffee.
+
+word.coffeework.coffee_freddo_caramel_ice.name=Ice, Caramel, Espresso
+word.coffeework.coffee_freddo_mocha_ice.name=Chocolate Coffee ice? Or ice coffee?
+word.coffeework.coffee_freddo_ice.name=Not shaved ice, is a drink
+word.coffeework.coffee_lemon_ice.name=Fresh as summer
+word.coffeework.coffee_berry_ice.name=Strawberry Ice
+word.coffeework.coffee_vanilla_ice.name=Stand Cream
+
+word.coffeework.coffee_cream.name=Creamy Coffee
+word.coffeework.coffee_lemon.name=Mixed feelings
+word.coffeework.coffee_berry.name=Strawberry flavor 
+word.coffeework.coffee_vanilla.name=French Style
