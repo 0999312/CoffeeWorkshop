@@ -21,8 +21,8 @@ public class ItemDessert extends ItemFood {
 		PotionEffect effect= player.getActivePotionEffect(PotionLoader.relax);
 		if(effect != null){
 			int foodlevel = effect.getAmplifier();
-			player.heal(foodlevel*2);
-			player.getFoodStats().addStats(foodlevel, foodlevel*1.25F);
+			player.heal(foodlevel+4);
+			player.getFoodStats().addStats(foodlevel+2, foodlevel*1.25F);
 		}
 		}
 		super.onFoodEaten(stack, worldIn, player);

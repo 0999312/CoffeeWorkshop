@@ -5,17 +5,19 @@ import net.minecraft.potion.PotionEffect;
 
 public enum EnumCoffee {
 	american("american",3,1f,null),
-	latte("latte",4,2f,new PotionEffect(Potion.getPotionById(10),500,1)),
-	cappuccino("cappuccino",4,2f,new PotionEffect(Potion.getPotionById(10),600,2)),
-	macchiato("macchiato",5,2f,new PotionEffect(Potion.getPotionById(3),600,2)),
-	mochaccino("mochaccino",5,2f,new PotionEffect(Potion.getPotionById(5),600,1)),
-	vanilla("vanilla",4,4f,new PotionEffect(Potion.getPotionById(10),500,2)),
-	berry("berry",4,4f,new PotionEffect(Potion.getPotionById(10),500,2)),
-	lemon("lemon",5,2f,new PotionEffect(Potion.getPotionById(8),500,2)),
-
-	freddo("freddo",4,2f,new PotionEffect(Potion.getPotionById(11),600,2)),
-	freddo_mocha("freddo_mocha",6,2f,new PotionEffect(Potion.getPotionById(11),700,2)),
-	freddo_caramel("freddo_caramel",6,2f,new PotionEffect(Potion.getPotionById(11),700,2))
+	latte("latte",4,2f,new PotionEffect(Potion.getPotionById(10),1200,1)),
+	cappuccino("cappuccino",4,2f,new PotionEffect(Potion.getPotionById(10),1300,2)),
+	macchiato("macchiato",5,2f,new PotionEffect(Potion.getPotionById(13),1300,2)),
+	mochaccino("mochaccino",5,2f,new PotionEffect(Potion.getPotionById(5),1300,1)),
+	vanilla("vanilla",4,4f,new PotionEffect(Potion.getPotionById(10),1200,2)),
+	berry("berry",4,4f,new PotionEffect(Potion.getPotionById(10),1200,2)),
+	lemon("lemon",4,4f,new PotionEffect(Potion.getPotionById(8),1200,2)),
+	mint("mint",4,4f,new PotionEffect(Potion.getPotionById(3),1200,2)),
+	soda("soda",5,2f,new PotionEffect(Potion.getPotionById(16),1200,1)),
+	moncheri("moncheri",4,2f,new PotionEffect(Potion.getPotionById(6),10,1)),
+	freddo("freddo",4,2f,new PotionEffect(Potion.getPotionById(11),1300,2)),
+	freddo_mocha("freddo_mocha",6,2f,new PotionEffect(Potion.getPotionById(11),1400,2)),
+	freddo_caramel("freddo_caramel",6,2f,new PotionEffect(Potion.getPotionById(11),1400,2))
 	
 	;
 

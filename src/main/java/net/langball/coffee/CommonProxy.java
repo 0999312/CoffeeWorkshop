@@ -16,12 +16,14 @@ import net.langball.coffee.recipes.MaterialCraftingRecipes;
 import net.langball.coffee.recipes.SyrupCraftingRecipes;
 import net.langball.coffee.recipes.blocks.FuelLoader;
 import net.langball.coffee.util.RecipesUtil;
+import net.langball.coffee.villager.VillagerLoader;
 import net.langball.coffee.recipes.DrinksCraftingRecipes;
 import net.langball.coffee.recipes.FoodCraftingRecipes;
 import net.langball.coffee.recipes.MakingBlackCoffee;
 import net.langball.coffee.recipes.MakingTurkeyCoffee;
 import net.langball.coffee.world.BlueBerryWorldGen;
 import net.langball.coffee.world.CoffeeTreeWorldGen;
+import net.langball.coffee.world.WorldGenLoader;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,20 +57,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event)
     { 
 		 new FuelLoader();
-			if (ConfigLoader.coffee_tree_int < 0) {
-				ConfigLoader.coffee_tree_int = 1;
-			}
-			if (ConfigLoader.coffee_tree_int > 20) {
-				ConfigLoader.coffee_tree_int = 20;
-			}
-    	GameRegistry.registerWorldGenerator(new CoffeeTreeWorldGen(), 1);
-		if (ConfigLoader.blueberry_int < 0) {
-			ConfigLoader.blueberry_int = 1;
-		}
-		if (ConfigLoader.blueberry_int > 20) {
-			ConfigLoader.blueberry_int = 20;
-		}
-	GameRegistry.registerWorldGenerator(new BlueBerryWorldGen(), 2);
+		 new WorldGenLoader();
     	new GuiLoader();
     	RecipesUtil.addRecipe(DrinksLoader.coffee, new MakingBlackCoffee());
     	MinecraftForge.EVENT_BUS.register(new MakingBlackCoffee());
@@ -85,5 +74,6 @@ public class CommonProxy {
 
     public void postInit(FMLPostInitializationEvent event)
     {
+    	new VillagerLoader();
     }
 }

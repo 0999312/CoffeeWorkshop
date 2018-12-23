@@ -30,12 +30,12 @@ public class DrinkTurkeyCoffee extends DrinkCoffee {
 	
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		
-		PotionEffect bitter_1 = new PotionEffect(Potion.getPotionById(1),500,2);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),500,2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),500,2);
-		PotionEffect bad_1 = new PotionEffect(Potion.getPotionById(19),500,2);
-		PotionEffect bad_2 = new PotionEffect(Potion.getPotionById(17),500,2);
-		PotionEffect bad_3 = new PotionEffect(Potion.getPotionById(9),500,2);
+		PotionEffect bitter_1 = new PotionEffect(Potion.getPotionById(1),1200,2);
+		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1200,2);
+		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),1200,2);
+		PotionEffect bad_1 = new PotionEffect(Potion.getPotionById(19),1200,2);
+		PotionEffect bad_2 = new PotionEffect(Potion.getPotionById(17),1200,2);
+		PotionEffect bad_3 = new PotionEffect(Potion.getPotionById(9),1200,2);
 		if(!worldIn.isRemote){
 		Random ran = new Random();
 		int ranresult = ran.nextInt(5);

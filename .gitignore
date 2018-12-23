@@ -33,3 +33,5 @@ logs
 resourcepacks
 screenshots
 config
+patchouli_books
+*.json

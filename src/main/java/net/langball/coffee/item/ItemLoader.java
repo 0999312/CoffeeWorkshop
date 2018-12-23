@@ -106,7 +106,7 @@ public class ItemLoader {
 	public static Item plate_pastry_raw=new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_pastry_raw");
 	public static Item hardtack=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"hardtack");
 	public static Item plate_pastry=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_pastry");
-	public static Item mille_feuille=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mille_feuille");
+	public static Item mille_feuille=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mille_feuille");
 	
 	public static Item mixing_bowl = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mixing_bowl");
 	public static Item yeast = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"yeast");
@@ -263,7 +263,37 @@ public class ItemLoader {
 	public static Item syrup_berry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_berry").setContainerItem(syrup_empty);
 	public static Item syrup_cherry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_cherry").setContainerItem(syrup_empty);
 	public static Item syrup_lemon = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_lemon").setContainerItem(syrup_empty);
+	
+	public static Item syrup_chocolate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_chocolate").setContainerItem(syrup_empty);
+	public static Item syrup_apple = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_apple").setContainerItem(syrup_empty);
+	public static Item syrup_mint = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_mint").setContainerItem(syrup_empty);
+	
+	public static Item spices = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"spices");
+	public static Item gelatin = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"gelatin");
+
+	public static Item dough_ginger = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough_ginger");
+	public static Item plate_dough_ginger = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"plate_dough_ginger");
+	public static Item plate_ginger = new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_ginger");
+	public static Item ginger_bread = new ItemDessert(3, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread");
+	public static Item ginger_bread_man_raw = new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread_man_raw");
+	public static Item ginger_bread_man = new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread_man");
+
+	public static Item marshmallow = new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow");
+	public static Item marshmallow_chocolate = new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow_chocolate");
+	public static Item marshmallow_roast = new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow_roast");
+	public static Item smore = new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"smore");
+	
+	public static Item soda = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"soda");
+	public static Item mousse_berry_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_berry_raw").setMaxStackSize(1);
+	public static Item mousse_berry_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_berry_model").setMaxStackSize(1).setContainerItem(cake_model);
+	public static Item mousse_coffee_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_coffee_raw").setMaxStackSize(1);
+	public static Item mousse_coffee_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_coffee_model").setMaxStackSize(1).setContainerItem(cake_model);
+	public static Item mousse_chocolate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_chocolate_raw").setMaxStackSize(1);
+	public static Item mousse_chocolate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_chocolate_model").setMaxStackSize(1).setContainerItem(cake_model);
+	public static Item mousse_lemon_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_lemon_raw").setMaxStackSize(1);
+	public static Item mousse_lemon_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_lemon_model").setMaxStackSize(1).setContainerItem(cake_model);
 	public ItemLoader(FMLPreInitializationEvent event) {
+
 		
 		register(record_blank);
 		register(kusa_noshi_to_ne);
@@ -296,15 +326,35 @@ public class ItemLoader {
 		register(cocoa_powder);
 		register(cocoa_batter);
 		register(ice_slag);
+		
+		register(syrup_empty);
+		register(syrup_full);
+		register(syrup_brown);
+		register(syrup_vanilla);
+		register(syrup_berry);
+		register(syrup_cherry);
+		register(syrup_lemon);
+		register(syrup_chocolate);
+		register(syrup_apple);
+		register(syrup_mint);
+		
+		register(spices);
+
+		register(soda);
 		register(yeast);
 		register(flour);
 		register(dough);
+		register(gelatin);
 		register(dough_cookie);
 		register(dough_baguette);
 		register(dough_pastry);
-
+		register(dough_ginger);
+		register(plate_dough_ginger);
+		register(plate_ginger);
 		register(plate_dough);
 		register(plate_dough_pastry);
+
+
 		register(chocolate_bar);
 		register(chocolate_chip);
 		register(cream_milk);
@@ -317,6 +367,13 @@ public class ItemLoader {
 		register(butter);
 		register(cheese);
 		register(custard);
+		register(marshmallow);
+		register(marshmallow_chocolate);
+		register(marshmallow_roast);
+		register(smore);
+		register(ginger_bread);
+		register(ginger_bread_man_raw);
+		register(ginger_bread_man);
 		
 		register(iron_bowl);
 		register(iron_bowl_egg);
@@ -330,15 +387,7 @@ public class ItemLoader {
 		register(iron_bowl_batter_lemon);
 		register(iron_bowl_batter_berry);
 		register(iron_bowl_batter_tea);
-		
-		register(syrup_empty);
-		register(syrup_full);
-		register(syrup_brown);
-		register(syrup_vanilla);
-		register(syrup_berry);
-		register(syrup_cherry);
-		register(syrup_lemon);
-		
+
 		//foods
 		register(icecream_vanilla);
 		register(icecream_chocolate);
@@ -452,6 +501,15 @@ public class ItemLoader {
 		register(cake_cheese_raw);
 		register(cake_cheese_model);
 		
+		register(mousse_berry_raw);
+		register(mousse_berry_model);
+		register(mousse_coffee_raw);
+		register(mousse_coffee_model);
+		register(mousse_chocolate_raw);
+		register(mousse_chocolate_model);
+		register(mousse_lemon_raw);
+		register(mousse_lemon_model);
+		
 		register(brownie_raw);
 		register(brownie_model);
 		register(tiramisu_model);
@@ -502,6 +560,31 @@ public class ItemLoader {
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(mousse_berry_raw);
+		registerRender(mousse_berry_model);
+		registerRender(mousse_coffee_raw);
+		registerRender(mousse_coffee_model);
+		registerRender(mousse_chocolate_raw);
+		registerRender(mousse_chocolate_model);
+		registerRender(mousse_lemon_raw);
+		registerRender(mousse_lemon_model);
+		
+		registerRender(syrup_mint);
+		registerRender(syrup_chocolate);
+		registerRender(syrup_apple);
+		registerRender(soda);
+		registerRender(dough_ginger);
+		registerRender(plate_dough_ginger);
+		registerRender(plate_ginger);
+		registerRender(marshmallow);
+		registerRender(marshmallow_chocolate);
+		registerRender(marshmallow_roast);
+		registerRender(smore);
+		registerRender(ginger_bread);
+		registerRender(ginger_bread_man_raw);
+		registerRender(ginger_bread_man);
+		
+		registerRender(gelatin);
 		registerRender(muffin_raw);
 		registerRender(muffin_chocolate_raw);
 		registerRender(muffin_coffee_raw);
@@ -555,12 +638,13 @@ public class ItemLoader {
 		registerRender(iron_bowl_batter_lemon);
 		registerRender(iron_bowl_batter_berry);
 		registerRender(iron_bowl_batter_tea);
-		
+		registerRender(spices);
+
 		registerRender(cake_model);
 		registerRender(cake_model_square);
 		registerRender(cake_model_plate);
-		registerRender(vanilla_seeds,"vanilla_seeds");
-		registerRender(vanilla,"vanilla");
+		registerRender(vanilla_seeds);
+		registerRender(vanilla);
 		registerRender(cake_sponge_raw);
 		registerRender(cake_sponge_model);
 		registerRender(cake_sponge_plate_raw);

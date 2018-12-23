@@ -155,6 +155,8 @@ item.coffeework.icecream_apple.name=Apple Ice cream
 item.coffeework.icecream_berry.name=Berry Ice cream
 item.coffeework.icecream_melon.name=Melon Ice cream
 item.coffeework.icecream_lemon.name=Lemon Ice cream
+item.coffeework.coffee_soda_ice.name=Coffee Soda
+
 
 item.coffeework.cream_milk.name=Cream
 item.coffeework.cream_chocolate.name=Chocolate Cream
@@ -231,6 +233,16 @@ item.coffeework.cake_sponge_tea_base.name=Matcha Sponge Cake Plate
 item.coffeework.cake_sponge_berry_base.name=Berry Sponge Cake Plate
 item.coffeework.cake_sponge_lemon_base.name=Lemon Sponge Cake Plate
 item.coffeework.cake_sponge_redvelvet_base.name=Red Velvet Sponge Cake Plate
+
+item.coffeework.mousse_berry_raw.name=Unformed mousse
+item.coffeework.mousse_chocolate_raw.name=Unformed mousse
+item.coffeework.mousse_coffee_raw.name=Unformed mousse
+item.coffeework.mousse_lemon_raw.name=Unformed mousse
+
+item.coffeework.mousse_berry_model.name=Mousse Berry(Model)
+item.coffeework.mousse_chocolate_model.name=Mousse Chocolate(Model)
+item.coffeework.mousse_coffee_model.name=Mousse Coffee(Model)
+item.coffeework.mousse_lemon_model.name=Mousse Lemon(Model)
 
 item.coffeework.jiggy_cake_raw.name=Raw Sponge Jiggy Cake
 item.coffeework.jiggy_cake_chocolate_raw.name=Raw Chocolate Sponge Jiggy Cake
@@ -324,6 +336,20 @@ item.coffeework.dough_pastry.name=Pastry Dough
 item.coffeework.plate_dough.name=Dough Plate
 item.coffeework.plate_dough_pastry.name=Pastry Dough Plate
 
+item.coffeework.spices.name=Spices
+item.coffeework.gelatin.name=Gelatin
+item.coffeework.dough_ginger.name=Ginger Dough
+item.coffeework.plate_dough_ginger.name=Ginger Dough Plate
+item.coffeework.plate_ginger.name=Ginger Bread Plate
+item.coffeework.ginger_bread.name=Ginger Bread
+item.coffeework.ginger_bread_man_raw.name=Raw Ginger Bread Man
+item.coffeework.ginger_bread_man.name=Ginger Bread Man
+item.coffeework.marshmallow.name=Marshmallow
+item.coffeework.marshmallow_chocolate.name=Chocolate Marshmallow
+item.coffeework.marshmallow_roast.name=Roast Marshmallow
+item.coffeework.smore.name=S'more
+item.coffeework.soda.name=Baking soda
+
 item.coffeework.iron_bowl.name=Iron Bowl
 item.coffeework.iron_bowl_egg.name=Egg(Iron Bowl)
 item.coffeework.iron_bowl_cheese.name=Cheese(Iron Bowl)
@@ -346,7 +372,42 @@ item.record.lazy_lady_kaguya.desc=Lanxi-Lazy lady Kaguya
 item.record.the_grimoire_of_marisa.desc=Lanxi-The Grimoire of Marisa(Has been removed)
 word.thanks2lanxi.name=Thanks,Lanxi.
 
+item.coffeework.coffee_instant_stick.name=Instant Coffee Stick 
+item.coffeework.coffee_instant_box.name=Instant Coffee Box
+item.coffeework.coffee_instant_cup_unopen.name=Instant Coffee Cup
+item.coffeework.coffee_instant_cup.name=Instant Coffee Cup
+item.coffeework.coffee_instant.name=Instant Coffee
+item.coffeework.coffee_mint.name=Mint Café Latté
+item.coffeework.cocoa_gingerbread.name=Ginger Bread Cocoa
+item.coffeework.cocoa_marshmallow.name=Marshmallow Cocoa
+item.coffeework.coffee_icecream.name=Snow Coffee
 
+tile.coffeework.coffee_instant.name=Instant Coffee
+tile.coffeework.coffee_mint.name=Mint Café Latté
+tile.coffeework.cocoa_gingerbread.name=Ginger Bread Cocoa
+tile.coffeework.cocoa_marshmallow.name=Marshmallow Cocoa
+tile.coffeework.coffee_icecream.name=Snow Coffee
+
+item.coffeework.coffee_mint_ice.name=Mine Ice Latté
+item.coffeework.coffee_moncheri_ice.name=Mon Cheri
+
+tile.coffeework.xmas_tree.name=Xmas Tree
+tile.coffeework.ginger_house.name=Ginger Bread House
+tile.coffeework.soda_ore.name=Sodium bicarbonate Ore
+
+tile.coffeework.mousse_berry.name=Mousse Berry
+tile.coffeework.mousse_lemon.name=Mousse Lemon
+tile.coffeework.mousse_chocolate.name=Mousse Chocolate
+tile.coffeework.mousse_coffee.name=Mousse Coffee
+
+item.coffeework.soda_drink.name=Soda Drink
+item.coffeework.soda_drink_cola.name=Cola
+item.coffeework.soda_drink_lemon.name=Lemon Soda
+item.coffeework.soda_drink_berry.name=Berry Soda
+item.coffeework.soda_drink_cherry.name=Cherry Cola
+item.coffeework.soda_drink_vanilla.name=Vanilla Soda
+item.coffeework.soda_drink_apple.name=Apple Soda
+item.coffeework.soda_drink_chocolate.name=Cocoa Soda
 #TABS
 itemGroup.coffee_workshop=Coffee Workshop
 
@@ -432,3 +493,15 @@ word.coffeework.coffee_cream.name=Creamy Coffee
 word.coffeework.coffee_lemon.name=Mixed feelings
 word.coffeework.coffee_berry.name=Strawberry flavor 
 word.coffeework.coffee_vanilla.name=French Style
+
+word.coffeework.coffee_instant_cup.name=Ready to drink
+word.coffeework.coffee_instant.name=Impatient
+word.coffeework.coffee_mint.name=Mint scent
+word.coffeework.cocoa_gingerbread.name=Holiday Drink
+word.coffeework.cocoa_marshmallow.name=Holiday Drink
+word.coffeework.coffee_icecream.name=Icecream Coffee
+word.coffeework.coffee_soda_ice.name=Cleft palate
+word.coffeework.coffee_mint_ice.name=Strong Cold
+word.coffeework.coffee_moncheri_ice.name=The Famous work of Hiroyuki Kadowaki
+
+entity.Villager.coffee_trader=Coffee Trader

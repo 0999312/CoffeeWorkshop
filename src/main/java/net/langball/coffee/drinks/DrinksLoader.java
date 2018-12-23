@@ -5,9 +5,11 @@ import net.langball.coffee.CommonProxy;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.item.DrinkCocoaIce;
 import net.langball.coffee.item.DrinkCoffee;
+import net.langball.coffee.item.DrinkCoffeeInstant;
 import net.langball.coffee.item.DrinkEspresso;
 import net.langball.coffee.item.DrinkMixCoffee;
 import net.langball.coffee.item.DrinkMixCoffeeIce;
+import net.langball.coffee.item.DrinkSodaDrink;
 import net.langball.coffee.item.DrinkTurkeyCoffee;
 import net.langball.coffee.util.JSON_Creator;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -25,14 +27,20 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.ForgeRegistry;
 
 public class DrinksLoader {
+	public static Item coffee_instant_stick = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_instant_stick");
+	public static Item coffee_instant_box = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_instant_box");
+	public static Item coffee_instant_cup_unopen = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_instant_cup_unopen");
+	public static Item coffee_instant_cup= new DrinkCoffeeInstant(2, 1F, true).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_instant_cup");
+	public static Item coffee_instant= new DrinkCoffeeInstant(2, 1F, false).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_instant");
+	
 	public static Item cup = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup").setMaxStackSize(1);
 	public static Item coffee=new DrinkCoffee(2,1f,null).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee");
-	public static Item coffee_milk=new DrinkCoffee(3,1f,new PotionEffect(Potion.getPotionById(10),500,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_milk");
-	public static Item coffee_cream=new DrinkCoffee(4,2f,new PotionEffect(Potion.getPotionById(10),300,2)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_cream");
-	public static Item coffee_cheese=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(12),500,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_cheese");
+	public static Item coffee_milk=new DrinkCoffee(3,1f,new PotionEffect(Potion.getPotionById(10),1200,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_milk");
+	public static Item coffee_cream=new DrinkCoffee(4,2f,new PotionEffect(Potion.getPotionById(10),1000,2)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_cream");
+	public static Item coffee_cheese=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(12),1200,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_cheese");
 	public static Item espresso=new DrinkEspresso(2,2f).setUnlocalizedName(CoffeeWork.MODID+"."+"espresso");
 	public static Item cocoa=new DrinkCoffee(4,2f,null).setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa");
-	public static Item strong_cocoa=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(5),600,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"strong_cocoa");
+	public static Item strong_cocoa=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(5),1300,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"strong_cocoa");
 	public static Item coffee_american=new DrinkMixCoffee(EnumCoffee.american);
 	public static Item coffee_latte=new DrinkMixCoffee(EnumCoffee.latte);
 	public static Item coffee_mochaccino=new DrinkMixCoffee(EnumCoffee.mochaccino);
@@ -56,33 +64,60 @@ public class DrinksLoader {
 	
 	public static Item coffee_turkey = new DrinkTurkeyCoffee().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_turkey");
 	public static Item cocoa_ice=new DrinkCocoaIce(4,2f,null).setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_ice");
-	public static Item strong_cocoa_ice=new DrinkCocoaIce(5,2f,new PotionEffect(Potion.getPotionById(5),600,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"strong_cocoa_ice");
+	public static Item strong_cocoa_ice=new DrinkCocoaIce(5,2f,new PotionEffect(Potion.getPotionById(5),1300,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"strong_cocoa_ice");
 	public static Item freddo=new DrinkMixCoffeeIce(EnumCoffee.freddo);
 	public static Item freddo_mocha=new DrinkMixCoffeeIce(EnumCoffee.freddo_mocha);
 	public static Item freddo_caramel=new DrinkMixCoffeeIce(EnumCoffee.freddo_caramel);
 	
+	public static Item soda_drink = new DrinkSodaDrink(3, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink");
+	public static Item soda_drink_cola = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_cola");
+	public static Item soda_drink_lemon = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_lemon");
+	public static Item soda_drink_berry = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_berry");
+	public static Item soda_drink_cherry = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_cherry");
+	public static Item soda_drink_vanilla = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_vanilla");
+	public static Item soda_drink_apple = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_apple");
+	public static Item soda_drink_chocolate = new DrinkSodaDrink(4, 1f).setUnlocalizedName(CoffeeWork.MODID+"."+"soda_drink_chocolate");
+	public static Item coffee_soda=new DrinkMixCoffeeIce(EnumCoffee.soda);
+
+	public static Item moncheri=new DrinkMixCoffeeIce(EnumCoffee.moncheri);
+	public static Item coffee_icecream=new DrinkCoffee(4,2f,new PotionEffect(Potion.getPotionById(12),1200,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_icecream");
+	public static Item coffee_mint=new DrinkMixCoffee(EnumCoffee.mint);
+	public static Item coffee_mint_ice=new DrinkMixCoffeeIce(EnumCoffee.mint);
+	
+	public static Item cocoa_marshmallow=new DrinkCoffee(5,2f,new PotionEffect(Potion.getPotionById(12),1200,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_marshmallow");
+	public static Item cocoa_gingerbread=new DrinkCoffee(7,2f,new PotionEffect(Potion.getPotionById(13),1200,1)).setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_gingerbread");
 	public DrinksLoader(FMLPreInitializationEvent event) {
+		
+		register(coffee_instant_stick);
+		register(coffee_instant_box);
+		register(coffee_instant_cup_unopen);
+		register(coffee_instant_cup);
+		register(coffee_instant);
 
 		register(cup);
 		register(coffee);
 		register(coffee_milk);
 		register(coffee_cream);
 		register(coffee_cheese);
+		register(coffee_icecream);
 		register(coffee_turkey);
 		register(cocoa);
 		register(strong_cocoa);
-		
+		register(cocoa_marshmallow);
+		register(cocoa_gingerbread);
+
+
 		register(espresso);
 		register(coffee_american);
 		register(coffee_latte);
 		register(coffee_mochaccino);
 		register(coffee_cappuccino);
 		register(coffee_macchiato);
-		
 		register(coffee_vanilla);
 		register(coffee_berry);
 		register(coffee_lemon);
-		
+		register(coffee_mint);
+
 		register(cup_glass);
 		register(cocoa_ice);
 		register(strong_cocoa_ice);
@@ -94,7 +129,18 @@ public class DrinksLoader {
 		register(coffee_vanilla_ice);
 		register(coffee_berry_ice);
 		register(coffee_lemon_ice);
+		register(coffee_mint_ice);
+		register(moncheri);
+		register(soda_drink);
+		register(soda_drink_cola);
+		register(soda_drink_vanilla);
+		register(soda_drink_berry);
+		register(soda_drink_cherry);
+		register(soda_drink_lemon);
+		register(soda_drink_chocolate);
+		register(soda_drink_apple);
 		
+		register(coffee_soda);
 		register(freddo);
 		register(freddo_caramel);
 		register(freddo_mocha);
@@ -103,6 +149,22 @@ public class DrinksLoader {
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(cocoa_marshmallow);
+		registerRender(cocoa_gingerbread);
+		registerRender(coffee_icecream);
+		registerRender(coffee_mint);
+		registerRender(coffee_mint_ice);
+		registerRender(moncheri);
+		registerRender(coffee_soda);
+		registerRender(soda_drink);
+		registerRender(soda_drink_cola);
+		registerRender(soda_drink_vanilla);
+		registerRender(soda_drink_berry);
+		registerRender(soda_drink_cherry);
+		registerRender(soda_drink_lemon);
+		registerRender(soda_drink_chocolate);
+		registerRender(soda_drink_apple);
+		
 		registerRender(coffee_cream);
 		registerRender(coffee_vanilla_ice);
 		registerRender(coffee_berry_ice);
@@ -123,7 +185,11 @@ public class DrinksLoader {
 		registerRender(coffee_mochaccino_ice);
 		registerRender(coffee_cappuccino_ice);
 		registerRender(coffee_macchiato_ice);
-	
+		registerRender(coffee_instant_stick);
+		registerRender(coffee_instant_box);
+		registerRender(coffee_instant_cup_unopen);
+		registerRender(coffee_instant_cup);
+		registerRender(coffee_instant);
         registerRender(coffee_american);
         registerRender(coffee_latte);
         registerRender(coffee_mochaccino);

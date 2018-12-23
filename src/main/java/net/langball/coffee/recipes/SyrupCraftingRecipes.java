@@ -16,17 +16,18 @@ public class SyrupCraftingRecipes {
 			"WGW","W W"," W ",'W',"paneGlassColorless",'G',"plankWood"
 	}));
 	RecipesUtil.addRecipe(ItemLoader.syrup_full, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.syrup_full,new Object[]{
-			ItemLoader.syrup_empty,"listAllsugar"
+			ItemLoader.syrup_empty,"listAllsugar","listAllsugar"
 	}));
 	RegisterSyrupRecipe(ItemLoader.syrup_berry, "listAllberry");
 	RegisterSyrupRecipe(ItemLoader.syrup_lemon, "cropLemon");
 	RegisterSyrupRecipe(ItemLoader.syrup_cherry, "cropCherry");
 	RegisterSyrupRecipe(ItemLoader.syrup_vanilla, "cropVanilla");
+	RegisterSyrupRecipe(ItemLoader.syrup_mint, "cropSpiceleaf");
 	GameRegistry.addSmelting(ItemLoader.syrup_full, new ItemStack(ItemLoader.syrup_brown), 0F);
 	}
 	public static void RegisterSyrupRecipe(Item syrup,String oredict){
 		RecipesUtil.addRecipe(syrup, new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
-				ItemLoader.syrup_empty,"listAllsugar",oredict
+				ItemLoader.syrup_empty,"listAllsugar",oredict,"listAllsugar"
 		}));
 		RecipesUtil.addRecipe(syrup.getRegistryName().toString()+"_2", new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
 				ItemLoader.syrup_full,oredict

@@ -84,11 +84,11 @@ public class DrinkCoffee extends ItemFood {
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,400,0);
+		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1000,0);
 		player.addPotionEffect(bitter_1);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),400,1);
+		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1000,1);
 		player.addPotionEffect(bitter_2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),400,1);
+		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),1000,1);
 		player.addPotionEffect(bitter_3);
 		if(effect!=null){
 		player.addPotionEffect(effect);

@@ -2,6 +2,7 @@ package net.langball.coffee.item;
 
 import defeatedcrow.hac.food.FoodInit;
 import defeatedcrow.hac.main.ClimateMain;
+import net.langball.coffee.drinks.DrinksLoader;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -78,7 +79,14 @@ public class OreDicRegister {
     if(Loader.isModLoaded(ClimateMain.MOD_ID)){
     	OreDictionary.registerOre("beanCoffee",new ItemStack(FoodInit.teaLeaves, 1, 0));
     }
- 
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_apple);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_berry);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_cherry);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_chocolate);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_cola);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_lemon);
+	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_vanilla);
 	}
 	
 }

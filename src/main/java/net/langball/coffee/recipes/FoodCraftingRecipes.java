@@ -3,10 +3,12 @@ package net.langball.coffee.recipes;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
+import net.langball.coffee.recipes.blocks.IcecreamMachineRecipes;
 import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
@@ -19,6 +21,7 @@ public class FoodCraftingRecipes {
 	public FoodCraftingRecipes() {
 		
 		GameRegistry.addSmelting(ItemLoader.dough, new ItemStack(Items.BREAD), 0F);
+		GameRegistry.addSmelting(ItemLoader.dough_ginger, new ItemStack(ItemLoader.ginger_bread,8), 0F);
 		GameRegistry.addSmelting(ItemLoader.dough_cookie, new ItemStack(Items.COOKIE,8), 0F);
 		GameRegistry.addSmelting(ItemLoader.dough_baguette, new ItemStack(ItemLoader.baguette), 0F);
 		RecipesUtil.addRecipe(ItemLoader.chocolate_bar, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.chocolate_bar,new Object[]{
@@ -107,7 +110,18 @@ public class FoodCraftingRecipes {
 		registerRaw2CookedRecipes(new ItemStack(ItemLoader.mooncake_fruit_raw,2), new ItemStack(ItemLoader.mooncake_fruit), new Object[]{
 				"listAllfruit","listAllfruit","listAllsugar","foodDoughPastry",ItemLoader.mooncake_model
 		});
-		
+		registerRaw2CookedRecipes(new ItemStack(ItemLoader.ginger_bread_man_raw,4), new ItemStack(ItemLoader.ginger_bread_man), new Object[]{
+				ItemLoader.plate_dough_ginger,ItemLoader.plate_dough_ginger
+		});
+		registerRaw2CookedRecipes(new ItemStack(ItemLoader.marshmallow,8), new ItemStack(ItemLoader.marshmallow_roast), new Object[]{
+				"listAllsugar","listAllsugar","listAllsugar",ItemLoader.gelatin
+		});
+		RecipesUtil.addRecipe(ItemLoader.smore, new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.smore,2),new Object[]{
+				ItemLoader.plate_pastry,ItemLoader.plate_pastry,ItemLoader.marshmallow,"foodChocolatebar"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.marshmallow_chocolate, new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.marshmallow_chocolate,2),new Object[]{
+				ItemLoader.marshmallow_roast,"foodCocoapowder","listAllmilk"
+		}));
 		registerCakeRecipes(new ItemStack(ItemLoader.iron_bowl_batter),
 				new ItemStack(ItemLoader.cake_sponge_raw), new ItemStack(ItemLoader.cake_sponge_model), new ItemStack(BlockLoader.cake_sponge),
 				new ItemStack(ItemLoader.cake_sponge_plate_raw), new ItemStack(ItemLoader.cake_sponge_plate_model), new ItemStack(ItemLoader.cake_sponge_base), 
@@ -171,6 +185,18 @@ public class FoodCraftingRecipes {
 				new ItemStack(ItemLoader.muffin_berry_raw,3), new ItemStack(ItemLoader.muffin_berry),new ItemStack(ItemLoader.cake_berry_roll), new Object[]{
 					ItemLoader.iron_bowl_egg,"listAllmilk","foodFlour","foodFlour","listAllsugar", "listAllberry"	
 				});
+		registerMousseRecipes(ItemLoader.mousse_berry_raw,new ItemStack( ItemLoader.mousse_berry_model), new ItemStack(BlockLoader.mousse_berryItem), new Object[]{
+				"listAllmilk","listAllmilk","listAllegg","listAllegg",ItemLoader.gelatin,ItemLoader.cake_model,"listAllberry"
+		});
+		registerMousseRecipes(ItemLoader.mousse_chocolate_raw,new ItemStack( ItemLoader.mousse_chocolate_model), new ItemStack(BlockLoader.mousse_chocolateItem), new Object[]{
+				"listAllmilk","listAllmilk","listAllegg","listAllegg",ItemLoader.gelatin,ItemLoader.cake_model,"foodCocoapowder"
+		});
+		registerMousseRecipes(ItemLoader.mousse_lemon_raw,new ItemStack( ItemLoader.mousse_lemon_model), new ItemStack(BlockLoader.mousse_lemonItem), new Object[]{
+				"listAllmilk","listAllmilk","listAllegg","listAllegg",ItemLoader.gelatin,ItemLoader.cake_model,"cropLemon"
+		});
+		registerMousseRecipes(ItemLoader.mousse_coffee_raw,new ItemStack( ItemLoader.mousse_coffee_model), new ItemStack(BlockLoader.mousse_coffeeItem), new Object[]{
+				"listAllmilk","listAllmilk","listAllegg","listAllegg",ItemLoader.gelatin,ItemLoader.cake_model,"dustCoffee"
+		});
 	}
 		private static void registerCakeRecipes(ItemStack cake_raw,ItemStack cake_model,ItemStack cake,Object... recipe) {
 			RecipesUtil.addRecipe(cake_raw.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake_raw,recipe));
@@ -204,6 +230,12 @@ public class FoodCraftingRecipes {
 		private static void registerRaw2CookedRecipes(ItemStack cake_raw,ItemStack cake,Object... recipe) {
 			RecipesUtil.addRecipe(cake_raw.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake_raw,recipe));
 			GameRegistry.addSmelting(cake_raw.getItem(), cake, 0F);
-			
+		}
+		private static void registerMousseRecipes(Item cake_raw,ItemStack cake_model,ItemStack cake,Object... recipe) {
+			RecipesUtil.addRecipe(cake_raw, new ShapelessOreRecipe(new ResourceLocation(""),cake_raw,recipe));
+			IcecreamMachineRecipes.instance().addSmelting(cake_raw, cake_model, 0F);
+			RecipesUtil.addRecipe(cake.getItem(), new ShapelessOreRecipe(new ResourceLocation(""),cake,new Object[]{
+					cake_model
+			}));
 		}
 }

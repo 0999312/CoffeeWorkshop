@@ -40,7 +40,6 @@ public class BlockCakeBasic extends BlockCake {
     
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-    	// TODO Auto-generated method stub
     	return this.cake;
     }
 
@@ -69,8 +68,8 @@ public class BlockCakeBasic extends BlockCake {
         		PotionEffect effect= player.getActivePotionEffect(PotionLoader.relax);
         		if(effect != null){
         			int foodlevel = effect.getAmplifier();
-        			player.heal(foodlevel*2);
-        			player.getFoodStats().addStats(foodlevel, foodlevel*1.25F);
+        			player.heal(foodlevel+2);
+        			player.getFoodStats().addStats(foodlevel+1, foodlevel*1.25F);
         		}
         	}
             int i = ((Integer)state.getValue(BITES)).intValue();

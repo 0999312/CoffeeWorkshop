@@ -6,6 +6,7 @@ import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.util.JSON_Creator;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockOre;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -51,6 +52,8 @@ public class BlockLoader {
 	public static Block coffee_berryBlock = new BlockCoffee(DrinksLoader.coffee_berry);
 	public static Block coffee_lemonBlock = new BlockCoffee(DrinksLoader.coffee_lemon);
 
+	public static Block coffee_instantBlock = new BlockCoffee(DrinksLoader.coffee_instant);
+	public static Item coffee_instantBlockItem = new ItemBlockCoffee(coffee_instantBlock);
 	
 	public static Item coffee_berryBlockItem = new ItemBlockCoffee(coffee_berryBlock);
 	public static Item coffee_creamBlockItem = new ItemBlockCoffee(coffee_creamBlock);
@@ -150,7 +153,37 @@ public class BlockLoader {
 	
 	public static Block BlueBerryBush = new BlockBlueBerryBush().setRegistryName("blueberry_bush").setUnlocalizedName(CoffeeWork.MODID+".blueberry_bush").setCreativeTab(CommonProxy.tab);
 	public static Item BlueBerryBushItem = new ItemBlock(BlueBerryBush).setRegistryName("blueberry_bush").setUnlocalizedName(CoffeeWork.MODID+"blueberry_bush");
+	
+	public static Block XmasTree = new BlockXmasTree().setRegistryName("xmas_tree").setUnlocalizedName(CoffeeWork.MODID+".xmas_tree").setCreativeTab(CommonProxy.tab);
+	public static Item XmasTreeItem = new ItemBlock(XmasTree).setRegistryName("xmas_tree").setUnlocalizedName(CoffeeWork.MODID+"xmas_tree");
+	public static Block GingerHouse = new BlockGingerHouse().setRegistryName("ginger_house").setUnlocalizedName(CoffeeWork.MODID+".ginger_house").setCreativeTab(CommonProxy.tab);
+	public static Item GingerHouseItem = new ItemBlock(GingerHouse).setRegistryName("ginger_house").setUnlocalizedName(CoffeeWork.MODID+"ginger_house");
+
+	public static Block Soda_Ore = new BlockOreSoda().setRegistryName("soda_ore").setUnlocalizedName(CoffeeWork.MODID+".soda_ore").setCreativeTab(CommonProxy.tab);
+	public static Item Soda_OreItem = new ItemBlock(Soda_Ore).setRegistryName("soda_ore").setUnlocalizedName(CoffeeWork.MODID+"soda_ore");
+
+	public static Block coffee_mintBlock = new BlockCoffee(DrinksLoader.coffee_mint);
+	public static Item coffee_mintBlockItem = new ItemBlockCoffee(coffee_mintBlock);
+	public static Block coffee_icecreamBlock = new BlockCoffee(DrinksLoader.coffee_icecream);
+	public static Item coffee_icecreamBlockItem = new ItemBlockCoffee(coffee_icecreamBlock);
+	public static Block cocoa_marshmallowBlock = new BlockCoffee(DrinksLoader.cocoa_marshmallow);
+	public static Item cocoa_marshmallowBlockItem = new ItemBlockCoffee(cocoa_marshmallowBlock);
+	public static Block cocoa_gingerbreadBlock = new BlockCoffee(DrinksLoader.cocoa_gingerbread);
+	public static Item cocoa_gingerbreadBlockItem = new ItemBlockCoffee(cocoa_gingerbreadBlock);
+	
+	public static Block mousse_berry = new BlockCakeBasic(3,0.5F).setRegistryName("mousse_berry").setUnlocalizedName(CoffeeWork.MODID+".mousse_berry").setCreativeTab(CommonProxy.tab);
+	public static Item mousse_berryItem = new ItemBlock(mousse_berry).setRegistryName("mousse_berry").setUnlocalizedName(CoffeeWork.MODID+".mousse_berry");
+	public static Block mousse_lemon = new BlockCakeBasic(3,0.5F).setRegistryName("mousse_lemon").setUnlocalizedName(CoffeeWork.MODID+".mousse_lemon").setCreativeTab(CommonProxy.tab);
+	public static Item mousse_lemonItem = new ItemBlock(mousse_lemon).setRegistryName("mousse_lemon").setUnlocalizedName(CoffeeWork.MODID+".mousse_lemon");
+	public static Block mousse_chocolate = new BlockCakeBasic(3,0.5F).setRegistryName("mousse_chocolate").setUnlocalizedName(CoffeeWork.MODID+".mousse_chocolate").setCreativeTab(CommonProxy.tab);
+	public static Item mousse_chocolateItem = new ItemBlock(mousse_chocolate).setRegistryName("mousse_chocolate").setUnlocalizedName(CoffeeWork.MODID+".mousse_chocolate");
+	public static Block mousse_coffee = new BlockCakeBasic(3,0.5F).setRegistryName("mousse_coffee").setUnlocalizedName(CoffeeWork.MODID+".mousse_coffee").setCreativeTab(CommonProxy.tab);
+	public static Item mousse_coffeeItem = new ItemBlock(mousse_coffee).setRegistryName("mousse_coffee").setUnlocalizedName(CoffeeWork.MODID+".mousse_coffee");
+	
 	public BlockLoader(FMLPreInitializationEvent event) {
+		ForgeRegistries.BLOCKS.register(Soda_Ore);
+		ForgeRegistries.ITEMS.register(Soda_OreItem);
+		
 		ForgeRegistries.BLOCKS.register(Grinder);
 		ForgeRegistries.BLOCKS.register(Grinder_on);
 		ForgeRegistries.ITEMS.register(GrinderItem);
@@ -163,6 +196,7 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(Roller);
 		ForgeRegistries.BLOCKS.register(Roller_on);
 		ForgeRegistries.ITEMS.register(RollerItem);
+
 		ForgeRegistries.BLOCKS.register(Coffee_tree);
 		ForgeRegistries.ITEMS.register(Coffee_treeItem);
 		ForgeRegistries.BLOCKS.register(BlueBerryBush);
@@ -208,6 +242,15 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(tiramisu);
 		ForgeRegistries.ITEMS.register(tiramisuItem);
 		
+		ForgeRegistries.BLOCKS.register(mousse_berry);
+		ForgeRegistries.ITEMS.register(mousse_berryItem);
+		ForgeRegistries.BLOCKS.register(mousse_lemon);
+		ForgeRegistries.ITEMS.register(mousse_lemonItem);
+		ForgeRegistries.BLOCKS.register(mousse_chocolate);
+		ForgeRegistries.ITEMS.register(mousse_chocolateItem);
+		ForgeRegistries.BLOCKS.register(mousse_coffee);
+		ForgeRegistries.ITEMS.register(mousse_coffeeItem);
+		
 		ForgeRegistries.BLOCKS.register(bag_coffee_raw);
 		ForgeRegistries.ITEMS.register(bag_coffee_rawItem);
 		ForgeRegistries.BLOCKS.register(bag_coffee);
@@ -242,6 +285,7 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(plateItem);
 		
 		ForgeRegistries.BLOCKS.register(coffeeBlock);
+		ForgeRegistries.BLOCKS.register(coffee_instantBlock);
 		ForgeRegistries.BLOCKS.register(coffee_milkBlock);
 		ForgeRegistries.BLOCKS.register(cocoaBlock);
 		ForgeRegistries.BLOCKS.register(strong_cocoaBlock);
@@ -257,8 +301,18 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(coffee_vanillaBlock);
 		ForgeRegistries.BLOCKS.register(coffee_berryBlock);
 		ForgeRegistries.BLOCKS.register(coffee_lemonBlock);
-
+		
+		ForgeRegistries.BLOCKS.register(coffee_mintBlock);
+		ForgeRegistries.ITEMS.register(coffee_mintBlockItem);
+		ForgeRegistries.BLOCKS.register(coffee_icecreamBlock);
+		ForgeRegistries.ITEMS.register(coffee_icecreamBlockItem);
+		ForgeRegistries.BLOCKS.register(cocoa_marshmallowBlock);
+		ForgeRegistries.ITEMS.register(cocoa_marshmallowBlockItem);
+		ForgeRegistries.BLOCKS.register(cocoa_gingerbreadBlock);
+		ForgeRegistries.ITEMS.register(cocoa_gingerbreadBlockItem);
+		
 		ForgeRegistries.ITEMS.register(coffeeBlockItem);
+		ForgeRegistries.ITEMS.register(coffee_instantBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_milkBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_turkeyBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_creamBlockItem);
@@ -275,15 +329,31 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(coffee_berryBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_lemonBlockItem);
 
-
+		ForgeRegistries.BLOCKS.register(XmasTree);
+		ForgeRegistries.ITEMS.register(XmasTreeItem);
+		ForgeRegistries.BLOCKS.register(GingerHouse);
+		ForgeRegistries.ITEMS.register(GingerHouseItem);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
+		registerRender(mousse_berry);
+		registerRender(mousse_chocolate);
+		registerRender(mousse_coffee);
+		registerRender(mousse_lemon);
+		
+		registerRender(coffee_mintBlock);
+		registerRender(coffee_icecreamBlock);
+		registerRender(cocoa_marshmallowBlock);
+		registerRender(cocoa_gingerbreadBlock);
+		
+		registerRender(GingerHouse);
+		registerRender(XmasTree);
+		registerRender(Soda_Ore);
 		registerRender(coffee_creamBlock);
 		registerRender(coffee_berryBlock);
 		registerRender(coffee_vanillaBlock);
 		registerRender(coffee_lemonBlock);
-		
+		registerRender(coffee_instantBlock);
 		registerRender(coffee_cheeseBlock);
 		registerRender(cake_sponge);
 		registerRender(cake_sponge_chocolate);
