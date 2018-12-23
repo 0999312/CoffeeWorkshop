@@ -1,11 +1,13 @@
 package net.langball.coffee;
 
 import defeatedcrow.hac.main.ClimateMain;
+import ic2.core.IC2;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.block.tileentity.TileEntityLoader;
 import net.langball.coffee.compat.TeaStoriesCompatDrinks;
 import net.langball.coffee.compat.TeaStoriesCompatRecipes;
 import net.langball.coffee.compat.HACRecipeLoader;
+import net.langball.coffee.compat.ICcompatLoader;
 import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.effect.PotionLoader;
 import net.langball.coffee.event.EventCoffeeSeeds;
@@ -56,8 +58,8 @@ public class CommonProxy {
 	 
     public void init(FMLInitializationEvent event)
     { 
-		 new FuelLoader();
-		 new WorldGenLoader();
+		new FuelLoader();
+		new WorldGenLoader();
     	new GuiLoader();
     	RecipesUtil.addRecipe(DrinksLoader.coffee, new MakingBlackCoffee());
     	MinecraftForge.EVENT_BUS.register(new MakingBlackCoffee());
@@ -68,8 +70,9 @@ public class CommonProxy {
     	new DrinksCraftingRecipes();
     	new FoodCraftingRecipes();
     	SyrupCraftingRecipes.init();
-    	 if(Loader.isModLoaded(ClimateMain.MOD_ID)) new HACRecipeLoader();
+    	if(Loader.isModLoaded(ClimateMain.MOD_ID)) new HACRecipeLoader();
     	if(Loader.isModLoaded(TeaStory.MODID)) new TeaStoriesCompatRecipes();
+		if(Loader.isModLoaded(IC2.MODID)) new ICcompatLoader();
     }
 
     public void postInit(FMLPostInitializationEvent event)
