@@ -17,7 +17,7 @@ public class MakingTurkeyCoffee extends ShapelessOreRecipe {
 
 	public MakingTurkeyCoffee() {
 		super(new ResourceLocation(" "), DrinksLoader.coffee_turkey, new  Object[]{
-				ItemLoader.turkey_coffee_pot_heated,DrinksLoader.cup
+				new ItemStack(ItemLoader.coffee_pot,1,6),DrinksLoader.cup
 		});
 		
 	}
@@ -29,7 +29,7 @@ public class MakingTurkeyCoffee extends ShapelessOreRecipe {
 
 		if(!item.isEmpty()){
 	        if(item.getItem() ==DrinksLoader.coffee_turkey){
-	        	ItemStack top = new ItemStack(ItemLoader.turkey_coffee_pot);
+	        	ItemStack top = new ItemStack(ItemLoader.coffee_pot,1,4);
 	    		player.inventory.addItemStackToInventory(top);
 	        }
 		}

@@ -24,70 +24,72 @@ public class HACRecipeLoader {
 		public HACRecipeLoader() {
 			if(Loader.isModLoaded(ClimateMain.MOD_ID)){
 				 ItemStack sus = new ItemStack(MachineInit.rotaryBlade, 1, 0);
-				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.cocoa_powder,2), new ItemStack(ItemLoader.cocoa_powder,1), 0.2F, null, 0.0F, null, sus,new ItemStack(ItemLoader.cocoa_bean));
-				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.coffee_powder,2), new ItemStack(ItemLoader.coffee_powder,1), 0.2F, null, 0.0F, null, sus,"beanCoffee");
-				 FoodFluidRecipe.regBoilrecipe(null, null, 0.0F, new FluidStack(MainInit.coffee, 1000), null, null, false, new FluidStack(FluidRegistry.WATER, 1000), new Object[] { new ItemStack(ItemLoader.coffee_bean, 1, 0) });
-				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.ice_slag,2), new ItemStack(ItemLoader.ice_slag), 0.2F, null, 0.0F, null, sus,new ItemStack(Blocks.ICE));
-				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.chocolate_chip,2), new ItemStack(ItemLoader.chocolate_chip), 0.2F, null, 0.0F, null, sus,"foodChocolatebar");
-				 addFoodRecipe(new ItemStack(ItemLoader.brownie_model),new ItemStack(ItemLoader.brownie_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.croissant),new ItemStack(ItemLoader.croissant_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.croissant_chocolate),new ItemStack(ItemLoader.croissant_chocolate_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.hardtack),new ItemStack(ItemLoader.hardtack_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.cake_cheese_model),new ItemStack(ItemLoader.cake_cheese_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.plate_pastry),new ItemStack(ItemLoader.plate_pastry_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.coffee_bean),new ItemStack(ItemLoader.coffee_bean_raw));
-				 addFoodRecipe(new ItemStack(ItemLoader.baguette),new ItemStack(ItemLoader.dough_baguette));
+				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.materials,2,11), new ItemStack(ItemLoader.materials,1,11), 0.2F, null, 0.0F, null, sus,new ItemStack(ItemLoader.materials,1,10));
+				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.materials,2,9), new ItemStack(ItemLoader.materials,1,9), 0.2F, null, 0.0F, null, sus,"beanCoffee");
+				 FoodFluidRecipe.regBoilrecipe(null, null, 0.0F, new FluidStack(MainInit.coffee, 1000), null, null, false, new FluidStack(FluidRegistry.WATER, 1000), new Object[] { new ItemStack(ItemLoader.materials, 1, 1) });
+				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.materials,2,2), new ItemStack(ItemLoader.materials,1,2), 0.2F, null, 0.0F, null, sus,new ItemStack(Blocks.ICE));
+				 RecipeAPI.registerCrushers.addRecipe(new ItemStack(ItemLoader.materialFood,2,4), new ItemStack(ItemLoader.materialFood,1,4), 0.2F, null, 0.0F, null, sus,"foodChocolatebar");
+				 addFoodRecipe(new ItemStack(ItemLoader.jiggy_cake_model,1,9),new ItemStack(ItemLoader.jiggy_cake_raw,1,9));
+				 addFoodRecipe(new ItemStack(ItemLoader.dessert_1,1,2),new ItemStack(ItemLoader.dessert_1,1,0));
+				 addFoodRecipe(new ItemStack(ItemLoader.dessert_1,1,3),new ItemStack(ItemLoader.dessert_1,1,1));
+				 addFoodRecipe(new ItemStack(ItemLoader.dessert_1,1,5),new ItemStack(ItemLoader.dessert_1,1,4));
+				 addFoodRecipe(new ItemStack(ItemLoader.model_cake,1,9),new ItemStack(ItemLoader.raw_cake,1,9));
+				 addFoodRecipe(new ItemStack(ItemLoader.dessert_1,1,7),new ItemStack(ItemLoader.dessert_1,6));
+				 addFoodRecipe(new ItemStack(ItemLoader.materials,1,1),new ItemStack(ItemLoader.materials,1,0));
+				 addFoodRecipe(new ItemStack(ItemLoader.materialFood,1,5),new ItemStack(ItemLoader.materials,1,21));
 				 registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_raw), new ItemStack(ItemLoader.cake_sponge_model),
-							new ItemStack(ItemLoader.cake_sponge_plate_raw), new ItemStack(ItemLoader.cake_sponge_plate_model), 
-							new ItemStack(ItemLoader.jiggy_cake_raw), new ItemStack(ItemLoader.jiggy_cake_model), 
-							new ItemStack(ItemLoader.muffin_raw), new ItemStack(ItemLoader.muffin)
+							new ItemStack(ItemLoader.model_cake,1,0), new ItemStack(ItemLoader.model_cake,1,0),
+							new ItemStack(ItemLoader.cake_plate_raw,1,0), new ItemStack(ItemLoader.cake_plate_model,1,0), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,0), new ItemStack(ItemLoader.jiggy_cake_model), 
+							new ItemStack(ItemLoader.muffin,1,0), new ItemStack(ItemLoader.muffin,1,9)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_chocolate_raw), new ItemStack(ItemLoader.cake_sponge_chocolate_model),
-							new ItemStack(ItemLoader.cake_sponge_chocolate_plate_raw), new ItemStack(ItemLoader.cake_sponge_chocolate_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_chocolate_raw), new ItemStack(ItemLoader.jiggy_cake_chocolate_model),
-							new ItemStack(ItemLoader.muffin_chocolate_raw), new ItemStack(ItemLoader.muffin_chocolate));
-					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_coffee_raw), new ItemStack(ItemLoader.cake_sponge_coffee_model),
-							new ItemStack(ItemLoader.cake_sponge_coffee_plate_raw), new ItemStack(ItemLoader.cake_sponge_coffee_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_coffee_raw), new ItemStack(ItemLoader.jiggy_cake_coffee_model),
-							new ItemStack(ItemLoader.muffin_coffee_raw), new ItemStack(ItemLoader.muffin_coffee)
+							new ItemStack(ItemLoader.model_cake,1,1), new ItemStack(ItemLoader.model_cake,1,1),
+							new ItemStack(ItemLoader.cake_plate_raw,1,1), new ItemStack(ItemLoader.cake_plate_model,1,1), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,1), new ItemStack(ItemLoader.jiggy_cake_model,1,1), 
+							new ItemStack(ItemLoader.muffin,1,1), new ItemStack(ItemLoader.muffin,1,10)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_pumpkin_raw), new ItemStack(ItemLoader.cake_sponge_pumpkin_model),
-							new ItemStack(ItemLoader.cake_sponge_pumpkin_plate_raw), new ItemStack(ItemLoader.cake_sponge_pumpkin_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_pumpkin_raw), new ItemStack(ItemLoader.jiggy_cake_pumpkin_model),
-							new ItemStack(ItemLoader.muffin_pumpkin_raw), new ItemStack(ItemLoader.muffin_pumpkin));
-					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_carrot_raw), new ItemStack(ItemLoader.cake_sponge_carrot_model), 
-							new ItemStack(ItemLoader.cake_sponge_carrot_plate_raw), new ItemStack(ItemLoader.cake_sponge_carrot_plate_model), 
-							new ItemStack(ItemLoader.jiggy_cake_carrot_raw), new ItemStack(ItemLoader.jiggy_cake_carrot_model),
-							new ItemStack(ItemLoader.muffin_carrot_raw), new ItemStack(ItemLoader.muffin_carrot)
+							new ItemStack(ItemLoader.model_cake,1,2), new ItemStack(ItemLoader.model_cake,1,2),
+							new ItemStack(ItemLoader.cake_plate_raw,1,2), new ItemStack(ItemLoader.cake_plate_model,1,2), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,2), new ItemStack(ItemLoader.jiggy_cake_model,1,2), 
+							new ItemStack(ItemLoader.muffin,1,2), new ItemStack(ItemLoader.muffin,1,11)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_redvelvet_raw), new ItemStack(ItemLoader.cake_sponge_redvelvet_model),
-							new ItemStack(ItemLoader.cake_sponge_redvelvet_plate_raw), new ItemStack(ItemLoader.cake_sponge_redvelvet_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_redvelvet_raw), new ItemStack(ItemLoader.jiggy_cake_redvelvet_model),
-							new ItemStack(ItemLoader.muffin_redvelvet_raw), new ItemStack(ItemLoader.muffin_redvelvet)
+							new ItemStack(ItemLoader.model_cake,1,3), new ItemStack(ItemLoader.model_cake,1,3),
+							new ItemStack(ItemLoader.cake_plate_raw,1,3), new ItemStack(ItemLoader.cake_plate_model,1,3), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,3), new ItemStack(ItemLoader.jiggy_cake_model,1,3), 
+							new ItemStack(ItemLoader.muffin,1,3), new ItemStack(ItemLoader.muffin,1,12)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_lemon_raw), new ItemStack(ItemLoader.cake_sponge_lemon_model),
-							new ItemStack(ItemLoader.cake_sponge_lemon_plate_raw), new ItemStack(ItemLoader.cake_sponge_lemon_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_lemon_raw), new ItemStack(ItemLoader.jiggy_cake_lemon_model),
-							new ItemStack(ItemLoader.muffin_lemon_raw), new ItemStack(ItemLoader.muffin_lemon)
+							new ItemStack(ItemLoader.model_cake,1,4), new ItemStack(ItemLoader.model_cake,1,4),
+							new ItemStack(ItemLoader.cake_plate_raw,1,4), new ItemStack(ItemLoader.cake_plate_model,1,4), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,4), new ItemStack(ItemLoader.jiggy_cake_model,1,4), 
+							new ItemStack(ItemLoader.muffin,1,4), new ItemStack(ItemLoader.muffin,1,13)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_tea_raw), new ItemStack(ItemLoader.cake_sponge_tea_model),
-							new ItemStack(ItemLoader.cake_sponge_tea_plate_raw), new ItemStack(ItemLoader.cake_sponge_tea_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_tea_raw), new ItemStack(ItemLoader.jiggy_cake_tea_model),
-							new ItemStack(ItemLoader.muffin_tea_raw), new ItemStack(ItemLoader.muffin_tea)
+							new ItemStack(ItemLoader.model_cake,1,5), new ItemStack(ItemLoader.model_cake,1,5),
+							new ItemStack(ItemLoader.cake_plate_raw,1,5), new ItemStack(ItemLoader.cake_plate_model,1,5), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,5), new ItemStack(ItemLoader.jiggy_cake_model,1,5), 
+							new ItemStack(ItemLoader.muffin,1,5), new ItemStack(ItemLoader.muffin,1,14)
 							);
 					registerCakeRecipes(
-							new ItemStack(ItemLoader.cake_sponge_berry_raw), new ItemStack(ItemLoader.cake_sponge_berry_model),
-							new ItemStack(ItemLoader.cake_sponge_berry_plate_raw), new ItemStack(ItemLoader.cake_sponge_berry_plate_model),
-							new ItemStack(ItemLoader.jiggy_cake_berry_raw), new ItemStack(ItemLoader.jiggy_cake_berry_model),
-							new ItemStack(ItemLoader.muffin_berry_raw), new ItemStack(ItemLoader.muffin_berry)
+							new ItemStack(ItemLoader.model_cake,1,6), new ItemStack(ItemLoader.model_cake,1,6),
+							new ItemStack(ItemLoader.cake_plate_raw,1,6), new ItemStack(ItemLoader.cake_plate_model,1,6), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,6), new ItemStack(ItemLoader.jiggy_cake_model,1,6), 
+							new ItemStack(ItemLoader.muffin,1,6), new ItemStack(ItemLoader.muffin,1,15)
+							);
+					registerCakeRecipes(
+							new ItemStack(ItemLoader.model_cake,1,7), new ItemStack(ItemLoader.model_cake,1,7),
+							new ItemStack(ItemLoader.cake_plate_raw,1,7), new ItemStack(ItemLoader.cake_plate_model,1,7), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,7), new ItemStack(ItemLoader.jiggy_cake_model,1,7), 
+							new ItemStack(ItemLoader.muffin,1,7), new ItemStack(ItemLoader.muffin,1,16)
+							);
+					registerCakeRecipes(
+							new ItemStack(ItemLoader.model_cake,1,8), new ItemStack(ItemLoader.model_cake,1,8),
+							new ItemStack(ItemLoader.cake_plate_raw,1,8), new ItemStack(ItemLoader.cake_plate_model,1,8), 
+							new ItemStack(ItemLoader.jiggy_cake_raw,1,8), new ItemStack(ItemLoader.jiggy_cake_model,1,8), 
+							new ItemStack(ItemLoader.muffin,1,8), new ItemStack(ItemLoader.muffin,1,17)
 							);
 			} 
 		}

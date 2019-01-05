@@ -14,6 +14,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -28,789 +29,397 @@ public class ItemLoader {
 	
 	public static Item vanilla_seeds = new ItemSeeds(BlockLoader.vanilla_crop, Blocks.FARMLAND).setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla_seeds");
 	public static Item vanilla = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla");
-	
+	public static ItemBase coffee_pot = new ItemBase("coffee_pot", 1, 
+			CoffeeWork.MODID+"."+"moka_top",//0
+			CoffeeWork.MODID+"."+"moka_bottom",//1
+			CoffeeWork.MODID+"."+"moka_pot_unheated",//2
+			CoffeeWork.MODID+"."+"moka_pot_heated",//3
+			CoffeeWork.MODID+"."+"turkey_coffee_pot",//4
+			CoffeeWork.MODID+"."+"turkey_coffee_pot_unheated",//5
+			CoffeeWork.MODID+"."+"turkey_coffee_pot_heated"//6
+			);
 
-	public static Item moka_top = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_top").setMaxStackSize(1);
-	public static Item moka_bottom = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_bottom").setMaxStackSize(1);
-	public static Item moka_pot_unheated = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_pot_unheated").setMaxStackSize(1);
-	public static Item moka_pot_heated = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"moka_pot_heated").setMaxStackSize(1);
+	public static ItemBase materials = new ItemBase("itemMaterials", 64, 
+			CoffeeWork.MODID+"."+"coffee_bean_raw",//0
+			CoffeeWork.MODID+"."+"coffee_bean",//1
+			CoffeeWork.MODID+"."+"ice_slag",//2
+			CoffeeWork.MODID+"."+"yeast",//3
+			CoffeeWork.MODID+"."+"bag",//4
+			CoffeeWork.MODID+"."+"plate_iron",//5
+			CoffeeWork.MODID+"."+"spices",//6
+			CoffeeWork.MODID+"."+"gelatin",//7
+			CoffeeWork.MODID+"."+"soda",//8
+			CoffeeWork.MODID+"."+"coffee_powder",//9
+			CoffeeWork.MODID+"."+"cocoa_bean",//10
+			CoffeeWork.MODID+"."+"cocoa_powder",//11
+			CoffeeWork.MODID+"."+"cocoa_batter",//12
+			CoffeeWork.MODID+"."+"flour",//13
+			CoffeeWork.MODID+"."+"dough",//14
+			CoffeeWork.MODID+"."+"dough_pastry",//15
+			CoffeeWork.MODID+"."+"dough_cookie",//16
+			CoffeeWork.MODID+"."+"dough_ginger",//17
+			CoffeeWork.MODID+"."+"plate_dough",//18
+			CoffeeWork.MODID+"."+"plate_dough_pastry",//19
+			CoffeeWork.MODID+"."+"plate_dough_ginger",//20
+			CoffeeWork.MODID+"."+"dough_baguette"//21
+			);
+	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
+	public static ItemDessert materialFood = new ItemDessert("itemMaterialFood", 64,
+			new int[]{2,3,1,4,1,7,4,8,2,1,2,6,4,6,4},
+			new float[]{2,2,2,2,2,2,6,2,2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"butter",//0
+					CoffeeWork.MODID+"."+"cheese",//1
+					CoffeeWork.MODID+"."+"blueberry",//2
+					CoffeeWork.MODID+"."+"chocolate_bar",//3
+					CoffeeWork.MODID+"."+"chocolate_chip",//4
+					CoffeeWork.MODID+"."+"baguette",//5
+					CoffeeWork.MODID+"."+"brownie",//6
+					CoffeeWork.MODID+"."+"field_ration_d",//7
+					CoffeeWork.MODID+"."+"custard",//8
+					CoffeeWork.MODID+"."+"milk_form",//9
+					CoffeeWork.MODID+"."+"marshmallow",//10
+					CoffeeWork.MODID+"."+"marshmallow_chocolate",//11
+					CoffeeWork.MODID+"."+"marshmallow_roast",//12
+					CoffeeWork.MODID+"."+"smore",//13
+					CoffeeWork.MODID+"."+"plate_ginger"//14		
+			});
 	
-	public static Item turkey_coffee_pot = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"turkey_coffee_pot").setMaxStackSize(1);
-	public static Item turkey_coffee_pot_unheated = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"turkey_coffee_pot_unheated").setMaxStackSize(1);
-	public static Item turkey_coffee_pot_heated = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"turkey_coffee_pot_heated").setMaxStackSize(1);
-	
-	public static Item coffee_bean_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_bean_raw");
-	public static Item coffee_bean = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_bean");
-	public static Item ice_slag = new ItemFood(0, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ice_slag");
-	public static Item bag = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"bag");
-	public static Item coffee_powder = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_powder");
-	public static Item cocoa_bean = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_bean");
-	public static Item cocoa_powder = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_powder");
-	public static Item cocoa_batter = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cocoa_batter");
-	public static Item flour = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"flour");
-	public static Item dough = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough");
-	public static Item dough_pastry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough_pastry");
-	public static Item dough_cookie = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough_cookie");
-	public static Item dough_baguette = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough_baguette");
-	
-	public static Item plate_dough = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"plate_dough");
-	public static Item plate_iron = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"plate_iron");
-	public static Item plate_dough_pastry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"plate_dough_pastry");
-	
-	public static Item chocolate_bar = new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"chocolate_bar");
-	public static Item chocolate_chip = new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"chocolate_chip");
-	public static Item baguette = new ItemDessert(7,false).setUnlocalizedName(CoffeeWork.MODID+"."+"baguette");
-	public static Item icecream_vanilla=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_vanilla");
-	public static Item icecream_chocolate=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_chocolate");
-	public static Item icecream_coffee=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_coffee");
-	public static Item icecream_apple=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_apple");
-	public static Item icecream_berry=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_berry");
-	public static Item icecream_melon=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_melon");
-	public static Item icecream_lemon=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"icecream_lemon");
-	
-	public static Item cream_milk=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_milk");
-	public static Item cream_chocolate=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_chocolate");
-	public static Item cream_coffee=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_coffee");
-	public static Item cream_apple=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_apple");
-	public static Item cream_berry=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_berry");
-	public static Item cream_melon=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_melon");
-	public static Item cream_lemon=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cream_lemon");
-	public static Item custard=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"custard");
-	public static Item milk_form=new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"milk_form");
-	
-	public static Item cookie_icecream_vanilla=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_vanilla");
-	public static Item cookie_icecream_chocolate=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_chocolate");
-	public static Item cookie_icecream_coffee=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_coffee");
-	public static Item cookie_icecream_apple=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_apple");
-	public static Item cookie_icecream_berry=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_berry");
-	public static Item cookie_icecream_melon=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_melon");
-	public static Item cookie_icecream_lemon=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cookie_icecream_lemon");
-	
+	public static ItemDessert dessert_1 = new ItemDessert("itemDessert", 64,
+			new int[]{2,2,6,8,1,4,1,2,4,2,5,8},
+			new float[]{2,2,2,2,2,2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"croissant_raw",//0
+					CoffeeWork.MODID+"."+"croissant_chocolate_raw",//1
+					CoffeeWork.MODID+"."+"croissant",//2
+					CoffeeWork.MODID+"."+"croissant_chocolate",//3
+					CoffeeWork.MODID+"."+"hardtack_raw",//4
+					CoffeeWork.MODID+"."+"hardtack",//5
+					CoffeeWork.MODID+"."+"plate_pastry_raw",//6
+					CoffeeWork.MODID+"."+"plate_pastry",//7
+					CoffeeWork.MODID+"."+"ginger_bread",//8
+					CoffeeWork.MODID+"."+"ginger_bread_man_raw",//9
+					CoffeeWork.MODID+"."+"ginger_bread_man",//10
+					CoffeeWork.MODID+"."+"mille_feuille"//11
+			});
 
-	public static Item brownie=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"brownie");
-	public static Item D_bar=new ItemDessert(6,6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"field_ration_d");
-	
-	public static Item butter=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"butter");
-	public static Item cheese=new ItemDessert(3, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cheese");
-	
-	public static Item cake_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model").setMaxStackSize(1);
-	public static Item cake_model_square = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_square").setMaxStackSize(1);
-	public static Item cake_model_plate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_plate").setMaxStackSize(1);
-	
-	public static Item croissant_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"croissant_raw");
-	public static Item croissant_chocolate_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"croissant_chocolate_raw");
-	public static Item croissant=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"croissant");
-	public static Item croissant_chocolate=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"croissant_chocolate");
+	public static ItemDessert icecream = new ItemDessert("icecream", 64,
+			new int[]{4,6,6,6,6,6,6},
+			new float[]{2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"icecream_vanilla",//0
+					CoffeeWork.MODID+"."+"icecream_chocolate",//1
+					CoffeeWork.MODID+"."+"icecream_coffee",//2
+					CoffeeWork.MODID+"."+"icecream_apple",//3
+					CoffeeWork.MODID+"."+"icecream_berry",//4
+					CoffeeWork.MODID+"."+"icecream_melon",//5
+					CoffeeWork.MODID+"."+"icecream_lemon"//6
+			});
 
-	public static Item hardtack_raw=new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"hardtack_raw");
-	public static Item plate_pastry_raw=new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_pastry_raw");
-	public static Item hardtack=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"hardtack");
-	public static Item plate_pastry=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_pastry");
-	public static Item mille_feuille=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mille_feuille");
+	public static ItemDessert cream = new ItemDessert("cream", 64,
+			new int[]{2,4,4,4,4,4,4},
+			new float[]{2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"cream_milk",
+					CoffeeWork.MODID+"."+"cream_chocolate",
+					CoffeeWork.MODID+"."+"cream_coffee",
+					CoffeeWork.MODID+"."+"cream_apple",
+					CoffeeWork.MODID+"."+"cream_berry",
+					CoffeeWork.MODID+"."+"cream_melon",
+					CoffeeWork.MODID+"."+"cream_lemon"
+			});
+
+	public static ItemDessert cookie_icecream = new ItemDessert("cookie_icecream", 64,
+			new int[]{6,8,8,8,8,8,8},
+			new float[]{2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"cookie_icecream_vanilla",
+					CoffeeWork.MODID+"."+"cookie_icecream_chocolate",
+					CoffeeWork.MODID+"."+"cookie_icecream_coffee",
+					CoffeeWork.MODID+"."+"cookie_icecream_apple",
+					CoffeeWork.MODID+"."+"cookie_icecream_berry",
+					CoffeeWork.MODID+"."+"cookie_icecream_melon",
+					CoffeeWork.MODID+"."+"cookie_icecream_lemon"
+			});
+
+	public static ItemDessert mooncake = new ItemDessert("mooncake", 64,
+			new int[]{2,2,2,2,5,6,6,6},
+			new float[]{1,1,1,1,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"mooncake_raw",	
+					CoffeeWork.MODID+"."+"mooncake_egg_raw",
+					CoffeeWork.MODID+"."+"mooncake_ham_raw",
+					CoffeeWork.MODID+"."+"mooncake_fruit_raw",
+					CoffeeWork.MODID+"."+"mooncake",
+					CoffeeWork.MODID+"."+"mooncake_egg",
+					CoffeeWork.MODID+"."+"mooncake_ham",
+					CoffeeWork.MODID+"."+"mooncake_fruit"
+			});
 	
-	public static Item mixing_bowl = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mixing_bowl");
-	public static Item yeast = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"yeast");
-	
+	public static Item iron_bowl = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl").setMaxStackSize(16);
+	public static Item cake_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model").setMaxStackSize(16);
+	public static Item cake_model_square = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_square").setMaxStackSize(16);
+	public static Item cake_model_plate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_plate").setMaxStackSize(16);
 	public static Item mooncake_model = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_model");
-	public static Item mooncake_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_raw");
-	public static Item mooncake_egg_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_egg_raw");
-	public static Item mooncake_ham_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_ham_raw");
-	public static Item mooncake_fruit_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_fruit_raw");
-	public static Item mooncake=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake");
-	public static Item mooncake_egg=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_egg");
-	public static Item mooncake_ham=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_ham");
-	public static Item mooncake_fruit=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_fruit");
+	public static Item mixing_bowl = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mixing_bowl");
 	
-	public static Item blue_berry=new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"blueberry");
+	public static ItemBase iron_bowl_batter = new ItemBase("iron_bowl_batter", 1,
+			CoffeeWork.MODID+"."+"iron_bowl_egg",//0
+			CoffeeWork.MODID+"."+"iron_bowl_cheese",//1
+			CoffeeWork.MODID+"."+"iron_bowl_batter",///2
+			CoffeeWork.MODID+"."+"iron_bowl_batter_coffee",//3
+			CoffeeWork.MODID+"."+"iron_bowl_batter_berry",//4
+			CoffeeWork.MODID+"."+"iron_bowl_batter_chocolate",///5
+			CoffeeWork.MODID+"."+"iron_bowl_batter_red",//6
+			CoffeeWork.MODID+"."+"iron_bowl_batter_lemon",//7
+			CoffeeWork.MODID+"."+"iron_bowl_batter_pumpkin",//8
+			CoffeeWork.MODID+"."+"iron_bowl_batter_carrot",//9
+			CoffeeWork.MODID+"."+"iron_bowl_batter_tea"//10
+			);
+
+	public static ItemBase raw_cake = new ItemBase("raw_cake", 16, 
+			CoffeeWork.MODID+"."+"cake_sponge_raw",//0
+			CoffeeWork.MODID+"."+"cake_sponge_chocolate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_coffee_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_carrot_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_pumpkin_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_redvelvet_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_lemon_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_tea_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_berry_raw",
+			CoffeeWork.MODID+"."+"cake_cheese_raw",//9
+			CoffeeWork.MODID+"."+"mousse_berry_raw",
+			CoffeeWork.MODID+"."+"mousse_coffee_raw",
+			CoffeeWork.MODID+"."+"mousse_chocolate_raw",
+			CoffeeWork.MODID+"."+"mousse_lemon_raw"
+			);
 	
-	public static Item iron_bowl = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl").setMaxStackSize(1);
-	public static Item iron_bowl_egg = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_egg").setMaxStackSize(1);
-	public static Item iron_bowl_cheese = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_cheese").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_coffee = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_coffee").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_berry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_berry").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_chocolate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_chocolate").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_red = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_red").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_lemon = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_lemon").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_pumpkin = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_pumpkin").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_carrot = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_carrot").setMaxStackSize(1).setContainerItem(iron_bowl);
-	public static Item iron_bowl_batter_tea = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl_batter_tea").setMaxStackSize(1).setContainerItem(iron_bowl);
+	public static ItemBase model_cake = new ItemBase("model_cake", 16, 
+			CoffeeWork.MODID+"."+"cake_sponge_model",
+			CoffeeWork.MODID+"."+"cake_sponge_chocolate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_coffee_model",
+			CoffeeWork.MODID+"."+"cake_sponge_carrot_model",
+			CoffeeWork.MODID+"."+"cake_sponge_pumpkin_model",
+			CoffeeWork.MODID+"."+"cake_sponge_redvelvet_model",
+			CoffeeWork.MODID+"."+"cake_sponge_lemon_model",
+			CoffeeWork.MODID+"."+"cake_sponge_tea_model",
+			CoffeeWork.MODID+"."+"cake_sponge_berry_model",
+			CoffeeWork.MODID+"."+"cake_cheese_model",
+			CoffeeWork.MODID+"."+"mousse_berry_model",
+			CoffeeWork.MODID+"."+"mousse_coffee_model",
+			CoffeeWork.MODID+"."+"mousse_chocolate_model",
+			CoffeeWork.MODID+"."+"mousse_lemon_model"
+			).setContainerItem(cake_model);
+
+	public static ItemBase cake_plate_raw = new ItemBase("cake_plate_raw", 16, new String[]{
+			CoffeeWork.MODID+"."+"cake_sponge_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_chocolate_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_coffee_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_carrot_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_pumpkin_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_redvelvet_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_lemon_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_tea_plate_raw",
+			CoffeeWork.MODID+"."+"cake_sponge_berry_plate_raw"
+	});
 	
-	public static Item cake_sponge_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_raw").setMaxStackSize(1);
-	public static Item cake_sponge_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_base=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_base");
-	public static Item cake_roll=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_roll");
-	public static Item jiggy_cake_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake");
-	public static Item muffin_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_raw");
-	public static Item muffin=new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin");
+	public static ItemBase cake_plate_model = new ItemBase("cake_plate_model", 16, new String[]{
+			CoffeeWork.MODID+"."+"cake_sponge_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_chocolate_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_coffee_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_carrot_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_pumpkin_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_redvelvet_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_lemon_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_tea_plate_model",
+			CoffeeWork.MODID+"."+"cake_sponge_berry_plate_model"
+	}).setContainerItem(cake_model_plate);
+
+	public static ItemDessert cake_base = new ItemDessert("cake_base", 64,
+			new int[]{4,6,6,6,6,6,6,6,6},
+			new float[]{2,2,2,2,2,2,2,2,2}, 
+			CoffeeWork.MODID+"."+"cake_sponge_base",
+			CoffeeWork.MODID+"."+"cake_sponge_chocolate_base",
+			CoffeeWork.MODID+"."+"cake_sponge_coffee_base",
+			CoffeeWork.MODID+"."+"cake_sponge_carrot_base",
+			CoffeeWork.MODID+"."+"cake_sponge_pumpkin_base",
+			CoffeeWork.MODID+"."+"cake_sponge_redvelvet_base",
+			CoffeeWork.MODID+"."+"cake_sponge_lemon_base",
+			CoffeeWork.MODID+"."+"cake_sponge_tea_base",
+			CoffeeWork.MODID+"."+"cake_sponge_berry_base"
+			);
 	
-	public static Item cake_sponge_chocolate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_chocolate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_chocolate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_chocolate_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_chocolate_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_chocolate_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_chocolate_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_chocolate_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_chocolate_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_chocolate_base");
-	public static Item cake_chocolate_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_chocolate_roll");
-	public static Item jiggy_cake_chocolate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_chocolate_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_chocolate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_chocolate_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_chocolate=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_chocolate");
-	public static Item muffin_chocolate_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_chocolate_raw");
-	public static Item muffin_chocolate=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_chocolate");
+	public static ItemDessert cake_roll = new ItemDessert("cake_roll", 64,
+			new int[]{4,6,6,6,6,6,6,6,6},
+			new float[]{2,2,2,2,2,2,2,2,2}, 
+			CoffeeWork.MODID+"."+"cake_roll",
+			CoffeeWork.MODID+"."+"cake_chocolate_roll",
+			CoffeeWork.MODID+"."+"cake_coffee_roll",
+			CoffeeWork.MODID+"."+"cake_carrot_roll",
+			CoffeeWork.MODID+"."+"cake_pumpkin_roll",
+			CoffeeWork.MODID+"."+"cake_redvelvet_roll",
+			CoffeeWork.MODID+"."+"cake_lemon_roll",
+			CoffeeWork.MODID+"."+"cake_tea_roll",
+			CoffeeWork.MODID+"."+"cake_berry_roll");
 	
-	public static Item cake_sponge_coffee_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_coffee_raw").setMaxStackSize(1);
-	public static Item cake_sponge_coffee_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_coffee_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_coffee_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_coffee_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_coffee_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_coffee_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_coffee_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_coffee_base");
-	public static Item cake_coffee_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_coffee_roll");
-	public static Item jiggy_cake_coffee_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_coffee_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_coffee_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_coffee_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_coffee=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_coffee");
-	public static Item muffin_coffee_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_coffee_raw");
-	public static Item muffin_coffee=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_coffee");
+	public static ItemBase jiggy_cake_raw = new ItemBase("jiggy_cake_raw", 16, new String[]{
+			CoffeeWork.MODID+"."+"jiggy_cake_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_chocolate_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_coffee_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_carrot_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_pumpkin_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_redvelvet_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_lemon_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_tea_raw",
+			CoffeeWork.MODID+"."+"jiggy_cake_berry_raw",
+			CoffeeWork.MODID+"."+"brownie_raw"
+	});
+
+	public static ItemBase jiggy_cake_model = new ItemBase("jiggy_cake_model", 16, new String[]{
+			CoffeeWork.MODID+"."+"jiggy_cake_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_chocolate_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_coffee_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_carrot_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_pumpkin_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_redvelvet_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_lemon_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_tea_model",
+			CoffeeWork.MODID+"."+"jiggy_cake_berry_model",
+			CoffeeWork.MODID+"."+"brownie_model",
+			CoffeeWork.MODID+"."+"tiramisu_model"
+	}).setContainerItem(cake_model_square);
 	
-	public static Item cake_sponge_carrot_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_carrot_raw").setMaxStackSize(1);
-	public static Item cake_sponge_carrot_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_carrot_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_carrot_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_carrot_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_carrot_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_carrot_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_carrot_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_carrot_base");
-	public static Item cake_carrot_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_carrot_roll");
-	public static Item jiggy_cake_carrot_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_carrot_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_carrot_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_carrot_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_carrot=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_carrot");
-	public static Item muffin_carrot_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_carrot_raw");
-	public static Item muffin_carrot=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_carrot");
+	public static ItemDessert jiggy_cake = new ItemDessert("jiggy_cake", 64,
+			new int[]{4,5,5,5,5,5,5,5,5},
+			new float[]{2,2,2,2,2,2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"jiggy_cake",
+					CoffeeWork.MODID+"."+"jiggy_cake_chocolate",
+					CoffeeWork.MODID+"."+"jiggy_cake_coffee",
+					CoffeeWork.MODID+"."+"jiggy_cake_carrot",
+					CoffeeWork.MODID+"."+"jiggy_cake_pumpkin",
+					CoffeeWork.MODID+"."+"jiggy_cake_redvelvet",
+					CoffeeWork.MODID+"."+"jiggy_cake_lemon",
+					CoffeeWork.MODID+"."+"jiggy_cake_tea",
+					CoffeeWork.MODID+"."+"jiggy_cake_berry"
+			});
 	
-	public static Item cake_sponge_pumpkin_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_pumpkin_raw").setMaxStackSize(1);
-	public static Item cake_sponge_pumpkin_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_pumpkin_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_pumpkin_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_pumpkin_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_pumpkin_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_pumpkin_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_pumpkin_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_pumpkin_base");
-	public static Item cake_pumpkin_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_pumpkin_roll");
-	public static Item jiggy_cake_pumpkin_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_pumpkin_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_pumpkin_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_pumpkin_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_pumpkin=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_pumpkin");
-	public static Item muffin_pumpkin_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_pumpkin_raw");
-	public static Item muffin_pumpkin=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_pumpkin");
+	public static ItemDessert muffin = new ItemDessert("muffin", 64,
+			new int[]{2,2,2,2,2,2,2,2,2,4,6,6,6,6,6,6,6,6},
+			new float[]{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			new String[]{
+					CoffeeWork.MODID+"."+"muffin_raw",//0
+					CoffeeWork.MODID+"."+"muffin_chocolate_raw",//1
+					CoffeeWork.MODID+"."+"muffin_coffee_raw",
+					CoffeeWork.MODID+"."+"muffin_carrot_raw",
+					CoffeeWork.MODID+"."+"muffin_pumpkin_raw",
+					CoffeeWork.MODID+"."+"muffin_redvelvet_raw",
+					CoffeeWork.MODID+"."+"muffin_lemon_raw",
+					CoffeeWork.MODID+"."+"muffin_tea_raw",
+					CoffeeWork.MODID+"."+"muffin_berry_raw",
+					CoffeeWork.MODID+"."+"muffin",
+					CoffeeWork.MODID+"."+"muffin_chocolate",
+					CoffeeWork.MODID+"."+"muffin_coffee",
+					CoffeeWork.MODID+"."+"muffin_carrot",
+					CoffeeWork.MODID+"."+"muffin_pumpkin",
+					CoffeeWork.MODID+"."+"muffin_redvelvet",
+					CoffeeWork.MODID+"."+"muffin_lemon",
+					CoffeeWork.MODID+"."+"muffin_tea",
+					CoffeeWork.MODID+"."+"muffin_berry"
+			});
+
 	
-	public static Item cake_sponge_redvelvet_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_redvelvet_raw").setMaxStackSize(1);
-	public static Item cake_sponge_redvelvet_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_redvelvet_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_redvelvet_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_redvelvet_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_redvelvet_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_redvelvet_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_redvelvet_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_redvelvet_base");
-	public static Item cake_redvelvet_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_redvelvet_roll");
-	public static Item jiggy_cake_redvelvet_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_redvelvet_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_redvelvet_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_redvelvet_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_redvelvet=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_redvelvet");
-	public static Item muffin_redvelvet_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_redvelvet_raw");
-	public static Item muffin_redvelvet=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_redvelvet");
-	
-	public static Item cake_sponge_lemon_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_lemon_raw").setMaxStackSize(1);
-	public static Item cake_sponge_lemon_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_lemon_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_lemon_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_lemon_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_lemon_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_lemon_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_lemon_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_lemon_base");
-	public static Item cake_lemon_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_lemon_roll");
-	public static Item jiggy_cake_lemon_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_lemon_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_lemon_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_lemon_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_lemon=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_lemon");
-	public static Item muffin_lemon_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_lemon_raw");
-	public static Item muffin_lemon=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_lemon");
-	
-	public static Item cake_sponge_tea_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_tea_raw").setMaxStackSize(1);
-	public static Item cake_sponge_tea_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_tea_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_tea_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_tea_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_tea_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_tea_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_tea_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_tea_base");
-	public static Item cake_tea_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_tea_roll");
-	public static Item jiggy_cake_tea_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_tea_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_tea_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_tea_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_tea=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_tea");
-	public static Item muffin_tea_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_tea_raw");
-	public static Item muffin_tea=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_tea");
-	
-	public static Item cake_sponge_berry_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_berry_raw").setMaxStackSize(1);
-	public static Item cake_sponge_berry_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_berry_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item cake_sponge_berry_plate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_berry_plate_raw").setMaxStackSize(1);
-	public static Item cake_sponge_berry_plate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_berry_plate_model").setMaxStackSize(1).setContainerItem(cake_model_plate);
-	public static Item cake_sponge_berry_base=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_sponge_berry_base");
-	public static Item cake_berry_roll=new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"cake_berry_roll");
-	public static Item jiggy_cake_berry_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_berry_raw").setMaxStackSize(1);
-	public static Item jiggy_cake_berry_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_berry_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item jiggy_cake_berry=new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"jiggy_cake_berry");
-	public static Item muffin_berry_raw=new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_berry_raw");
-	public static Item muffin_berry=new ItemDessert(6, false).setUnlocalizedName(CoffeeWork.MODID+"."+"muffin_berry");
-	
-	public static Item cake_cheese_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_cheese_raw").setMaxStackSize(1);
-	public static Item cake_cheese_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_cheese_model").setMaxStackSize(1).setContainerItem(cake_model);
-	
-	public static Item brownie_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"brownie_raw").setMaxStackSize(1);
-	public static Item brownie_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"brownie_model").setMaxStackSize(1).setContainerItem(cake_model_square);
-	public static Item tiramisu_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"tiramisu_model").setMaxStackSize(1).setContainerItem(cake_model_square);
 	
 	public static Item record_blank = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"record_blank").setMaxStackSize(1);
 	public static Item kusa_noshi_to_ne = new ItemRecordCW("records.kusa_noshi_to_ne");
 	public static Item lazt_lady_kaguya = new ItemRecordCW("records.lazy_lady_kaguya");
 	public static Item the_grimoire_of_marisa = new ItemRecordCW("records.the_grimoire_of_marisa");
 	
-	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
-	public static Item syrup_full = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_full").setContainerItem(syrup_empty);
-	public static Item syrup_brown = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_brown").setContainerItem(syrup_empty);
-	public static Item syrup_vanilla = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_vanilla").setContainerItem(syrup_empty);
-	public static Item syrup_berry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_berry").setContainerItem(syrup_empty);
-	public static Item syrup_cherry = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_cherry").setContainerItem(syrup_empty);
-	public static Item syrup_lemon = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_lemon").setContainerItem(syrup_empty);
-	
-	public static Item syrup_chocolate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_chocolate").setContainerItem(syrup_empty);
-	public static Item syrup_apple = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_apple").setContainerItem(syrup_empty);
-	public static Item syrup_mint = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_mint").setContainerItem(syrup_empty);
-	
-	public static Item spices = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"spices");
-	public static Item gelatin = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"gelatin");
+	public static ItemBase syrup = new ItemBase("syrup", 64, new String[]{
+			CoffeeWork.MODID+"."+"syrup_full",
+			CoffeeWork.MODID+"."+"syrup_brown",
+			CoffeeWork.MODID+"."+"syrup_vanilla",
+			CoffeeWork.MODID+"."+"syrup_berry",
+			CoffeeWork.MODID+"."+"syrup_cherry",
+			CoffeeWork.MODID+"."+"syrup_lemon",
+			CoffeeWork.MODID+"."+"syrup_chocolate",
+			CoffeeWork.MODID+"."+"syrup_apple",
+			CoffeeWork.MODID+"."+"syrup_mint"
+	}).setContainerItem(syrup_empty);
 
-	public static Item dough_ginger = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"dough_ginger");
-	public static Item plate_dough_ginger = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"plate_dough_ginger");
-	public static Item plate_ginger = new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"plate_ginger");
-	public static Item ginger_bread = new ItemDessert(3, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread");
-	public static Item ginger_bread_man_raw = new ItemDessert(1, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread_man_raw");
-	public static Item ginger_bread_man = new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"ginger_bread_man");
-
-	public static Item marshmallow = new ItemDessert(2, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow");
-	public static Item marshmallow_chocolate = new ItemDessert(5, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow_chocolate");
-	public static Item marshmallow_roast = new ItemDessert(4, false).setUnlocalizedName(CoffeeWork.MODID+"."+"marshmallow_roast");
-	public static Item smore = new ItemDessert(8, false).setUnlocalizedName(CoffeeWork.MODID+"."+"smore");
-	
-	public static Item soda = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"soda");
-	public static Item mousse_berry_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_berry_raw").setMaxStackSize(1);
-	public static Item mousse_berry_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_berry_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item mousse_coffee_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_coffee_raw").setMaxStackSize(1);
-	public static Item mousse_coffee_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_coffee_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item mousse_chocolate_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_chocolate_raw").setMaxStackSize(1);
-	public static Item mousse_chocolate_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_chocolate_model").setMaxStackSize(1).setContainerItem(cake_model);
-	public static Item mousse_lemon_raw = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_lemon_raw").setMaxStackSize(1);
-	public static Item mousse_lemon_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"mousse_lemon_model").setMaxStackSize(1).setContainerItem(cake_model);
 	public ItemLoader(FMLPreInitializationEvent event) {
-
-		
 		register(record_blank);
 		register(kusa_noshi_to_ne);
 		register(lazt_lady_kaguya);
 		register(the_grimoire_of_marisa);
-		//cooker
 		register(mixing_bowl);
 		register(mooncake_model);
-		
-		//material
-		register(plate_iron);
-		register(bag);
-		register(moka_top);
-		register(moka_bottom);
-		register(moka_pot_unheated);
-		register(moka_pot_heated);
-		register(turkey_coffee_pot);
-		register(turkey_coffee_pot_unheated);
-		register(turkey_coffee_pot_heated);
-		register(milk_form);
+		register(coffee_pot);
 		register(coffee_seeds);
-		register(blue_berry);
 		register(vanilla_seeds);
 		MinecraftForge.addGrassSeed(new ItemStack(vanilla_seeds), 8);
 		register(vanilla);
-		register(coffee_bean_raw);
-		register(coffee_bean);
-		register(coffee_powder);
-		register(cocoa_bean);
-		register(cocoa_powder);
-		register(cocoa_batter);
-		register(ice_slag);
-		
+		register(materials);
+		register(materialFood);
 		register(syrup_empty);
-		register(syrup_full);
-		register(syrup_brown);
-		register(syrup_vanilla);
-		register(syrup_berry);
-		register(syrup_cherry);
-		register(syrup_lemon);
-		register(syrup_chocolate);
-		register(syrup_apple);
-		register(syrup_mint);
-		
-		register(spices);
-
-		register(soda);
-		register(yeast);
-		register(flour);
-		register(dough);
-		register(gelatin);
-		register(dough_cookie);
-		register(dough_baguette);
-		register(dough_pastry);
-		register(dough_ginger);
-		register(plate_dough_ginger);
-		register(plate_ginger);
-		register(plate_dough);
-		register(plate_dough_pastry);
-
-
-		register(chocolate_bar);
-		register(chocolate_chip);
-		register(cream_milk);
-		register(cream_chocolate);
-		register(cream_coffee);
-		register(cream_apple);
-		register(cream_berry);
-		register(cream_melon);
-		register(cream_lemon);
-		register(butter);
-		register(cheese);
-		register(custard);
-		register(marshmallow);
-		register(marshmallow_chocolate);
-		register(marshmallow_roast);
-		register(smore);
-		register(ginger_bread);
-		register(ginger_bread_man_raw);
-		register(ginger_bread_man);
-		
+		register(syrup);
+		register(cream);
+		register(icecream);
+		register(cookie_icecream);
+		register(dessert_1);
+		register(muffin);
+		register(mooncake);
 		register(iron_bowl);
-		register(iron_bowl_egg);
-		register(iron_bowl_cheese);
-		register(iron_bowl_batter);
-		register(iron_bowl_batter_chocolate);
-		register(iron_bowl_batter_coffee);
-		register(iron_bowl_batter_pumpkin);
-		register(iron_bowl_batter_carrot);
-		register(iron_bowl_batter_red);
-		register(iron_bowl_batter_lemon);
-		register(iron_bowl_batter_berry);
-		register(iron_bowl_batter_tea);
-
-		//foods
-		register(icecream_vanilla);
-		register(icecream_chocolate);
-		register(icecream_coffee);
-		register(icecream_apple);
-		register(icecream_berry);
-		register(icecream_melon);
-		register(icecream_lemon);
-		register(cookie_icecream_vanilla);
-		register(cookie_icecream_chocolate);
-		register(cookie_icecream_coffee);
-		register(cookie_icecream_apple);
-		register(cookie_icecream_berry);
-		register(cookie_icecream_melon);
-		register(cookie_icecream_lemon);
-		
 		register(cake_model);
 		register(cake_model_square);
 		register(cake_model_plate);
-
-		register(cake_sponge_raw);
-		register(cake_sponge_model);
-		register(cake_sponge_plate_raw);
-		register(cake_sponge_plate_model);
-		register(cake_sponge_base);
+		register(iron_bowl_batter);
+		register(raw_cake);
+		register(model_cake);
+		register(cake_plate_raw);
+		register(cake_plate_model);
+		register(cake_base);
 		register(cake_roll);
 		register(jiggy_cake_raw);
 		register(jiggy_cake_model);
 		register(jiggy_cake);
-		
-		register(cake_sponge_chocolate_raw);
-		register(cake_sponge_chocolate_model);
-		register(cake_sponge_chocolate_plate_raw);
-		register(cake_sponge_chocolate_plate_model);
-		register(cake_sponge_chocolate_base);
-		register(cake_chocolate_roll);
-		register(jiggy_cake_chocolate_raw);
-		register(jiggy_cake_chocolate_model);
-		register(jiggy_cake_chocolate);
-		
-		register(cake_sponge_coffee_raw);
-		register(cake_sponge_coffee_model);
-		register(cake_sponge_coffee_plate_raw);
-		register(cake_sponge_coffee_plate_model);
-		register(cake_sponge_coffee_base);
-		register(cake_coffee_roll);
-		register(jiggy_cake_coffee_raw);
-		register(jiggy_cake_coffee_model);
-		register(jiggy_cake_coffee);
-		
-		register(cake_sponge_pumpkin_raw);
-		register(cake_sponge_pumpkin_model);
-		register(cake_sponge_pumpkin_plate_raw);
-		register(cake_sponge_pumpkin_plate_model);
-		register(cake_sponge_pumpkin_base);	
-		register(cake_pumpkin_roll);
-		register(jiggy_cake_pumpkin_raw);
-		register(jiggy_cake_pumpkin_model);
-		register(jiggy_cake_pumpkin);
-		
-		register(cake_sponge_carrot_raw);
-		register(cake_sponge_carrot_model);
-		register(cake_sponge_carrot_plate_raw);
-		register(cake_sponge_carrot_plate_model);
-		register(cake_sponge_carrot_base);
-		register(cake_carrot_roll);
-		register(jiggy_cake_carrot_raw);
-		register(jiggy_cake_carrot_model);
-		register(jiggy_cake_carrot);
-		
-		register(cake_sponge_redvelvet_raw);
-		register(cake_sponge_redvelvet_model);
-		register(cake_sponge_redvelvet_plate_raw);
-		register(cake_sponge_redvelvet_plate_model);
-		register(cake_sponge_redvelvet_base);
-		register(cake_redvelvet_roll);
-		register(jiggy_cake_redvelvet_raw);
-		register(jiggy_cake_redvelvet_model);
-		register(jiggy_cake_redvelvet);
-		
-		register(cake_sponge_lemon_raw);
-		register(cake_sponge_lemon_model);
-		register(cake_sponge_lemon_plate_raw);
-		register(cake_sponge_lemon_plate_model);
-		register(cake_sponge_lemon_base);
-		register(cake_lemon_roll);
-		register(jiggy_cake_lemon_raw);
-		register(jiggy_cake_lemon_model);
-		register(jiggy_cake_lemon);
-		
-		register(cake_sponge_tea_raw);
-		register(cake_sponge_tea_model);
-		register(cake_sponge_tea_plate_raw);
-		register(cake_sponge_tea_plate_model);
-		register(cake_sponge_tea_base);
-		register(cake_tea_roll);
-		register(jiggy_cake_tea_raw);
-		register(jiggy_cake_tea_model);
-		register(jiggy_cake_tea);
-		
-		register(cake_sponge_berry_raw);
-		register(cake_sponge_berry_model);
-		register(cake_sponge_berry_plate_raw);
-		register(cake_sponge_berry_plate_model);
-		register(cake_sponge_berry_base);
-		register(cake_berry_roll);
-		register(jiggy_cake_berry_raw);
-		register(jiggy_cake_berry_model);
-		register(jiggy_cake_berry);
-		
-		register(cake_cheese_raw);
-		register(cake_cheese_model);
-		
-		register(mousse_berry_raw);
-		register(mousse_berry_model);
-		register(mousse_coffee_raw);
-		register(mousse_coffee_model);
-		register(mousse_chocolate_raw);
-		register(mousse_chocolate_model);
-		register(mousse_lemon_raw);
-		register(mousse_lemon_model);
-		
-		register(brownie_raw);
-		register(brownie_model);
-		register(tiramisu_model);
 
-		register(baguette);
-		register(hardtack_raw);
-		register(hardtack);
-		register(plate_pastry_raw);
-		register(plate_pastry);
-		register(mille_feuille);
-		register(muffin_raw);
-		register(muffin_chocolate_raw);
-		register(muffin_coffee_raw);
-		register(muffin_pumpkin_raw);
-		register(muffin_carrot_raw);
-		register(muffin_redvelvet_raw);
-		register(muffin_lemon_raw);
-		register(muffin_tea_raw);
-		register(muffin_berry_raw);
-		
-		register(muffin);
-		register(muffin_chocolate);
-		register(muffin_coffee);
-		register(muffin_pumpkin);
-		register(muffin_carrot);
-		register(muffin_redvelvet);
-		register(muffin_lemon);
-		register(muffin_tea);
-		register(muffin_berry);
-
-		register(croissant_raw);
-		register(croissant_chocolate_raw);
-		register(croissant);
-		register(croissant_chocolate);
-
-		register(brownie);
-		register(D_bar);
-		//mooncakes
-		register(mooncake_raw);
-		register(mooncake_egg_raw);
-		register(mooncake_ham_raw);
-		register(mooncake_fruit_raw);
-		register(mooncake);
-		register(mooncake_egg);
-		register(mooncake_ham);
-		register(mooncake_fruit);
 	}
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
-		registerRender(mousse_berry_raw);
-		registerRender(mousse_berry_model);
-		registerRender(mousse_coffee_raw);
-		registerRender(mousse_coffee_model);
-		registerRender(mousse_chocolate_raw);
-		registerRender(mousse_chocolate_model);
-		registerRender(mousse_lemon_raw);
-		registerRender(mousse_lemon_model);
-		
-		registerRender(syrup_mint);
-		registerRender(syrup_chocolate);
-		registerRender(syrup_apple);
-		registerRender(soda);
-		registerRender(dough_ginger);
-		registerRender(plate_dough_ginger);
-		registerRender(plate_ginger);
-		registerRender(marshmallow);
-		registerRender(marshmallow_chocolate);
-		registerRender(marshmallow_roast);
-		registerRender(smore);
-		registerRender(ginger_bread);
-		registerRender(ginger_bread_man_raw);
-		registerRender(ginger_bread_man);
-		
-		registerRender(gelatin);
-		registerRender(muffin_raw);
-		registerRender(muffin_chocolate_raw);
-		registerRender(muffin_coffee_raw);
-		registerRender(muffin_pumpkin_raw);
-		registerRender(muffin_carrot_raw);
-		registerRender(muffin_redvelvet_raw);
-		registerRender(muffin_lemon_raw);
-		registerRender(muffin_tea_raw);
-		registerRender(muffin_berry_raw);
-		
-		registerRender(cake_roll);
-		registerRender(cake_chocolate_roll);
-		registerRender(cake_coffee_roll);
-		registerRender(cake_pumpkin_roll);
-		registerRender(cake_carrot_roll);
-		registerRender(cake_redvelvet_roll);
-		registerRender(cake_lemon_roll);
-		registerRender(cake_tea_roll);
-		registerRender(cake_berry_roll);
-		
-		registerRender(syrup_empty);
-		registerRender(syrup_full);
-		registerRender(syrup_brown);
-		registerRender(syrup_vanilla);
-		registerRender(syrup_berry);
-		registerRender(syrup_cherry);
-		registerRender(syrup_lemon);
-		
+		registerRender(icecream);
+		registerRender(cookie_icecream);
+		registerRender(vanilla);
 		registerRender(muffin);
-		registerRender(muffin_chocolate);
-		registerRender(muffin_coffee);
-		registerRender(muffin_pumpkin);
-		registerRender(muffin_carrot);
-		registerRender(muffin_redvelvet);
-		registerRender(muffin_lemon);
-		registerRender(muffin_tea);
-		registerRender(muffin_berry);
-		
-		registerRender(cake_cheese_raw);
-		registerRender(cake_cheese_model);
-		
+		registerRender(cake_roll);
+		registerRender(syrup_empty);
+		registerRender(syrup);
+		registerRender(cream);
 		registerRender(iron_bowl);
-		registerRender(iron_bowl_egg);
-		registerRender(iron_bowl_cheese);
 		registerRender(iron_bowl_batter);
-		registerRender(iron_bowl_batter_chocolate);
-		registerRender(iron_bowl_batter_coffee);
-		registerRender(iron_bowl_batter_pumpkin);
-		registerRender(iron_bowl_batter_carrot);
-		registerRender(iron_bowl_batter_red);
-		registerRender(iron_bowl_batter_lemon);
-		registerRender(iron_bowl_batter_berry);
-		registerRender(iron_bowl_batter_tea);
-		registerRender(spices);
-
 		registerRender(cake_model);
 		registerRender(cake_model_square);
 		registerRender(cake_model_plate);
 		registerRender(vanilla_seeds);
-		registerRender(vanilla);
-		registerRender(cake_sponge_raw);
-		registerRender(cake_sponge_model);
-		registerRender(cake_sponge_plate_raw);
-		registerRender(cake_sponge_plate_model);
-		registerRender(cake_sponge_base);
+		registerRender(dessert_1);
+		registerRender(raw_cake);
+		registerRender(model_cake);
+		registerRender(cake_plate_raw);
+		registerRender(cake_plate_model);
+		registerRender(cake_base);
 		registerRender(jiggy_cake_raw);
 		registerRender(jiggy_cake_model);
 		registerRender(jiggy_cake);
-		
-		registerRender(cake_sponge_chocolate_raw);
-		registerRender(cake_sponge_chocolate_model);
-		registerRender(cake_sponge_chocolate_plate_raw);
-		registerRender(cake_sponge_chocolate_plate_model);
-		registerRender(cake_sponge_chocolate_base);
-		registerRender(jiggy_cake_chocolate_raw);
-		registerRender(jiggy_cake_chocolate_model);
-		registerRender(jiggy_cake_chocolate);
-		
-		registerRender(cake_sponge_coffee_raw);
-		registerRender(cake_sponge_coffee_model);
-		registerRender(cake_sponge_coffee_plate_raw);
-		registerRender(cake_sponge_coffee_plate_model);
-		registerRender(cake_sponge_coffee_base);
-		registerRender(jiggy_cake_coffee_raw);
-		registerRender(jiggy_cake_coffee_model);
-		registerRender(jiggy_cake_coffee);
-		
-		registerRender(cake_sponge_pumpkin_raw);
-		registerRender(cake_sponge_pumpkin_model);
-		registerRender(cake_sponge_pumpkin_plate_raw);
-		registerRender(cake_sponge_pumpkin_plate_model);
-		registerRender(cake_sponge_pumpkin_base);
-		registerRender(jiggy_cake_pumpkin_raw);
-		registerRender(jiggy_cake_pumpkin_model);
-		registerRender(jiggy_cake_pumpkin);
-		
-		registerRender(cake_sponge_carrot_raw);
-		registerRender(cake_sponge_carrot_model);
-		registerRender(cake_sponge_carrot_plate_raw);
-		registerRender(cake_sponge_carrot_plate_model);
-		registerRender(cake_sponge_carrot_base);
-		registerRender(jiggy_cake_carrot_raw);
-		registerRender(jiggy_cake_carrot_model);
-		registerRender(jiggy_cake_carrot);
-		
-		registerRender(cake_sponge_redvelvet_raw);
-		registerRender(cake_sponge_redvelvet_model);
-		registerRender(cake_sponge_redvelvet_plate_raw);
-		registerRender(cake_sponge_redvelvet_plate_model);
-		registerRender(cake_sponge_redvelvet_base);
-		registerRender(jiggy_cake_redvelvet_raw);
-		registerRender(jiggy_cake_redvelvet_model);
-		registerRender(jiggy_cake_redvelvet);
-		
-		registerRender(cake_sponge_lemon_raw);
-		registerRender(cake_sponge_lemon_model);
-		registerRender(cake_sponge_lemon_plate_raw);
-		registerRender(cake_sponge_lemon_plate_model);
-		registerRender(cake_sponge_lemon_base);
-		registerRender(jiggy_cake_lemon_raw);
-		registerRender(jiggy_cake_lemon_model);
-		registerRender(jiggy_cake_lemon);
-		
-		registerRender(cake_sponge_tea_raw);
-		registerRender(cake_sponge_tea_model);
-		registerRender(cake_sponge_tea_plate_raw);
-		registerRender(cake_sponge_tea_plate_model);
-		registerRender(cake_sponge_tea_base);
-		registerRender(jiggy_cake_tea_raw);
-		registerRender(jiggy_cake_tea_model);
-		registerRender(jiggy_cake_tea);
-		
-		registerRender(cake_sponge_berry_raw);
-		registerRender(cake_sponge_berry_model);
-		registerRender(cake_sponge_berry_plate_raw);
-		registerRender(cake_sponge_berry_plate_model);
-		registerRender(cake_sponge_berry_base);
-		registerRender(jiggy_cake_berry_raw);
-		registerRender(jiggy_cake_berry_model);
-		registerRender(jiggy_cake_berry);
-		
-		registerRender(dough_pastry);
-		registerRender(hardtack_raw);
-		registerRender(hardtack);
-		registerRender(plate_pastry_raw);
-		registerRender(plate_pastry);
-		registerRender(mille_feuille);
-		
 		registerRender(mooncake_model);
-		registerRender(mooncake_raw);
-		registerRender(mooncake_egg_raw);
 		registerRender(mooncake);
-		registerRender(mooncake_egg);
-		registerRender(mooncake_ham_raw);
-		registerRender(mooncake_fruit_raw);
-		registerRender(mooncake_ham);
-		registerRender(mooncake_fruit);
-		registerRender(blue_berry);
-		registerRender(plate_iron);
-		registerRender(plate_dough);
-		registerRender(plate_dough_pastry);
-		
 		registerRender(mixing_bowl);
-		registerRender(yeast);
-
-		registerRender(brownie_raw);
-		registerRender(brownie_model);
-		registerRender(tiramisu_model);
-		registerRender(butter);
-		registerRender(cheese);
-		registerRender(croissant_raw);
-		registerRender(croissant);
-		registerRender(croissant_chocolate_raw);
-		registerRender(croissant_chocolate);
-		registerRender(D_bar);
-		registerRender(brownie);
-		
-		registerRender(turkey_coffee_pot);
-		registerRender(turkey_coffee_pot_unheated);
-		registerRender(turkey_coffee_pot_heated);
-		registerRender(bag);
-		registerRender(coffee_bean_raw);
-		registerRender(moka_top);
-		registerRender(moka_bottom);
-		registerRender(moka_pot_unheated);
-		registerRender(moka_pot_heated);
-		registerRender(milk_form);
-		registerRender(ice_slag);
-		registerRender(cream_milk);
-		registerRender(cream_chocolate);
-		registerRender(cream_coffee);
-		registerRender(cream_apple);
-		registerRender(cream_berry);
-		registerRender(cream_melon);
-		registerRender(cream_lemon);
-		
-		registerRender(icecream_vanilla);
-		registerRender(icecream_chocolate);
-		registerRender(icecream_coffee);
-		registerRender(icecream_apple);
-		registerRender(icecream_berry);
-		registerRender(icecream_melon);
-		registerRender(icecream_lemon);
-		
-		registerRender(cookie_icecream_vanilla);
-		registerRender(cookie_icecream_chocolate);
-		registerRender(cookie_icecream_coffee);
-		registerRender(cookie_icecream_apple);
-		registerRender(cookie_icecream_berry);
-		registerRender(cookie_icecream_melon);
-		registerRender(cookie_icecream_lemon);
-		
-		registerRender(dough_cookie);
-		registerRender(custard);
+		registerRender(materials);
+		registerRender(materialFood);
+		registerRender(coffee_pot);
+		registerRender(icecream);
+		registerRender(cookie_icecream);
         registerRender(coffee_seeds);
-        registerRender(coffee_bean);
-        registerRender(coffee_powder);
-        registerRender(cocoa_bean);
-        registerRender(cocoa_powder);
-        registerRender(cocoa_batter);
-        registerRender(chocolate_bar);
-        registerRender(chocolate_chip);
-        registerRender(baguette);
-        registerRender(flour);
-        registerRender(dough);
-        registerRender(dough_baguette);
         registerRender(record_blank);
         registerRender(kusa_noshi_to_ne);
         registerRender(lazt_lady_kaguya);
@@ -821,10 +430,43 @@ public class ItemLoader {
 		item.setCreativeTab(CommonProxy.tab);
         ForgeRegistries.ITEMS.register(item.setRegistryName(item.getUnlocalizedName().substring(5+CoffeeWork.MODID.length()+1)));
     }
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemBase item)
+    {
+    	for(int i = 0;i<item.getSubNames().length;i++){
+    		String name = item.getSubNames()[i].substring(CoffeeWork.MODID.length()+1);
+            ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(CoffeeWork.MODID,name), "inventory");
+            ModelLoader.setCustomModelResourceLocation(item, i, model);
+    	}
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemDessert item)
+    {
+    	for(int i = 0;i<item.getSubNames().length;i++){
+    		String name = item.getSubNames()[i].substring(CoffeeWork.MODID.length()+1);
+            ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(CoffeeWork.MODID,name), "inventory");
+            ModelLoader.setCustomModelResourceLocation(item, i, model);
+    	}
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(Item item, int meta, String name)
+    {
+        ModelResourceLocation model = new ModelResourceLocation(name, "inventory");
+        ModelLoader.setCustomModelResourceLocation(item, meta, model);
+    }
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(Item item, int meta, String name,String textureName)
+    {
+    	JSON_Creator.genItem(name, textureName, "json_create");
+        ModelResourceLocation model = new ModelResourceLocation(name, "inventory");
+        ModelLoader.setCustomModelResourceLocation(item, meta, model);
+    }
 	@SideOnly(Side.CLIENT)
     private static void registerRender(Item item,String textureName)
     {
-		JSON_Creator.genItem(item.getRegistryName().toString().substring(11), textureName, "json_create");
+		JSON_Creator.genItem(item.getRegistryName().toString().substring(10), textureName, "json_create");
         ModelResourceLocation model = new ModelResourceLocation(item.getRegistryName(), "inventory");
         ModelLoader.setCustomModelResourceLocation(item, 0, model);
     }

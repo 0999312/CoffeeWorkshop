@@ -17,7 +17,7 @@ public class MakingBlackCoffee extends ShapelessOreRecipe {
 
 	public MakingBlackCoffee() {
 		super(new ResourceLocation(" "), DrinksLoader.coffee, new  Object[]{
-				ItemLoader.moka_pot_heated,DrinksLoader.cup
+				new ItemStack(ItemLoader.coffee_pot,1,3),DrinksLoader.cup
 		});
 		
 	}
@@ -29,8 +29,8 @@ public class MakingBlackCoffee extends ShapelessOreRecipe {
 
 		if(!item.isEmpty()){
 	        if(item.getItem() ==DrinksLoader.coffee){
-	        	ItemStack top = new ItemStack(ItemLoader.moka_top);
-	        	ItemStack bottom = new ItemStack(ItemLoader.moka_bottom);
+	        	ItemStack top = new ItemStack(ItemLoader.coffee_pot,1,0);
+	        	ItemStack bottom = new ItemStack(ItemLoader.coffee_pot,1,1);
 	    		player.inventory.addItemStackToInventory(top);
 	    		player.inventory.addItemStackToInventory(bottom);
 	        }

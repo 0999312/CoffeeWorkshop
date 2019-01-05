@@ -15,22 +15,24 @@ public class SyrupCraftingRecipes {
 	RecipesUtil.addRecipe(ItemLoader.syrup_empty, new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.syrup_empty,8),new Object[]{
 			"WGW","W W"," W ",'W',"paneGlassColorless",'G',"plankWood"
 	}));
-	RecipesUtil.addRecipe(ItemLoader.syrup_full, new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.syrup_full,new Object[]{
+	RecipesUtil.addRecipe("syrup_full", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.syrup,1,0),new Object[]{
 			ItemLoader.syrup_empty,"listAllsugar","listAllsugar"
 	}));
-	RegisterSyrupRecipe(ItemLoader.syrup_berry, "listAllberry");
-	RegisterSyrupRecipe(ItemLoader.syrup_lemon, "cropLemon");
-	RegisterSyrupRecipe(ItemLoader.syrup_cherry, "cropCherry");
-	RegisterSyrupRecipe(ItemLoader.syrup_vanilla, "cropVanilla");
-	RegisterSyrupRecipe(ItemLoader.syrup_mint, "cropSpiceleaf");
-	GameRegistry.addSmelting(ItemLoader.syrup_full, new ItemStack(ItemLoader.syrup_brown), 0F);
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,3), "listAllberry","syrup_berry");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,5), "cropLemon","syrup_lemon");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,4), "cropCherry","syrup_cherry");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,2), "cropVanilla","syrup_vanilla");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,6), "foodCocoapowder","syrup_chocolate");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,7), "cropApple","syrup_apple");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,8), "cropSpiceleaf","syrup_mint");
+	GameRegistry.addSmelting(new ItemStack(ItemLoader.syrup,1,0), new ItemStack(ItemLoader.syrup,1,1), 0F);
 	}
-	public static void RegisterSyrupRecipe(Item syrup,String oredict){
-		RecipesUtil.addRecipe(syrup, new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
+	public static void RegisterSyrupRecipe(ItemStack syrup,String oredict,String name){
+		RecipesUtil.addRecipe(name, new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
 				ItemLoader.syrup_empty,"listAllsugar",oredict,"listAllsugar"
 		}));
-		RecipesUtil.addRecipe(syrup.getRegistryName().toString()+"_2", new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
-				ItemLoader.syrup_full,oredict
+		RecipesUtil.addRecipe(name+"_2", new ShapelessOreRecipe(new ResourceLocation(""), syrup,new Object[]{
+				new ItemStack(ItemLoader.syrup,1,0),oredict
 		}));
 	}
 }

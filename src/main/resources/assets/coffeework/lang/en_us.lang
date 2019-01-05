@@ -505,3 +505,7 @@ word.coffeework.coffee_mint_ice.name=Strong Cold
 word.coffeework.coffee_moncheri_ice.name=The Famous work of Hiroyuki Kadowaki
 
 entity.Villager.coffee_trader=Coffee Trader
+
+entity.Villager.coffee_instant_trader=Instant Coffee Trader
+
+entity.Villager.food_trader=Food Trader

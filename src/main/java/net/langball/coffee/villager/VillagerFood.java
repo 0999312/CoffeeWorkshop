@@ -18,12 +18,12 @@ public class VillagerFood {
 	public static void registerVillager() {
 		VillagerProfession prof = VillagerRegistry.getById(4);
 		VillagerCareer career = new VillagerCareer(prof, "food_trader");
-		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.flour,8),new PriceInfo(3, 5)));
-		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.brownie,4),new PriceInfo(6, 8)));
-		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.spices,4),new PriceInfo(3, 5)));
-		career.addTrade(2, new SimpleSell(new ItemStack(ItemLoader.muffin,16),new PriceInfo(8, 14)));
-		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.gelatin,8),new PriceInfo(6, 7)));
-		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.custard,8),new PriceInfo(8, 10)));
+		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,8,13),new PriceInfo(3, 5)));
+		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materialFood,4,6),new PriceInfo(6, 8)));
+		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,4,6),new PriceInfo(3, 5)));
+		career.addTrade(2, new SimpleSell(new ItemStack(ItemLoader.muffin,8),new PriceInfo(8, 14)));
+		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.materials,8,7),new PriceInfo(6, 7)));
+		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.materialFood,8,8),new PriceInfo(8, 10)));
 		career.addTrade(3, new SimpleBuy(new ItemStack(ItemLoader.cake_model),new PriceInfo(4, 8)));
 		career.addTrade(3, new SimpleBuy(new ItemStack(ItemLoader.cake_model_square),new PriceInfo(4, 8)));		
 		career.addTrade(3, new SimpleBuy(new ItemStack(ItemLoader.cake_model_plate),new PriceInfo(4, 8)));

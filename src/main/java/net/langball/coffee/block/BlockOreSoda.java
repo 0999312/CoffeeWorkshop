@@ -17,11 +17,7 @@ public class BlockOreSoda extends BlockOre {
 	}
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return ItemLoader.soda;
+		return BlockLoader.Soda_OreItem;
 	}
-	@Override
-	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
-		 Random rand = world instanceof World ? ((World)world).rand : new Random();
-		return MathHelper.getInt(rand, 3, 7);
-	}
+	
 }

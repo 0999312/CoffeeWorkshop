@@ -506,3 +506,7 @@ word.coffeework.coffee_moncheri_ice.name=门脇洋之的名作
 
 
 entity.Villager.coffee_trader=咖啡交易者
+
+entity.Villager.coffee_instant_trader=速溶咖啡卖家
+
+entity.Villager.food_trader=糕点师

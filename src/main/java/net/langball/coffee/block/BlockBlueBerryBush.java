@@ -167,7 +167,7 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
 	        return false;
 	        else{
 	        	worldIn.setBlockState(pos, crops.withAge(1));
-	              dropItem(new ItemStack(ItemLoader.blue_berry), worldIn, pos);
+	              dropItem(new ItemStack(ItemLoader.materialFood,1,2), worldIn, pos);
 	            return true;
 	        }
 		  }else return false;
@@ -234,7 +234,7 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
     
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this.isMaxAge(state) ? ItemLoader.blue_berry : null;
+        return BlockLoader.BlueBerryBushItem;
     }
 
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)

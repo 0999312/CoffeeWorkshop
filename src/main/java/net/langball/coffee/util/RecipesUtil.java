@@ -11,8 +11,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RecipesUtil {
 	public static void addRecipe(Item item, IRecipe value) {
-	    addRecipe(item.getRegistryName().toString().replaceAll(":", "."), value, false);
-		}
+	addRecipe(item.getRegistryName().toString().replaceAll(":", "."), value, false);
+	}
 	public static void addRecipe(String key, IRecipe value) {
     addRecipe(key, value, false);
 	}

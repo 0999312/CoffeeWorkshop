@@ -75,19 +75,19 @@ public class BlockLoader {
 	public static Item coffee_cheeseBlockItem = new ItemBlockCoffee(coffee_cheeseBlock);
 	
 	public static Block bag_coffee = new BlockBag().setRegistryName("bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee").setCreativeTab(CommonProxy.tab);
-	public static Item bag_coffeeItem = new ItemBlock(bag_coffee).setRegistryName("bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee").setContainerItem(ItemLoader.bag);
+	public static Item bag_coffeeItem = new ItemBlock(bag_coffee).setRegistryName("bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee");
 	public static Block bag_coffee_raw = new BlockBag().setRegistryName("bag_coffee_raw").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee_raw").setCreativeTab(CommonProxy.tab);
-	public static Item bag_coffee_rawItem = new ItemBlock(bag_coffee_raw).setRegistryName("bag_coffee_raw").setUnlocalizedName(CoffeeWork.MODID+"bag_coffee_raw").setContainerItem(ItemLoader.bag);
+	public static Item bag_coffee_rawItem = new ItemBlock(bag_coffee_raw).setRegistryName("bag_coffee_raw").setUnlocalizedName(CoffeeWork.MODID+"bag_coffee_raw");
 	public static Block bag_cocoa = new BlockBag().setRegistryName("bag_cocoa").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa").setCreativeTab(CommonProxy.tab);
-	public static Item bag_cocoaItem = new ItemBlock(bag_cocoa).setRegistryName("bag_cocoa").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa").setContainerItem(ItemLoader.bag);
+	public static Item bag_cocoaItem = new ItemBlock(bag_cocoa).setRegistryName("bag_cocoa").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa");
 	public static Block bag_cocoa_powder = new BlockBag().setRegistryName("bag_cocoa_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa_powder").setCreativeTab(CommonProxy.tab);
-	public static Item bag_cocoa_powderItem = new ItemBlock(bag_cocoa_powder).setRegistryName("bag_cocoa_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa_powder").setContainerItem(ItemLoader.bag);
+	public static Item bag_cocoa_powderItem = new ItemBlock(bag_cocoa_powder).setRegistryName("bag_cocoa_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_cocoa_powder");
 	public static Block bag_flour = new BlockBag().setRegistryName("bag_flour").setUnlocalizedName(CoffeeWork.MODID+".bag_flour").setCreativeTab(CommonProxy.tab);
-	public static Item bag_flourItem = new ItemBlock(bag_flour).setRegistryName("bag_flour").setUnlocalizedName(CoffeeWork.MODID+".bag_flour").setContainerItem(ItemLoader.bag);
+	public static Item bag_flourItem = new ItemBlock(bag_flour).setRegistryName("bag_flour").setUnlocalizedName(CoffeeWork.MODID+".bag_flour");
 	public static Block bag_coffee_powder = new BlockBag().setRegistryName("bag_coffee_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee_powder").setCreativeTab(CommonProxy.tab);
-	public static Item bag_coffee_powderItem = new ItemBlock(bag_coffee_powder).setRegistryName("bag_coffee_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee_powder").setContainerItem(ItemLoader.bag);
+	public static Item bag_coffee_powderItem = new ItemBlock(bag_coffee_powder).setRegistryName("bag_coffee_powder").setUnlocalizedName(CoffeeWork.MODID+".bag_coffee_powder");
 	public static Block bag_sugar = new BlockBag().setRegistryName("bag_sugar").setUnlocalizedName(CoffeeWork.MODID+".bag_sugar").setCreativeTab(CommonProxy.tab);
-	public static Item bag_sugarItem = new ItemBlock(bag_sugar).setRegistryName("bag_sugar").setUnlocalizedName(CoffeeWork.MODID+".bag_sugar").setContainerItem(ItemLoader.bag);
+	public static Item bag_sugarItem = new ItemBlock(bag_sugar).setRegistryName("bag_sugar").setUnlocalizedName(CoffeeWork.MODID+".bag_sugar");
 	
 	public static Block double_bag_coffee = new BlockBag2().setRegistryName("double_bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".double_bag_coffee").setCreativeTab(CommonProxy.tab);
 	public static Item double_bag_coffeeItem = new ItemBlock(double_bag_coffee).setRegistryName("double_bag_coffee").setUnlocalizedName(CoffeeWork.MODID+".double_bag_coffee");
@@ -98,7 +98,7 @@ public class BlockLoader {
 	public static Block double_bag_cocoa_powder = new BlockBag2().setRegistryName("double_bag_cocoa_powder").setUnlocalizedName(CoffeeWork.MODID+".double_bag_cocoa_powder").setCreativeTab(CommonProxy.tab);
 	public static Item double_bag_cocoa_powderItem = new ItemBlock(double_bag_cocoa_powder).setRegistryName("double_bag_cocoa_powder").setUnlocalizedName(CoffeeWork.MODID+"double_bag_cocoa_powder");
 	public static Block double_bag_flour = new BlockBag2().setRegistryName("double_bag_flour").setUnlocalizedName(CoffeeWork.MODID+".bag_flour").setCreativeTab(CommonProxy.tab);
-	public static Item double_bag_flourItem = new ItemBlock(double_bag_flour).setRegistryName("double_bag_flour").setUnlocalizedName(CoffeeWork.MODID+".double_bag_flour").setContainerItem(ItemLoader.bag);
+	public static Item double_bag_flourItem = new ItemBlock(double_bag_flour).setRegistryName("double_bag_flour").setUnlocalizedName(CoffeeWork.MODID+".double_bag_flour");
 	public static Block double_bag_coffee_powder = new BlockBag2().setRegistryName("double_bag_coffee_powder").setUnlocalizedName(CoffeeWork.MODID+".double_bag_coffee_powder").setCreativeTab(CommonProxy.tab);
 	public static Item double_bag_coffee_powderItem = new ItemBlock(double_bag_coffee_powder).setRegistryName("double_bag_coffee_powder").setUnlocalizedName(CoffeeWork.MODID+"double_bag_coffee_powder");
 	public static Block double_bag_sugar = new BlockBag2().setRegistryName("double_bag_sugar").setUnlocalizedName(CoffeeWork.MODID+".double_bag_sugar").setCreativeTab(CommonProxy.tab);
