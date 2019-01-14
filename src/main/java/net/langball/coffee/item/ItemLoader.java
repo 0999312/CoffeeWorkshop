@@ -41,30 +41,45 @@ public class ItemLoader {
 
 	public static ItemBase materials = new ItemBase("itemMaterials", 64, 
 			CoffeeWork.MODID+"."+"coffee_bean_raw",//0
-			CoffeeWork.MODID+"."+"coffee_bean",//1
-			CoffeeWork.MODID+"."+"ice_slag",//2
-			CoffeeWork.MODID+"."+"yeast",//3
-			CoffeeWork.MODID+"."+"bag",//4
-			CoffeeWork.MODID+"."+"plate_iron",//5
-			CoffeeWork.MODID+"."+"spices",//6
-			CoffeeWork.MODID+"."+"gelatin",//7
-			CoffeeWork.MODID+"."+"soda",//8
-			CoffeeWork.MODID+"."+"coffee_powder",//9
-			CoffeeWork.MODID+"."+"cocoa_bean",//10
-			CoffeeWork.MODID+"."+"cocoa_powder",//11
-			CoffeeWork.MODID+"."+"cocoa_batter",//12
-			CoffeeWork.MODID+"."+"flour",//13
-			CoffeeWork.MODID+"."+"dough",//14
-			CoffeeWork.MODID+"."+"dough_pastry",//15
-			CoffeeWork.MODID+"."+"dough_cookie",//16
-			CoffeeWork.MODID+"."+"dough_ginger",//17
-			CoffeeWork.MODID+"."+"plate_dough",//18
-			CoffeeWork.MODID+"."+"plate_dough_pastry",//19
-			CoffeeWork.MODID+"."+"plate_dough_ginger",//20
-			CoffeeWork.MODID+"."+"dough_baguette"//21
+			CoffeeWork.MODID+"."+"coffee_bean_light",//1
+			CoffeeWork.MODID+"."+"coffee_powder_light",//2
+			CoffeeWork.MODID+"."+"coffee_bean",//3
+			CoffeeWork.MODID+"."+"coffee_powder",//4
+			CoffeeWork.MODID+"."+"cocoa_bean",//5
+			CoffeeWork.MODID+"."+"cocoa_powder",//6
+			CoffeeWork.MODID+"."+"cocoa_batter",//7
+			CoffeeWork.MODID+"."+"bag",//8
+			CoffeeWork.MODID+"."+"ice_slag",//9
+			CoffeeWork.MODID+"."+"yeast",//10
+			CoffeeWork.MODID+"."+"plate_iron",//11
+			CoffeeWork.MODID+"."+"spices",//12
+			CoffeeWork.MODID+"."+"gelatin",//13
+			CoffeeWork.MODID+"."+"soda",
+			CoffeeWork.MODID+"."+"flour",
+			CoffeeWork.MODID+"."+"dough",
+			CoffeeWork.MODID+"."+"dough_pastry",
+			CoffeeWork.MODID+"."+"dough_cookie",
+			CoffeeWork.MODID+"."+"dough_ginger",
+			CoffeeWork.MODID+"."+"dough_bread",
+			CoffeeWork.MODID+"."+"dough_bread_round",
+			CoffeeWork.MODID+"."+"dough_baguette",
+			CoffeeWork.MODID+"."+"dough_bagel",
+			CoffeeWork.MODID+"."+"dough_toast",
+			CoffeeWork.MODID+"."+"plate_dough",
+			CoffeeWork.MODID+"."+"plate_dough_pastry",
+			CoffeeWork.MODID+"."+"plate_dough_ginger"
 			);
+	public static ItemFoodBasic bread = new ItemFoodBasic("bread", 64,
+			new int[]{5,7,5,6},
+			new float[]{2,2,2,2},
+			new String[]{
+					CoffeeWork.MODID+"."+"bread_round",//0
+					CoffeeWork.MODID+"."+"baguette",//1
+					CoffeeWork.MODID+"."+"bagel",//2
+					CoffeeWork.MODID+"."+"toast",//3
+			});
 	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
-	public static ItemDessert materialFood = new ItemDessert("itemMaterialFood", 64,
+	public static ItemFoodBasic materialFood = new ItemFoodBasic("itemMaterialFood", 64,
 			new int[]{2,3,1,4,1,7,4,8,2,1,2,6,4,6,4},
 			new float[]{2,2,2,2,2,2,6,2,2,2,2,2,2,2,2},
 			new String[]{
@@ -73,19 +88,18 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"blueberry",//2
 					CoffeeWork.MODID+"."+"chocolate_bar",//3
 					CoffeeWork.MODID+"."+"chocolate_chip",//4
-					CoffeeWork.MODID+"."+"baguette",//5
-					CoffeeWork.MODID+"."+"brownie",//6
-					CoffeeWork.MODID+"."+"field_ration_d",//7
-					CoffeeWork.MODID+"."+"custard",//8
-					CoffeeWork.MODID+"."+"milk_form",//9
-					CoffeeWork.MODID+"."+"marshmallow",//10
-					CoffeeWork.MODID+"."+"marshmallow_chocolate",//11
-					CoffeeWork.MODID+"."+"marshmallow_roast",//12
-					CoffeeWork.MODID+"."+"smore",//13
-					CoffeeWork.MODID+"."+"plate_ginger"//14		
+					CoffeeWork.MODID+"."+"brownie",//5
+					CoffeeWork.MODID+"."+"field_ration_d",//6
+					CoffeeWork.MODID+"."+"custard",//7
+					CoffeeWork.MODID+"."+"milk_form",//8
+					CoffeeWork.MODID+"."+"marshmallow",//9
+					CoffeeWork.MODID+"."+"marshmallow_chocolate",//10
+					CoffeeWork.MODID+"."+"marshmallow_roast",//11
+					CoffeeWork.MODID+"."+"smore",//12
+					CoffeeWork.MODID+"."+"plate_ginger"//13	
 			});
 	
-	public static ItemDessert dessert_1 = new ItemDessert("itemDessert", 64,
+	public static ItemFoodBasic dessert_1 = new ItemFoodBasic("itemDessert", 64,
 			new int[]{2,2,6,8,1,4,1,2,4,2,5,8},
 			new float[]{2,2,2,2,2,2,2,2,2,2,2,2},
 			new String[]{
@@ -103,7 +117,7 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"mille_feuille"//11
 			});
 
-	public static ItemDessert icecream = new ItemDessert("icecream", 64,
+	public static ItemFoodBasic icecream = new ItemFoodBasic("icecream", 64,
 			new int[]{4,6,6,6,6,6,6},
 			new float[]{2,2,2,2,2,2,2},
 			new String[]{
@@ -116,7 +130,7 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"icecream_lemon"//6
 			});
 
-	public static ItemDessert cream = new ItemDessert("cream", 64,
+	public static ItemFoodBasic cream = new ItemFoodBasic("cream", 64,
 			new int[]{2,4,4,4,4,4,4},
 			new float[]{2,2,2,2,2,2,2},
 			new String[]{
@@ -129,7 +143,7 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"cream_lemon"
 			});
 
-	public static ItemDessert cookie_icecream = new ItemDessert("cookie_icecream", 64,
+	public static ItemFoodBasic cookie_icecream = new ItemFoodBasic("cookie_icecream", 64,
 			new int[]{6,8,8,8,8,8,8},
 			new float[]{2,2,2,2,2,2,2},
 			new String[]{
@@ -142,7 +156,7 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"cookie_icecream_lemon"
 			});
 
-	public static ItemDessert mooncake = new ItemDessert("mooncake", 64,
+	public static ItemFoodBasic mooncake = new ItemFoodBasic("mooncake", 64,
 			new int[]{2,2,2,2,5,6,6,6},
 			new float[]{1,1,1,1,2,2,2,2},
 			new String[]{
@@ -235,7 +249,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"cake_sponge_berry_plate_model"
 	}).setContainerItem(cake_model_plate);
 
-	public static ItemDessert cake_base = new ItemDessert("cake_base", 64,
+	public static ItemFoodBasic cake_base = new ItemFoodBasic("cake_base", 64,
 			new int[]{4,6,6,6,6,6,6,6,6},
 			new float[]{2,2,2,2,2,2,2,2,2}, 
 			CoffeeWork.MODID+"."+"cake_sponge_base",
@@ -249,7 +263,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"cake_sponge_berry_base"
 			);
 	
-	public static ItemDessert cake_roll = new ItemDessert("cake_roll", 64,
+	public static ItemFoodBasic cake_roll = new ItemFoodBasic("cake_roll", 64,
 			new int[]{4,6,6,6,6,6,6,6,6},
 			new float[]{2,2,2,2,2,2,2,2,2}, 
 			CoffeeWork.MODID+"."+"cake_roll",
@@ -289,7 +303,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"tiramisu_model"
 	}).setContainerItem(cake_model_square);
 	
-	public static ItemDessert jiggy_cake = new ItemDessert("jiggy_cake", 64,
+	public static ItemFoodBasic jiggy_cake = new ItemFoodBasic("jiggy_cake", 64,
 			new int[]{4,5,5,5,5,5,5,5,5},
 			new float[]{2,2,2,2,2,2,2,2,2},
 			new String[]{
@@ -304,7 +318,7 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"jiggy_cake_berry"
 			});
 	
-	public static ItemDessert muffin = new ItemDessert("muffin", 64,
+	public static ItemFoodBasic muffin = new ItemFoodBasic("muffin", 64,
 			new int[]{2,2,2,2,2,2,2,2,2,4,6,6,6,6,6,6,6,6},
 			new float[]{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 			new String[]{
@@ -328,8 +342,6 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"muffin_berry"
 			});
 
-	
-	
 	public static Item record_blank = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"record_blank").setMaxStackSize(1);
 	public static Item kusa_noshi_to_ne = new ItemRecordCW("records.kusa_noshi_to_ne");
 	public static Item lazt_lady_kaguya = new ItemRecordCW("records.lazy_lady_kaguya");
@@ -360,6 +372,7 @@ public class ItemLoader {
 		MinecraftForge.addGrassSeed(new ItemStack(vanilla_seeds), 8);
 		register(vanilla);
 		register(materials);
+		register(bread);
 		register(materialFood);
 		register(syrup_empty);
 		register(syrup);
@@ -388,6 +401,7 @@ public class ItemLoader {
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(bread);
 		registerRender(icecream);
 		registerRender(cookie_icecream);
 		registerRender(vanilla);
@@ -433,18 +447,33 @@ public class ItemLoader {
     @SideOnly(Side.CLIENT)
     private static void registerRender(ItemBase item)
     {
+    	registerRender(item, false);
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemFoodBasic item)
+    {
+    	registerRender(item, false);
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemBase item,boolean json_create)
+    {
     	for(int i = 0;i<item.getSubNames().length;i++){
     		String name = item.getSubNames()[i].substring(CoffeeWork.MODID.length()+1);
+    		if(json_create)JSON_Creator.genItem(name, name, "json_create");
             ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(CoffeeWork.MODID,name), "inventory");
             ModelLoader.setCustomModelResourceLocation(item, i, model);
     	}
     }
     
     @SideOnly(Side.CLIENT)
-    private static void registerRender(ItemDessert item)
+    private static void registerRender(ItemFoodBasic item,boolean json_create)
     {
+    	
     	for(int i = 0;i<item.getSubNames().length;i++){
     		String name = item.getSubNames()[i].substring(CoffeeWork.MODID.length()+1);
+        	if(json_create)JSON_Creator.genItem(name, name, "json_create");
             ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(CoffeeWork.MODID,name), "inventory");
             ModelLoader.setCustomModelResourceLocation(item, i, model);
     	}

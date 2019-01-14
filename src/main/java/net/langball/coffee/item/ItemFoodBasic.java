@@ -16,12 +16,12 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public class ItemDessert extends ItemFood {
+public class ItemFoodBasic extends ItemFood {
 
 	protected String[] subNames;
 	protected int[] amount;
 	protected float[] saturation;
-	public ItemDessert(String name, int stackSize,int[] amounts,float[] saturations, String... subNames) {
+	public ItemFoodBasic(String name, int stackSize,int[] amounts,float[] saturations, String... subNames) {
 		super(amounts[0],saturations[0], false);
 		this.setUnlocalizedName(CoffeeWork.MODID+"."+name);
 		this.setHasSubtypes(subNames!=null&&subNames.length > 0);

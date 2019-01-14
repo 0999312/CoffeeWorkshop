@@ -1,7 +1,7 @@
 package net.langball.coffee.recipes;
 
+import net.langball.coffee.drinks.DrinkCoffee;
 import net.langball.coffee.drinks.DrinksLoader;
-import net.langball.coffee.item.DrinkCoffee;
 import net.langball.coffee.item.ItemLoader;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

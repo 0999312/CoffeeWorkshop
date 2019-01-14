@@ -128,7 +128,7 @@ public class MaterialCraftingRecipes {
 				"slimeball","slimeball","dyeWhite"
 		}));
 		
-		RecipesUtil.addRecipe("dough_ginger", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,17),new Object[]{
+		RecipesUtil.addRecipe("dough_ginger", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,17),new Object[]{
 				"foodDough",new ItemStack(ItemLoader.materials,1,6)
 		}));
 		
@@ -276,13 +276,13 @@ public class MaterialCraftingRecipes {
 		registerCoffeePlate(BlockLoader.cocoa_gingerbreadBlockItem, DrinksLoader.cocoa_gingerbread);
 		registerCoffeePlate(BlockLoader.cocoa_marshmallowBlockItem, DrinksLoader.cocoa_marshmallow);
 		
-		registerBag(BlockLoader.bag_flourItem,new ItemStack(ItemLoader.materials,1,13),"foodFlour",BlockLoader.double_bag_flourItem,"flour");
-		registerBag(BlockLoader.bag_coffee_powderItem,new ItemStack(ItemLoader.materials,1,9),"dustCoffee",BlockLoader.double_bag_coffee_powderItem,"coffeePowder");
-		registerBag(BlockLoader.bag_cocoaItem,new ItemStack(ItemLoader.materials,1,10),BlockLoader.double_bag_cocoaItem,"cocoa");
-		registerBag(BlockLoader.bag_cocoa_powderItem,new ItemStack(ItemLoader.materials,1,11),"foodCocoapowder",BlockLoader.double_bag_cocoa_powderItem,"cocoaPowder");
+		registerBag(BlockLoader.bag_flourItem,new ItemStack(ItemLoader.materials,1,15),"foodFlour",BlockLoader.double_bag_flourItem,"flour");
+		registerBag(BlockLoader.bag_coffee_powderItem,new ItemStack(ItemLoader.materials,1,4),"dustCoffee",BlockLoader.double_bag_coffee_powderItem,"coffeePowder");
+		registerBag(BlockLoader.bag_cocoaItem,new ItemStack(ItemLoader.materials,1,5),BlockLoader.double_bag_cocoaItem,"cocoa");
+		registerBag(BlockLoader.bag_cocoa_powderItem,new ItemStack(ItemLoader.materials,1,6),"foodCocoapowder",BlockLoader.double_bag_cocoa_powderItem,"cocoaPowder");
 		registerBag(BlockLoader.bag_sugarItem,new ItemStack(Items.SUGAR),"listAllsugar",BlockLoader.double_bag_sugarItem,"sugar");
 		registerBag(BlockLoader.bag_coffee_rawItem,new ItemStack(ItemLoader.materials,1,0),BlockLoader.double_bag_coffee_rawItem,"coffeeRaw");
-		registerBag(BlockLoader.bag_coffeeItem,new ItemStack(ItemLoader.materials,1,1),"beanCoffee",BlockLoader.double_bag_coffeeItem,"coffee");
+		registerBag(BlockLoader.bag_coffeeItem,new ItemStack(ItemLoader.materials,1,3),"beanCoffee",BlockLoader.double_bag_coffeeItem,"coffee");
 	}
 	private static void registerIcecream(ItemStack result,ItemStack icecream) {
 		IcecreamMachineRecipes.instance().addSmeltingRecipe(icecream, result, 0F);

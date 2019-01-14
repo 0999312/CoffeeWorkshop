@@ -1,8 +1,7 @@
-package net.langball.coffee.item;
+package net.langball.coffee.drinks;
 
 import java.util.List;
 
-import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
@@ -34,9 +33,9 @@ import toughasnails.api.temperature.TemperatureHelper;
 import toughasnails.api.thirst.ThirstHelper;
 
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
-public class DrinkCoffee extends ItemFood {
+public class DrinkCoffeeTest extends ItemFood {
 	public PotionEffect effect;
-	public DrinkCoffee(int amount, float saturation,PotionEffect potion) {
+	public DrinkCoffeeTest(int amount, float saturation,PotionEffect potion) {
 		super(amount, saturation,false);
 		effect=potion;
 		this.setMaxStackSize(1);

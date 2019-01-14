@@ -1,8 +1,6 @@
-package net.langball.coffee.item;
+package net.langball.coffee.drinks;
 
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.drinks.DrinksLoader;
-import net.langball.coffee.drinks.EnumCoffee;
 import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;

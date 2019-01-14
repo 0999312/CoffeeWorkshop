@@ -1,8 +1,7 @@
-package net.langball.coffee.item;
+package net.langball.coffee.drinks;
 
 import java.util.Random;
 
-import net.langball.coffee.drinks.DrinksLoader;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;

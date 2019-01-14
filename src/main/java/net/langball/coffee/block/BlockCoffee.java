@@ -4,8 +4,8 @@ import javax.annotation.Nullable;
 
 import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.CommonProxy;
+import net.langball.coffee.drinks.DrinkMixCoffee;
 import net.langball.coffee.drinks.EnumCoffee;
-import net.langball.coffee.item.DrinkMixCoffee;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
