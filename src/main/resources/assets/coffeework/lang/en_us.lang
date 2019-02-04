@@ -30,6 +30,27 @@ tile.coffeework.cake_berry.name=Berry mix Cake
 tile.coffeework.cake_lemon.name=Summer day Cake
 tile.coffeework.cake_coffee.name=Latté Cake
 
+item.coffeework.sandwich_blt.name=BLT Sandwich
+item.coffeework.sandwich_club.name=Club Sandwich
+item.coffeework.sandwich_blt_large.name=Large BLT
+item.coffeework.sandwich_club_large.name=Large Club
+item.coffeework.sandwich_bacon_egg.name=Bacon and egg sandwich
+item.coffeework.sandwich_beef_cheese.name=Cheese Burger
+item.coffeework.sandwich_ham_cheese.name=Ham and Cheese Bagel
+
+
+item.coffeework.bread_round.name=Round Bread
+item.coffeework.bagel.name=Bagel
+item.coffeework.toast.name=Toast
+item.coffeework.coffee_bean_light.name=Light Roast Coffee Bean
+item.coffeework.coffee_powder_light.name=Light Roast Coffee Powder
+item.coffeework.dough_bread.name=Bread Dough
+item.coffeework.dough_bread_round.name=Round Bread Dough
+item.coffeework.dough_bagel.name=Bagel Dough
+item.coffeework.dough_toast.name=Toast Dough
+
+item.coffeework.bag_cloth.name=Cloth
+
 item.coffeework.cake_roll.name=Cake Roll
 item.coffeework.cake_chocolate_roll.name=Chocolate Cake Roll
 item.coffeework.cake_coffee_roll.name=Coffee Cake Roll

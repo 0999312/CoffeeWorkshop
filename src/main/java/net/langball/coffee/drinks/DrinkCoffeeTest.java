@@ -3,6 +3,7 @@ package net.langball.coffee.drinks;
 import java.util.List;
 
 import net.langball.coffee.effect.PotionLoader;
+import net.langball.coffee.util.TagPropertyAccessor;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -35,6 +36,19 @@ import toughasnails.api.thirst.ThirstHelper;
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkCoffeeTest extends ItemFood {
 	public PotionEffect effect;
+	
+	public static TagPropertyAccessor.TagPropertyString CoffeeName = new TagPropertyAccessor.TagPropertyString("CoffeeName");
+	public static TagPropertyAccessor.TagPropertyBoolean IsCoffeeWord = new TagPropertyAccessor.TagPropertyBoolean("IsCoffeeWord");
+	public static TagPropertyAccessor.TagPropertyString CustomCoffeeWord = new TagPropertyAccessor.TagPropertyString("CustomCoffeeWord");
+	public static TagPropertyAccessor.TagPropertyInteger CoffeeAmount = new TagPropertyAccessor.TagPropertyInteger("Coffee_CoffeeEffect");
+	
+	public static TagPropertyAccessor.TagPropertyInteger Coffee_CoffeeEffect = new TagPropertyAccessor.TagPropertyInteger("Coffee_CoffeeEffect");
+	public static TagPropertyAccessor.TagPropertyInteger Coffee_MilkEffect = new TagPropertyAccessor.TagPropertyInteger("Coffee_MilkEffect");
+	public static TagPropertyAccessor.TagPropertyInteger Coffee_IceEffect = new TagPropertyAccessor.TagPropertyInteger("Coffee_IceEffect");
+	public static TagPropertyAccessor.TagPropertyInteger Coffee_SweetEffect = new TagPropertyAccessor.TagPropertyInteger("Coffee_SweetEffect");
+	
+	
+	
 	public DrinkCoffeeTest(int amount, float saturation,PotionEffect potion) {
 		super(amount, saturation,false);
 		effect=potion;
@@ -61,6 +75,8 @@ public class DrinkCoffeeTest extends ItemFood {
 	    }
 	 public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
 	    {
+		 ItemStack coffee = stack.copy();
+		 
 		 if (entityLiving instanceof EntityPlayer)
 	        {
 	            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
@@ -83,15 +99,8 @@ public class DrinkCoffeeTest extends ItemFood {
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1000,0);
-		player.addPotionEffect(bitter_1);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1000,1);
-		player.addPotionEffect(bitter_2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),1000,1);
-		player.addPotionEffect(bitter_3);
-		if(effect!=null){
-		player.addPotionEffect(effect);
-		}
+		
+		
 	}
 	  @Method(modid="toughasnails")
 	  public void drink(EntityLivingBase entity)

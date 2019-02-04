@@ -21,7 +21,7 @@ public class SyrupCraftingRecipes {
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,3), "listAllberry","syrup_berry");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,5), "cropLemon","syrup_lemon");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,4), "cropCherry","syrup_cherry");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,2), "cropVanilla","syrup_vanilla");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,2), "foodVanilla","syrup_vanilla");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,6), "foodCocoapowder","syrup_chocolate");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,7), "cropApple","syrup_apple");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,8), "cropSpiceleaf","syrup_mint");

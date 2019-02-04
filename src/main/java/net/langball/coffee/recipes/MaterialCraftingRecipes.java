@@ -29,16 +29,17 @@ public class MaterialCraftingRecipes {
 	public MaterialCraftingRecipes() {
 
 		for(ItemStack coffee_bean : OreDictionary.getOres("beanCoffee")){
-			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,9), 0F);
+			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,2), 0F);
 		}
+		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,3), new ItemStack(ItemLoader.materials,1,4), 0F);
 		for(ItemStack coffee_bean : OreDictionary.getOres("foodCocoapowder")){
-			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,12), 0F);
+			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,7), 0F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("listAllwheat")){
-			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,13), 0F);
+			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,15), 0F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("listAllgrain")){
-			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,13), 0F);
+			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materials,1,15), 0F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("foodChocolatebar")){
 			GrinderRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(ItemLoader.materialFood,1,4), 0F);
@@ -50,30 +51,32 @@ public class MaterialCraftingRecipes {
 			IcecreamMachineRecipes.instance().addSmeltingRecipe(coffee_bean, new ItemStack(Blocks.ICE), 0F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("listAllmilk")){
-			CoffeeMachineRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materialFood,1,9), 1F);
+			CoffeeMachineRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materialFood,1,8), 1F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("ingotIron")){
-			RollerRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materials,1,5), 1F);
+			RollerRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materials,1,11), 1F);
 		}
 		for(ItemStack coffee_bean : OreDictionary.getOres("foodDough")){
-			RollerRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materials,1,18), 1F);
+			RollerRecipes.instance().addSmeltingRecipe(coffee_bean,new ItemStack(ItemLoader.materials,1,25), 1F);
 		}
-		RecipesUtil.addRecipe("dough_pastry", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,15),new Object[]{
+		RecipesUtil.addRecipe("dough_pastry", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,17),new Object[]{
 				"foodDough","foodButter","listAllegg"
 		}));
-		RollerRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,15),new ItemStack(ItemLoader.materials,1,19), 1F);
-			GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,10), new ItemStack(ItemLoader.materials,1,11), 0F);
-			RollerRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,17),new ItemStack(ItemLoader.materials,1,20), 1F);	
-			GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(Blocks.ICE),new ItemStack(ItemLoader.materials,1,2), 0F);
-			GameRegistry.addSmelting(new ItemStack(ItemLoader.materials,1,0), new ItemStack(ItemLoader.materials,1,1), 0F);
-			GameRegistry.addSmelting(new ItemStack(ItemLoader.materials,1,20), new ItemStack(ItemLoader.materialFood,1,14), 0F);
-			GameRegistry.addSmelting(new ItemStack(Items.DYE,1,3), new ItemStack(ItemLoader.materials,1,10), 0F);
-			GameRegistry.addSmelting(new ItemStack(ItemLoader.materialFood,1,10), new ItemStack(ItemLoader.materialFood,1,12), 1F);
-			GameRegistry.addSmelting(new ItemStack(ItemLoader.coffee_pot,1,2), new ItemStack(ItemLoader.coffee_pot,1,3), 0F);
-			GameRegistry.addSmelting(new ItemStack(ItemLoader.coffee_pot,1,5), new ItemStack(ItemLoader.coffee_pot,1,6), 0F);
-			CoffeeMachineRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,9),new ItemStack(DrinksLoader.espresso), 1F);
+		RollerRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,17),new ItemStack(ItemLoader.materials,1,26), 1F);
+		RollerRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,17), new ItemStack(ItemLoader.materials,1,26), 0F);
+		RollerRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,19),new ItemStack(ItemLoader.materials,1,27), 1F);	
+		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(BlockLoader.Soda_OreItem),new ItemStack(ItemLoader.materials,4,14), 1F);	
+		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(Blocks.ICE),new ItemStack(ItemLoader.materials,1,9), 0F);
+		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.coffee_seeds),new ItemStack(ItemLoader.materials,1,0), 0F);
+		GameRegistry.addSmelting(new ItemStack(ItemLoader.materials,1,0), new ItemStack(ItemLoader.materials,1,1), 0F);
+		GameRegistry.addSmelting(new ItemStack(ItemLoader.materials,1,1), new ItemStack(ItemLoader.materials,1,3), 0F);
+		GameRegistry.addSmelting(new ItemStack(Items.DYE,1,3), new ItemStack(ItemLoader.materials,1,5), 0F);
+		GameRegistry.addSmelting(new ItemStack(ItemLoader.materialFood,1,9), new ItemStack(ItemLoader.materialFood,1,11), 1F);
+		GameRegistry.addSmelting(new ItemStack(ItemLoader.coffee_pot,1,2), new ItemStack(ItemLoader.coffee_pot,1,3), 0F);
+		GameRegistry.addSmelting(new ItemStack(ItemLoader.coffee_pot,1,5), new ItemStack(ItemLoader.coffee_pot,1,6), 0F);
+		CoffeeMachineRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,4),new ItemStack(DrinksLoader.espresso), 1F);
 		RecipesUtil.addRecipe(DrinksLoader.cup, new ShapedOreRecipe(new ResourceLocation(""), DrinksLoader.cup,new Object[]{
-				"W W","W W"," W ",'W',new ItemStack(Blocks.CONCRETE,1,0)
+				"W W","W W"," W ",'W',new ItemStack(Blocks.HARDENED_CLAY,1,0)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_instant_box, new ShapedOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_instant_box,new Object[]{
 				"WWW","WWW","WWW",'W',new ItemStack(DrinksLoader.coffee_instant)
@@ -82,7 +85,7 @@ public class MaterialCraftingRecipes {
 				DrinksLoader.coffee_instant_box
 		}));
 		RecipesUtil.addRecipe(BlockLoader.GingerHouseItem, new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.GingerHouseItem,new Object[]{
-				" W ","WWW","WWW",'W',new ItemStack(ItemLoader.materialFood,1,14)
+				" W ","WWW","WWW",'W',new ItemStack(ItemLoader.materialFood,1,13)
 		}));
 		
 		RecipesUtil.addRecipe(ItemLoader.cake_model, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.cake_model,new Object[]{
@@ -106,6 +109,9 @@ public class MaterialCraftingRecipes {
 		RecipesUtil.addRecipe("iron_bowl_egg", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.iron_bowl_batter,1,0),new Object[]{
 				ItemLoader.iron_bowl,"listAllegg","listAllegg","listAllegg"
 		}));
+		RecipesUtil.addRecipe(ItemLoader.vanilla_seeds, new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.vanilla_seeds,2),new Object[]{
+				ItemLoader.vanilla
+		}));
 		RecipesUtil.addRecipe("iron_bowl_cheese", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.iron_bowl_batter,1,1),new Object[]{
 				ItemLoader.iron_bowl,"foodCheese","foodCheese","listAllheavycream"
 		}));
@@ -121,18 +127,18 @@ public class MaterialCraftingRecipes {
 		registerBatterInBowl(new ItemStack(ItemLoader.iron_bowl_batter,1,7), "cropLemon","iron_bowl_batter_lemon");
 		registerBatterInBowl(new ItemStack(ItemLoader.iron_bowl_batter,1,6), "dyeRed","iron_bowl_batter_red");
 		RecipesUtil.addRecipe(BlockLoader.plateItem, new ShapedOreRecipe(new ResourceLocation(""),BlockLoader.plateItem,new Object[]{
-				"   ","WDW"," W ",'W',new ItemStack(Blocks.CONCRETE,1,0),'D',"dyeWhite"
+				"   ","WDW"," W ",'W',new ItemStack(Blocks.HARDENED_CLAY,1,0),'D',"dyeWhite"
 		}));
 
-		RecipesUtil.addRecipe("gelatin", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,4,7),new Object[]{
+		RecipesUtil.addRecipe("gelatin", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,4,13),new Object[]{
 				"slimeball","slimeball","dyeWhite"
 		}));
 		
-		RecipesUtil.addRecipe("dough_ginger", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,17),new Object[]{
-				"foodDough",new ItemStack(ItemLoader.materials,1,6)
+		RecipesUtil.addRecipe("dough_ginger", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,19),new Object[]{
+				"foodDough",new ItemStack(ItemLoader.materials,1,12)
 		}));
 		
-		RecipesUtil.addRecipe("spices", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,4,6),new Object[]{
+		RecipesUtil.addRecipe("spices", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,4,12),new Object[]{
 				"listAllspice","cropGinger","cropGinger"
 		}));
 		
@@ -153,8 +159,12 @@ public class MaterialCraftingRecipes {
 		}));
 		
 		
-		RecipesUtil.addRecipe("bag", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,16,4),new Object[]{
-				" D "," W "," D ",'W',Blocks.WOOL,'D',"string"
+		RecipesUtil.addRecipe("bag_cloth", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,8,8),new Object[]{
+				" D ","DWD"," D ",'W',Blocks.WOOL,'D',"string"
+		}));
+		
+		RecipesUtil.addRecipe("bag", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.bag,4),new Object[]{
+				" W ","DWD"," W ",'W',new ItemStack(ItemLoader.materials,1,8),'D',"string"
 		}));
 		
 		RecipesUtil.addRecipe("moka_top", new ShapedOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.coffee_pot,1,0),new Object[]{
@@ -190,24 +200,38 @@ public class MaterialCraftingRecipes {
 				"LLL","ISI","LHL",'I',"blockIron",'L',"logWood",'S',"stone",'H',Blocks.SNOW
 		}));
 		
-		RecipesUtil.addRecipe("dough", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,14),new Object[]{
-				ItemLoader.mixing_bowl,"foodFlour","listAllwater",new ItemStack(ItemLoader.materials,1,6)
+		RecipesUtil.addRecipe("dough", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,16),new Object[]{
+				ItemLoader.mixing_bowl,"foodFlour","listAllwater","powderBaking"
 		}));
-		RecipesUtil.addRecipe("dough_baguette", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,21),new Object[]{
+		RecipesUtil.addRecipe("dough_bread", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,20),new Object[]{
+				"foodDough","powderBaking","foodFlour"
+		}));
+		RecipesUtil.addRecipe("dough_bread_round", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,21),new Object[]{
+				"foodDough","powderBaking"
+		}));
+		RecipesUtil.addRecipe("dough_baguette", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,22),new Object[]{
 				"foodDough","foodDough"
 		}));
-		RecipesUtil.addRecipe("dough_cookie", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.materials,1,16),new Object[]{
+		RecipesUtil.addRecipe("dough_bagel", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,23),new Object[]{
+				"foodDough","listAllegg"
+		}));
+		
+		RecipesUtil.addRecipe("dough_toast", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,24),new Object[]{
+				"foodDough","foodDough","listAllegg"
+		}));
+		
+		RecipesUtil.addRecipe("dough_cookie", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.materials,1,18),new Object[]{
 				"foodDough",new ItemStack(ItemLoader.materialFood,1,4)
 		}));
 
-		RecipesUtil.addRecipe("yeast", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,4,3),new Object[]{
-				"listAllmushroom","listAllmushroom",ItemLoader.mixing_bowl,"listAllsugar"
+		RecipesUtil.addRecipe("yeast", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,8,10),new Object[]{
+				"listAllmushroom",ItemLoader.mixing_bowl,"listAllsugar"
 		}));
 		
 		RecipesUtil.addRecipe("cream_milk", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.cream,1,0),new Object[]{
-				"listAllmilk",ItemLoader.mixing_bowl,"listAllsugar"
+				"listAllmilk",ItemLoader.mixing_bowl,"foodVanilla"
 		}));
-		RecipesUtil.addRecipe("custard", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materialFood,1,8),new Object[]{
+		RecipesUtil.addRecipe("custard", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materialFood,1,7),new Object[]{
 				"listAllmilk",ItemLoader.mixing_bowl,"listAllsugar","listAllegg"
 		}));
 		RecipesUtil.addRecipe("butter", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(ItemLoader.materialFood,1,0),new Object[]{
@@ -215,7 +239,7 @@ public class MaterialCraftingRecipes {
 		}));
 		
 		RecipesUtil.addRecipe("cheese", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materialFood,1,1),new Object[]{
-				ItemLoader.mixing_bowl,"listAllmilk",new ItemStack(ItemLoader.materials,1,3)
+				ItemLoader.mixing_bowl,"listAllmilk",new ItemStack(ItemLoader.materials,1,10)
 		}));
 		
 		RecipesUtil.addRecipe("cream_apple", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.cream,1,3),new Object[]{
@@ -276,13 +300,13 @@ public class MaterialCraftingRecipes {
 		registerCoffeePlate(BlockLoader.cocoa_gingerbreadBlockItem, DrinksLoader.cocoa_gingerbread);
 		registerCoffeePlate(BlockLoader.cocoa_marshmallowBlockItem, DrinksLoader.cocoa_marshmallow);
 		
-		registerBag(BlockLoader.bag_flourItem,new ItemStack(ItemLoader.materials,1,15),"foodFlour",BlockLoader.double_bag_flourItem,"flour");
-		registerBag(BlockLoader.bag_coffee_powderItem,new ItemStack(ItemLoader.materials,1,4),"dustCoffee",BlockLoader.double_bag_coffee_powderItem,"coffeePowder");
-		registerBag(BlockLoader.bag_cocoaItem,new ItemStack(ItemLoader.materials,1,5),BlockLoader.double_bag_cocoaItem,"cocoa");
-		registerBag(BlockLoader.bag_cocoa_powderItem,new ItemStack(ItemLoader.materials,1,6),"foodCocoapowder",BlockLoader.double_bag_cocoa_powderItem,"cocoaPowder");
+		registerBag(BlockLoader.bag_flourItem,new ItemStack(ItemLoader.materials,9,15),"foodFlour",BlockLoader.double_bag_flourItem,"flour");
+		registerBag(BlockLoader.bag_coffee_powderItem,new ItemStack(ItemLoader.materials,9,4),"dustCoffee",BlockLoader.double_bag_coffee_powderItem,"coffeePowder");
+		registerBag(BlockLoader.bag_cocoaItem,new ItemStack(ItemLoader.materials,9,5),BlockLoader.double_bag_cocoaItem,"cocoa");
+		registerBag(BlockLoader.bag_cocoa_powderItem,new ItemStack(ItemLoader.materials,9,6),"foodCocoapowder",BlockLoader.double_bag_cocoa_powderItem,"cocoaPowder");
 		registerBag(BlockLoader.bag_sugarItem,new ItemStack(Items.SUGAR),"listAllsugar",BlockLoader.double_bag_sugarItem,"sugar");
-		registerBag(BlockLoader.bag_coffee_rawItem,new ItemStack(ItemLoader.materials,1,0),BlockLoader.double_bag_coffee_rawItem,"coffeeRaw");
-		registerBag(BlockLoader.bag_coffeeItem,new ItemStack(ItemLoader.materials,1,3),"beanCoffee",BlockLoader.double_bag_coffeeItem,"coffee");
+		registerBag(BlockLoader.bag_coffee_rawItem,new ItemStack(ItemLoader.materials,9,0),BlockLoader.double_bag_coffee_rawItem,"coffeeRaw");
+		registerBag(BlockLoader.bag_coffeeItem,new ItemStack(ItemLoader.materials,9,3),"beanCoffee",BlockLoader.double_bag_coffeeItem,"coffee");
 	}
 	private static void registerIcecream(ItemStack result,ItemStack icecream) {
 		IcecreamMachineRecipes.instance().addSmeltingRecipe(icecream, result, 0F);
@@ -295,8 +319,11 @@ public class MaterialCraftingRecipes {
 	}
 	
 	private static void registerBag(Item result,ItemStack icecream,Item twobags,String name) {
+		ItemStack icecream2 =icecream.copy();
+		icecream2.setCount(1);
 		RecipesUtil.addRecipe(name+"2bag", new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
-				new ItemStack(ItemLoader.materials,1,15),icecream,icecream,icecream,icecream,icecream,icecream,icecream,icecream
+				
+				new ItemStack(ItemLoader.bag),icecream2,icecream2,icecream2,icecream2,icecream2,icecream2,icecream2,icecream2
 		}));
 		RecipesUtil.addRecipe(CoffeeWork.MODID+"."+"bag2"+name, new ShapelessOreRecipe(new ResourceLocation(""), icecream,new Object[]{
 				result
@@ -311,7 +338,7 @@ public class MaterialCraftingRecipes {
 	
 	private static void registerBag(Item result,ItemStack icecream,String ore,Item twobags,String name) {
 		RecipesUtil.addRecipe(name+"2bag", new ShapelessOreRecipe(new ResourceLocation(""), result,new Object[]{
-				new ItemStack(ItemLoader.materials,1,15),ore,ore,ore,ore,ore,ore,ore,ore
+				new ItemStack(ItemLoader.bag),ore,ore,ore,ore,ore,ore,ore,ore
 		}));
 		RecipesUtil.addRecipe(CoffeeWork.MODID+"."+"bag2"+name, new ShapelessOreRecipe(new ResourceLocation(""), icecream,new Object[]{
 				result

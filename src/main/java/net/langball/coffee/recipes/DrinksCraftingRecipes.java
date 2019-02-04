@@ -56,7 +56,7 @@ public class DrinksCraftingRecipes {
 		
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mochaccino, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mochaccino,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,6),DrinksLoader.cup
+				DrinksLoader.espresso,"listAllmilk",new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,6),DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_american, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_american,new Object[]{
 				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup
@@ -82,58 +82,58 @@ public class DrinksCraftingRecipes {
 				DrinksLoader.cocoa,new ItemStack(ItemLoader.dessert_1,1,8)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.cocoa_marshmallow, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.cocoa_marshmallow,new Object[]{
-				DrinksLoader.cocoa,new ItemStack(ItemLoader.materialFood,1,12)
+				DrinksLoader.cocoa,new ItemStack(ItemLoader.materialFood,1,11)
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_cappuccino, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cappuccino,new Object[]{
-				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,9),DrinksLoader.cup
+				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,8),DrinksLoader.cup
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato,new Object[]{
-				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,1),DrinksLoader.cup
+				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,1),DrinksLoader.cup
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mochaccino_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mochaccino_ice,new Object[]{
-				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,6),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,6),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_american_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_american_ice,new Object[]{
-				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllwater",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,9)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_latte_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_latte_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,9)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_cappuccino_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_cappuccino_ice,new Object[]{
-				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,9),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,8),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,9)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_macchiato_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_macchiato_ice,new Object[]{
-				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,1),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,1),DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,9)
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.freddo, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,2),new ItemStack(ItemLoader.syrup,1,0)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.materials,1,9),new ItemStack(ItemLoader.syrup,1,0)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.freddo_mocha, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo_mocha,new Object[]{
-				DrinksLoader.freddo,new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,6)
+				DrinksLoader.freddo,new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,6)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.freddo_caramel, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.freddo_caramel,new Object[]{
-				DrinksLoader.freddo,new ItemStack(ItemLoader.materialFood,1,9),new ItemStack(ItemLoader.syrup,1,1)
+				DrinksLoader.freddo,new ItemStack(ItemLoader.materialFood,1,8),new ItemStack(ItemLoader.syrup,1,1)
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_berry_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_berry_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,3),new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,3),new ItemStack(ItemLoader.materials,1,9)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_vanilla_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_vanilla_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,2),new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,2),new ItemStack(ItemLoader.materials,1,9)
 		}));
 		RecipesUtil.addRecipe(DrinksLoader.coffee_lemon_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_lemon_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,5),new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,5),new ItemStack(ItemLoader.materials,1,9)
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_mint_ice, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_mint_ice,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,8),new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,8),new ItemStack(ItemLoader.materials,1,9)
 		}));
 		
 		RecipesUtil.addRecipe(DrinksLoader.moncheri, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.moncheri,new Object[]{
-				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,4),new ItemStack(ItemLoader.materialFood,1,9)
+				DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,4),new ItemStack(ItemLoader.materialFood,1,8)
 		}));
 		
 		RegisterSodaDrinkRecipes(DrinksLoader.soda_drink, new ItemStack(ItemLoader.syrup,1,0));
@@ -146,12 +146,12 @@ public class DrinksCraftingRecipes {
 		RegisterSodaDrinkRecipes(DrinksLoader.soda_drink_berry, new ItemStack(ItemLoader.syrup,1,3));
 		
 		RecipesUtil.addRecipe(DrinksLoader.coffee_soda, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_soda,new Object[]{
-				DrinksLoader.espresso,"listAllsodaDrink",new ItemStack(ItemLoader.materials,1,2)
+				DrinksLoader.espresso,"listAllsodaDrink",new ItemStack(ItemLoader.materials,1,9)
 		}));
 	}
 	private static void RegisterSodaDrinkRecipes(Item soda,ItemStack syrup) {
 		RecipesUtil.addRecipe(soda, new ShapelessOreRecipe(new ResourceLocation(""), soda,new Object[]{
-				DrinksLoader.cup_glass,"listAllwater",syrup,new ItemStack(ItemLoader.materials,1,8)
+				DrinksLoader.cup_glass,"listAllwater",syrup,"dustSoda"
 		}));
 	}
 }

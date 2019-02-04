@@ -139,6 +139,25 @@ item.coffeework.soda_drink_vanilla.name=香草苏打
 item.coffeework.soda_drink_apple.name=苹果苏打
 item.coffeework.soda_drink_chocolate.name=可可苏打
 
+item.coffeework.sandwich_blt.name=BLT三明治
+item.coffeework.sandwich_club.name=俱乐部三明治
+item.coffeework.sandwich_blt_large.name=大号BLT三明治
+item.coffeework.sandwich_club_large.name=大号俱乐部三明治
+item.coffeework.sandwich_bacon_egg.name=培根蛋三明治
+item.coffeework.sandwich_beef_cheese.name=芝士汉堡
+item.coffeework.sandwich_ham_cheese.name=火腿芝士贝果
+
+item.coffeework.bag_cloth.name=麻布
+item.coffeework.bread_round.name=圆面包
+item.coffeework.bagel.name=贝果
+item.coffeework.toast.name=吐司
+item.coffeework.coffee_bean_light.name=轻度烘培咖啡豆
+item.coffeework.coffee_powder_light.name=轻度烘培咖啡粉
+item.coffeework.dough_bread.name=面包面团
+item.coffeework.dough_bread_round.name=圆面包面团
+item.coffeework.dough_bagel.name=贝果面团
+item.coffeework.dough_toast.name=吐司面团
+
 item.coffeework.coffee_american_ice.name=冰美式咖啡
 item.coffeework.coffee_latte_ice.name=冰拿铁咖啡
 item.coffeework.coffee_cappuccino_ice.name=冰卡布奇诺
