@@ -72,7 +72,7 @@ public class ItemLoader {
 			);
 	public static ItemFoodBasic bread = new ItemFoodBasic("bread", 64,
 			new int[]{6,9,7,8},
-			new float[]{2,2,2,2},
+			new float[]{0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"bread_round",//0
 					CoffeeWork.MODID+"."+"baguette",//1
@@ -82,7 +82,7 @@ public class ItemLoader {
 	
 	public static ItemFoodBasic sandwich = new ItemFoodBasic("sandwich", 64,
 			  new int[]{9,9,11,11,9,10,9},
-			new float[]{3,3,3,3,3,3,3},
+			new float[]{0.9F,0.9F,0.9F,0.9F,0.9F,0.9F,0.9F},
 			new String[]{
 					CoffeeWork.MODID+"."+"sandwich_blt",//0
 					CoffeeWork.MODID+"."+"sandwich_club",//1
@@ -95,8 +95,8 @@ public class ItemLoader {
 	
 	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
 	public static ItemFoodBasic materialFood = new ItemFoodBasic("itemMaterialFood", 64,
-			new int[]{2,3,1,4,2,9,8,2,2,1,3,8,6,12,4},
-			new float[]{2,2,2,2,2,2,5,2,2,2,2,2,2,2,2},
+			  new int[]{2   ,3   ,1   ,4   ,4   ,9   ,8,2,2,1,3,8,6,12,4},
+			new float[]{0.4F,0.4F,0.5F,0.5F,0.5F,0.5F,1F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F},
 			new String[]{
 					CoffeeWork.MODID+"."+"butter",//0
 					CoffeeWork.MODID+"."+"cheese",//1
@@ -115,8 +115,8 @@ public class ItemLoader {
 			});
 	
 	public static ItemFoodBasic dessert_1 = new ItemFoodBasic("itemDessert", 64,
-			new int[]{2,2,8,10,2,5,1,2,4,2,9,14},
-			new float[]{2,2,2,2,2,2,2,2,2,2,2,2},
+			  new int[]{2   ,2   ,8   ,10  ,2   ,5   ,1   ,2   ,4   ,2   ,9   ,14},
+			new float[]{0.4F,0.4F,0.6F,0.6F,0.6F,0.6F,0.4F,0.6F,0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"croissant_raw",//0
 					CoffeeWork.MODID+"."+"croissant_chocolate_raw",//1
@@ -134,7 +134,7 @@ public class ItemLoader {
 
 	public static ItemFoodBasic icecream = new ItemFoodBasic("icecream", 64,
 			new int[]{4,6,6,6,6,6,6},
-			new float[]{2,2,2,2,2,2,2},
+			new float[]{0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F},
 			new String[]{
 					CoffeeWork.MODID+"."+"icecream_vanilla",//0
 					CoffeeWork.MODID+"."+"icecream_chocolate",//1
@@ -147,7 +147,7 @@ public class ItemLoader {
 
 	public static ItemFoodBasic cream = new ItemFoodBasic("cream", 64,
 			new int[]{2,4,4,4,4,4,4},
-			new float[]{2,2,2,2,2,2,2},
+			new float[]{0.4F,0.4F,0.4F,0.4F,0.4F,0.4F,0.4F},
 			new String[]{
 					CoffeeWork.MODID+"."+"cream_milk",
 					CoffeeWork.MODID+"."+"cream_chocolate",
@@ -160,7 +160,7 @@ public class ItemLoader {
 
 	public static ItemFoodBasic cookie_icecream = new ItemFoodBasic("cookie_icecream", 64,
 			new int[]{8,10,10,10,10,10,10},
-			new float[]{2,2,2,2,2,2,2},
+			new float[]{0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"cookie_icecream_vanilla",
 					CoffeeWork.MODID+"."+"cookie_icecream_chocolate",
@@ -173,7 +173,7 @@ public class ItemLoader {
 
 	public static ItemFoodBasic mooncake = new ItemFoodBasic("mooncake", 64,
 			new int[]{2,2,2,2,7,9,9,9},
-			new float[]{1,1,1,1,2,2,2,2},
+			new float[]{0.4F,0.4F,0.4F,0.4F,0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"mooncake_raw",	
 					CoffeeWork.MODID+"."+"mooncake_egg_raw",
@@ -268,7 +268,7 @@ public class ItemLoader {
 
 	public static ItemFoodBasic cake_base = new ItemFoodBasic("cake_base", 64,
 			new int[]{4,6,6,6,6,6,6,6,6},
-			new float[]{2,2,2,2,2,2,2,2,2}, 
+			new float[]{0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F}, 
 			CoffeeWork.MODID+"."+"cake_sponge_base",
 			CoffeeWork.MODID+"."+"cake_sponge_chocolate_base",
 			CoffeeWork.MODID+"."+"cake_sponge_coffee_base",
@@ -282,7 +282,7 @@ public class ItemLoader {
 	
 	public static ItemFoodBasic cake_roll = new ItemFoodBasic("cake_roll", 64,
 			new int[]{4,6,6,6,6,6,6,6,6},
-			new float[]{2,2,2,2,2,2,2,2,2}, 
+			new float[]{0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F}, 
 			CoffeeWork.MODID+"."+"cake_roll",
 			CoffeeWork.MODID+"."+"cake_chocolate_roll",
 			CoffeeWork.MODID+"."+"cake_coffee_roll",
@@ -322,7 +322,7 @@ public class ItemLoader {
 	
 	public static ItemFoodBasic jiggy_cake = new ItemFoodBasic("jiggy_cake", 64,
 			new int[]{4,5,5,5,5,5,5,5,5},
-			new float[]{2,2,2,2,2,2,2,2,2},
+			new float[]{0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F,0.8F},
 			new String[]{
 					CoffeeWork.MODID+"."+"jiggy_cake",
 					CoffeeWork.MODID+"."+"jiggy_cake_chocolate",
@@ -337,7 +337,7 @@ public class ItemLoader {
 	
 	public static ItemFoodBasic muffin = new ItemFoodBasic("muffin", 64,
 			new int[]{2,2,2,2,2,2,2,2,2,4,6,6,6,6,6,6,6,6},
-			new float[]{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			new float[]{0.2F,0.2F,0.2F,0.2F,0.2F,0.2F,0.2F,0.2F,0.2F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"muffin_raw",//0
 					CoffeeWork.MODID+"."+"muffin_chocolate_raw",//1

@@ -127,8 +127,8 @@ public class FoodCraftingRecipes {
 		registerRaw2CookedRecipes("hardtack",new ItemStack(ItemLoader.dessert_1,4,4), new ItemStack(ItemLoader.dessert_1,1,5), new Object[]{
 				"plateDough","powderBaking"
 		});
-		registerRaw2CookedRecipes("plate_pastry",new ItemStack(ItemLoader.dessert_1,2,6), new ItemStack(ItemLoader.dessert_1,1,7), new Object[]{
-				new ItemStack(ItemLoader.materials,1,17)
+		registerRaw2CookedRecipes("plate_pastry",new ItemStack(ItemLoader.dessert_1,4,6), new ItemStack(ItemLoader.dessert_1,4,7), new Object[]{
+				new ItemStack(ItemLoader.materials,1,26)
 		});
 		registerRaw2CookedRecipes("mooncake",new ItemStack(ItemLoader.mooncake,2,0), new ItemStack(ItemLoader.mooncake,1,4), new Object[]{
 				"listAllseed","listAllseed","listAllsugar","foodDoughPastry",ItemLoader.mooncake_model

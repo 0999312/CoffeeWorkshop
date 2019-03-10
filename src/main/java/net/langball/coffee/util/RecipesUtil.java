@@ -4,6 +4,7 @@ import net.langball.coffee.CoffeeWork;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -32,5 +33,16 @@ public class RecipesUtil {
 		for(ItemStack item :OreDictionary.getOres(ore)){
 			GameRegistry.addSmelting(item, output, 0F);
 		}
+	}
+    public static NBTTagCompound getItemTagCompound(ItemStack stack){
+		NBTTagCompound tag;
+		if(stack.hasTagCompound()){
+			tag = stack.getTagCompound();
+		}else{
+			tag = new NBTTagCompound();
+			stack.setTagCompound(tag);
+		}
+
+		return tag;
 	}
 }

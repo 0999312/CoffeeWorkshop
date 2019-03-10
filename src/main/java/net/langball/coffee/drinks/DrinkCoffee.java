@@ -2,7 +2,10 @@ package net.langball.coffee.drinks;
 
 import java.util.List;
 
+import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.effect.PotionLoader;
+import net.langball.coffee.util.RecipesUtil;
+import net.langball.coffee.util.TagPropertyAccessor.TagPropertyInteger;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -34,14 +37,37 @@ import toughasnails.api.thirst.ThirstHelper;
 
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkCoffee extends ItemFood {
-	public PotionEffect effect;
-	public DrinkCoffee(int amount, float saturation,PotionEffect potion) {
-		super(amount, saturation,false);
-		effect=potion;
-		this.setMaxStackSize(1);
+	private final String name;
+	private final PotionEffect[] effect;
+	private final int max_cup;
+	public TagPropertyInteger cup_amount = new TagPropertyInteger("cup_amount");
+	public DrinkCoffee(String name,int cups,int amount, float saturation, PotionEffect[]effects) {
+		super(amount, saturation, false);
+		effect=effects;
+		this.name=name;
+		this.setUnlocalizedName(CoffeeWork.MODID+"."+name);
+		max_cup=cups;
+		cup_amount.set(RecipesUtil.getItemTagCompound(getDefaultInstance()), max_cup);
 	}
 	
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+	public DrinkCoffee(EnumCoffee coffee) {
+		super(coffee.getAmount(), coffee.getSaturation(), false);
+		effect=coffee.getEffect();
+		this.name=coffee.getName();
+		this.setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_"+name);
+		max_cup=coffee.getMaxCups();
+		cup_amount.set(RecipesUtil.getItemTagCompound(getDefaultInstance()), max_cup);
+	}
+	
+	public PotionEffect[] getEffectList(){
+		return effect;
+	}
+
+	public int getMaxCup() {
+		return max_cup;
+	}
+	
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
     {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 
@@ -72,25 +98,25 @@ public class DrinkCoffee extends ItemFood {
 	            {
 	                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)entityplayer, stack);
 	            }
+	            int cups = cup_amount.get(RecipesUtil.getItemTagCompound(stack));
+	            if(cups-1 > 0){
+	            	cup_amount.set(RecipesUtil.getItemTagCompound(stack), cups--);
+	            	return stack;
+	            }
 	        }
 		 return new ItemStack(DrinksLoader.cup);
 	    }
 	 @Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		 tooltip.add(I18n.format("word."+this.getUnlocalizedName().substring(5)+".name", new Object()));
+		 tooltip.add(I18n.format("word."+CoffeeWork.MODID+"."+name+".name", new Object()));
 		super.addInformation(stack, worldIn, tooltip, flagIn);
 	}
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1000,0);
-		player.addPotionEffect(bitter_1);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1000,1);
-		player.addPotionEffect(bitter_2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),1000,1);
-		player.addPotionEffect(bitter_3);
-		if(effect!=null){
-		player.addPotionEffect(effect);
+		if(effect!=null&&effect.length>0){
+			for(PotionEffect effect1:effect){
+				player.addPotionEffect(effect1);
+			}
 		}
 	}
 	  @Method(modid="toughasnails")

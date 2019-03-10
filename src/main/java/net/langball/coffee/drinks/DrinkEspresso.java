@@ -19,8 +19,12 @@ import net.minecraftforge.fml.common.Optional.Interface;
 import net.minecraftforge.fml.common.Optional.Method;
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkEspresso extends DrinkCoffee {
-	public DrinkEspresso(int amount, float saturation) {
-		super(amount, saturation,null);
+	public DrinkEspresso() {
+		super("espresso", 1, 1,0.1f, new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,1200,1),
+				new PotionEffect(Potion.getPotionById(11),1200,2),
+				new PotionEffect(Potion.getPotionById(26),1200,2)
+		});
 		this.setAlwaysEdible();
 	}
 	 public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
@@ -40,16 +44,16 @@ public class DrinkEspresso extends DrinkCoffee {
 	        stack.shrink(1);
 	        return stack;
 	    }
-	@Override
-	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-		super.onFoodEaten(stack, worldIn, player);
-		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1200,1);
-		player.addPotionEffect(bitter_1);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1200,2);
-		player.addPotionEffect(bitter_2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),1200,2);
-		player.addPotionEffect(bitter_3);
-	}
+//	@Override
+//	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
+//		super.onFoodEaten(stack, worldIn, player);
+//		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1200,1);
+//		player.addPotionEffect(bitter_1);
+//		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1200,2);
+//		player.addPotionEffect(bitter_2);
+//		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),1200,2);
+//		player.addPotionEffect(bitter_3);
+//	}
 	  @Method(modid="toughasnails")
 	  public int getThirst()
 	  {

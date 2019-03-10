@@ -27,33 +27,20 @@ public class ItemFoodBasic extends ItemFood {
 		this.setHasSubtypes(subNames!=null&&subNames.length > 0);
 		this.setMaxStackSize(stackSize);
 		this.subNames = subNames!=null&&subNames.length > 0?subNames: null;
+		this.amount = amounts!=null&&amounts.length > 0?amounts: null;
+		this.saturation = saturations!=null&&saturations.length > 0?saturations: null;
 	}
 	
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
-    {
-        if (entityLiving instanceof EntityPlayer)
-        {
-            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-            if(getAmounts()!=null&&getSaturations()!=null)
-			{
-				for(int i = 0; i < getAmounts().length; i++)
-				entityplayer.getFoodStats().addStats(getAmounts()[i], getSaturations()[i]);
-			}
-           
-            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
-            this.onFoodEaten(stack, worldIn, entityplayer);
-            entityplayer.addStat(StatList.getObjectUseStats(this));
+	@Override
+	public int getHealAmount(ItemStack stack) {
+		return stack.getMetadata() < getAmounts().length?getAmounts()[stack.getMetadata()]: 0;
+	}
 
-            if (entityplayer instanceof EntityPlayerMP)
-            {
-                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)entityplayer, stack);
-            }
-        }
+	@Override
+	public float getSaturationModifier(ItemStack stack) {
+		return stack.getMetadata() < getSaturations().length?getSaturations()[stack.getMetadata()]: 0;
+	}
 
-        stack.shrink(1);
-        return stack;
-    }
-	
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		if(!worldIn.isRemote){

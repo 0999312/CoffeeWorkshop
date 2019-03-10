@@ -69,8 +69,7 @@ public class BlockLoader {
 	public static Item coffee_cappuccinoBlockItem = new ItemBlockCoffee(coffee_cappuccinoBlock);
 	public static Item coffee_macchiatoBlockItem = new ItemBlockCoffee(coffee_macchiatoBlock);
 	public static Item espressoBlockItem = new ItemBlockCoffee(espressoBlock);
-	public static Block coffee_turkeyBlock = new BlockCoffee(DrinksLoader.coffee_turkey);
-	public static Item coffee_turkeyBlockItem = new ItemBlockCoffee(coffee_turkeyBlock);
+
 	public static Block coffee_cheeseBlock = new BlockCoffee(DrinksLoader.coffee_cheese);
 	public static Item coffee_cheeseBlockItem = new ItemBlockCoffee(coffee_cheeseBlock);
 	
@@ -148,7 +147,7 @@ public class BlockLoader {
 
 	public static Block cake_redvelvet = new BlockCakeBasic(2,0.5F).setRegistryName("cake_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_redvelvet").setCreativeTab(CommonProxy.tab);
 	public static Item cake_redvelvetItem = new ItemBlock(cake_redvelvet).setRegistryName("cake_redvelvet").setUnlocalizedName(CoffeeWork.MODID+".cake_redvelvet");
-	public static Block tiramisu = new BlockCakeBasic(3,0.5F).setRegistryName("tiramisu").setUnlocalizedName(CoffeeWork.MODID+".tiramisu").setCreativeTab(CommonProxy.tab);
+	public static Block tiramisu = new BlockCakeBasic(4,0.5F).setRegistryName("tiramisu").setUnlocalizedName(CoffeeWork.MODID+".tiramisu").setCreativeTab(CommonProxy.tab);
 	public static Item tiramisuItem = new ItemBlock(tiramisu).setRegistryName("tiramisu").setUnlocalizedName(CoffeeWork.MODID+".tiramisu");
 	
 	public static Block BlueBerryBush = new BlockBlueBerryBush().setRegistryName("blueberry_bush").setUnlocalizedName(CoffeeWork.MODID+".blueberry_bush").setCreativeTab(CommonProxy.tab);
@@ -289,7 +288,6 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(coffee_milkBlock);
 		ForgeRegistries.BLOCKS.register(cocoaBlock);
 		ForgeRegistries.BLOCKS.register(strong_cocoaBlock);
-		ForgeRegistries.BLOCKS.register(coffee_turkeyBlock);
 		ForgeRegistries.BLOCKS.register(coffee_cheeseBlock);
 		ForgeRegistries.BLOCKS.register(coffee_creamBlock);
 		ForgeRegistries.BLOCKS.register(espressoBlock);
@@ -314,7 +312,6 @@ public class BlockLoader {
 		ForgeRegistries.ITEMS.register(coffeeBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_instantBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_milkBlockItem);
-		ForgeRegistries.ITEMS.register(coffee_turkeyBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_creamBlockItem);
 		ForgeRegistries.ITEMS.register(coffee_cheeseBlockItem);
 		ForgeRegistries.ITEMS.register(cocoaBlockItem);
@@ -395,7 +392,6 @@ public class BlockLoader {
 		registerRender(Icecream_Machine_on);
 		registerRender(Coffee_tree);
 		registerRender(plate);
-		registerRender(coffee_turkeyBlock);
 		registerRender(coffeeBlock);
 		registerRender(coffee_milkBlock);
 		registerRender(cocoaBlock);

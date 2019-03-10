@@ -4,7 +4,6 @@ import javax.annotation.Nullable;
 
 import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.CommonProxy;
-import net.langball.coffee.drinks.DrinkMixCoffee;
 import net.langball.coffee.drinks.EnumCoffee;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
@@ -38,6 +37,7 @@ public class BlockCoffee extends Block {
 		this.coffee=coffee;
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setCreativeTab(CommonProxy.tab);
+		this.setHardness(-1);
 		this.setUnlocalizedName(CoffeeWork.MODID+"."+coffee.getUnlocalizedName().substring(6+CoffeeWork.MODID.length()));
 		this.setRegistryName(coffee.getUnlocalizedName().substring(6+CoffeeWork.MODID.length())+"_plate");
 	}
