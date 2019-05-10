@@ -4,7 +4,8 @@ import javax.annotation.Nullable;
 
 import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.CommonProxy;
-import net.langball.coffee.drinks.EnumCoffee;
+import net.langball.coffee.drinks.DrinkCoffee;
+import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -18,6 +19,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -27,11 +29,13 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCoffee extends Block {
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
-	private Item coffee;
-	public BlockCoffee(Item coffee) {
+	private ItemStack coffee;
+	public BlockCoffee(ItemStack coffee) {
 		super(Material.ROCK);
 		this.setHarvestLevel("pickaxe", 0);
 		this.coffee=coffee;
@@ -55,15 +59,12 @@ public class BlockCoffee extends Block {
     {
         return EnumBlockRenderType.MODEL;
     }
-    
+
     @Override
 	public boolean isFullBlock(IBlockState state) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-	/**
-     * Convert the given metadata into a BlockState for this Block
-     */
+
     public IBlockState getStateFromMeta(int meta)
     {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
@@ -75,9 +76,15 @@ public class BlockCoffee extends Block {
 
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
+    
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT;
+    }
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-    	return new ItemStack(coffee);
+    	return coffee;
     }
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
@@ -118,6 +125,12 @@ public class BlockCoffee extends Block {
 		return false;
 	}
 	
+	@Override
+	public boolean isBlockNormalCube(IBlockState state) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
     /**
      * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
      * blockstate.
@@ -142,6 +155,10 @@ public class BlockCoffee extends Block {
 	    double d1 = world.rand.nextFloat() * f + 0.25D;
 	    double d2 = world.rand.nextFloat() * f + 0.25D;
 	    
+	    if(itemStack.getItem() instanceof DrinkCoffee){
+	    DrinkCoffee.cup_amount.set(RecipesUtil.getItemTagCompound(itemStack), 0);
+	    DrinkCoffee.max_cup_amount.set(RecipesUtil.getItemTagCompound(itemStack), ((DrinkCoffee)itemStack.getItem()).getMaxCup());
+	    }
 
 	    EntityItem entityItem = new EntityItem(world, pos.getX() + d0, pos.getY() + d1, pos.getZ() + d2, itemStack);
 	    entityItem.setDefaultPickupDelay();
@@ -152,7 +169,7 @@ public class BlockCoffee extends Block {
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		 if(!worldIn.isRemote){
 			 worldIn.setBlockState(pos, BlockLoader.plate.getDefaultState());
-			 dropItem(new ItemStack(coffee), worldIn, pos);
+			 dropItem(coffee, worldIn, pos);
 			 
 		 }
 		return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);

@@ -10,7 +10,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemBase extends Item {
 	protected String[] subNames;
-	private Item containerItem;
 	public ItemBase(String name, int stackSize, String... subNames) {
 		this.setUnlocalizedName(CoffeeWork.MODID+"."+name);
 		this.setHasSubtypes(subNames!=null&&subNames.length > 0);
@@ -41,8 +40,4 @@ public class ItemBase extends Item {
 		return this.getUnlocalizedName();
 	}
 
-	public ItemBase setContainerItem(Item containerItem) {
-		this.containerItem = containerItem;
-		return this;
-	}
 }

@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "blocks/concrete_white"
+		"1": "coffeework:model/coffee/cup"
 	},
 	"elements": [
 		{
@@ -139,36 +139,33 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"scale": [0.425, 0.425, 0.425],
 			"rotation": [34, 45, 0],
-			"translation": [-4, 2, -0.5]
+			"translation": [-4, 2, -0.5],
+			"scale": [0.425, 0.425, 0.425]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [34, 45, 0],
+			"translation": [-4, 2, -0.5],
+			"scale": [0.425, 0.425, 0.425]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 52, 13],
+			"translation": [0, 5, 0],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 52, 14],
+			"translation": [0, 5, 0],
+			"scale": [0.55, 0.55, 0.55]
 		},
 		"gui": {
 			"rotation": [16, 77, 4],
 			"translation": [-0.5, 2, 0],
 			"scale": [0.8, 0.8, 0.8]
 		},
-		"thirdperson_lefthand": {
-			"scale": [0.425, 0.425, 0.425],
-			"rotation": [34, 45, 0],
-			"translation": [-4, 2, -0.5]
-		},
-		"firstperson_righthand": {
-			"scale": [0.55, 0.55, 0.55],
-			"rotation": [0, 52, 13],
-			"translation": [0, 5, 0]
-		},
-		"firstperson_lefthand": {
-			"scale": [0.55, 0.55, 0.55],
-			"rotation": [0, 52, 14],
-			"translation": [0, 5, 0]
-		},
-		"ground": {
-			"rotation": [0, 0, 0]
-		},
 		"fixed": {
-			"translation": [0.5, 2, -1.5],
-			"rotation": [-1, -95, 0]
+			"rotation": [-1, -95, 0],
+			"translation": [0.5, 2, -1.5]
 		}
 	}
 }

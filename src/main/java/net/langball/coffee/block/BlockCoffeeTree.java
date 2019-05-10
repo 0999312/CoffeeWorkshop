@@ -176,7 +176,7 @@ public class BlockCoffeeTree extends BlockBush implements IGrowable, IShearable 
 	  	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	    {
 	    ArrayList<ItemStack> ret = new ArrayList();
-	    ret.add(new ItemStack(BlockLoader.Coffee_treeItem, 1, 0));
+	    ret.add(new ItemStack(BlockLoader.Coffee_tree, 1, 0));
 	    return ret;
 	    }
 	 
@@ -237,8 +237,4 @@ public class BlockCoffeeTree extends BlockBush implements IGrowable, IShearable 
         return this.isMaxAge(state) ? ItemLoader.coffee_seeds : null;
     }
 
-    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
-    {
-        return new ItemStack(BlockLoader.Coffee_treeItem);
-    }
 }

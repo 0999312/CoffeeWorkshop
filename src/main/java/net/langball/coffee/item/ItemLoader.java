@@ -30,45 +30,35 @@ public class ItemLoader {
 	public static Item vanilla_seeds = new ItemSeeds(BlockLoader.vanilla_crop, Blocks.FARMLAND).setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla_seeds");
 	public static Item vanilla = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"vanilla");
 	public static Item bag = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"bag");
-	public static ItemBase coffee_pot = new ItemBase("coffee_pot", 1, 
-			CoffeeWork.MODID+"."+"moka_top",//0
-			CoffeeWork.MODID+"."+"moka_bottom",//1
-			CoffeeWork.MODID+"."+"moka_pot_unheated",//2
-			CoffeeWork.MODID+"."+"moka_pot_heated",//3
-			CoffeeWork.MODID+"."+"turkey_coffee_pot",//4
-			CoffeeWork.MODID+"."+"turkey_coffee_pot_unheated",//5
-			CoffeeWork.MODID+"."+"turkey_coffee_pot_heated"//6
-			);
 
 	public static ItemBase materials = new ItemBase("itemMaterials", 64, 
 			CoffeeWork.MODID+"."+"coffee_bean_raw",//0
-			CoffeeWork.MODID+"."+"coffee_bean_light",//1
-			CoffeeWork.MODID+"."+"coffee_powder_light",//2
-			CoffeeWork.MODID+"."+"coffee_bean",//3
-			CoffeeWork.MODID+"."+"coffee_powder",//4
-			CoffeeWork.MODID+"."+"cocoa_bean",//5
-			CoffeeWork.MODID+"."+"cocoa_powder",//6
-			CoffeeWork.MODID+"."+"cocoa_batter",//7
-			CoffeeWork.MODID+"."+"bag_cloth",//8
-			CoffeeWork.MODID+"."+"ice_slag",//9
-			CoffeeWork.MODID+"."+"yeast",//10
-			CoffeeWork.MODID+"."+"plate_iron",//11
-			CoffeeWork.MODID+"."+"spices",//12
-			CoffeeWork.MODID+"."+"gelatin",//13
-			CoffeeWork.MODID+"."+"soda",//14
-			CoffeeWork.MODID+"."+"flour",//15
-			CoffeeWork.MODID+"."+"dough",//16
-			CoffeeWork.MODID+"."+"dough_pastry",//17
-			CoffeeWork.MODID+"."+"dough_cookie",//18
-			CoffeeWork.MODID+"."+"dough_ginger",//19
-			CoffeeWork.MODID+"."+"dough_bread",//20
-			CoffeeWork.MODID+"."+"dough_bread_round",//21
-			CoffeeWork.MODID+"."+"dough_baguette",//22
-			CoffeeWork.MODID+"."+"dough_bagel",//23
-			CoffeeWork.MODID+"."+"dough_toast",//24
-			CoffeeWork.MODID+"."+"plate_dough",//25
-			CoffeeWork.MODID+"."+"plate_dough_pastry",//26
-			CoffeeWork.MODID+"."+"plate_dough_ginger"//27
+			CoffeeWork.MODID+"."+"coffee_bean",//1
+			CoffeeWork.MODID+"."+"coffee_powder",//2
+			CoffeeWork.MODID+"."+"cocoa_bean",//3
+			CoffeeWork.MODID+"."+"cocoa_powder",//4
+			CoffeeWork.MODID+"."+"cocoa_batter",//5
+			CoffeeWork.MODID+"."+"bag_cloth",//6
+			CoffeeWork.MODID+"."+"ice_slag",//7
+			CoffeeWork.MODID+"."+"yeast",//8
+			CoffeeWork.MODID+"."+"plate_iron",//9
+			CoffeeWork.MODID+"."+"spices",//10
+			CoffeeWork.MODID+"."+"gelatin",//11
+			CoffeeWork.MODID+"."+"soda",//12
+			CoffeeWork.MODID+"."+"flour",//13
+			CoffeeWork.MODID+"."+"dough",//14
+			CoffeeWork.MODID+"."+"dough_pastry",//15
+			CoffeeWork.MODID+"."+"dough_cookie",//16
+			CoffeeWork.MODID+"."+"dough_ginger",//17
+			CoffeeWork.MODID+"."+"dough_bread",//18
+			CoffeeWork.MODID+"."+"dough_bread_round",//19
+			CoffeeWork.MODID+"."+"dough_baguette",//20
+			CoffeeWork.MODID+"."+"dough_bagel",//21
+			CoffeeWork.MODID+"."+"dough_toast",//22
+			CoffeeWork.MODID+"."+"plate_dough",//23
+			CoffeeWork.MODID+"."+"plate_dough_pastry",//24
+			CoffeeWork.MODID+"."+"plate_dough_ginger",//25
+			CoffeeWork.MODID+"."+"empty_coldbrew_pot"//26
 			);
 	public static ItemFoodBasic bread = new ItemFoodBasic("bread", 64,
 			new int[]{6,9,7,8},
@@ -172,7 +162,7 @@ public class ItemLoader {
 			});
 
 	public static ItemFoodBasic mooncake = new ItemFoodBasic("mooncake", 64,
-			new int[]{2,2,2,2,7,9,9,9},
+			new int[]{2,2,2,2,8,10,10,10},
 			new float[]{0.4F,0.4F,0.4F,0.4F,0.6F,0.6F,0.6F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"mooncake_raw",	
@@ -185,8 +175,6 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"mooncake_fruit"
 			});
 	
-
-	
 	public static Item iron_bowl = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"iron_bowl").setMaxStackSize(16);
 	public static Item cake_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model").setMaxStackSize(16);
 	public static Item cake_model_square = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_square").setMaxStackSize(16);
@@ -194,7 +182,7 @@ public class ItemLoader {
 	public static Item mooncake_model = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_model");
 	public static Item mixing_bowl = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mixing_bowl");
 	
-	public static ItemBase iron_bowl_batter = new ItemBase("iron_bowl_batter", 16,
+	public static ItemBase iron_bowl_batter = (ItemBase) new ItemBase("iron_bowl_batter", 16,
 			CoffeeWork.MODID+"."+"iron_bowl_egg",//0
 			CoffeeWork.MODID+"."+"iron_bowl_cheese",//1
 			CoffeeWork.MODID+"."+"iron_bowl_batter",///2
@@ -206,7 +194,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"iron_bowl_batter_pumpkin",//8
 			CoffeeWork.MODID+"."+"iron_bowl_batter_carrot",//9
 			CoffeeWork.MODID+"."+"iron_bowl_batter_tea"//10
-			);
+			).setContainerItem(iron_bowl);
 
 	public static ItemBase raw_cake = new ItemBase("raw_cake", 16, 
 			CoffeeWork.MODID+"."+"cake_sponge_raw",//0
@@ -225,7 +213,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"mousse_lemon_raw"
 			);
 	
-	public static ItemBase model_cake = new ItemBase("model_cake", 16, 
+	public static ItemBase model_cake = (ItemBase) new ItemBase("model_cake", 16, 
 			CoffeeWork.MODID+"."+"cake_sponge_model",
 			CoffeeWork.MODID+"."+"cake_sponge_chocolate_model",
 			CoffeeWork.MODID+"."+"cake_sponge_coffee_model",
@@ -254,7 +242,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"cake_sponge_berry_plate_raw"
 	});
 	
-	public static ItemBase cake_plate_model = new ItemBase("cake_plate_model", 16, new String[]{
+	public static ItemBase cake_plate_model = (ItemBase) new ItemBase("cake_plate_model", 16, new String[]{
 			CoffeeWork.MODID+"."+"cake_sponge_plate_model",
 			CoffeeWork.MODID+"."+"cake_sponge_chocolate_plate_model",
 			CoffeeWork.MODID+"."+"cake_sponge_coffee_plate_model",
@@ -306,7 +294,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"brownie_raw"
 	});
 
-	public static ItemBase jiggy_cake_model = new ItemBase("jiggy_cake_model", 16, new String[]{
+	public static ItemBase jiggy_cake_model = (ItemBase) new ItemBase("jiggy_cake_model", 16, new String[]{
 			CoffeeWork.MODID+"."+"jiggy_cake_model",
 			CoffeeWork.MODID+"."+"jiggy_cake_chocolate_model",
 			CoffeeWork.MODID+"."+"jiggy_cake_coffee_model",
@@ -364,26 +352,25 @@ public class ItemLoader {
 	public static Item lazt_lady_kaguya = new ItemRecordCW("records.lazy_lady_kaguya");
 	public static Item the_grimoire_of_marisa = new ItemRecordCW("records.the_grimoire_of_marisa");
 	
-	public static ItemBase syrup = new ItemBase("syrup", 64, new String[]{
-			CoffeeWork.MODID+"."+"syrup_full",
-			CoffeeWork.MODID+"."+"syrup_brown",
-			CoffeeWork.MODID+"."+"syrup_vanilla",
-			CoffeeWork.MODID+"."+"syrup_berry",
-			CoffeeWork.MODID+"."+"syrup_cherry",
-			CoffeeWork.MODID+"."+"syrup_lemon",
+	public static ItemBase syrup = (ItemBase) new ItemBase("syrup", 64, new String[]{
+			CoffeeWork.MODID+"."+"syrup_full",//0
+			CoffeeWork.MODID+"."+"syrup_brown",//1
+			CoffeeWork.MODID+"."+"syrup_vanilla",//2
+			CoffeeWork.MODID+"."+"syrup_fruit",//3
 			CoffeeWork.MODID+"."+"syrup_chocolate",
-			CoffeeWork.MODID+"."+"syrup_apple",
 			CoffeeWork.MODID+"."+"syrup_mint"
 	}).setContainerItem(syrup_empty);
 
+	public static Item coldbrew_bottle = new ItemSeasoning(CoffeeWork.MODID+"."+"coldbrew_bottle", 2);
+	
 	public ItemLoader(FMLPreInitializationEvent event) {
+		register(coldbrew_bottle);
 		register(record_blank);
 		register(kusa_noshi_to_ne);
 		register(lazt_lady_kaguya);
 		register(the_grimoire_of_marisa);
 		register(mixing_bowl);
 		register(mooncake_model);
-		register(coffee_pot);
 		register(coffee_seeds);
 		register(vanilla_seeds);
 		MinecraftForge.addGrassSeed(new ItemStack(vanilla_seeds), 8);
@@ -420,6 +407,7 @@ public class ItemLoader {
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(coldbrew_bottle);
 		registerRender(bag);
 		registerRender(bread);
 		registerRender(icecream);
@@ -450,7 +438,6 @@ public class ItemLoader {
 		registerRender(mixing_bowl);
 		registerRender(materials);
 		registerRender(materialFood);
-		registerRender(coffee_pot);
 		registerRender(icecream);
 		registerRender(cookie_icecream);
         registerRender(coffee_seeds);

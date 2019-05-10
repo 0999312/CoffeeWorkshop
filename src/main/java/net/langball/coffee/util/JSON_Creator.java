@@ -49,9 +49,298 @@ public class JSON_Creator {
 
     }
 
+	public static void genCoffee(String blockName, String textureName, String path){
+
+        File fileDir = new File(path + "\\blockstates\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + "_plate.json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("variants");
+            jw.beginObject();
+            
+            jw.name("inventory");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.endObject();
+            
+            jw.name("facing=north");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.endObject();
+            
+            jw.name("facing=south");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(180);
+            jw.endObject();
+            
+            jw.name("facing=west");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(270);
+            jw.endObject();
+            
+            jw.name("facing=east");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(90);
+            jw.endObject();
+            
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        genCoffeeModel(blockName, textureName, path);
+        genCoffeePlateModel(blockName, textureName, path);
+    }
+	
+	public static void genCoffeeIce(String blockName, String textureName, String path){
+
+        File fileDir = new File(path + "\\blockstates\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + "_plate.json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("variants");
+            jw.beginObject();
+            
+            jw.name("inventory");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.endObject();
+            
+            jw.name("facing=north");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.endObject();
+            
+            jw.name("facing=south");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(180);
+            jw.endObject();
+            
+            jw.name("facing=west");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(270);
+            jw.endObject();
+            
+            jw.name("facing=east");
+            jw.beginObject();
+            jw.name("model").value(modId + ":" + blockName+"_plate");
+            jw.name("y").value(90);
+            jw.endObject();
+            
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        genCoffeeIceModel(blockName, textureName, path);
+        genCoffeeIcePlateModel(blockName, textureName, path);
+    }
+	
+    private static void genCoffeeModel(String blockName, String textureName, String path){
+        File fileDir = new File(path + "\\models\\item\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + ".json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("parent").value(modId + ":item/coffee");
+            jw.name("textures");
+            jw.beginObject();
+            jw.name("1").value(modId + ":model/coffee/cup");
+            jw.name("2").value(modId + ":model/coffee/" + textureName);
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    public static void genCoffeeIceModel(String blockName, String textureName, String path){
+        File fileDir = new File(path + "\\models\\item\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + ".json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("parent").value(modId + ":item/coffee_ice");
+            jw.name("textures");
+            jw.beginObject();
+            jw.name("0").value(modId + ":model/coffee/glass");
+            jw.name("1").value(modId + ":model/coffee/" + textureName);
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    private static void genCoffeePlateModel(String blockName, String textureName, String path){
+        File fileDir = new File(path + "\\models\\block\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + "_plate.json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("parent").value(modId + ":item/coffee_plate");
+            jw.name("textures");
+            jw.beginObject();
+            jw.name("1").value(modId + ":model/coffee/cup");
+            jw.name("2").value(modId + ":model/coffee/" + textureName);
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    private static void genCoffeePlateItemModel(String blockName, String textureName, String path){
+        File fileDir = new File(path + "\\models\\item\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + "_plate.json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("parent").value(modId + ":item/coffee_plate");
+            jw.name("textures");
+            jw.beginObject();
+            jw.name("1").value(modId + ":model/coffee/cup");
+            jw.name("2").value(modId + ":model/coffee/" + textureName);
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    private static void genCoffeeIcePlateModel(String blockName, String textureName, String path){
+        File fileDir = new File(path + "\\models\\item\\");
+        if(!fileDir.exists()){
+            fileDir.mkdirs();
+        }
+
+        try {
+            Writer writer = new OutputStreamWriter(new FileOutputStream(fileDir + "\\" + blockName + "_plate.json"), "UTF-8");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            @SuppressWarnings("resource")
+			JsonWriter jw = new JsonWriter(writer);
+
+            jw.beginObject();
+            jw.name("parent").value(modId + ":block/coffee_ice_plate");
+            jw.name("textures");
+            jw.beginObject();
+            jw.name("0").value(modId + ":model/coffee/glass");
+            jw.name("1").value(modId + ":model/coffee/" + textureName);
+            jw.name("1_1").value(modId + ":model/coffee/cup");
+            jw.endObject();
+            jw.endObject();
+
+            writer.close();
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 	
     private static void genBlockModel(String blockName, String textureName, String path){
-
         File fileDir = new File(path + "\\models\\block\\");
         if(!fileDir.exists()){
             fileDir.mkdirs();

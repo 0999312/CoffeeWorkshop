@@ -14,6 +14,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -23,6 +24,8 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockPlate extends Block {
 
@@ -60,10 +63,6 @@ public class BlockPlate extends Block {
 
 	        return this.getDefaultState().withProperty(FACING, enumfacing);
 	    }
-	    @Override
-	    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-	    	return new ItemStack(BlockLoader.plateItem);
-	    }
 	    
 	    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
 	    {
@@ -77,7 +76,6 @@ public class BlockPlate extends Block {
 	    
 	    @Override
 		public boolean isFullBlock(IBlockState state) {
-			// TODO Auto-generated method stub
 			return false;
 		}
 	    
@@ -98,18 +96,26 @@ public class BlockPlate extends Block {
 	        return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
 	    }
 
+	    @SideOnly(Side.CLIENT)
+	    public BlockRenderLayer getBlockLayer()
+	    {
+	        return BlockRenderLayer.CUTOUT;
+	    }
+	    
 	    @Override
 		public boolean isOpaqueCube(IBlockState state) {
-			// TODO Auto-generated method stub
 			return false;
 		}
 
 		@Override
 		public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos) {
-			// TODO Auto-generated method stub
 			return false;
 		}
-
+		
+		@Override
+		public boolean isBlockNormalCube(IBlockState state) {
+			return false;
+		}
 	    /**
 	     * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
 	     * blockstate.
@@ -144,7 +150,7 @@ public class BlockPlate extends Block {
 				EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 			 if(!worldIn.isRemote){
 				 worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
-				 dropItem(new ItemStack(BlockLoader.plateItem), worldIn, pos);
+				 dropItem(new ItemStack(BlockLoader.plate), worldIn, pos);
 			 }
 			return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
 		}

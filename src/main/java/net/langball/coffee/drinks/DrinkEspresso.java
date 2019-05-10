@@ -1,5 +1,6 @@
 package net.langball.coffee.drinks;
 
+import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -13,21 +14,29 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional.Interface;
 import net.minecraftforge.fml.common.Optional.Method;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkEspresso extends DrinkCoffee {
-	public DrinkEspresso() {
-		super("espresso", 1, 1,0.1f, new PotionEffect[]{
-				new PotionEffect(PotionLoader.relax,1200,1),
-				new PotionEffect(Potion.getPotionById(11),1200,2),
-				new PotionEffect(Potion.getPotionById(26),1200,2)
+
+	 public DrinkEspresso() {
+		super("espresso", 1, new int[]{1},new float[]{0.1f},new String[]{CoffeeWork.MODID+"."+"espresso"}, new PotionEffect[][]{
+			new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,600,1),
+				new PotionEffect(PotionLoader.caffeine,3600,1),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "haste")), 600, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "speed")), 600, 0)
+				
+				}
 		});
-		this.setAlwaysEdible();
+		this.setMaxStackSize(64);
 	}
-	 public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
+
+	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
 	    {
 		 if (entityLiving instanceof EntityPlayer)
 	        {
@@ -44,16 +53,7 @@ public class DrinkEspresso extends DrinkCoffee {
 	        stack.shrink(1);
 	        return stack;
 	    }
-//	@Override
-//	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-//		super.onFoodEaten(stack, worldIn, player);
-//		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,1200,1);
-//		player.addPotionEffect(bitter_1);
-//		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),1200,2);
-//		player.addPotionEffect(bitter_2);
-//		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(26),1200,2);
-//		player.addPotionEffect(bitter_3);
-//	}
+
 	  @Method(modid="toughasnails")
 	  public int getThirst()
 	  {

@@ -19,11 +19,11 @@ public class VillagerFood {
 		VillagerProfession prof = VillagerRegistry.getById(4);
 		VillagerCareer career = new VillagerCareer(prof, "food_trader");
 		career.addTrade(1, new SimpleSell(new ItemStack(ItemLoader.dessert_1,8,2),new PriceInfo(4,12)));
-		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,16,13),new PriceInfo(3, 5)));
+		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,16,11),new PriceInfo(3, 5)));
 		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materialFood,4,5),new PriceInfo(6, 8)));
-		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,4,6),new PriceInfo(3, 5)));
+		career.addTrade(1, new SimpleBuy(new ItemStack(ItemLoader.materials,4,4),new PriceInfo(3, 5)));
 		career.addTrade(2, new SimpleSell(new ItemStack(ItemLoader.muffin,8,9),new PriceInfo(8, 14)));
-		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.materials,8,12),new PriceInfo(6, 7)));
+		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.materials,8,10),new PriceInfo(6, 7)));
 		career.addTrade(2, new SimpleBuy(new ItemStack(ItemLoader.materialFood,8,9),new PriceInfo(8, 10)));
 		career.addTrade(3, new SimpleBuy(new ItemStack(ItemLoader.cake_model),new PriceInfo(4, 8)));
 		career.addTrade(3, new SimpleBuy(new ItemStack(ItemLoader.cake_model_square),new PriceInfo(4, 8)));		

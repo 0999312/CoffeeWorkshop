@@ -31,7 +31,6 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
 
 	public BlockBlueBerryBush() {
 		super(Material.WOOD);
-		// TODO Auto-generated constructor stub
 	}
     protected PropertyInteger getAgeProperty()
     {
@@ -176,7 +175,7 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
 	  	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	    {
 	    ArrayList<ItemStack> ret = new ArrayList();
-	    ret.add(new ItemStack(BlockLoader.BlueBerryBushItem, 2, 0));
+	    ret.add(new ItemStack(BlockLoader.BlueBerryBush, 2, 0));
 	    return ret;
 	    }
 	 
@@ -232,13 +231,5 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
         return new BlockStateContainer(this, new IProperty[] {AGE});
     }
     
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-        return BlockLoader.BlueBerryBushItem;
-    }
 
-    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
-    {
-        return new ItemStack(BlockLoader.BlueBerryBushItem);
-    }
 }

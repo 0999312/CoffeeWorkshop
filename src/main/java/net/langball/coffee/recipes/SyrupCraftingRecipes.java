@@ -18,13 +18,10 @@ public class SyrupCraftingRecipes {
 	RecipesUtil.addRecipe("syrup_full", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.syrup,1,0),new Object[]{
 			ItemLoader.syrup_empty,"listAllsugar","listAllsugar"
 	}));
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,3), "listAllberry","syrup_berry");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,5), "cropLemon","syrup_lemon");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,4), "cropCherry","syrup_cherry");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,3), "listAllfruit","syrup_fruit");
 	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,2), "foodVanilla","syrup_vanilla");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,6), "foodCocoapowder","syrup_chocolate");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,7), "cropApple","syrup_apple");
-	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,8), "cropSpiceleaf","syrup_mint");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,4), "foodCocoapowder","syrup_chocolate");
+	RegisterSyrupRecipe(new ItemStack(ItemLoader.syrup,1,5), "cropSpiceleaf","syrup_mint");
 	GameRegistry.addSmelting(new ItemStack(ItemLoader.syrup,1,0), new ItemStack(ItemLoader.syrup,1,1), 0F);
 	}
 	public static void RegisterSyrupRecipe(ItemStack syrup,String oredict,String name){

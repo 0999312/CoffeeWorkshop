@@ -1,6 +1,7 @@
 package net.langball.coffee.util;
 
 import net.langball.coffee.CoffeeWork;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -12,6 +13,9 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RecipesUtil {
 	public static void addRecipe(Item item, IRecipe value) {
+	addRecipe(item.getRegistryName().toString().replaceAll(":", "."), value, false);
+	}
+	public static void addRecipe(Block item, IRecipe value) {
 	addRecipe(item.getRegistryName().toString().replaceAll(":", "."), value, false);
 	}
 	public static void addRecipe(String key, IRecipe value) {

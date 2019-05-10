@@ -20,8 +20,6 @@ import net.langball.coffee.util.RecipesUtil;
 import net.langball.coffee.villager.VillagerLoader;
 import net.langball.coffee.recipes.DrinksCraftingRecipes;
 import net.langball.coffee.recipes.FoodCraftingRecipes;
-import net.langball.coffee.recipes.MakingBlackCoffee;
-import net.langball.coffee.recipes.MakingTurkeyCoffee;
 import net.langball.coffee.world.BlueBerryWorldGen;
 import net.langball.coffee.world.CoffeeTreeWorldGen;
 import net.langball.coffee.world.WorldGenLoader;
@@ -40,7 +38,7 @@ public class CommonProxy {
 	public static CreativeTabs tab = new CreativeTabs("coffee_workshop") {
 		@Override
 		public ItemStack getTabIconItem() {
-			return new ItemStack(DrinksLoader.coffee);
+			return new ItemStack(DrinksLoader.cup);
 		}
 	};
 	 public void preInit(FMLPreInitializationEvent event)
@@ -60,10 +58,6 @@ public class CommonProxy {
 		new FuelLoader();
 		new WorldGenLoader();
     	new GuiLoader();
-    	RecipesUtil.addRecipe(DrinksLoader.coffee, new MakingBlackCoffee());
-    	MinecraftForge.EVENT_BUS.register(new MakingBlackCoffee());
-    	RecipesUtil.addRecipe(DrinksLoader.coffee_turkey, new MakingTurkeyCoffee());
-    	MinecraftForge.EVENT_BUS.register(new MakingTurkeyCoffee());
     	new MaterialCraftingRecipes();
     	new DrinksCraftingRecipes();
     	new FoodCraftingRecipes();

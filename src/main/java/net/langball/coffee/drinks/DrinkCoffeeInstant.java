@@ -1,6 +1,8 @@
 package net.langball.coffee.drinks;
 
+import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.effect.PotionLoader;
+import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
@@ -21,12 +23,13 @@ import toughasnails.api.temperature.TemperatureHelper;
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkCoffeeInstant extends DrinkCoffee{
 	private boolean cup_instant;
-	public DrinkCoffeeInstant(int amount, float saturation,boolean cup) {
-		super(amount, saturation,null);
+
+	public DrinkCoffeeInstant(String name, int cups, int amount, float saturation, PotionEffect[] effects,boolean cup) {
+		super(name, cups, new int[]{amount}, new float[]{saturation},new String[]{CoffeeWork.MODID+"."+name}, new PotionEffect[][]{
+			effects
+		});
 		cup_instant=cup;
-		this.setAlwaysEdible();
 	}
-	
 	 public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
 	    {
 		 if (entityLiving instanceof EntityPlayer)
@@ -40,21 +43,20 @@ public class DrinkCoffeeInstant extends DrinkCoffee{
 	            {
 	                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)entityplayer, stack);
 	            }
+
+	            int cups = cup_amount.get(RecipesUtil.getItemTagCompound(stack));
+	            if(cups <max_cup_amount.get(RecipesUtil.getItemTagCompound(stack))){
+	            	cup_amount.add(RecipesUtil.getItemTagCompound(stack), 1);
+	       		 System.out.println("cups:"+cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
+	            	return stack;
+	            }else{
+	            	cup_amount.set(RecipesUtil.getItemTagCompound(stack), max_cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
+	       		 return cup_instant ? ItemStack.EMPTY: new ItemStack(DrinksLoader.cup);
+	            }
 	        }
-		 ItemStack itemcup = ItemStack.EMPTY;
-		 if(!cup_instant) itemcup = new ItemStack(DrinksLoader.cup);
-		 return itemcup;
+		 System.out.println("?cups:"+cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
+		 return cup_instant ? ItemStack.EMPTY: new ItemStack(DrinksLoader.cup);
 	    }
-	
-	@Override
-	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-		PotionEffect bitter_1 = new PotionEffect(PotionLoader.relax,300,0);
-		player.addPotionEffect(bitter_1);
-		PotionEffect bitter_2 = new PotionEffect(Potion.getPotionById(11),200,0);
-		player.addPotionEffect(bitter_2);
-		PotionEffect bitter_3 = new PotionEffect(Potion.getPotionById(1),200,0);
-		player.addPotionEffect(bitter_3);
-	}
 	  @Method(modid="toughasnails")
 	  public int getThirst()
 	  {

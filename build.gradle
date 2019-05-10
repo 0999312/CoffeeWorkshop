@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.2.5"
+version = "1.2.6"
 group = "cn.mcmod.coffeework" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "coffeework"
 
@@ -91,6 +91,10 @@ repositories {
     name = "ModMaven"
     url = "modmaven.k-4u.nl"
 	}
+	    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
 }
 dependencies {
     compile "vazkii.patchouli:Patchouli:1.0-10.51"
@@ -98,4 +102,5 @@ dependencies {
     deobfProvided "mezz.jei:jei_1.12.2:4.14.3.238:api"
     // at runtime, use the full JEI jar
     runtime "mezz.jei:jei_1.12.2:4.14.3.238"
+	deobfCompile "torcherino:torcherino:7.6"
 }

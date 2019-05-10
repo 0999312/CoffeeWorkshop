@@ -9,6 +9,7 @@ import net.langball.coffee.util.TagPropertyAccessor.TagPropertyInteger;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -25,6 +26,7 @@ import net.minecraft.stats.StatList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional.Interface;
@@ -37,36 +39,97 @@ import toughasnails.api.thirst.ThirstHelper;
 
 @Interface(iface="toughasnails.api.thirst.IDrink", modid="toughasnails")
 public class DrinkCoffee extends ItemFood {
-	private final String name;
-	private final PotionEffect[] effect;
-	private final int max_cup;
-	public TagPropertyInteger cup_amount = new TagPropertyInteger("cup_amount");
-	public DrinkCoffee(String name,int cups,int amount, float saturation, PotionEffect[]effects) {
-		super(amount, saturation, false);
-		effect=effects;
-		this.name=name;
+	private PotionEffect[][] effect;
+	private int max_cups;
+	
+	public String[] subNames;
+	public int[] amount;
+	public float[] saturation;
+	
+	public static final TagPropertyInteger cup_amount = new TagPropertyInteger("cup_amount");
+	public static final TagPropertyInteger max_cup_amount = new TagPropertyInteger("max_cup_amount");
+	public DrinkCoffee(String name,int cups,int[] amounts,float[] saturations, String[] subNames, PotionEffect[][] effects) {
+		super(amounts[0], saturations[0], false);
+
 		this.setUnlocalizedName(CoffeeWork.MODID+"."+name);
-		max_cup=cups;
-		cup_amount.set(RecipesUtil.getItemTagCompound(getDefaultInstance()), max_cup);
-	}
-	
-	public DrinkCoffee(EnumCoffee coffee) {
-		super(coffee.getAmount(), coffee.getSaturation(), false);
-		effect=coffee.getEffect();
-		this.name=coffee.getName();
-		this.setUnlocalizedName(CoffeeWork.MODID+"."+"coffee_"+name);
-		max_cup=coffee.getMaxCups();
-		cup_amount.set(RecipesUtil.getItemTagCompound(getDefaultInstance()), max_cup);
-	}
-	
-	public PotionEffect[] getEffectList(){
-		return effect;
+		this.setAlwaysEdible();
+		this.setHasSubtypes(subNames!=null&&subNames.length > 0);
+		this.setMaxStackSize(1);
+		this.effect=effects!=null&&effects.length>0?effects:null;
+		this.max_cups = cups;
+		this.subNames = subNames!=null&&subNames.length > 0?subNames: null;
+		this.amount = amounts!=null&&amounts.length > 0?amounts: null;
+		this.saturation = saturations!=null&&saturations.length > 0?saturations: null;
 	}
 
 	public int getMaxCup() {
-		return max_cup;
+		return this.max_cups;
 	}
 	
+	@Override
+	public int getHealAmount(ItemStack stack) {
+		return stack.getMetadata() < getAmounts().length?getAmounts()[stack.getMetadata()]: 0;
+	}
+
+	@Override
+	public float getSaturationModifier(ItemStack stack) {
+		return stack.getMetadata() < getSaturations().length?getSaturations()[stack.getMetadata()]: 0;
+	}
+	
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if(this.isInCreativeTab(tab))
+			if(getSubNames()!=null)
+			{
+				for(int i = 0; i < getSubNames().length; i++){
+						ItemStack stack =new ItemStack(this, 1, i);
+						cup_amount.set(RecipesUtil.getItemTagCompound(stack), 0);
+						max_cup_amount.set(RecipesUtil.getItemTagCompound(stack), max_cups);
+						list.add(stack);
+						}
+			}
+			else{
+				ItemStack stack =new ItemStack(this);
+				cup_amount.set(RecipesUtil.getItemTagCompound(stack), 0);
+				max_cup_amount.set(RecipesUtil.getItemTagCompound(stack), max_cups);
+				list.add(stack);
+				}
+	}
+	public int[] getAmounts() {
+		return amount;
+	}
+	
+	public float[] getSaturations() {
+		return saturation;
+	}
+	
+	public String[] getSubNames() {
+		return subNames;
+	}
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		if(getSubNames()!=null) {
+			String subName = stack.getMetadata() < getSubNames().length?"item."+getSubNames()[stack.getMetadata()]: "";
+			return subName;
+		}
+		return this.getUnlocalizedName();
+	}
+	
+	@Override
+	public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+		cup_amount.set(RecipesUtil.getItemTagCompound(stack), 0);
+		max_cup_amount.set(RecipesUtil.getItemTagCompound(stack), max_cups);
+		super.onCreated(stack, worldIn, playerIn);
+	}
+	
+	public PotionEffect[] getEffectList(ItemStack stack){
+		return stack.getMetadata() < getAllEffectList().length?getAllEffectList()[stack.getMetadata()]: new PotionEffect[]{};
+	}
+	
+	public PotionEffect[][] getAllEffectList() {
+		return effect;
+	}
+
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
     {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
@@ -99,23 +162,37 @@ public class DrinkCoffee extends ItemFood {
 	                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)entityplayer, stack);
 	            }
 	            int cups = cup_amount.get(RecipesUtil.getItemTagCompound(stack));
-	            if(cups-1 > 0){
-	            	cup_amount.set(RecipesUtil.getItemTagCompound(stack), cups--);
+	            if(cups <max_cup_amount.get(RecipesUtil.getItemTagCompound(stack))){
+	            	cup_amount.add(RecipesUtil.getItemTagCompound(stack), 1);
+	       		 System.out.println("cups:"+cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
 	            	return stack;
+	            }else{
+	            	cup_amount.set(RecipesUtil.getItemTagCompound(stack), max_cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
+	       		 return new ItemStack(DrinksLoader.cup);
 	            }
 	        }
+		 System.out.println("?cups:"+cup_amount.get(RecipesUtil.getItemTagCompound(stack)));
 		 return new ItemStack(DrinksLoader.cup);
 	    }
+
+	@Override
+	public boolean showDurabilityBar(ItemStack stack) {
+		return cup_amount.get(RecipesUtil.getItemTagCompound(stack))>0;
+	} 
+	 
 	 @Override
-	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		 tooltip.add(I18n.format("word."+CoffeeWork.MODID+"."+name+".name", new Object()));
-		super.addInformation(stack, worldIn, tooltip, flagIn);
+	public double getDurabilityForDisplay(ItemStack stack) {
+		return (double)cup_amount.get(RecipesUtil.getItemTagCompound(stack))/(double)max_cup_amount.get(RecipesUtil.getItemTagCompound(stack));
 	}
+	 
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-		if(effect!=null&&effect.length>0){
-			for(PotionEffect effect1:effect){
-				player.addPotionEffect(effect1);
+		if(getEffectList(stack)!=null&&getEffectList(stack).length>0){
+			for(PotionEffect effect1 : getEffectList(stack)){
+				if(player.isPotionActive(effect1.getPotion()))
+					player.addPotionEffect(new PotionEffect(effect1.getPotion(),effect1.getDuration(),effect1.getAmplifier()+1));
+				else
+					player.addPotionEffect(effect1);
 			}
 		}
 	}
