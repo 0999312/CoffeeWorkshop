@@ -189,13 +189,25 @@ public class DrinkCoffee extends ItemFood {
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		if(getEffectList(stack)!=null&&getEffectList(stack).length>0){
 			for(PotionEffect effect1 : getEffectList(stack)){
-				if(player.isPotionActive(effect1.getPotion()))
-					player.addPotionEffect(new PotionEffect(effect1.getPotion(),effect1.getDuration(),effect1.getAmplifier()+1));
-				else
-					player.addPotionEffect(effect1);
+					if (effect1 != null && effect1.getPotion() != null) {
+						Potion por = effect1.getPotion();
+						if (por == null)
+							continue;
+						int amp = effect1.getAmplifier();
+						int dur = effect1.getDuration();
+						if (player.isPotionActive(effect1.getPotion())) {
+							PotionEffect check = player.getActivePotionEffect(por);
+							dur += check.getDuration();
+							amp ++;
+						}
+						player.addPotionEffect(new PotionEffect(effect1.getPotion(), dur, amp));
+					}
 			}
 		}
 	}
+	
+
+	
 	  @Method(modid="toughasnails")
 	  public void drink(EntityLivingBase entity)
 	  {

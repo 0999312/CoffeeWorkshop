@@ -356,6 +356,8 @@ item.coffeework.cake_cheese_model.name=Cheese Cake(In Model)
 item.coffeework.brownie_model.name=Brownie(In Model)
 item.coffeework.tiramisu_model.name=Tiramisu(In Model)
 
+item.coffeework.tiramisu_raw.name=Tiramisu(Need Refrigeration)
+
 item.coffeework.muffin_raw.name=Raw Muffin
 item.coffeework.muffin.name=Muffin
 item.coffeework.muffin_chocolate_raw.name=Raw Chocolate Muffin
@@ -485,3 +487,6 @@ entity.Villager.coffee_trader=Coffee Trader
 entity.Villager.coffee_instant_trader=Instant Coffee Trader
 
 entity.Villager.food_trader=Food Trader
+
+death.attack.potion_caffeine=%s died of caffeine poisoning
+coffeework.message.bed.caffeine=The caffeine makes you unable to sleep

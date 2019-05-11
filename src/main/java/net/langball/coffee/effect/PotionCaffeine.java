@@ -47,7 +47,7 @@ public class PotionCaffeine extends Potion {
 	  @Override
 	public boolean isReady(int duration, int amplifier) {
 		// TODO Auto-generated method stub
-		return (duration & 1) == 0&&amplifier>=64;
+		return (duration & 1) == 0&&(amplifier>=64||duration>=48000);
 	}
 	  
 		@SubscribeEvent

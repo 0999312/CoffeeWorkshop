@@ -442,8 +442,8 @@ public class DrinksLoader {
 			}
 	);
 	
-	public static Item cup = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup").setMaxStackSize(1);
-	public static Item cup_glass = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup_glass").setMaxStackSize(1);
+	public static Item cup = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup").setMaxStackSize(16);
+	public static Item cup_glass = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cup_glass").setMaxStackSize(16);
 	public static DrinkCoffee espresso = new DrinkEspresso();
 	
 	public static Block coffee_americanoBlock = new BlockCoffee(new ItemStack(coffee_americano,1,0));

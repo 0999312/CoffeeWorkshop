@@ -279,7 +279,8 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"cake_redvelvet_roll",
 			CoffeeWork.MODID+"."+"cake_lemon_roll",
 			CoffeeWork.MODID+"."+"cake_tea_roll",
-			CoffeeWork.MODID+"."+"cake_berry_roll");
+			CoffeeWork.MODID+"."+"cake_berry_roll"
+			);
 	
 	public static ItemBase jiggy_cake_raw = new ItemBase("jiggy_cake_raw", 16, new String[]{
 			CoffeeWork.MODID+"."+"jiggy_cake_raw",
@@ -291,7 +292,8 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"jiggy_cake_lemon_raw",
 			CoffeeWork.MODID+"."+"jiggy_cake_tea_raw",
 			CoffeeWork.MODID+"."+"jiggy_cake_berry_raw",
-			CoffeeWork.MODID+"."+"brownie_raw"
+			CoffeeWork.MODID+"."+"brownie_raw",
+			CoffeeWork.MODID+"."+"tiramisu_raw"
 	});
 
 	public static ItemBase jiggy_cake_model = (ItemBase) new ItemBase("jiggy_cake_model", 16, new String[]{
@@ -361,7 +363,7 @@ public class ItemLoader {
 			CoffeeWork.MODID+"."+"syrup_mint"
 	}).setContainerItem(syrup_empty);
 
-	public static Item coldbrew_bottle = new ItemSeasoning(CoffeeWork.MODID+"."+"coldbrew_bottle", 2);
+	public static Item coldbrew_bottle = new ItemSeasoning(CoffeeWork.MODID+"."+"coldbrew_bottle", 4);
 	
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(coldbrew_bottle);

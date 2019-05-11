@@ -378,6 +378,8 @@ item.coffeework.cake_cheese_model.name=芝士蛋糕（模具）
 item.coffeework.brownie_model.name=布朗尼（模具）
 item.coffeework.tiramisu_model.name=提拉米苏（模具）
 
+item.coffeework.tiramisu_raw.name=提拉米苏（待冷藏）
+
 item.coffeework.muffin_raw.name=玛芬蛋糕糊
 item.coffeework.muffin.name=玛芬
 item.coffeework.muffin_chocolate_raw.name=巧克力玛芬蛋糕糊
@@ -503,3 +505,6 @@ entity.Villager.coffee_trader=咖啡交易者
 entity.Villager.coffee_instant_trader=速溶咖啡卖家
 
 entity.Villager.food_trader=糕点师
+
+death.attack.potion_caffeine=%s死于咖啡因中毒。
+coffeework.message.bed.caffeine=你体内的咖啡因让你无法入眠。

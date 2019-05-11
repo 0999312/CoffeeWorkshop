@@ -90,7 +90,6 @@ public class OreDicRegister {
     OreDictionary.registerOre("powderBaking", new ItemStack(ItemLoader.materials,1,8));
 
     OreDictionary.registerOre("cropVanillabean", new ItemStack(ItemLoader.vanilla));
-    OreDictionary.registerOre("dustSoda", new ItemStack(ItemLoader.materials,1,12));
 //	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink);
 //	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_apple);
 //	OreDictionary.registerOre("listAllsodaDrink", DrinksLoader.soda_drink_berry);

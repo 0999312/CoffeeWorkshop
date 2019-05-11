@@ -85,6 +85,14 @@ public class MaterialCraftingRecipes {
 				" W ","WWW","WWW",'W',new ItemStack(ItemLoader.materialFood,1,13)
 		}));
 		
+		RecipesUtil.addRecipe(BlockLoader.ColdBrewPot, new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(BlockLoader.ColdBrewPot),new Object[]{
+				"dustCoffee","dustCoffee","dustCoffee","dustCoffee","listAllwater",new ItemStack(ItemLoader.materials,1,26)
+		}));
+		
+		RecipesUtil.addRecipe("empty_coldbrew_pot", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.materials,1,26),new Object[]{
+				" I ","WWW","III",'I',"plateIron",'W',"paneGlass"
+		}));
+		
 		RecipesUtil.addRecipe(ItemLoader.cake_model, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.cake_model,new Object[]{
 				" I ","IWI"," I ",'I',"ingotIron",'W',"plateIron"
 		}));
@@ -256,37 +264,15 @@ public class MaterialCraftingRecipes {
 		registerCookieIcecream(new ItemStack(ItemLoader.cookie_icecream,1,6), new ItemStack(ItemLoader.icecream,1,6),"cookie_icecream_lemon");
 		registerCookieIcecream(new ItemStack(ItemLoader.cookie_icecream,1,2), new ItemStack(ItemLoader.icecream,1,2),"cookie_icecream_coffee");
 		registerCookieIcecream(new ItemStack(ItemLoader.cookie_icecream,1,4), new ItemStack(ItemLoader.icecream,1,4),"cookie_icecream_berry");
-		registerCookieIcecream(new ItemStack(ItemLoader.cookie_icecream,1,5), new ItemStack(ItemLoader.icecream,1,5),"cookie_icecream_melon");
+		registerCookieIcecream(new ItemStack(ItemLoader.cookie_icecream,1,5), new ItemStack(ItemLoader.icecream,1,5),"cookie_icecream_melon");	
 		
-//		registerCoffeePlate(BlockLoader.coffeeBlockItem, DrinksLoader.coffee);
-//		registerCoffeePlate(BlockLoader.cocoaBlockItem, DrinksLoader.cocoa);
-//		registerCoffeePlate(BlockLoader.coffee_americanBlockItem, DrinksLoader.coffee_american);
-//		registerCoffeePlate(BlockLoader.coffee_latteBlockItem, DrinksLoader.coffee_latte);
-//		registerCoffeePlate(BlockLoader.coffee_cappuccinoBlockItem, DrinksLoader.coffee_cappuccino);
-//		registerCoffeePlate(BlockLoader.coffee_mochaccinoBlockItem, DrinksLoader.coffee_mochaccino);
-//		registerCoffeePlate(BlockLoader.espressoBlockItem, DrinksLoader.espresso);
-//		registerCoffeePlate(BlockLoader.coffee_macchiatoBlockItem, DrinksLoader.coffee_macchiato);
-//		registerCoffeePlate(BlockLoader.strong_cocoaBlockItem, DrinksLoader.strong_cocoa);
-//		registerCoffeePlate(BlockLoader.coffee_cheeseBlockItem, DrinksLoader.coffee_cheese);
-//		
-//		registerCoffeePlate(BlockLoader.coffee_lemonBlockItem, DrinksLoader.coffee_lemon);
-//		registerCoffeePlate(BlockLoader.coffee_creamBlockItem, DrinksLoader.coffee_cream);
-//		registerCoffeePlate(BlockLoader.coffee_berryBlockItem, DrinksLoader.coffee_berry);
-//		registerCoffeePlate(BlockLoader.coffee_vanillaBlockItem, DrinksLoader.coffee_vanilla);
-//		registerCoffeePlate(BlockLoader.coffee_instantBlockItem, DrinksLoader.coffee_instant);
-//		
-//		registerCoffeePlate(BlockLoader.coffee_mintBlockItem, DrinksLoader.coffee_mint);
-//		registerCoffeePlate(BlockLoader.coffee_icecreamBlockItem, DrinksLoader.coffee_icecream);
-//		registerCoffeePlate(BlockLoader.cocoa_gingerbreadBlockItem, DrinksLoader.cocoa_gingerbread);
-//		registerCoffeePlate(BlockLoader.cocoa_marshmallowBlockItem, DrinksLoader.cocoa_marshmallow);
-		
-		registerBag(BlockLoader.bag_flour,new ItemStack(ItemLoader.materials,9,15),"foodFlour",BlockLoader.double_bag_flour,"flour");
-		registerBag(BlockLoader.bag_coffee_powder,new ItemStack(ItemLoader.materials,9,4),"dustCoffee",BlockLoader.double_bag_coffee_powder,"coffeePowder");
-		registerBag(BlockLoader.bag_cocoa,new ItemStack(ItemLoader.materials,9,5),BlockLoader.double_bag_cocoa,"cocoa");
-		registerBag(BlockLoader.bag_cocoa_powder,new ItemStack(ItemLoader.materials,9,6),"foodCocoapowder",BlockLoader.double_bag_cocoa_powder,"cocoaPowder");
-		registerBag(BlockLoader.bag_sugar,new ItemStack(Items.SUGAR),"listAllsugar",BlockLoader.double_bag_sugar,"sugar");
-		registerBag(BlockLoader.bag_coffee_raw,new ItemStack(ItemLoader.materials,9,0),BlockLoader.double_bag_coffee_raw,"coffeeRaw");
-		registerBag(BlockLoader.bag_coffee,new ItemStack(ItemLoader.materials,9,3),"beanCoffee",BlockLoader.double_bag_coffee,"coffee");
+		registerBag(BlockLoader.bag_flour,new ItemStack(ItemLoader.materials,8,15),"foodFlour",BlockLoader.double_bag_flour,"flour");
+		registerBag(BlockLoader.bag_coffee_powder,new ItemStack(ItemLoader.materials,8,4),"dustCoffee",BlockLoader.double_bag_coffee_powder,"coffeePowder");
+		registerBag(BlockLoader.bag_cocoa,new ItemStack(ItemLoader.materials,8,5),BlockLoader.double_bag_cocoa,"cocoa");
+		registerBag(BlockLoader.bag_cocoa_powder,new ItemStack(ItemLoader.materials,8,6),"foodCocoapowder",BlockLoader.double_bag_cocoa_powder,"cocoaPowder");
+		registerBag(BlockLoader.bag_sugar,new ItemStack(Items.SUGAR,8),"listAllsugar",BlockLoader.double_bag_sugar,"sugar");
+		registerBag(BlockLoader.bag_coffee_raw,new ItemStack(ItemLoader.materials,8,0),BlockLoader.double_bag_coffee_raw,"coffeeRaw");
+		registerBag(BlockLoader.bag_coffee,new ItemStack(ItemLoader.materials,8,3),"beanCoffee",BlockLoader.double_bag_coffee,"coffee");
 	}
 	private static void registerIcecream(ItemStack result,ItemStack icecream) {
 		IcecreamMachineRecipes.instance().addSmeltingRecipe(icecream, result, 0F);
