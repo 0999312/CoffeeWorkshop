@@ -136,7 +136,7 @@ public class TeaStoriesCompatDrinks {
 		registerRender(milk_tea_iceBlock);
 		registerRender(mandarin_drink_iceBlock);
 		registerRender(tea_drinks);
-		registerRender(tea_ice_drinks,true,true);
+		registerRender(tea_ice_drinks);
 		registerRender(green_teaBlock);
 		registerRender(black_teaBlock);
 		registerRender(milk_teaBlock);

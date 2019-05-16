@@ -68,10 +68,49 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"baguette",//1
 					CoffeeWork.MODID+"."+"bagel",//2
 					CoffeeWork.MODID+"."+"toast",//3
+	});
+	
+	public static ItemFoodBasic cake_slices = new ItemFoodBasic("cake_slices", 64,
+			new int[]{1,1,1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3},
+			new float[]{0.1F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F},
+			new String[]{
+					CoffeeWork.MODID+"."+"cake_sponge_slices",//0
+					CoffeeWork.MODID+"."+"cake_sponge_chocolate_slices",//1
+					CoffeeWork.MODID+"."+"cake_sponge_coffee_slices",//2
+					CoffeeWork.MODID+"."+"cake_sponge_pumpkin_slices",//3
+					CoffeeWork.MODID+"."+"cake_sponge_carrot_slices",//4
+					CoffeeWork.MODID+"."+"cake_sponge_redvelvet_slices",//5
+					CoffeeWork.MODID+"."+"cake_sponge_lemon_slices",//6
+					CoffeeWork.MODID+"."+"cake_sponge_tea_slices",//7
+					CoffeeWork.MODID+"."+"cake_sponge_berry_slices",//8
+					CoffeeWork.MODID+"."+"cake_slices",//9
+					CoffeeWork.MODID+"."+"cake_harvest_slices",//10
+					CoffeeWork.MODID+"."+"cake_lemon_slices",//11
+					CoffeeWork.MODID+"."+"cake_tea_slices",//12
+					CoffeeWork.MODID+"."+"cake_berry_slices",//13
+					CoffeeWork.MODID+"."+"cake_schwarzwald_slices",//14
+					CoffeeWork.MODID+"."+"cake_redvelvet_slices",//15
+					CoffeeWork.MODID+"."+"cake_cheese_slices",//16
+					CoffeeWork.MODID+"."+"cake_coffee_slices"//17
+			});
+	
+	public static ItemFoodBasic pie = new ItemFoodBasic("pie", 64,
+			new int[]{10,12,12,12,12,12,12,12,12},
+			new float[]{0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F,0.6F},
+			new String[]{
+					CoffeeWork.MODID+"."+"pie_cream",//0
+					CoffeeWork.MODID+"."+"pie_chocolate",//1
+					CoffeeWork.MODID+"."+"pie_coffee",//2
+					CoffeeWork.MODID+"."+"pie_tea",//3
+					CoffeeWork.MODID+"."+"pie_apple",//4
+					CoffeeWork.MODID+"."+"pie_lemon",//5
+					CoffeeWork.MODID+"."+"pie_berry",//6
+					CoffeeWork.MODID+"."+"pie_melon",//7
+					CoffeeWork.MODID+"."+"pie_caramel",//8
 			});
 	
 	public static ItemFoodBasic sandwich = new ItemFoodBasic("sandwich", 64,
-			  new int[]{9,9,11,11,9,10,9},
+			  new int[]{10,10,12,12,10,11,10},
 			new float[]{0.9F,0.9F,0.9F,0.9F,0.9F,0.9F,0.9F},
 			new String[]{
 					CoffeeWork.MODID+"."+"sandwich_blt",//0
@@ -85,8 +124,8 @@ public class ItemLoader {
 	
 	public static Item syrup_empty = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"syrup_empty");
 	public static ItemFoodBasic materialFood = new ItemFoodBasic("itemMaterialFood", 64,
-			  new int[]{2   ,3   ,1   ,4   ,4   ,9   ,8,2,2,1,3,8,6,12,4},
-			new float[]{0.4F,0.4F,0.5F,0.5F,0.5F,0.5F,1F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F},
+			  new int[]{2   ,3   ,1   ,4   ,4   ,9   ,8,2,2,1,3,8,6,12,4,2},
+			new float[]{0.4F,0.4F,0.5F,0.5F,0.5F,0.5F,1F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.5F,0.1f},
 			new String[]{
 					CoffeeWork.MODID+"."+"butter",//0
 					CoffeeWork.MODID+"."+"cheese",//1
@@ -101,12 +140,13 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"marshmallow_chocolate",//10
 					CoffeeWork.MODID+"."+"marshmallow_roast",//11
 					CoffeeWork.MODID+"."+"smore",//12
-					CoffeeWork.MODID+"."+"plate_ginger"//13	
+					CoffeeWork.MODID+"."+"plate_ginger",//13
+					CoffeeWork.MODID+"."+"caramel"
 			});
 	
 	public static ItemFoodBasic dessert_1 = new ItemFoodBasic("itemDessert", 64,
-			  new int[]{2   ,2   ,8   ,10  ,2   ,5   ,1   ,2   ,4   ,2   ,9   ,14},
-			new float[]{0.4F,0.4F,0.6F,0.6F,0.6F,0.6F,0.4F,0.6F,0.6F,0.6F,0.6F,0.6F},
+			  new int[]{2   ,2   ,8   ,10  ,2   ,5   ,1   ,2   ,4   ,2   ,9   ,14,1   ,4   ,7,1   ,3   ,9},
+			new float[]{0.4F,0.4F,0.6F,0.6F,0.6F,0.6F,0.4F,0.6F,0.6F,0.6F,0.6F,0.6F,0.4F,0.4F,0.6F,0.4F,0.4F,0.6F},
 			new String[]{
 					CoffeeWork.MODID+"."+"croissant_raw",//0
 					CoffeeWork.MODID+"."+"croissant_chocolate_raw",//1
@@ -119,7 +159,13 @@ public class ItemLoader {
 					CoffeeWork.MODID+"."+"ginger_bread",//8
 					CoffeeWork.MODID+"."+"ginger_bread_man_raw",//9
 					CoffeeWork.MODID+"."+"ginger_bread_man",//10
-					CoffeeWork.MODID+"."+"mille_feuille"//11
+					CoffeeWork.MODID+"."+"mille_feuille",//11
+					CoffeeWork.MODID+"."+"puff_raw",//12
+					CoffeeWork.MODID+"."+"puff",//13
+					CoffeeWork.MODID+"."+"caramel_apple",//14
+					CoffeeWork.MODID+"."+"cookie_black_raw",//15
+					CoffeeWork.MODID+"."+"cookie_black",//16
+					CoffeeWork.MODID+"."+"cookie_oreo"//17
 			});
 
 	public static ItemFoodBasic icecream = new ItemFoodBasic("icecream", 64,
@@ -179,8 +225,25 @@ public class ItemLoader {
 	public static Item cake_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model").setMaxStackSize(16);
 	public static Item cake_model_square = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_square").setMaxStackSize(16);
 	public static Item cake_model_plate = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"cake_model_plate").setMaxStackSize(16);
+	public static Item small_model = new Item().setUnlocalizedName(CoffeeWork.MODID+"."+"small_model").setMaxStackSize(16);
 	public static Item mooncake_model = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mooncake_model");
 	public static Item mixing_bowl = new ItemCooker().setUnlocalizedName(CoffeeWork.MODID+"."+"mixing_bowl");
+	
+	public static ItemFoodBasic souffle = new ItemFoodContain("souffle", 64,
+			new int[]{2,2,8,10},
+			new float[]{0.2F,0.2F,0.6F,0.6F},
+			new String[]{
+					CoffeeWork.MODID+"."+"souffle_raw",//0
+					CoffeeWork.MODID+"."+"souffle_chocolate_raw",//1
+					CoffeeWork.MODID+"."+"souffle",//2
+					CoffeeWork.MODID+"."+"souffle_chocolate",//3
+			},new ItemStack[]{
+					new ItemStack(small_model),
+					new ItemStack(small_model),
+					new ItemStack(small_model),
+					new ItemStack(small_model)
+			}
+	);
 	
 	public static ItemBase iron_bowl_batter = (ItemBase) new ItemBase("iron_bowl_batter", 16,
 			CoffeeWork.MODID+"."+"iron_bowl_egg",//0
@@ -388,11 +451,15 @@ public class ItemLoader {
 		register(icecream);
 		register(cookie_icecream);
 		register(dessert_1);
+		register(pie);
 		register(muffin);
 		register(mooncake);
 		register(iron_bowl);
 		register(cake_model);
+		register(cake_slices);
+
 		register(cake_model_square);
+
 		register(cake_model_plate);
 		register(iron_bowl_batter);
 		register(raw_cake);
@@ -404,11 +471,16 @@ public class ItemLoader {
 		register(jiggy_cake_raw);
 		register(jiggy_cake_model);
 		register(jiggy_cake);
-
+		register(small_model);
+		register(souffle);
 	}
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(small_model);
+		registerRender(souffle);
+		registerRender(cake_slices);
+		registerRender(pie);
 		registerRender(coldbrew_bottle);
 		registerRender(bag);
 		registerRender(bread);

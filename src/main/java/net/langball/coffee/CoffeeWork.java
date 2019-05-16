@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid=CoffeeWork.MODID, name=CoffeeWork.NAME, version=CoffeeWork.VERSION, dependencies="required:forge@[14.23.4.2764,);after:*")
+@Mod(modid=CoffeeWork.MODID, name=CoffeeWork.NAME, version=CoffeeWork.VERSION, dependencies="required:forge@[14.23.4.2764,);after:*;after:lastsmith@[V1.2.6.3-MC1.12.2,);")
 public class CoffeeWork {
 	public static final String MODID = "coffeework";
     public static final String NAME = "Coffee Workshop";

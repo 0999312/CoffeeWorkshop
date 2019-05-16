@@ -106,6 +106,24 @@ item.coffeework.coffee_coldbrew_latte_chocolate_ice.name=冰摩卡冷萃拿铁
 item.coffeework.coffee_coldbrew_latte_mint_ice.name=冰薄荷冷萃拿铁
 item.coffeework.coffee_coldbrew_latte_vanilla_ice.name=冰香草冷萃拿铁
 
+item.coffeework.cocoa.name=热可可
+item.coffeework.cocoa_strong.name=香浓可可
+tile.coffeework.cocoa.name=热可可
+tile.coffeework.cocoa_strong.name=香浓可可
+
+item.coffeework.coffee_latte_sakura.name=樱花拿铁
+tile.coffeework.coffee_latte_sakura.name=樱花拿铁
+
+item.coffeework.cocoa_ice.name=冰可可
+item.coffeework.cocoa_strong_ice.name=香浓冰可可
+item.coffeework.coffee_latte_sakura_ice.name=冰樱花拿铁
+
+tile.coffeework.cocoa_ice.name=冰可可
+tile.coffeework.cocoa_strong_ice.name=香浓冰可可
+tile.coffeework.coffee_latte_sakura_ice.name=冰樱花拿铁
+
+tile.coffeework.oven.name=粘土烤炉
+
 #Items/Blocks
 tile.coffeework.bag_coffee_raw.name=咖啡生豆袋
 tile.coffeework.bag_coffee.name=咖啡豆袋
@@ -169,8 +187,6 @@ item.coffeework.cup_glass.name=玻璃杯
 item.coffeework.ice_slag.name=冰渣
 
 tile.coffeework.plate.name=盘子
-
-
 
 item.coffeework.coffee_instant_stick.name=条装速溶咖啡
 item.coffeework.coffee_instant_box.name=盒装速溶咖啡
@@ -452,10 +468,54 @@ item.coffeework.records_kusa_noshi_to_ne.name=唱片
 item.coffeework.records_lazy_lady_kaguya.name=唱片
 item.coffeework.records_the_grimoire_of_marisa.name=唱片
 item.coffeework.record_blank.name=空唱片
-item.record.kusa_noshi_to_ne.desc=沁墨蓝汐-草の茵（钢琴X小提琴）（已下架）
+item.record.kusa_noshi_to_ne.desc=沁墨蓝汐-草の茵（钢琴X小提琴）
 item.record.lazy_lady_kaguya.desc=沁墨蓝汐-懒散的辉夜姬
-item.record.the_grimoire_of_marisa.desc=沁墨蓝汐-The Grimoire of Marisa（已下架）
+item.record.the_grimoire_of_marisa.desc=沁墨蓝汐-The Grimoire of Marisa
 word.thanks2lanxi.name=感谢 沁墨蓝汐 的授权，网易云音乐ID：沁墨蓝汐
+
+item.coffeework.cake_sponge_slices.name=海绵蛋糕块
+item.coffeework.cake_sponge_chocolate_slices.name=巧克力海绵蛋糕块
+item.coffeework.cake_sponge_coffee_slices.name=咖啡海绵蛋糕块
+item.coffeework.cake_sponge_carrot_slices.name=胡萝卜海绵蛋糕块
+item.coffeework.cake_sponge_pumpkin_slices.name=南瓜海绵蛋糕块
+item.coffeework.cake_sponge_tea_slices.name=抹茶海绵蛋糕块
+item.coffeework.cake_sponge_berry_slices.name=莓果海绵蛋糕块
+item.coffeework.cake_sponge_lemon_slices.name=柠檬海绵蛋糕块
+item.coffeework.cake_sponge_redvelvet_slices.name=红丝绒海绵蛋糕块
+
+item.coffeework.cake_slices.name=蛋糕块
+item.coffeework.cake_schwarzwald_slices.name=黑森林蛋糕块
+item.coffeework.cake_coffee_slices.name=拿铁蛋糕块
+item.coffeework.cake_cheese_slices.name=芝士蛋糕块
+item.coffeework.cake_harvest_slices.name=丰收蛋糕块
+item.coffeework.cake_tea_slices.name=抹茶蛋糕块
+item.coffeework.cake_berry_slices.name=莓果蛋糕块
+item.coffeework.cake_lemon_slices.name=夏日蛋糕块
+item.coffeework.cake_redvelvet_slices.name=红丝绒蛋糕块
+
+item.coffeework.pie_cream.name=奶油派
+item.coffeework.pie_chocolate.name=巧克力派
+item.coffeework.pie_coffee.name=咖啡派
+item.coffeework.pie_tea.name=抹茶派
+item.coffeework.pie_apple.name=苹果派
+item.coffeework.pie_lemon.name=柠檬派
+item.coffeework.pie_berry.name=莓果派
+item.coffeework.pie_melon.name=西瓜派
+item.coffeework.pie_caramel.name=焦糖派
+
+item.coffeework.small_model.name=舒芙蕾模具
+item.coffeework.souffle_raw.name=舒芙蕾糊
+item.coffeework.souffle_chocolate_raw.name=巧克力舒芙蕾糊
+item.coffeework.souffle.name=舒芙蕾
+item.coffeework.souffle_chocolate.name=巧克力舒芙蕾
+
+item.coffeework.puff_raw.name=生奶油泡芙
+item.coffeework.puff.name=奶油泡芙
+item.coffeework.caramel_apple.name=焦糖苹果
+item.coffeework.caramel.name=焦糖块
+item.coffeework.cookie_black_raw.name=生黑巧克力饼干
+item.coffeework.cookie_black.name=黑巧克力饼干
+item.coffeework.cookie_oreo.name=OREO
 
 #TABS
 itemGroup.coffee_workshop=咖啡工坊
@@ -469,6 +529,8 @@ gui.ice_cream_machine.name=冰冻
 jei.coffeework.category.grinder=火力研磨
 jei.coffeework.category.icecream_machine=冰冻
 jei.coffeework.category.roller=火力卷板
+jei.coffeework.category.oven=烘焙
+
 #Achievement
 achievement.coffeework.first.title=开始种植咖啡吧!
 achievement.coffeework.roastbean.title=城市烘培

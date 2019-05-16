@@ -68,9 +68,11 @@ public class MaterialCraftingRecipes {
 		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(BlockLoader.Soda_Ore),new ItemStack(ItemLoader.materials,4,12), 1F);	
 		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(Blocks.ICE),new ItemStack(ItemLoader.materials,1,7), 0F);
 		GrinderRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.coffee_seeds),new ItemStack(ItemLoader.materials,1,0), 0F);
+		
 		GameRegistry.addSmelting(new ItemStack(ItemLoader.materials,1,0), new ItemStack(ItemLoader.materials,1,1), 0F);
 		GameRegistry.addSmelting(new ItemStack(Items.DYE,1,3), new ItemStack(ItemLoader.materials,1,3), 0F);
 		GameRegistry.addSmelting(new ItemStack(ItemLoader.materialFood,1,9), new ItemStack(ItemLoader.materialFood,1,11), 1F);
+		
 		CoffeeMachineRecipes.instance().addSmeltingRecipe(new ItemStack(ItemLoader.materials,1,2),new ItemStack(DrinksLoader.espresso), 1F);
 		RecipesUtil.addRecipe(DrinksLoader.cup, new ShapedOreRecipe(new ResourceLocation(""), DrinksLoader.cup,new Object[]{
 				"W W","W W"," W ",'W',new ItemStack(Blocks.HARDENED_CLAY,1,0)
@@ -83,6 +85,9 @@ public class MaterialCraftingRecipes {
 		}));
 		RecipesUtil.addRecipe(BlockLoader.GingerHouse, new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.GingerHouse,new Object[]{
 				" W ","WWW","WWW",'W',new ItemStack(ItemLoader.materialFood,1,13)
+		}));
+		RecipesUtil.addRecipe(BlockLoader.OvenItem, new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.OvenItem,new Object[]{
+				"WWW","W W","WBW",'W',new ItemStack(Blocks.HARDENED_CLAY),'B',new ItemStack(Blocks.FURNACE)
 		}));
 		
 		RecipesUtil.addRecipe(BlockLoader.ColdBrewPot, new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(BlockLoader.ColdBrewPot),new Object[]{
@@ -98,6 +103,9 @@ public class MaterialCraftingRecipes {
 		}));
 		RecipesUtil.addRecipe(ItemLoader.mixing_bowl, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.mixing_bowl,new Object[]{
 				 "I I"," W ",'I',"ingotIron",'W',"plateIron"
+		}));
+		RecipesUtil.addRecipe(ItemLoader.small_model, new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.small_model,8),new Object[]{
+				 "I","W",'I',"ingotIron",'W',"plateIron"
 		}));
 		RecipesUtil.addRecipe(ItemLoader.iron_bowl, new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.iron_bowl,new Object[]{
 				 "I I","W W"," W ",'I',"ingotIron",'W',"plateIron"

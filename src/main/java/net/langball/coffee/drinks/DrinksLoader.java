@@ -63,6 +63,73 @@ public class DrinksLoader {
 				}
 		}
 	);
+	
+	public static DrinkCoffee coffee_other = new DrinkCoffee("coffee_other", 4, 
+			  new int[]{2,2,2},
+			new float[]{0.2f,0.2f,0.2f},
+			new String[]{
+			CoffeeWork.MODID+"."+"cocoa",
+			CoffeeWork.MODID+"."+"cocoa_strong",
+			CoffeeWork.MODID+"."+"coffee_latte_sakura"
+			},
+			new PotionEffect[][]{
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,600,1),
+				new PotionEffect(PotionLoader.caffeine,1200,0),
+				new PotionEffect(PotionLoader.golden_heart, 400,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 400, 0)
+				},
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,600,1),
+				new PotionEffect(PotionLoader.caffeine,1500,0),
+				new PotionEffect(PotionLoader.golden_heart, 600,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 600, 0)
+				},
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,900,1),
+				new PotionEffect(PotionLoader.caffeine,3600,0),
+				new PotionEffect(PotionLoader.golden_heart, 900,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "haste")), 900, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "speed")), 900, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 900, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "regeneration")), 900, 0)
+				}
+		}
+	);
+	
+	public static DrinkCoffee coffee_other_ice = new DrinkCoffeeIce("coffee_other_ice", 4, 
+			  new int[]{2,2,2},
+			new float[]{0.2f,0.2f,0.2f},
+			new String[]{
+			CoffeeWork.MODID+"."+"cocoa_ice",
+			CoffeeWork.MODID+"."+"cocoa_strong_ice",
+			CoffeeWork.MODID+"."+"coffee_latte_sakura_ice"
+			},
+			new PotionEffect[][]{
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,900,1),
+				new PotionEffect(PotionLoader.caffeine,1200,0),
+				new PotionEffect(PotionLoader.golden_heart, 600,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 600, 0)
+				},
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,900,1),
+				new PotionEffect(PotionLoader.caffeine,1500,0),
+				new PotionEffect(PotionLoader.golden_heart, 900,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 900, 0)
+				},
+		new PotionEffect[]{
+				new PotionEffect(PotionLoader.relax,1200,1),
+				new PotionEffect(PotionLoader.caffeine,3600,0),
+				new PotionEffect(PotionLoader.golden_heart, 1200,0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "haste")), 1200, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "speed")), 1200, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "strength")), 1200, 0),
+				new PotionEffect(ForgeRegistries.POTIONS.getValue(new ResourceLocation("minecraft", "regeneration")), 1200, 0)
+				}
+		}
+	);
+	
 	public static DrinkCoffee coffee_americano_ice = new DrinkCoffeeIce("coffee_americano_ice", 4, 
 			  new int[]{2,2,2,2},
 			new float[]{0.2f,0.2f,0.2f,0.2f},
@@ -490,6 +557,14 @@ public class DrinksLoader {
 	public static Block coffee_coldbrew_ice_latte_mintBlock = new BlockCoffee(new ItemStack(coffee_coldbrew_ice,1,6));
 	public static Block coffee_coldbrew_ice_latte_vanillaBlock = new BlockCoffee(new ItemStack(coffee_coldbrew_ice,1,7));
 	
+	public static Block cocoaBlock = new BlockCoffee(new ItemStack(coffee_other,1,0));
+	public static Block cocoa_strongBlock = new BlockCoffee(new ItemStack(coffee_other,1,1));
+	public static Block coffee_latte_sakuraBlock = new BlockCoffee(new ItemStack(coffee_other,1,2));
+	
+	public static Block cocoa_iceBlock = new BlockCoffee(new ItemStack(coffee_other_ice,1,0));
+	public static Block cocoa_strong_iceBlock = new BlockCoffee(new ItemStack(coffee_other_ice,1,1));
+	public static Block coffee_latte_sakura_iceBlock = new BlockCoffee(new ItemStack(coffee_other_ice,1,2));
+	
 	public static Block coffee_instantBlock = new BlockCoffee(new ItemStack(coffee_instant));
 	public DrinksLoader(FMLPreInitializationEvent event) {
 		register(coffee_instant_stick);
@@ -502,10 +577,14 @@ public class DrinksLoader {
 		register(coffee_americano);
 		register(coffee_latte);
 		register(coffee_coldbrew);
+		register(coffee_other);
 		register(cup_glass);
 		register(coffee_americano_ice);
 		register(coffee_latte_ice);
 		register(coffee_coldbrew_ice);
+		register(coffee_other_ice);
+		
+
 		
 		register(coffee_instantBlock);
 		register(coffee_americanoBlock);
@@ -553,10 +632,27 @@ public class DrinksLoader {
 		register(coffee_coldbrew_ice_latte_chocolateBlock);
 		register(coffee_coldbrew_ice_latte_mintBlock);
 		register(coffee_coldbrew_ice_latte_vanillaBlock);
+		
+		register(cocoaBlock);
+		register(cocoa_strongBlock);
+		register(coffee_latte_sakuraBlock);
+		register(cocoa_iceBlock);
+		register(cocoa_strong_iceBlock);
+		register(coffee_latte_sakura_iceBlock);
 	}
 	@SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
+		registerRender(coffee_other);
+		registerRender(coffee_other_ice);
+		
+		registerRender(cocoaBlock);
+		registerRender(cocoa_strongBlock);
+		registerRender(coffee_latte_sakuraBlock);
+		registerRender(cocoa_iceBlock);
+		registerRender(cocoa_strong_iceBlock);
+		registerRender(coffee_latte_sakura_iceBlock);
+		
 		registerRender(coffee_americano_iceBlock);
 		registerRender(coffee_americano_ice_fruitBlock);
 		registerRender(coffee_americano_nitro_iceBlock);

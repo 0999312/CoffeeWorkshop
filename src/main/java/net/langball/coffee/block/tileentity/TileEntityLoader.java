@@ -13,6 +13,7 @@ public class TileEntityLoader
         registerTileEntity(TileEntityCoffeeMachine.class, "Fxxking_Machine");
         registerTileEntity(TileEntityIcecreamMachine.class, "icecream_Machine");
         registerTileEntity(TileEntityRoller.class, "roller");
+        registerTileEntity(TileEntityOven.class, "oven_clay");
     }
 
     public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)

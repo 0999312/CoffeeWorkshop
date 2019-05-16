@@ -13,6 +13,7 @@ public class GuiLoader implements IGuiHandler {
 	public static final int GUI_COFFEEMACHINE = 2;
 	public static final int GUI_ICECREAM = 3;
 	public static final int GUI_ROLLER = 4;
+	public static final int GUI_OVEN = 5;
     public GuiLoader()
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(CoffeeWork.instance, this);
@@ -31,6 +32,8 @@ public class GuiLoader implements IGuiHandler {
             return new ContainerIcecreamMachine(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
         case GUI_ROLLER:
             return new ContainerRoller(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
+        case GUI_OVEN:
+            return new ContainerOven(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
         default:
             return null;
         }
@@ -50,6 +53,8 @@ public class GuiLoader implements IGuiHandler {
             return new GuiIcecreamMachine(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
         case GUI_ROLLER:
             return new GuiRoller(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
+        case GUI_OVEN:
+            return new GuiOven(player.inventory,(IInventory) world.getTileEntity(new BlockPos(x, y, z)));
         default:
             return null;
         }

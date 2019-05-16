@@ -33,6 +33,11 @@ public class BlockLoader {
 	public static Block Roller = new BlockRoller(false).setRegistryName("roller_off").setUnlocalizedName(CoffeeWork.MODID+".roller").setCreativeTab(CommonProxy.tab);
 	public static Block Roller_on = new BlockRoller(true).setRegistryName("roller_on").setUnlocalizedName(CoffeeWork.MODID+".roller");
 	public static Item RollerItem = new ItemBlock(Roller).setRegistryName("roller").setUnlocalizedName(CoffeeWork.MODID+"roller");
+
+	public static Block Oven = new BlockClayOven(false).setRegistryName("oven_off").setUnlocalizedName(CoffeeWork.MODID+".oven").setCreativeTab(CommonProxy.tab);
+	public static Block Oven_on = new BlockClayOven(true).setRegistryName("oven_on").setLightLevel(0.875F).setUnlocalizedName(CoffeeWork.MODID+".oven");
+	public static Item OvenItem = new ItemBlock(Oven).setRegistryName("oven_off").setUnlocalizedName(CoffeeWork.MODID+"oven");
+	
 	public static Block vanilla_crop = new BlockVanilla();
 	
 	public static Block plate = new BlockPlate();
@@ -68,7 +73,7 @@ public class BlockLoader {
 	public static Block cake_lemon = new BlockCakeBasic(3,0.5F);
 	public static Block cake_tea = new BlockCakeBasic(3,0.5F);
 	public static Block cake_berry = new BlockCakeBasic(3,0.5F);
-	public static Block cake_cheese = new BlockCakeBasic(3,0.2F);
+	public static Block cake_cheese = new BlockCakeBasic(3,0.5F);
 	public static Block cake_schwarzwald = new BlockCakeBasic(3,0.5F);
 	public static Block cake_redvelvet = new BlockCakeBasic(3,0.5F);
 	public static Block tiramisu = new BlockCakeBasic(5,0.5F);
@@ -95,6 +100,11 @@ public class BlockLoader {
 		ForgeRegistries.BLOCKS.register(Roller);
 		ForgeRegistries.BLOCKS.register(Roller_on);
 		ForgeRegistries.ITEMS.register(RollerItem);
+		
+		ForgeRegistries.BLOCKS.register(Oven);
+		ForgeRegistries.BLOCKS.register(Oven_on);
+		ForgeRegistries.ITEMS.register(OvenItem);
+		
 		register(ColdBrewPot, new ItemBlock(ColdBrewPot), "coldbrew_pot");
 
 		register(Soda_Ore, new ItemBlock(Soda_Ore), "soda_ore");
@@ -205,6 +215,8 @@ public class BlockLoader {
 		registerRender(bag_coffee_raw);
 		registerRender(Grinder);
 		registerRender(Grinder_on);
+		registerRender(Oven);
+		registerRender(Oven_on);
 		registerRender(Coffee_Machine);
 		registerRender(Coffee_Machine_on);
 		registerRender(Icecream_Machine);

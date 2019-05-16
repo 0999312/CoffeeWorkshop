@@ -256,7 +256,7 @@ public class BlockRoller extends BlockContainer {
 
 	    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
 	    {
-	        return new ItemStack(BlockLoader.GrinderItem);
+	        return new ItemStack(BlockLoader.RollerItem);
 	    }
 
 	    /**

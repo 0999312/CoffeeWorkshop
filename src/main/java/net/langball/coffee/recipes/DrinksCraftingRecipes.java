@@ -181,6 +181,28 @@ public class DrinksCraftingRecipes {
 		RecipesUtil.addRecipe(DrinksLoader.coffee_instant, new ShapelessOreRecipe(new ResourceLocation(""), DrinksLoader.coffee_instant,new Object[]{
 				DrinksLoader.cup,"listAllwater",DrinksLoader.coffee_instant_stick
 		}));
+		RecipesUtil.addRecipe("cocoa", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(DrinksLoader.coffee_other,1,0),new Object[]{
+				DrinksLoader.cup,"listAllmilk","foodCocoapowder","foodCocoapowder",new ItemStack(ItemLoader.syrup,1,0)
+		}));
+		RecipesUtil.addRecipe("cocoa_strong", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(DrinksLoader.coffee_other,1,1),new Object[]{
+				DrinksLoader.cup,"listAllmilk","foodCocoapowder","foodCocoapowder",new ItemStack(ItemLoader.materialFood,1,4),new ItemStack(ItemLoader.syrup,1,0)
+		}));
+		RecipesUtil.addRecipe("cocoa_ice", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(DrinksLoader.coffee_other_ice,1,0),new Object[]{
+				DrinksLoader.cup_glass,"listAllmilk","foodCocoapowder","foodCocoapowder",new ItemStack(ItemLoader.syrup,1,0)
+		}));
+		RecipesUtil.addRecipe("cocoa_strong_ice", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(DrinksLoader.coffee_other_ice,1,1),new Object[]{
+				DrinksLoader.cup_glass,"listAllmilk","foodCocoapowder","foodCocoapowder",new ItemStack(ItemLoader.materialFood,1,4),new ItemStack(ItemLoader.syrup,1,0)
+		}));
+		
+		if(!OreDictionary.getOres("fullSakura").isEmpty()){
+			RecipesUtil.addRecipe("coffee_latte_sakura", new ShapelessOreRecipe(new ResourceLocation(""),new ItemStack(DrinksLoader.coffee_other,1,2),new Object[]{
+					DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup,new ItemStack(ItemLoader.syrup,1,0),"fullSakura"
+			}));
+			
+			RecipesUtil.addRecipe("coffee_latte_sakura_ice", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(DrinksLoader.coffee_other_ice,1,2),new Object[]{
+			DrinksLoader.espresso,"listAllmilk",DrinksLoader.cup_glass,new ItemStack(ItemLoader.syrup,1,0),"fullSakura"
+			}));
+		}
 		
 		RegisterCoffeePlateRecipes(DrinksLoader.coffee_americano, new ItemStack[]{
 				new ItemStack(DrinksLoader.coffee_americanoBlock),

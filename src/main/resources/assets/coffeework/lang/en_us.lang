@@ -217,16 +217,25 @@ item.coffeework.coffee_freddo_ice.name=Freddo
 
 tile.coffeework.plate.name=Plate
 
-tile.coffeework.cocoa.name=Hot Cocoa
-tile.coffeework.strong_cocoa.name=Thick Cocoa
+tile.coffeework.oven.name=Clay Oven
 
 item.coffeework.espresso.name=Espresso
 
 item.coffeework.cocoa.name=Hot Cocoa
-item.coffeework.strong_cocoa.name=Thick Cocoa
+item.coffeework.cocoa_strong.name=Thick Cocoa
+tile.coffeework.cocoa.name=Hot Cocoa
+tile.coffeework.cocoa_strong.name=Thick Cocoa
+
+item.coffeework.coffee_latte_sakura.name=Sakura Latté
+tile.coffeework.coffee_latte_sakura.name=Sakura Latté
 
 item.coffeework.cocoa_ice.name=Iced Cocoa
-item.coffeework.strong_cocoa_ice.name=Iced Thick Cocoa
+item.coffeework.cocoa_strong_ice.name=Iced Thick Cocoa
+item.coffeework.coffee_latte_sakura_ice.name=Iced Sakura Latté
+
+tile.coffeework.cocoa_ice.name=Iced Cocoa
+tile.coffeework.cocoa_strong_ice.name=Iced Thick Cocoa
+tile.coffeework.coffee_latte_sakura_ice.name=Iced Sakura Latté
 
 item.coffeework.icecream_vanilla.name=Vanilla Ice cream
 item.coffeework.icecream_chocolate.name=Chocolate Ice cream
@@ -463,6 +472,50 @@ tile.coffeework.mousse_lemon.name=Mousse Lemon
 tile.coffeework.mousse_chocolate.name=Mousse Chocolate
 tile.coffeework.mousse_coffee.name=Mousse Coffee
 
+item.coffeework.cake_sponge_slices.name=Sponge Cake Slices
+item.coffeework.cake_sponge_chocolate_slices.name=Chocolate Sponge Cake Slices
+item.coffeework.cake_sponge_coffee_slices.name=Coffee Sponge Cake Slices
+item.coffeework.cake_sponge_carrot_slices.name=Carrot Sponge Cake Slices
+item.coffeework.cake_sponge_pumpkin_slices.name=Pumpkin Sponge Cake Slices
+item.coffeework.cake_sponge_tea_slices.name=Matcha Sponge Cake Slices
+item.coffeework.cake_sponge_berry_slices.name=Berry Sponge Cake Slices
+item.coffeework.cake_sponge_lemon_slices.name=Lemon Sponge Cake Slices
+item.coffeework.cake_sponge_redvelvet_slices.name=Red Velvet Sponge Cake Slices
+
+item.coffeework.cake_slices.name=Cake Slices
+item.coffeework.cake_schwarzwald_slices.name=Schwarzwald Cake Slices
+item.coffeework.cake_coffee_slices.name=Latté Cake Slices
+item.coffeework.cake_cheese_slices.name=Cheese Cake Slices
+item.coffeework.cake_harvest_slices.name=Harvest Cake Slices
+item.coffeework.cake_tea_slices.name=Matcha Cake Slices
+item.coffeework.cake_berry_slices.name=Berry mix Cake Slices
+item.coffeework.cake_lemon_slices.name=Summer day Cake Slices
+item.coffeework.cake_redvelvet_slices.name=Red Velvet Cake Slices
+
+item.coffeework.pie_cream.name=Cream Pie
+item.coffeework.pie_chocolate.name=Chocolate Pie
+item.coffeework.pie_coffee.name=Coffee Pie
+item.coffeework.pie_tea.name=Matcha Pie
+item.coffeework.pie_apple.name=Apple Pie
+item.coffeework.pie_lemon.name=Lemon
+item.coffeework.pie_berry.name=Berry
+item.coffeework.pie_melon.name=Melon Pie
+item.coffeework.pie_caramel.name=Caramel Pie
+
+item.coffeework.small_model.name=Souffle model
+item.coffeework.souffle_raw.name=Raw Souffle
+item.coffeework.souffle_chocolate_raw.name=Raw Chocolate Souffle
+item.coffeework.souffle.name=Souffle
+item.coffeework.souffle_chocolate.name=Chocolate Souffle
+
+item.coffeework.puff_raw.name=Raw Cream Puff
+item.coffeework.puff.name=Cream Puff
+item.coffeework.caramel_apple.name=Caramel Apple
+item.coffeework.caramel.name=Caramel Cube
+item.coffeework.cookie_black_raw.name=Raw Black Chocolate Cookie
+item.coffeework.cookie_black.name=Black Chocolate Cookie
+item.coffeework.cookie_oreo.name=OREO
+
 #TABS
 itemGroup.coffee_workshop=Coffee Workshop
 
@@ -475,7 +528,7 @@ gui.ice_cream_machine.name=Freezing
 jei.coffeework.category.grinder=Grinding
 jei.coffeework.category.icecream_machine=Freezing
 jei.coffeework.category.roller=Rolling
-
+jei.coffeework.category.oven=Baking
 
 coffee.effect.relax=Relax
 coffee.effect.golden_heart=Immunity

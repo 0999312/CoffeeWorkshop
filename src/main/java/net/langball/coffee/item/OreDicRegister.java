@@ -23,8 +23,10 @@ public class OreDicRegister {
 	OreDictionary.registerOre("listAllmilk", Items.MILK_BUCKET);
 	OreDictionary.registerOre("listAllwater", Items.WATER_BUCKET);
 	OreDictionary.registerOre("listAllsugar", Items.SUGAR);
-	OreDictionary.registerOre("listAllsugar", new ItemStack(ItemLoader.syrup,1,OreDictionary.WILDCARD_VALUE));
+	OreDictionary.registerOre("listAllsugar", new ItemStack(ItemLoader.syrup,1,0));
 	OreDictionary.registerOre("listAllegg", Items.EGG);
+//	"foodCaramel"
+	OreDictionary.registerOre("foodCaramel", new ItemStack(ItemLoader.materialFood,1,14));
 	OreDictionary.registerOre("listAllwheat", Items.WHEAT);
 	OreDictionary.registerOre("listAllgrain", Items.WHEAT);
     OreDictionary.registerOre("cropCarrot", Items.CARROT);
@@ -81,6 +83,7 @@ public class OreDicRegister {
     OreDictionary.registerOre("listAllfruit", Items.CHORUS_FRUIT);
     OreDictionary.registerOre("plateIron", new ItemStack(ItemLoader.materials,1,9));
     OreDictionary.registerOre("plateDough", new ItemStack(ItemLoader.materials,1,23));
+    OreDictionary.registerOre("plateDoughPastry", new ItemStack(ItemLoader.materials,1,24));
     OreDictionary.registerOre("foodVanilla", ItemLoader.vanilla_seeds);
     if(Loader.isModLoaded(ClimateMain.MOD_ID)){
     	OreDictionary.registerOre("beanCoffee",new ItemStack(FoodInit.teaLeaves, 1, 0));
