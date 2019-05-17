@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "coffeework:soda_machine_bottom" },
+        "facing=south": { "model": "coffeework:soda_machine_bottom", "y": 180 },
+        "facing=west":  { "model": "coffeework:soda_machine_bottom", "y": 270 },
+        "facing=east":  { "model": "coffeework:soda_machine_bottom", "y": 90 }
+    }
+}

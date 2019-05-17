@@ -1,0 +1,35 @@
+{
+   "forge_marker" : 1,
+   "defaults" : {
+      "model" : "coffeework:coldbrew_pot"
+   },
+   "variants" : {
+      "ferm=0" : {
+		"model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=1" : {
+        "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=2" : {
+         "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=3" : {
+          "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=4" : {
+          "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=5" : {
+         "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=6" : {
+         "model" : "coffeework:coldbrew_pot"
+      },
+      "ferm=7" : {
+          "model" : "coffeework:coldbrew_pot_finished"
+      },
+      "ferm=8" : {
+         "model" : "coffeework:empty_coldbrew_pot"
+      }
+   }
+}

@@ -1,0 +1,10 @@
+{
+   "parent" : "coffeework:block/coffee_cappuccino_ice_plate",
+   "textures" : {
+		"0": "coffeework:model/coffee/glass",
+		"1": "coffeework:model/coffee/coffee_latte",
+		"2": "coffeework:model/coffee/coffee_mochaccino",
+		"particle": "coffeework:model/coffee/glass",
+		"1_1": "coffeework:model/coffee/cup"
+   }
+}

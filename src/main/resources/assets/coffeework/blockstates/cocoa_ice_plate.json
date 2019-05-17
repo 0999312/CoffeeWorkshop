@@ -1,0 +1,1 @@
+{"variants":{"inventory":{"model":"coffeework:cocoa_ice_plate"},"facing=north":{"model":"coffeework:cocoa_ice_plate"},"facing=south":{"model":"coffeework:cocoa_ice_plate","y":180},"facing=west":{"model":"coffeework:cocoa_ice_plate","y":270},"facing=east":{"model":"coffeework:cocoa_ice_plate","y":90}}}

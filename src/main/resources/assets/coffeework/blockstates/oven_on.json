@@ -1,0 +1,11 @@
+{
+    "variants": {
+	"inventory" : {
+			 "model" : "coffeework:clay_oven_on"
+		  },
+        "facing=north": { "model": "coffeework:clay_oven_on" },
+        "facing=south": { "model": "coffeework:clay_oven_on", "y": 180 },
+        "facing=west":  { "model": "coffeework:clay_oven_on", "y": 270 },
+        "facing=east":  { "model": "coffeework:clay_oven_on", "y": 90 }
+    }
+}

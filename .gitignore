@@ -20,18 +20,3 @@ build
 # other
 eclipse
 run
-build.bat
-build_debug.bat
-json_create
-init.bat
-eclipse.bat
-gradlew
-crash-reports
-saves
-mods
-logs
-resourcepacks
-screenshots
-config
-patchouli_books
-*.json
