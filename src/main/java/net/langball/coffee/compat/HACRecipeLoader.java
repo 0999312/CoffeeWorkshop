@@ -4,22 +4,18 @@ import defeatedcrow.hac.api.climate.DCHeatTier;
 import defeatedcrow.hac.api.climate.DCHumidity;
 import defeatedcrow.hac.api.recipe.RecipeAPI;
 import defeatedcrow.hac.core.climate.recipe.ClimateSmelting;
-import defeatedcrow.hac.food.FoodInit;
 import defeatedcrow.hac.food.recipes.FoodFluidRecipe;
 import defeatedcrow.hac.machine.MachineInit;
 import defeatedcrow.hac.main.ClimateMain;
 import defeatedcrow.hac.main.MainInit;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.item.ItemLoader;
-import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class HACRecipeLoader {
 		public HACRecipeLoader() {

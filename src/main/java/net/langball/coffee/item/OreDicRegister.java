@@ -2,14 +2,11 @@ package net.langball.coffee.item;
 
 import defeatedcrow.hac.food.FoodInit;
 import defeatedcrow.hac.main.ClimateMain;
-import net.langball.coffee.drinks.DrinksLoader;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
-import roito.teastory.TeaStory;
-import roito.teastory.item.ItemRegister;
 
 public class OreDicRegister {
 	public OreDicRegister() {
@@ -25,7 +22,7 @@ public class OreDicRegister {
 	OreDictionary.registerOre("listAllsugar", Items.SUGAR);
 	OreDictionary.registerOre("listAllsugar", new ItemStack(ItemLoader.syrup,1,0));
 	OreDictionary.registerOre("listAllegg", Items.EGG);
-//	"foodCaramel"
+
 	OreDictionary.registerOre("foodCaramel", new ItemStack(ItemLoader.materialFood,1,14));
 	OreDictionary.registerOre("listAllwheat", Items.WHEAT);
 	OreDictionary.registerOre("listAllgrain", Items.WHEAT);

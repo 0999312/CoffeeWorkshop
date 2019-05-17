@@ -13,13 +13,11 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -113,7 +111,6 @@ public class BlockClayOven extends BlockContainer {
 	            double d0 = (double)pos.getX() + 0.5D;
 	            double d1 = (double)pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
 	            double d2 = (double)pos.getZ() + 0.5D;
-	            double d3 = 0.52D;
 	            double d4 = rand.nextDouble() * 0.6D - 0.3D;
 
 	            if (rand.nextDouble() < 0.1D)

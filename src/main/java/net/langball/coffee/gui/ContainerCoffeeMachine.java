@@ -1,19 +1,14 @@
 package net.langball.coffee.gui;
 
-import net.langball.coffee.block.tileentity.TileEntityCoffeeMachine;
-import net.langball.coffee.block.tileentity.TileEntityGrinder;
 import net.langball.coffee.gui.slot.SlotCoffeeMachineOutput;
 import net.langball.coffee.recipes.blocks.CoffeeMachineRecipes;
-import net.langball.coffee.recipes.blocks.GrinderRecipes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 

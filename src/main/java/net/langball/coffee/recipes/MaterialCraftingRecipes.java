@@ -1,9 +1,6 @@
 package net.langball.coffee.recipes;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.BlockAction;
-
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.ConfigLoader;
 import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
@@ -15,16 +12,12 @@ import net.langball.coffee.util.RecipesUtil;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import net.minecraftforge.registries.ForgeRegistry;
 
 public class MaterialCraftingRecipes {
 	public MaterialCraftingRecipes() {

@@ -16,21 +16,16 @@ import net.langball.coffee.item.OreDicRegister;
 import net.langball.coffee.recipes.MaterialCraftingRecipes;
 import net.langball.coffee.recipes.SyrupCraftingRecipes;
 import net.langball.coffee.recipes.blocks.FuelLoader;
-import net.langball.coffee.util.RecipesUtil;
 import net.langball.coffee.villager.VillagerLoader;
 import net.langball.coffee.recipes.DrinksCraftingRecipes;
 import net.langball.coffee.recipes.FoodCraftingRecipes;
-import net.langball.coffee.world.BlueBerryWorldGen;
-import net.langball.coffee.world.CoffeeTreeWorldGen;
 import net.langball.coffee.world.WorldGenLoader;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import roito.teastory.TeaStory;
 
 public class CommonProxy {

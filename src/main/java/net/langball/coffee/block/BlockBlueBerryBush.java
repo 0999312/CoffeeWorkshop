@@ -15,7 +15,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -174,7 +173,7 @@ public class BlockBlueBerryBush extends BlockBush implements IGrowable, IShearab
 	  
 	  	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	    {
-	    ArrayList<ItemStack> ret = new ArrayList();
+	    ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 	    ret.add(new ItemStack(BlockLoader.BlueBerryBush, 2, 0));
 	    return ret;
 	    }

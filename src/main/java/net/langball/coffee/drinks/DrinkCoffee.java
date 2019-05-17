@@ -1,25 +1,17 @@
 package net.langball.coffee.drinks;
 
-import java.util.List;
-
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.effect.PotionLoader;
 import net.langball.coffee.util.RecipesUtil;
 import net.langball.coffee.util.TagPropertyAccessor.TagPropertyInteger;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.init.PotionTypes;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;

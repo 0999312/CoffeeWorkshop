@@ -1,15 +1,11 @@
 package net.langball.coffee.gui;
 
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.block.tileentity.TileEntityGrinder;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -79,4 +75,8 @@ public class GuiGrinder extends GuiContainer
 
         return this.tileFurnace.getField(0) * pixels / i;
     }
+
+	public InventoryPlayer getPlayerInventory() {
+		return playerInventory;
+	}
 }

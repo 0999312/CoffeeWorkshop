@@ -6,7 +6,6 @@ import java.util.Map.Entry;
 import com.google.common.collect.Maps;
 
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

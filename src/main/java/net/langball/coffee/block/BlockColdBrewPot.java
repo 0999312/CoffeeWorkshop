@@ -3,15 +3,11 @@ package net.langball.coffee.block;
 import net.langball.coffee.CommonProxy;
 import net.langball.coffee.item.ItemLoader;
 import net.minecraft.block.Block;
-import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -28,7 +24,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.List;
 import java.util.Random;
 
 public class BlockColdBrewPot extends Block{
@@ -70,7 +65,7 @@ public class BlockColdBrewPot extends Block{
     }
 
     public int getFerm(IBlockState state) {
-        return state.getValue(this.FERM).intValue();
+        return state.getValue(BlockColdBrewPot.FERM).intValue();
     }
 
     public IBlockState withFerm(int age) {

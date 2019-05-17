@@ -3,7 +3,6 @@ package net.langball.coffee.villager;
 import java.util.Random;
 
 import net.langball.coffee.drinks.DrinksLoader;
-import net.langball.coffee.item.ItemLoader;
 import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.passive.EntityVillager.ITradeList;
 import net.minecraft.entity.passive.EntityVillager.PriceInfo;

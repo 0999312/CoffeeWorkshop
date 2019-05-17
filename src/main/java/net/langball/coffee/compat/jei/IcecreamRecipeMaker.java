@@ -6,7 +6,6 @@ import java.util.Map;
 
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.recipe.IStackHelper;
-import net.langball.coffee.recipes.blocks.GrinderRecipes;
 import net.langball.coffee.recipes.blocks.IcecreamMachineRecipes;
 import net.minecraft.item.ItemStack;
 
@@ -17,7 +16,7 @@ public final class IcecreamRecipeMaker {
 	    IcecreamMachineRecipes furnaceRecipes = IcecreamMachineRecipes.instance();
 	    Map<ItemStack, ItemStack> smeltingMap = furnaceRecipes.getSmeltingList();
 	    
-	    List<IcecreamRecipe> recipes = new ArrayList();
+	    List<IcecreamRecipe> recipes = new ArrayList<IcecreamRecipe>();
 	    for (Map.Entry<ItemStack, ItemStack> entry : smeltingMap.entrySet())
 	    {
 	    	

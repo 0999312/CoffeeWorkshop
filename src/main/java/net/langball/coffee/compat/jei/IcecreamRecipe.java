@@ -6,7 +6,6 @@ import java.util.List;
 
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import net.langball.coffee.recipes.blocks.GrinderRecipes;
 import net.langball.coffee.recipes.blocks.IcecreamMachineRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
@@ -24,7 +23,8 @@ public class IcecreamRecipe  implements IRecipeWrapper
 	    this.output = output;
 	  }
 	  
-	  public void getIngredients(IIngredients ingredients)
+	  @SuppressWarnings("deprecation")
+	public void getIngredients(IIngredients ingredients)
 	  {
 	    ingredients.setInputLists(ItemStack.class, this.inputs);
 	    ingredients.setOutput(ItemStack.class, this.output);

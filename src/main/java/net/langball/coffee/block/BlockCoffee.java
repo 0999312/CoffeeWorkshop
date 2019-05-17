@@ -16,8 +16,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
@@ -86,7 +84,8 @@ public class BlockCoffee extends Block {
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
     	return coffee;
     }
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+    @SuppressWarnings("deprecation")
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
         IBlockState soil = worldIn.getBlockState(pos.down());
         return super.canPlaceBlockAt(worldIn, pos) && soil.getBlock().isFullBlock(soil);

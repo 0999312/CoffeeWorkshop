@@ -1,17 +1,13 @@
 package net.langball.coffee.drinks;
 
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.effect.PotionLoader;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.ResourceLocation;

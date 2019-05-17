@@ -64,7 +64,8 @@ public class BlockPlate extends Block {
 	        return this.getDefaultState().withProperty(FACING, enumfacing);
 	    }
 	    
-	    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+	    @SuppressWarnings("deprecation")
+		public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
 	    {
 	        IBlockState soil = worldIn.getBlockState(pos.down());
 	        return super.canPlaceBlockAt(worldIn, pos) && soil.getBlock().isFullBlock(soil);

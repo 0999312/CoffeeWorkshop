@@ -16,7 +16,7 @@ public final class OvenRecipeMaker {
 	    OvenRecipes furnaceRecipes = OvenRecipes.instance();
 	    Map<ItemStack, ItemStack> smeltingMap = furnaceRecipes.getSmeltingList();
 	    
-	    List<OvenRecipe> recipes = new ArrayList();
+	    List<OvenRecipe> recipes = new ArrayList<OvenRecipe>();
 	    for (Map.Entry<ItemStack, ItemStack> entry : smeltingMap.entrySet())
 	    {
 	      ItemStack input = (ItemStack)entry.getKey();

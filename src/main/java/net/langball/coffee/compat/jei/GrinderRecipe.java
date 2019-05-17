@@ -23,7 +23,8 @@ public class GrinderRecipe  implements IRecipeWrapper
 	    this.output = output;
 	  }
 	  
-	  public void getIngredients(IIngredients ingredients)
+	  @SuppressWarnings("deprecation")
+	public void getIngredients(IIngredients ingredients)
 	  {
 	    ingredients.setInputLists(ItemStack.class, this.inputs);
 	    ingredients.setOutput(ItemStack.class, this.output);

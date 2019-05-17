@@ -16,7 +16,7 @@ public final class GrinderRecipeMaker {
 	    GrinderRecipes furnaceRecipes = GrinderRecipes.instance();
 	    Map<ItemStack, ItemStack> smeltingMap = furnaceRecipes.getSmeltingList();
 	    
-	    List<GrinderRecipe> recipes = new ArrayList();
+	    List<GrinderRecipe> recipes = new ArrayList<GrinderRecipe>();
 	    for (Map.Entry<ItemStack, ItemStack> entry : smeltingMap.entrySet())
 	    {
 	      ItemStack input = (ItemStack)entry.getKey();

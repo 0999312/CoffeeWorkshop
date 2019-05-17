@@ -1,6 +1,5 @@
 package net.langball.coffee.gui.slot;
 
-import net.langball.coffee.recipes.blocks.CoffeeMachineRecipes;
 import net.langball.coffee.recipes.blocks.IcecreamMachineRecipes;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;

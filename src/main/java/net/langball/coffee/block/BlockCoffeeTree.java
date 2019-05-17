@@ -175,7 +175,7 @@ public class BlockCoffeeTree extends BlockBush implements IGrowable, IShearable 
 	  
 	  	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	    {
-	    ArrayList<ItemStack> ret = new ArrayList();
+	    ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 	    ret.add(new ItemStack(BlockLoader.Coffee_tree, 1, 0));
 	    return ret;
 	    }

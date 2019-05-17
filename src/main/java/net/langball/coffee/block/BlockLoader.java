@@ -6,7 +6,6 @@ import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.util.JSON_Creator;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockOre;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;

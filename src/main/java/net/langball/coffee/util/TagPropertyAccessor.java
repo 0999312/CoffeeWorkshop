@@ -2,7 +2,7 @@ package net.langball.coffee.util;
 
 import net.minecraft.nbt.NBTTagCompound;
 
-public abstract class TagPropertyAccessor<T extends Comparable> {
+public abstract class TagPropertyAccessor<T extends Comparable<?>> {
     protected final String tagName;
     public TagPropertyAccessor(String tagName){
         this.tagName = tagName;

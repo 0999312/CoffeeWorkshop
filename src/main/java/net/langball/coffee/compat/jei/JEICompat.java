@@ -4,7 +4,6 @@ import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
-import mezz.jei.api.ingredients.IIngredientRegistry;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import mezz.jei.api.recipe.transfer.IRecipeTransferRegistry;
@@ -23,7 +22,6 @@ import net.minecraft.item.ItemStack;
 public class JEICompat implements IModPlugin {
 	@Override
 	public void register(IModRegistry registry) {
-		IIngredientRegistry ingredientRegistry = registry.getIngredientRegistry();
 		IJeiHelpers jeiHelpers = registry.getJeiHelpers();
 		IRecipeTransferRegistry recipeTransferRegistry = registry.getRecipeTransferRegistry();
 		registry.addRecipes(GrinderRecipeMaker.getRecipes(jeiHelpers),"coffeework.grinder");

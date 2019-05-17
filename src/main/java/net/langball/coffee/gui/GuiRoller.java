@@ -1,11 +1,9 @@
 package net.langball.coffee.gui;
 
 import net.langball.coffee.CoffeeWork;
-import net.langball.coffee.block.BlockLoader;
 import net.langball.coffee.block.tileentity.TileEntityRoller;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
@@ -77,4 +75,8 @@ public class GuiRoller extends GuiContainer
 
         return this.tileFurnace.getField(0) * pixels / i;
     }
+
+	public InventoryPlayer getPlayerInventory() {
+		return playerInventory;
+	}
 }

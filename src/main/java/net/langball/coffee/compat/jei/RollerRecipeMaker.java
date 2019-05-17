@@ -16,7 +16,7 @@ public final class RollerRecipeMaker {
 	    RollerRecipes furnaceRecipes = RollerRecipes.instance();
 	    Map<ItemStack, ItemStack> smeltingMap = furnaceRecipes.getSmeltingList();
 	    
-	    List<RollerRecipe> recipes = new ArrayList();
+	    List<RollerRecipe> recipes = new ArrayList<RollerRecipe>();
 	    for (Map.Entry<ItemStack, ItemStack> entry : smeltingMap.entrySet())
 	    {
 	      ItemStack input = (ItemStack)entry.getKey();

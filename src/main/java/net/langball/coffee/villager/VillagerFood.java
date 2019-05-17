@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerProfessio
 
 public class VillagerFood {
 	public static void registerVillager() {
+		@SuppressWarnings("deprecation")
 		VillagerProfession prof = VillagerRegistry.getById(4);
 		VillagerCareer career = new VillagerCareer(prof, "food_trader");
 		career.addTrade(1, new SimpleSell(new ItemStack(ItemLoader.dessert_1,8,2),new PriceInfo(4,12)));

@@ -1,6 +1,5 @@
 package net.langball.coffee.gui.slot;
 
-import net.langball.coffee.block.tileentity.TileEntityCoffeeMachine;
 import net.langball.coffee.block.tileentity.TileEntityIcecreamMachine;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;

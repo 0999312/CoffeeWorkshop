@@ -2,7 +2,6 @@ package net.langball.coffee.recipes;
 
 import net.langball.coffee.item.ItemLoader;
 import net.langball.coffee.util.RecipesUtil;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;

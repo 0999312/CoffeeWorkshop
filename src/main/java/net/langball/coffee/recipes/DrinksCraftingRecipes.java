@@ -1,6 +1,5 @@
 package net.langball.coffee.recipes;
 
-import net.langball.coffee.CoffeeWork;
 import net.langball.coffee.drinks.DrinkCoffee;
 import net.langball.coffee.drinks.DrinksLoader;
 import net.langball.coffee.item.ItemLoader;
@@ -260,6 +259,7 @@ public class DrinksCraftingRecipes {
 		});
 		MaterialCraftingRecipes.registerCoffeePlate("coffee_instant_plate", new ItemStack(DrinksLoader.coffee_instantBlock), new ItemStack(DrinksLoader.coffee_instant));
 	}
+	@SuppressWarnings("unused")
 	private static void RegisterSodaDrinkRecipes(Item soda,ItemStack syrup) {
 		RecipesUtil.addRecipe(soda, new ShapelessOreRecipe(new ResourceLocation(""), soda,new Object[]{
 				DrinksLoader.cup_glass,"listAllwater",syrup,"dustSoda"
