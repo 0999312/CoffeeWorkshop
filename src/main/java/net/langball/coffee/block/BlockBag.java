@@ -1,9 +1,7 @@
 package net.langball.coffee.block;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -11,34 +9,31 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockBag extends Block {
+public abstract class BlockBag extends BlockSlab {
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
 	
 	public BlockBag() {
 		super(Material.CLOTH);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        IBlockState iblockstate = this.blockState.getBaseState();
+
+        if (!this.isDouble())
+        {
+            iblockstate = iblockstate.withProperty(HALF, BlockSlab.EnumBlockHalf.BOTTOM);
+        }
+		this.setDefaultState(iblockstate.withProperty(FACING, EnumFacing.NORTH));
 		this.setSoundType(SoundType.CLOTH);
 		this.setHardness(0.5F);
 	}
-	protected static final AxisAlignedBB BUSH_AABB = new AxisAlignedBB(0D, 0.0D, 0.0, 1D, 0.5D, 1D);
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
-    {
-        return BUSH_AABB;
-    }
-    @Nullable
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
-    {
-        return BUSH_AABB;
-    }
+
     @Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
@@ -48,10 +43,11 @@ public class BlockBag extends Block {
 	public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos) {
 		return false;
 	}
-	    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-	    {
-	        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-	    }
+	
+	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+	{
+	return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+	}
 	    
     public EnumBlockRenderType getRenderType(IBlockState state)
     {
@@ -66,13 +62,28 @@ public class BlockBag extends Block {
         {
             enumfacing = EnumFacing.NORTH;
         }
+        
+        IBlockState iblockstate =  this.getDefaultState().withProperty(FACING, enumfacing);
+        
+        if (!this.isDouble())
+        {
+            iblockstate = iblockstate.withProperty(HALF, (meta & 8) == 0 ? BlockSlab.EnumBlockHalf.BOTTOM : BlockSlab.EnumBlockHalf.TOP);
+        }
 
-        return this.getDefaultState().withProperty(FACING, enumfacing);
+        return iblockstate;
     }
 
     public int getMetaFromState(IBlockState state)
     {
-        return ((EnumFacing)state.getValue(FACING)).getIndex();
+        int i = 0;
+        i = i | ((EnumFacing)state.getValue(FACING)).getIndex();
+
+        if (!this.isDouble() && state.getValue(HALF) == BlockSlab.EnumBlockHalf.TOP)
+        {
+            i |= 8;
+        }
+
+        return i;
     }
 
     public IBlockState withRotation(IBlockState state, Rotation rot)
@@ -87,8 +98,9 @@ public class BlockBag extends Block {
 
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] {FACING});
+        return this.isDouble() ? new BlockStateContainer(this, new IProperty[] {FACING}) : new BlockStateContainer(this, new IProperty[] {HALF, FACING});
     }
+    
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
         this.setDefaultFacing(worldIn, pos, state);
@@ -124,5 +136,21 @@ public class BlockBag extends Block {
             worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
         }
     }
+	@Override
+	public String getUnlocalizedName(int meta) {
+		// TODO Auto-generated method stub
+		return this.getUnlocalizedName();
+	}
+
+	@Override
+	public IProperty<?> getVariantProperty() {
+		// TODO Auto-generated method stub
+		return FACING;
+	}
+	@Override
+	public Comparable<?> getTypeForItem(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
